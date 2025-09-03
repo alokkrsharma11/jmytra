@@ -1,0 +1,71 @@
+import logo from './images/img_1.png';
+import { useState } from 'react'
+import { NavLink } from 'react-router-dom';
+import './Header.css';
+
+const data = [
+	{
+		title: 'Home',
+		link: '/',
+	},
+	{
+		title: 'Java',
+		link: '/java-tutorial',
+	},
+	{
+		title: 'React JS',
+		link: '/react-tutorial',
+	},
+	{
+		title: 'Spring Framework',
+		link: '/spring-tutorial',
+	},
+	{
+		title: 'Databases',
+		link: '/database-tutorial',
+	},
+    {
+		title: 'About Me',
+		link: '/about',
+	},
+    {
+		title: 'Contact Me',
+		link: '/contact',
+	},
+];
+const Header = ({title, subtitle}) => {
+  const [navs] = useState(data);
+
+  return (
+    <>
+
+      <div style={{paddingRight: '1rem', maxHeight: '8rem'}}>
+          <table style={{width:'100%'}}>
+            <tr  style={{width:'100%'}}>
+                <td style={{width:'50%'}}>
+                    <img src={logo} alt="logo" style={{width: '20rem', height: '10rem', marginLeft: '-3rem'}}/>
+                </td>
+                <td style={{width:'50%', textAlign: 'right'}}>
+                    <div>
+                    <h1 className='h1'>{title}</h1>
+                    <h5 className='h5'>{subtitle}</h5>
+                    </div>
+                </td>
+            </tr>
+          </table>
+      </div>
+      <div className='flex gap-8'>
+        {navs.map((nav, index) => (
+          <div key={index} className='li'>
+            <NavLink to={nav.link} className='navs'>
+              {nav.title}
+            </NavLink>
+          </div>
+
+        ))}
+      </div>
+    </>
+  );
+}
+
+export default Header;

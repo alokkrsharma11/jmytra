@@ -1,0 +1,12 @@
+.flex.gap-8 {
+    display: flex;
+    gap: 5rem;
+    color: white;
+    padding: 1rem;
+    background-color: darkgray;
+}
+
+.App-logo {
+  height: 20vmin;
+  pointer-events: none;
+}

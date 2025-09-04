@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "question": "What new features did Java 8 introduce?",
+    "isObjective": 0,
+    "options": [],
+    "answer": "",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "intro": "The Java 8 version has:",
+      "points": [
+        "An improved, immutable JodaTime-inspired Date and time API",
+        "A new language called Lambda Expressions that treats actions as objects",
+        "Method References, which enable defining Lambda Expressions by referring to methods directly using their names",
+        "Default methods, which give users the ability to add full implementations in interfaces besides abstract methods",
+        "Nashorn, a high-performance Java-based engine integrated to JDK used to evaluate and execute JavaScript code",
+        "Stream API, a special iterator class that allows processing object collections in a functional manner"
+      ],
+      "code": "List<String> names = Arrays.asList(\"Alok\", \"Sharma\");\nnames.forEach(System.out::println);"
+    }
+  },
+  {
+    "id": 2,
+    "question": "Why was a new version of Java needed in the first place?",
+    "isObjective": 0,
+    "options": [],
+    "answer": "",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "intro": "There are two main reasons:",
+      "points": [
+        "Dramatic changes in hardware created the need for Java to use current multi-core CPUs more efficiently",
+        "Enable users to use new Functional Programming (FP) features"
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "question": "So, what actual advantages does Java 8 bring?",
+    "isObjective": 0,
+    "options": [],
+    "answer": "",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "intro": "The advantages include:",
+      "points": [
+        "Code is more concise and readable",
+        "Code is more reusable",
+        "Code is more testable and maintainable",
+        "Code is now both highly concurrent and scalable",
+        "Users can write parallel code",
+        "Users can write database-like operations",
+        "Applications now perform better",
+        "Code is far more productive"
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "question": "What is a Lambda Expression, and why use them?",
+    "isObjective": 0,
+    "options": [],
+    "answer": "",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "intro": "It’s a function that can be referenced and shared as an object. Lambda Expressions require less coding, provide a means of implementing the Java 8 functional interface, and let users encapsulate one behaviour unit to pass around to other code.",
+      "code": "import java.util.*;\n\npublic class LambdaExample {\n    public static void main(String[] args) {\n        List<String> names = Arrays.asList(\"Alok\", \"Heena\", \"Sudhanshu\", \"Shreyank\");\n\n        // Using Lambda Expression to sort\n        Collections.sort(names, (a, b) -> a.compareToIgnoreCase(b));\n\n        // Using forEach with Lambda\n        names.forEach(name -> System.out.println(\"Hello, \" + name));\n    }\n}"
+    }
+  },
+  {
+    "id": 5,
+    "question": "What is a functional interface?",
+    "isObjective": 0,
+    "options": [],
+    "answer": "",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "intro": "A functional interface is an interface that contains just one abstract method."
+    }
+  }
+]

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const PageLayout = ({title, data, image}) => {
+const PageLayout = ({title, data, bgimg, w, h}) => {
 
   return (
     <>
@@ -13,7 +13,9 @@ const PageLayout = ({title, data, image}) => {
                    <div className='h3'>{data}</div>
               </td>
               <td style={{width:'50%', textAlign: 'right'}}>
-                  <img src={image} alt="image" style={{width: '35rem', height: '18rem', marginLeft: '-3rem'}}/>
+                { bgimg &&
+                  <img src={bgimg} alt="image" style={{width: w, height: h, marginLeft: '-3rem'}}/>
+                }
               </td>
           </tr>
       </table>

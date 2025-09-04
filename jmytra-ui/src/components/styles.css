@@ -1,0 +1,28 @@
+.container {
+    padding-left: 10rem;
+    padding-right: 10rem;
+    max-height: 45rem;
+    overflow-y: scroll;
+}
+
+.question {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.explaination {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.code-block {
+  background-color: #2d2d2d; /* dark background */
+  color: #f8f8f2;           /* light text */
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;         /* scroll horizontally if code is wide */
+  font-family: 'Fira Code', 'Courier New', monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  white-space: pre-wrap;    /* keeps wrapping nicely */
+}

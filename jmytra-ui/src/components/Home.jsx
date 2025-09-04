@@ -1,12 +1,11 @@
-import React, { useState } from 'react'
-import { data } from '../menu-data'
+import React from 'react'
 import PageLayout from './PageLayout'
 import './../App.css'
-import image from './../images/java_img.png';
+import './styles.css'
+import bgimg from './../images/java_img.png';
 
 
 const Home = () => {
-  const [menuData] = useState(data)
 
   const val =  <div>
                 <h1>Jmytra4u – Your Friendly Guide to Java and other related skills</h1>
@@ -28,10 +27,9 @@ const Home = () => {
   return (
     <div>
 
-      <div style={{paddingLeft:'10rem', paddingRight: '10rem'}}>
-      <PageLayout title='Welcome to Jmytra4u !' data={val} image={image}/>
+      <div  className='container'>
+      <PageLayout title='Welcome to Jmytra4u !' data={val} bgimg={bgimg} w='35px' h='18px'/>
       </div>
-      <br/>
       <br/>
       <br/>
       <br/>

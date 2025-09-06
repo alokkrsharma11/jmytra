@@ -1,7 +1,7 @@
 import './styles.css'
 import CodeBlock from "./CodeBlock";
 
-const QuizContent = ({ question, technology, intro, points, code }) => {
+const QuizContent = ({ question }) => {
 
   return (
     <div>
@@ -9,24 +9,31 @@ const QuizContent = ({ question, technology, intro, points, code }) => {
       <h5 className="explaination">
       
       {/* Intro line */}
-      {intro && (
+      {question.answer && (
         <p className="mt-3 font-medium text-gray-800">
-          {intro}
+          <h5 className="question">Answer:</h5> {question.answer}
+        </p>
+      )}
+
+      {/* Intro line */}
+      {question.explanation.intro && (
+        <p className="mt-3 font-medium text-gray-800">
+          {question.explanation.intro}
         </p>
       )}
 
       {/* Bullet points */}
-      {points?.length > 0 && (
+      {question.explanation.points?.length > 0 && (
         <ul className="list-disc pl-5 mt-2 space-y-1 text-gray-700">
-          {points.map((point, index) => (
+          {question.explanation.points.map((point, index) => (
             <li key={index}>{point}</li>
           ))}
         </ul>
       )}
 
       {/* Code block */}
-      {code && (
-        <CodeBlock language="java" code={code} />
+      {question.explanation.code && (
+        <CodeBlock language="java" code={question.explanation.code} />
         )}
       </h5>
       

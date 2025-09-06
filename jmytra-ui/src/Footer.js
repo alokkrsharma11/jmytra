@@ -11,11 +11,14 @@ const Footer = () => {
   return (
     <BottomNavigation
       sx={{
+        position: "fixed",
+        bottom: 0,
+        left: 0,
+        width: "100%",
         backgroundColor: "#222",
-        height: "55px",
-        overflow: "hidden",
-        display: "flex",
-        justifyContent: "center",
+        color: "#fff",
+        textAlign: "center",
+        padding: "1rem",
       }}
     >
       <BottomNavigationAction
@@ -102,6 +105,7 @@ const Footer = () => {
           },
         }}
       />
+      © {new Date().getFullYear()} Jmytra. All rights reserved.
     </BottomNavigation>
   );
 };

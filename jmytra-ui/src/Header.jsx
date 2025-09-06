@@ -6,7 +6,8 @@ const Header = ({title, subtitle}) => {
   return (
     <>
 
-      <div style={{paddingRight: '1rem', maxHeight: '8rem'}}>
+      <div style={{paddingRight: '1rem', maxHeight: '8rem',
+      zIndex: 1000,}}>
           <table style={{width:'100%'}}>
             <tr  style={{width:'100%'}}>
                 <td style={{width:'50%'}}>

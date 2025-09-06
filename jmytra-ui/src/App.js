@@ -5,6 +5,7 @@ import Header from './Header';
 import Footer from './Footer'
 import Navbar from "./components/Navbar";
 import JavaTutorial from './components/JavaTutorial';
+import ReactTutorial from './components/ReactTutorial';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
               <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='/JavaTutorial' element={<JavaTutorial />} />
+                <Route path='/ReactTutorial' element={<ReactTutorial />} />
               </Routes>
               </div>
 

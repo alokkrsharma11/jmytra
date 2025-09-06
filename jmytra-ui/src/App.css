@@ -41,3 +41,39 @@ BrowserRouter {
   display: flex;
   gap: 20px; /* space between items */
 }
+
+.css-yiloz8 {
+  background-color: #eee !important;
+  color: black !important;
+}
+
+.css-19oky00 {
+    border-right: 1px solid;
+    /* border-color: rgba(0, 0, 0, 0.12); */
+    /* background-color: #424242; */
+    width: 220px;
+}
+
+.css-6qj85y-MuiTabs-root .MuiTab-root {
+    -webkit-align-items: flex-start;
+    -webkit-box-align: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+    color: #59546b;
+    text-transform: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.css-1vnz3x5 {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    padding: 32px;
+    overflow-y: scroll !important;
+    max-height: 45rem;
+}
+
+.css-1usuzwp-MuiButtonBase-root-MuiTab-root.Mui-selected {
+    /* color: #1976d2; */
+}

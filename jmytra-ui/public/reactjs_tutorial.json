@@ -1,0 +1,150 @@
+[
+    {
+      "title": "CSS Background Properties",
+      "items": [
+        {
+          "name": "Solid Color Background",
+          "example": "background-color: #ff5733;",
+          "description": "Sets a solid color as the background of an element."
+        },
+        {
+          "name": "Background Image",
+          "example": "background-image: url('image.jpg');",
+          "description": "Sets an image as the background of an element."
+        },
+        {
+          "name": "Gradient Backgrounds",
+          "subitems": [
+            {
+              "type": "Linear Gradient",
+              "example": "background-image: linear-gradient(to right, red, yellow);",
+              "description": "Transitions between two or more colors in a straight line."
+            },
+            {
+              "type": "Radial Gradient",
+              "example": "background-image: radial-gradient(circle, red, yellow, green);",
+              "description": "Transitions colors outward from a central point like a circle."
+            }
+          ]
+        },
+        {
+          "name": "Multiple Backgrounds",
+          "example": "background-image: url('image1.jpg'), url('image2.png'), linear-gradient(to bottom, red, blue);",
+          "description": "Allows stacking multiple background images and gradients."
+        },
+        {
+          "name": "Background Position",
+          "example": "background-position: center top;",
+          "description": "Sets background alignment relative to the element."
+        },
+        {
+          "name": "Background Size",
+          "example": "background-size: cover;",
+          "options": ["cover", "contain", "specific dimensions (e.g., 100px 200px)"],
+          "description": "Controls how the background image is scaled."
+        },
+        {
+          "name": "Background Repeat",
+          "example": "background-repeat: no-repeat;",
+          "options": ["repeat", "repeat-x", "repeat-y", "no-repeat"],
+          "description": "Controls if and how the background repeats."
+        },
+        {
+          "name": "Background Attachment",
+          "example": "background-attachment: fixed;",
+          "options": ["scroll", "fixed"],
+          "description": "Determines whether the background scrolls with the page."
+        },
+        {
+          "name": "Background Clip",
+          "example": "background-clip: padding-box;",
+          "options": ["border-box", "padding-box", "content-box"],
+          "description": "Defines how far the background extends within the element."
+        },
+        {
+          "name": "Background Origin",
+          "example": "background-origin: content-box;",
+          "options": ["border-box", "padding-box", "content-box"],
+          "description": "Defines where the background starts positioning from."
+        },
+        {
+          "name": "Background Blend Mode",
+          "example": "background-blend-mode: multiply;",
+          "options": ["multiply", "screen", "overlay"],
+          "description": "Applies blending effects between background layers."
+        }
+      ],
+      "type": "Learning ReactJS"
+    },
+    {
+      "title": "Closures in JavaScript",
+      "definition": "Closures allow inner functions to access variables from their outer function even after the outer function has executed.",
+      "example": "function outer() { let x=10; return function inner(){ return x; } }",
+      "useCases": ["Data privacy", "Function factories", "Event handlers"],
+      "keyPoints": ["Lexical scoping", "State persistence"],
+      "type": "Learning ReactJS"
+    },
+    {
+      "title": "let, const, var in JavaScript",
+      "differences": [
+        {
+          "keyword": "var",
+          "scope": "Function or global",
+          "hoisting": "Hoisted, initialized as undefined",
+          "reassignment": "Allowed"
+        },
+        {
+          "keyword": "let",
+          "scope": "Block",
+          "hoisting": "Hoisted but not accessible before initialization",
+          "reassignment": "Allowed"
+        },
+        {
+          "keyword": "const",
+          "scope": "Block",
+          "hoisting": "Hoisted but not accessible before initialization",
+          "reassignment": "Not allowed (except object/array mutations)"
+        }
+      ],
+      "type": "Learning ReactJS"
+    },
+    {
+      "title": "React Basics",
+      "features": [
+        "Component-based architecture",
+        "JSX syntax",
+        "Virtual DOM",
+        "One-way data binding",
+        "State & Props",
+        "React Hooks",
+        "Declarative UI",
+        "Rich ecosystem & tools"
+      ],
+      "type": "Learning ReactJS"
+    },
+    {
+      "title": "React Lifecycle Methods",
+      "phases": {
+        "Mounting": ["constructor()", "getDerivedStateFromProps()", "render()", "componentDidMount()"],
+        "Updating": ["getDerivedStateFromProps()", "shouldComponentUpdate()", "render()", "getSnapshotBeforeUpdate()", "componentDidUpdate()"],
+        "Unmounting": ["componentWillUnmount()"]
+      },
+      "functionalEquivalent": {
+        "useEffect": "Combines componentDidMount, componentDidUpdate, componentWillUnmount"
+      },
+      "type": "Learning ReactJS"
+    },
+    {
+      "title": "JavaScript Iterations",
+      "loops": ["for", "while", "do...while", "for...of", "for...in"],
+      "arrayMethods": ["forEach", "map", "filter", "reduce", "every", "some", "find", "findIndex"],
+      "type": "Learning ReactJS"
+    },
+    {
+      "title": "Object-Oriented JavaScript",
+      "concepts": ["Objects", "Classes", "Inheritance", "Encapsulation", "Polymorphism"],
+      "exampleClass": "class Car { constructor(make, model){ this.make=make; this.model=model;} start(){console.log('Engine on')}}",
+      "type": "Learning ReactJS"
+    }
+
+  ]

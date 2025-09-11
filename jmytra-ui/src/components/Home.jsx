@@ -8,14 +8,14 @@ import bgimg from './../images/java_img.png';
 const Home = () => {
 
   const val =  <div>
-                <h1>Jmytra4u – Your Friendly Guide to Java and other related skills</h1>
-               <div><p>Learning Java doesn’t have to be hard.
+                <span className="font-semibold text-indigo-600" style={{marginLeft:0}}>Jmytra4u – Your Friendly Guide to Java and other related skills</span>
+               <div><p className="text-lg text-gray-600 leading-relaxed mb-8 mt-5">Learning Java doesn’t have to be hard.
                    At Jmytra4u, we believe in being your mitra (friend) on the journey to mastering Java programming.
                    Whether you’re a beginner or looking to sharpen your skills, you’ll find clear explanations,
                    practical examples, and supportive guidance here.</p></div>
                    <br/>
 
-                   <ul>
+                   <ul className='text-lg text-gray-600 leading-relaxed mb-8'>
                    <div style={{padding: '1rem', marginLeft: '-2rem'}}>🔹 What You’ll Find Here</div>
                     <li style={{padding: '1rem'}}>	📘 Step-by-Step Tutorials – Learn Java from the basics to advanced concepts. </li>
                     <li style={{padding: '1rem'}}>	💻 Practical Code Examples – Understand by doing, not just reading. </li>
@@ -32,7 +32,7 @@ const Home = () => {
       </div>
       <br/>
       <br/>
-      <br/>
+      
     </div>
   );
 }

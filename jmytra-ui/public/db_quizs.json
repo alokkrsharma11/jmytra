@@ -1,0 +1,362 @@
+[
+  {
+    "id": "1",
+    "question": "What is the main difference between a primary key and a unique key in RDBMS?",
+    "isObjective": 1,
+    "type": "MCQ",
+    "options": [
+      "Primary key allows NULL values, Unique key does not",
+      "Primary key does not allow NULL values, Unique key allows one NULL",
+      "Both allow multiple NULL values",
+      "Both do not allow NULL values"
+    ],
+    "answer": "Primary key does not allow NULL values, Unique key allows one NULL",
+    "askedBy": ["interview", "exam"],
+    "technology": "RDBMS",
+    "explanation": {
+      "intro": "Primary and Unique keys are constraints to maintain uniqueness in RDBMS.",
+      "points": [
+        "Primary key uniquely identifies each record in a table.",
+        "Primary key cannot accept NULL values.",
+        "Unique key ensures uniqueness but can accept a single NULL value."
+      ]
+    }
+  },
+  {
+    "id": "2",
+    "question": "Which normal form removes partial dependency?",
+    "isObjective": 1,
+    "type": "MCQ",
+    "options": ["1NF", "2NF", "3NF", "BCNF"],
+    "answer": "2NF",
+    "askedBy": ["university", "mock-test"],
+    "technology": "RDBMS",
+    "explanation": {
+      "intro": "Normalization helps reduce redundancy and improve integrity.",
+      "points": [
+        "1NF removes repeating groups.",
+        "2NF removes partial dependency.",
+        "3NF removes transitive dependency."
+      ]
+    }
+  },
+  {
+    "id": "3",
+    "question": "What is a foreign key in RDBMS?",
+    "isObjective": 0,
+    "type": "Interview",
+    "options": [],
+    "answer": "A foreign key is a field that establishes a relationship between two tables by referencing the primary key of another table.",
+    "askedBy": ["interview"],
+    "technology": "RDBMS",
+    "explanation": {
+      "intro": "Foreign keys maintain referential integrity.",
+      "points": [
+        "It links rows in one table to rows in another.",
+        "It prevents actions that would destroy links between tables."
+      ]
+    }
+  },
+  {
+    "id": "4",
+    "question": "What does ACID stand for in RDBMS transactions?",
+    "isObjective": 1,
+    "type": "MCQ",
+    "options": ["Atomicity, Consistency, Isolation, Durability", "Accuracy, Control, Integrity, Data", "Atomic, Concurrent, Independent, Durable"],
+    "answer": "Atomicity, Consistency, Isolation, Durability",
+    "askedBy": ["exam"],
+    "technology": "RDBMS",
+    "explanation": {
+      "intro": "ACID ensures reliable transactions in databases.",
+      "points": [
+        "Atomicity ensures all or nothing execution.",
+        "Consistency keeps database valid.",
+        "Isolation separates transactions.",
+        "Durability makes results permanent."
+      ]
+    }
+  },
+  {
+    "id": "5",
+    "question": "What is the difference between INNER JOIN and LEFT JOIN?",
+    "isObjective": 0,
+    "type": "Interview",
+    "options": [],
+    "answer": "INNER JOIN returns only matching rows, while LEFT JOIN returns all rows from the left table and matching rows from the right table.",
+    "askedBy": ["mock-test"],
+    "technology": "RDBMS",
+    "explanation": {
+      "intro": "Joins combine data from multiple tables.",
+      "points": [
+        "INNER JOIN → intersection of two tables.",
+        "LEFT JOIN → all rows from left, nulls if no match in right."
+      ]
+    }
+  },
+  {
+    "id": "6",
+    "question": "What is a stored procedure?",
+    "isObjective": 0,
+    "type": "Interview",
+    "options": [],
+    "answer": "A stored procedure is a precompiled collection of SQL statements stored in the database that can be executed as a unit.",
+    "askedBy": ["interview"],
+    "technology": "RDBMS",
+    "explanation": {
+      "intro": "Stored procedures improve performance and security.",
+      "points": [
+        "They reduce network traffic.",
+        "They enforce business logic on the database side."
+      ]
+    }
+  },
+  {
+    "id": "7",
+    "question": "What is an index in RDBMS?",
+    "isObjective": 0,
+    "type": "Interview",
+    "options": [],
+    "answer": "An index is a database object that improves query performance by allowing faster data retrieval.",
+    "askedBy": ["exam"],
+    "technology": "RDBMS",
+    "explanation": {
+      "intro": "Indexes speed up data access.",
+      "points": [
+        "They reduce the number of disk reads.",
+        "Too many indexes can slow down write operations."
+      ]
+    }
+  },
+  {
+    "id": "8",
+    "question": "What is the difference between TRUNCATE and DELETE?",
+    "isObjective": 1,
+    "type": "MCQ",
+    "options": [
+      "DELETE removes all rows permanently, TRUNCATE does not",
+      "TRUNCATE is DDL, DELETE is DML",
+      "DELETE is faster than TRUNCATE",
+      "TRUNCATE allows WHERE clause"
+    ],
+    "answer": "TRUNCATE is DDL, DELETE is DML",
+    "askedBy": ["exam"],
+    "technology": "RDBMS",
+    "explanation": {
+      "intro": "Both remove rows, but differ in behavior.",
+      "points": [
+        "TRUNCATE removes all rows, faster, no WHERE allowed.",
+        "DELETE removes rows conditionally, logged per row."
+      ]
+    }
+  },
+  {
+    "id": "9",
+    "question": "What is a composite key?",
+    "isObjective": 0,
+    "type": "Interview",
+    "options": [],
+    "answer": "A composite key is a combination of two or more columns used to uniquely identify a record.",
+    "askedBy": ["interview"],
+    "technology": "RDBMS",
+    "explanation": {
+      "intro": "Composite keys extend uniqueness.",
+      "points": [
+        "Useful when no single field is unique.",
+        "Combination ensures unique identification."
+      ]
+    }
+  },
+  {
+    "id": "10",
+    "question": "What is normalization?",
+    "isObjective": 0,
+    "type": "Interview",
+    "options": [],
+    "answer": "Normalization is the process of organizing data to reduce redundancy and improve data integrity.",
+    "askedBy": ["exam"],
+    "technology": "RDBMS",
+    "explanation": {
+      "intro": "Normalization prevents anomalies.",
+      "points": [
+        "Reduces duplication.",
+        "Ensures referential integrity.",
+        "Improves storage efficiency."
+      ]
+    }
+  },
+  {
+    "id": "11",
+    "question": "Which command is used to view all databases in MongoDB?",
+    "isObjective": 1,
+    "type": "MCQ",
+    "options": ["show databases", "db.show()", "list databases", "db.listCollections()"],
+    "answer": "show databases",
+    "askedBy": ["exam"],
+    "technology": "MongoDB",
+    "explanation": {
+      "intro": "MongoDB shell provides commands to list databases and collections.",
+      "points": [
+        "Use `show databases` to see all databases.",
+        "Use `show collections` to list collections inside a database."
+      ]
+    }
+  },
+  {
+    "id": "12",
+    "question": "In MongoDB, which data type is used to store unique document identifiers?",
+    "isObjective": 1,
+    "type": "MCQ",
+    "options": ["ObjectId", "UUID", "Primary Key", "Integer"],
+    "answer": "ObjectId",
+    "askedBy": ["interview"],
+    "technology": "MongoDB",
+    "explanation": {
+      "intro": "MongoDB assigns a unique `_id` field to every document.",
+      "points": [
+        "By default, `_id` is of type ObjectId.",
+        "ObjectId ensures uniqueness across clusters."
+      ]
+    }
+  },
+  {
+    "id": "13",
+    "question": "What is a collection in MongoDB?",
+    "isObjective": 0,
+    "type": "Interview",
+    "options": [],
+    "answer": "A collection is a group of MongoDB documents, equivalent to a table in relational databases.",
+    "askedBy": ["exam"],
+    "technology": "MongoDB",
+    "explanation": {
+      "intro": "Collections hold documents.",
+      "points": [
+        "They are schema-less.",
+        "They can store documents of varying structures."
+      ]
+    }
+  },
+  {
+    "id": "14",
+    "question": "Which command is used to insert one document in MongoDB?",
+    "isObjective": 1,
+    "type": "MCQ",
+    "options": ["db.collection.add()", "db.collection.insertOne()", "db.insert()", "db.collection.save()"],
+    "answer": "db.collection.insertOne()",
+    "askedBy": ["mock-test"],
+    "technology": "MongoDB",
+    "explanation": {
+      "intro": "MongoDB provides CRUD operations on collections.",
+      "points": [
+        "`insertOne()` inserts a single document.",
+        "`insertMany()` inserts multiple documents."
+      ]
+    }
+  },
+  {
+    "id": "15",
+    "question": "What is the difference between MongoDB and RDBMS?",
+    "isObjective": 0,
+    "type": "Interview",
+    "options": [],
+    "answer": "MongoDB is a NoSQL, document-oriented database, while RDBMS is a structured, relational database.",
+    "askedBy": ["interview"],
+    "technology": "MongoDB",
+    "explanation": {
+      "intro": "The two database types differ fundamentally.",
+      "points": [
+        "MongoDB stores data as BSON documents.",
+        "RDBMS stores data in tables with rows and columns.",
+        "MongoDB is schema-less, RDBMS is schema-bound."
+      ]
+    }
+  },
+  {
+    "id": "16",
+    "question": "How do you update multiple documents in MongoDB?",
+    "isObjective": 1,
+    "type": "MCQ",
+    "options": ["db.update()", "db.collection.updateMany()", "db.collection.updateAll()", "db.collection.modify()"],
+    "answer": "db.collection.updateMany()",
+    "askedBy": ["exam"],
+    "technology": "MongoDB",
+    "explanation": {
+      "intro": "MongoDB provides update operations.",
+      "points": [
+        "`updateOne()` updates a single document.",
+        "`updateMany()` updates all matching documents."
+      ]
+    }
+  },
+  {
+    "id": "17",
+    "question": "What is the purpose of sharding in MongoDB?",
+    "isObjective": 0,
+    "type": "Interview",
+    "options": [],
+    "answer": "Sharding in MongoDB is the process of distributing data across multiple machines to support horizontal scaling.",
+    "askedBy": ["interview"],
+    "technology": "MongoDB",
+    "explanation": {
+      "intro": "Sharding enables large-scale scalability.",
+      "points": [
+        "It splits data across shards.",
+        "Each shard holds part of the dataset.",
+        "Queries are distributed automatically."
+      ]
+    }
+  },
+  {
+    "id": "18",
+    "question": "Which operator is used for pattern matching in MongoDB queries?",
+    "isObjective": 1,
+    "type": "MCQ",
+    "options": ["LIKE", "$regex", "$match", "$search"],
+    "answer": "$regex",
+    "askedBy": ["exam"],
+    "technology": "MongoDB",
+    "explanation": {
+      "intro": "Pattern matching is often required in queries.",
+      "points": [
+        "MongoDB uses `$regex` for regex-based filtering.",
+        "It works like SQL LIKE operator."
+      ]
+    }
+  },
+  {
+    "id": "19",
+    "question": "What is an aggregation pipeline in MongoDB?",
+    "isObjective": 0,
+    "type": "Interview",
+    "options": [],
+    "answer": "An aggregation pipeline is a framework for transforming documents into aggregated results using stages like $match, $group, and $sort.",
+    "askedBy": ["interview"],
+    "technology": "MongoDB",
+    "explanation": {
+      "intro": "Aggregations process and analyze data.",
+      "points": [
+        "Stages are executed sequentially.",
+        "$match filters documents.",
+        "$group groups documents.",
+        "$sort orders the result."
+      ]
+    }
+  },
+  {
+    "id": "20",
+    "question": "What is the default port used by MongoDB?",
+    "isObjective": 1,
+    "type": "MCQ",
+    "options": ["8080", "3306", "27017", "5432"],
+    "answer": "27017",
+    "askedBy": ["mock-test"],
+    "technology": "MongoDB",
+    "explanation": {
+      "intro": "Each database has a default port.",
+      "points": [
+        "MongoDB → 27017",
+        "MySQL → 3306",
+        "PostgreSQL → 5432"
+      ]
+    }
+  }
+]

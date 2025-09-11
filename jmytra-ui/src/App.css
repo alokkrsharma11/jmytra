@@ -74,6 +74,6 @@ BrowserRouter {
     max-height: 45rem;
 }
 
-.css-1usuzwp-MuiButtonBase-root-MuiTab-root.Mui-selected {
-    /* color: #1976d2; */
+button.MuiButtonBase-root.MuiTab-root.MuiTab-textColorPrimary.Mui-selected.css-1usuzwp-MuiButtonBase-root-MuiTab-root {
+    color: #eee;
 }

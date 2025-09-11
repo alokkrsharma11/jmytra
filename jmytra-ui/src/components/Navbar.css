@@ -11,7 +11,6 @@
 }
 
 .menu-bars {
-  margin-top: 0.5rem;
   margin-left: 2rem;
   font-size: 2rem;
   background: none;
@@ -32,6 +31,7 @@
 .nav-menu.active {
   left: 0;
   transition: 350ms;
+  z-index: 9999;
 }
 
 .nav-menu-items {

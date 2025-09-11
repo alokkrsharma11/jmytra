@@ -4,12 +4,12 @@ import QuizContent from "./QuizContent";
 import PageLayout from "./PageLayout";
 import './../App.css'
 
-const SpringTutorial = () => {
+const DbTutorial = () => {
   const [questions, setQuestions] = useState([]);
   const [tabIndex, setTabIndex] = useState(0);
 
   useEffect(() => {
-    fetch("/spring_quizs.json") // Replace with API later
+    fetch("/db_quizs.json") // Replace with API later
       .then((res) => res.json())
       .then((val) => setQuestions(val))
       .catch((err) => console.error("Error loading JSON:", err));
@@ -78,4 +78,4 @@ const SpringTutorial = () => {
   );
 };
 
-export default SpringTutorial;
+export default DbTutorial;

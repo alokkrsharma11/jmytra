@@ -4,7 +4,7 @@ import CodeBlock from "./CodeBlock";
 const QuizContent = ({ question }) => {
 
   return (
-    <div>
+    <div className='mb-6 p-4 border rounded-lg shadow-sm bg-white text-black'>
       <h5 className="question">Question {question.id} : {question.question}</h5>
       <h5 className="explaination">
       

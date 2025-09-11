@@ -9,7 +9,7 @@ export const SidebarData = [
   { title: "Java", path: "/JavaTutorial", icon: <FaJava />, cName: "nav-text" },
   { title: "Spring Framework", path: "/SpringTutorial", icon: <SiSpring />, cName: "nav-text" },
   { title: "ReactJS", path: "/ReactTutorial", icon: <FaReact />, cName: "nav-text" },
-  { title: "Databases", path: "/DatabaseTutorial", icon: <FaDatabase />, cName: "nav-text" },
+  { title: "Databases", path: "/DbTutorial", icon: <FaDatabase />, cName: "nav-text" },
   { title: "Support", path: "/Support", icon: <IoIcons.IoMdHelpCircle />, cName: "nav-text" },
   { title: "About", path: "/About", icon: <AiIcons.AiOutlineInfoCircle />, cName: "nav-text" },
 ];

@@ -11,7 +11,7 @@ const Header = ({title, subtitle}) => {
           <table style={{width:'100%'}}>
             <tr  style={{width:'100%'}}>
                 <td style={{width:'50%'}}>
-                    <img src={logo} alt="logo" style={{width: '20rem', height: '10rem', marginLeft: '-3rem'}}/>
+                    <img src={logo} alt="logo" style={{width: '17rem', height: '10rem', marginLeft: '-3rem'}}/>
                 </td>
                 <td style={{width:'50%', textAlign: 'right'}}>
                     <div>

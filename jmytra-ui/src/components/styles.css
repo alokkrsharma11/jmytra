@@ -26,3 +26,50 @@
   line-height: 1.5;
   white-space: pre-wrap;    /* keeps wrapping nicely */
 }
+
+.hero-section {
+  height: 100vh;
+  background: linear-gradient(135deg, #007bff, #6610f2);
+  animation: fadeIn 2s ease-in-out;
+}
+
+.slogan {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #29057b;
+  overflow: hidden;
+  border-right: 3px solid #fff;
+  white-space: nowrap;
+  letter-spacing: 2px;
+  /* typing + blinking */
+  animation: typing 2s steps(30, end), blink 0.5s step-end infinite;
+}
+
+/* Make typing reveal text width dynamically */
+@keyframes typing {
+  from {
+    width: 0ch;
+  }
+  to {
+    width: 50%; /* 👈 large enough for your longest slogan */
+  }
+}
+
+@keyframes blink {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #eee;
+  }
+}
+
+/* Fade In */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

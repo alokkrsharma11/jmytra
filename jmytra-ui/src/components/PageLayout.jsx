@@ -10,7 +10,7 @@ const PageLayout = ({title, data, w, h}) => {
       <table style={{width:'100%'}}>
           <tr  style={{width:'100%'}}>
               <td style={{width:'100%'}}>
-                   <div className='h3'>{data}</div>
+                   <div className='h5'>{data}</div>
               </td>
           </tr>
       </table>

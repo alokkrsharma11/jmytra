@@ -79,7 +79,7 @@
     {
       "title": "Closures in JavaScript",
       "definition": "Closures allow inner functions to access variables from their outer function even after the outer function has executed.",
-      "example": "function outer() { let x=10; return function inner(){ return x; } }",
+      "code": "function outer() { let x=10; return function inner(){ return x; } }",
       "useCases": ["Data privacy", "Function factories", "Event handlers"],
       "keyPoints": ["Lexical scoping", "State persistence"],
       "type": "Learning ReactJS"

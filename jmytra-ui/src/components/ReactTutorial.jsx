@@ -187,6 +187,46 @@ const ReactTutorial = () => {
                     </pre>
                 </div>
                 )}
+
+                {/* Closure */}
+                  {/* Render example class */}
+                {topic.definition && (
+                <div>
+                    <h3 className="text-xl mt-2">Definition:</h3>
+                    <p className="bg-gray-100 p-2 rounded mt-1 text-black">
+                    {topic.definition}
+                    </p>
+                </div>
+                )}
+                
+                {topic.useCases && (
+                  <div>
+                    <h3 className="text-xl mt-2">Use Cases:</h3>
+                    <ul className="list-disc ml-6"></ul>
+                {topic.useCases.map((use, idx) => (
+                  
+                  <ul className="list-disc ml-6">
+                    
+                  <li className="bg-gray-100 p-2 rounded mt-1 text-black" key={idx}>✅ {use}</li>
+                  </ul>
+                ))}
+                </div>
+              )}
+
+              {topic.keyPoints && (
+                  <div>
+                    <h3 className="text-xl mt-2">Key Points</h3>
+                    <ul className="list-disc ml-6"></ul>
+                {topic.keyPoints.map((point, idx) => (
+                  
+                  <ul className="list-disc ml-6">
+                    
+                  <li className="bg-gray-100 p-2 rounded mt-1 text-black" key={idx}>✅ {point}</li>
+                  </ul>
+                ))}
+                </div>
+              )}
+
                 </div>
               ))}
             </Box>

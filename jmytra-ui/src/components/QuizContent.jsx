@@ -1,14 +1,22 @@
 import './styles.css'
 import CodeBlock from "./CodeBlock";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import QuizOptions from './QuizOptions';
 
 const QuizContent = ({ question }) => {
 const [selected, setSelected] = useState(null);
+const [quizType, setQuizType] = useState(null);
 
   const handleSelect = (option) => {
     setSelected(option);
   };
+  console.log(question.type);
+
+  useEffect(() => {
+    if(question.type !== 'MCQ') {
+      setQuizType('NonMCQ');
+    }
+  }, [question.type]);
 
   return (
     <div className='mb-6 p-4 border rounded-lg shadow-sm bg-white text-black'>
@@ -48,6 +56,9 @@ const [selected, setSelected] = useState(null);
         </p>
       )}
 
+      {quizType || (selected &&  (
+      
+      <div >
       {/* Intro line */}
       {question.explanation.intro && (
         <p className="mt-3 font-medium text-gray-800">
@@ -68,8 +79,10 @@ const [selected, setSelected] = useState(null);
       {question.explanation.code && (
         <CodeBlock language="java" code={question.explanation.code} />
         )}
+              </div>
+      ))}
       </h5>
-      
+
     </div>
   );
 };

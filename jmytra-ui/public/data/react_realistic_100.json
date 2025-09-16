@@ -1,6 +1,6 @@
 [
   {
-    "id": "reactjs_&_javascript_1",
+    "id": "1",
     "question": "Which hook is used to manage state in functional components?",
     "options": [
       "useState",
@@ -26,7 +26,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_2",
+    "id": "2",
     "question": "What does useEffect hook do?",
     "options": [
       "Manage side-effects",
@@ -52,7 +52,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_3",
+    "id": "3",
     "question": "Which method is used to render React elements to the DOM?",
     "options": [
       "ReactDOM.render",
@@ -78,7 +78,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_4",
+    "id": "4",
     "question": "What is JSX?",
     "options": [
       "A CSS framework",
@@ -104,7 +104,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_5",
+    "id": "5",
     "question": "Which is used for memoization in React?",
     "options": [
       "useMemo",
@@ -130,7 +130,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_6",
+    "id": "6",
     "question": "Explain reconciliation in React.",
     "options": [],
     "answer": "Reconciliation is React's diffing algorithm to update the DOM efficiently by comparing virtual DOM trees and applying minimal changes.",
@@ -149,7 +149,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_7",
+    "id": "7",
     "question": "How do you optimize performance in a React app?",
     "options": [],
     "answer": "Use memoization, code-splitting, virtualization, avoid unnecessary re-renders, usePureComponent/React.memo and appropriate keys.",
@@ -168,7 +168,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_8",
+    "id": "8",
     "question": "What is the default behavior of Async/Await?",
     "options": [
       "Behavior Async/Await",
@@ -194,7 +194,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_9",
+    "id": "9",
     "question": "Explain how Async/Await works in ReactJS & JavaScript.",
     "options": [],
     "answer": "Detailed explanation about Async/Await.",
@@ -213,7 +213,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_10",
+    "id": "10",
     "question": "Which annotation/keyword is used for Context API?",
     "options": [
       "@Context API",
@@ -239,7 +239,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_11",
+    "id": "11",
     "question": "Explain how Context API works in ReactJS & JavaScript.",
     "options": [],
     "answer": "Detailed explanation about Context API.",
@@ -258,7 +258,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_12",
+    "id": "12",
     "question": "Which annotation/keyword is used for Component lifecycle?",
     "options": [
       "@Component lifecycle",
@@ -284,7 +284,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_13",
+    "id": "13",
     "question": "Explain how Component lifecycle works in ReactJS & JavaScript.",
     "options": [],
     "answer": "Detailed explanation about Component lifecycle.",
@@ -303,7 +303,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_14",
+    "id": "14",
     "question": "What is the purpose of Virtual DOM in ReactJS & JavaScript?",
     "options": [
       "Option Virtual DOM",
@@ -329,7 +329,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_15",
+    "id": "15",
     "question": "Explain how Virtual DOM works in ReactJS & JavaScript.",
     "options": [],
     "answer": "Detailed explanation about Virtual DOM.",
@@ -348,7 +348,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_16",
+    "id": "16",
     "question": "Which command is used to JSX?",
     "options": [
       "cmd JSX",
@@ -374,7 +374,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_17",
+    "id": "17",
     "question": "Describe pros and cons of JSX.",
     "options": [],
     "answer": "Pros: ... Cons: ...",
@@ -393,7 +393,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_18",
+    "id": "18",
     "question": "Which command is used to Hooks?",
     "options": [
       "cmd Hooks",
@@ -419,7 +419,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_19",
+    "id": "19",
     "question": "How would you design/implement Hooks in a production system?",
     "options": [],
     "answer": "Design considerations and steps.",
@@ -438,7 +438,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_20",
+    "id": "20",
     "question": "Which command is used to Event handlers?",
     "options": [
       "cmd Event handlers",
@@ -464,7 +464,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_21",
+    "id": "21",
     "question": "How would you design/implement Event handlers in a production system?",
     "options": [],
     "answer": "Design considerations and steps.",
@@ -483,7 +483,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_22",
+    "id": "22",
     "question": "What is the purpose of Event handlers in ReactJS & JavaScript?",
     "options": [
       "Option Event handlers",
@@ -509,7 +509,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_23",
+    "id": "23",
     "question": "Describe pros and cons of Event handlers.",
     "options": [],
     "answer": "Pros: ... Cons: ...",
@@ -528,7 +528,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_24",
+    "id": "24",
     "question": "Which annotation/keyword is used for Closures?",
     "options": [
       "@Closures",
@@ -554,7 +554,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_25",
+    "id": "25",
     "question": "Explain how Closures works in ReactJS & JavaScript.",
     "options": [],
     "answer": "Detailed explanation about Closures.",
@@ -573,7 +573,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_26",
+    "id": "26",
     "question": "What is the purpose of Event handlers in ReactJS & JavaScript?",
     "options": [
       "Option Event handlers",
@@ -599,7 +599,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_27",
+    "id": "27",
     "question": "How would you design/implement Event handlers in a production system?",
     "options": [],
     "answer": "Design considerations and steps.",
@@ -618,7 +618,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_28",
+    "id": "28",
     "question": "Which command is used to Closures?",
     "options": [
       "cmd Closures",
@@ -644,7 +644,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_29",
+    "id": "29",
     "question": "Describe pros and cons of Closures.",
     "options": [],
     "answer": "Pros: ... Cons: ...",
@@ -663,7 +663,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_30",
+    "id": "30",
     "question": "Which statement about Async/Await is correct?",
     "options": [
       "True for Async/Await",
@@ -689,7 +689,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_31",
+    "id": "31",
     "question": "How would you design/implement Async/Await in a production system?",
     "options": [],
     "answer": "Design considerations and steps.",
@@ -708,7 +708,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_32",
+    "id": "32",
     "question": "What is the purpose of Promises in ReactJS & JavaScript?",
     "options": [
       "Option Promises",
@@ -734,7 +734,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_33",
+    "id": "33",
     "question": "Explain how Promises works in ReactJS & JavaScript.",
     "options": [],
     "answer": "Detailed explanation about Promises.",
@@ -753,7 +753,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_34",
+    "id": "34",
     "question": "What is the default behavior of Async/Await?",
     "options": [
       "Behavior Async/Await",
@@ -779,7 +779,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_35",
+    "id": "35",
     "question": "How would you design/implement Async/Await in a production system?",
     "options": [],
     "answer": "Design considerations and steps.",
@@ -798,7 +798,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_36",
+    "id": "36",
     "question": "What is the default behavior of Promises?",
     "options": [
       "Behavior Promises",
@@ -824,7 +824,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_37",
+    "id": "37",
     "question": "Describe pros and cons of Promises.",
     "options": [],
     "answer": "Pros: ... Cons: ...",
@@ -843,7 +843,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_38",
+    "id": "38",
     "question": "What is the purpose of JSX in ReactJS & JavaScript?",
     "options": [
       "Option JSX",
@@ -869,7 +869,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_39",
+    "id": "39",
     "question": "Describe pros and cons of JSX.",
     "options": [],
     "answer": "Pros: ... Cons: ...",
@@ -888,7 +888,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_40",
+    "id": "40",
     "question": "Which statement about Context API is correct?",
     "options": [
       "True for Context API",
@@ -914,7 +914,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_41",
+    "id": "41",
     "question": "Explain how Context API works in ReactJS & JavaScript.",
     "options": [],
     "answer": "Detailed explanation about Context API.",
@@ -933,7 +933,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_42",
+    "id": "42",
     "question": "Which annotation/keyword is used for Closures?",
     "options": [
       "@Closures",
@@ -959,7 +959,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_43",
+    "id": "43",
     "question": "Describe pros and cons of Closures.",
     "options": [],
     "answer": "Pros: ... Cons: ...",
@@ -978,7 +978,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_44",
+    "id": "44",
     "question": "Which statement about Closures is correct?",
     "options": [
       "True for Closures",
@@ -1004,7 +1004,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_45",
+    "id": "45",
     "question": "Explain how Closures works in ReactJS & JavaScript.",
     "options": [],
     "answer": "Detailed explanation about Closures.",
@@ -1023,7 +1023,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_46",
+    "id": "46",
     "question": "What is the purpose of Component lifecycle in ReactJS & JavaScript?",
     "options": [
       "Option Component lifecycle",
@@ -1049,7 +1049,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_47",
+    "id": "47",
     "question": "How would you design/implement Component lifecycle in a production system?",
     "options": [],
     "answer": "Design considerations and steps.",
@@ -1068,7 +1068,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_48",
+    "id": "48",
     "question": "Which statement about Component lifecycle is correct?",
     "options": [
       "True for Component lifecycle",
@@ -1094,7 +1094,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_49",
+    "id": "49",
     "question": "Describe pros and cons of Component lifecycle.",
     "options": [],
     "answer": "Pros: ... Cons: ...",
@@ -1113,7 +1113,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_50",
+    "id": "50",
     "question": "Which annotation/keyword is used for Context API?",
     "options": [
       "@Context API",
@@ -1139,7 +1139,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_51",
+    "id": "51",
     "question": "Describe pros and cons of Context API.",
     "options": [],
     "answer": "Pros: ... Cons: ...",
@@ -1158,7 +1158,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_52",
+    "id": "52",
     "question": "What is the default behavior of Redux?",
     "options": [
       "Behavior Redux",
@@ -1184,7 +1184,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_53",
+    "id": "53",
     "question": "Describe pros and cons of Redux.",
     "options": [],
     "answer": "Pros: ... Cons: ...",
@@ -1203,7 +1203,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_54",
+    "id": "54",
     "question": "What is the purpose of Hooks in ReactJS & JavaScript?",
     "options": [
       "Option Hooks",
@@ -1229,7 +1229,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_55",
+    "id": "55",
     "question": "Explain how Hooks works in ReactJS & JavaScript.",
     "options": [],
     "answer": "Detailed explanation about Hooks.",
@@ -1248,7 +1248,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_56",
+    "id": "56",
     "question": "What is the default behavior of JSX?",
     "options": [
       "Behavior JSX",
@@ -1274,7 +1274,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_57",
+    "id": "57",
     "question": "How would you design/implement JSX in a production system?",
     "options": [],
     "answer": "Design considerations and steps.",
@@ -1293,7 +1293,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_58",
+    "id": "58",
     "question": "Which annotation/keyword is used for Closures?",
     "options": [
       "@Closures",
@@ -1319,7 +1319,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_59",
+    "id": "59",
     "question": "Describe pros and cons of Closures.",
     "options": [],
     "answer": "Pros: ... Cons: ...",
@@ -1338,7 +1338,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_60",
+    "id": "60",
     "question": "Which annotation/keyword is used for Context API?",
     "options": [
       "@Context API",
@@ -1364,7 +1364,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_61",
+    "id": "61",
     "question": "Describe pros and cons of Context API.",
     "options": [],
     "answer": "Pros: ... Cons: ...",
@@ -1383,7 +1383,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_62",
+    "id": "62",
     "question": "Which command is used to Promises?",
     "options": [
       "cmd Promises",
@@ -1409,7 +1409,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_63",
+    "id": "63",
     "question": "Explain how Promises works in ReactJS & JavaScript.",
     "options": [],
     "answer": "Detailed explanation about Promises.",
@@ -1428,7 +1428,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_64",
+    "id": "64",
     "question": "What is the default behavior of Event handlers?",
     "options": [
       "Behavior Event handlers",
@@ -1454,7 +1454,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_65",
+    "id": "65",
     "question": "Explain how Event handlers works in ReactJS & JavaScript.",
     "options": [],
     "answer": "Detailed explanation about Event handlers.",
@@ -1473,7 +1473,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_66",
+    "id": "66",
     "question": "Which statement about Context API is correct?",
     "options": [
       "True for Context API",
@@ -1499,7 +1499,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_67",
+    "id": "67",
     "question": "How would you design/implement Context API in a production system?",
     "options": [],
     "answer": "Design considerations and steps.",
@@ -1518,7 +1518,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_68",
+    "id": "68",
     "question": "What is the default behavior of Hooks?",
     "options": [
       "Behavior Hooks",
@@ -1544,7 +1544,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_69",
+    "id": "69",
     "question": "Describe pros and cons of Hooks.",
     "options": [],
     "answer": "Pros: ... Cons: ...",
@@ -1563,7 +1563,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_70",
+    "id": "70",
     "question": "What is the purpose of Async/Await in ReactJS & JavaScript?",
     "options": [
       "Option Async/Await",
@@ -1589,7 +1589,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_71",
+    "id": "71",
     "question": "Describe pros and cons of Async/Await.",
     "options": [],
     "answer": "Pros: ... Cons: ...",
@@ -1608,7 +1608,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_72",
+    "id": "72",
     "question": "Which command is used to Virtual DOM?",
     "options": [
       "cmd Virtual DOM",
@@ -1634,7 +1634,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_73",
+    "id": "73",
     "question": "How would you design/implement Virtual DOM in a production system?",
     "options": [],
     "answer": "Design considerations and steps.",
@@ -1653,7 +1653,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_74",
+    "id": "74",
     "question": "What is the default behavior of Context API?",
     "options": [
       "Behavior Context API",
@@ -1679,7 +1679,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_75",
+    "id": "75",
     "question": "Explain how Context API works in ReactJS & JavaScript.",
     "options": [],
     "answer": "Detailed explanation about Context API.",
@@ -1698,7 +1698,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_76",
+    "id": "76",
     "question": "Which command is used to JSX?",
     "options": [
       "cmd JSX",
@@ -1724,7 +1724,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_77",
+    "id": "77",
     "question": "Describe pros and cons of JSX.",
     "options": [],
     "answer": "Pros: ... Cons: ...",
@@ -1743,7 +1743,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_78",
+    "id": "78",
     "question": "What is the default behavior of Redux?",
     "options": [
       "Behavior Redux",
@@ -1769,7 +1769,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_79",
+    "id": "79",
     "question": "Explain how Redux works in ReactJS & JavaScript.",
     "options": [],
     "answer": "Detailed explanation about Redux.",
@@ -1788,7 +1788,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_80",
+    "id": "80",
     "question": "Which statement about Event handlers is correct?",
     "options": [
       "True for Event handlers",
@@ -1814,7 +1814,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_81",
+    "id": "81",
     "question": "Describe pros and cons of Event handlers.",
     "options": [],
     "answer": "Pros: ... Cons: ...",
@@ -1833,7 +1833,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_82",
+    "id": "82",
     "question": "Which statement about Hooks is correct?",
     "options": [
       "True for Hooks",
@@ -1859,7 +1859,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_83",
+    "id": "83",
     "question": "Explain how Hooks works in ReactJS & JavaScript.",
     "options": [],
     "answer": "Detailed explanation about Hooks.",
@@ -1878,7 +1878,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_84",
+    "id": "84",
     "question": "Which annotation/keyword is used for Redux?",
     "options": [
       "@Redux",
@@ -1904,7 +1904,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_85",
+    "id": "85",
     "question": "Explain how Redux works in ReactJS & JavaScript.",
     "options": [],
     "answer": "Detailed explanation about Redux.",
@@ -1923,7 +1923,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_86",
+    "id": "86",
     "question": "Which statement about Event handlers is correct?",
     "options": [
       "True for Event handlers",
@@ -1949,7 +1949,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_87",
+    "id": "87",
     "question": "How would you design/implement Event handlers in a production system?",
     "options": [],
     "answer": "Design considerations and steps.",
@@ -1968,7 +1968,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_88",
+    "id": "88",
     "question": "Which statement about Hooks is correct?",
     "options": [
       "True for Hooks",
@@ -1994,7 +1994,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_89",
+    "id": "89",
     "question": "How would you design/implement Hooks in a production system?",
     "options": [],
     "answer": "Design considerations and steps.",
@@ -2013,7 +2013,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_90",
+    "id": "90",
     "question": "Which command is used to Context API?",
     "options": [
       "cmd Context API",
@@ -2039,7 +2039,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_91",
+    "id": "91",
     "question": "Explain how Context API works in ReactJS & JavaScript.",
     "options": [],
     "answer": "Detailed explanation about Context API.",
@@ -2058,7 +2058,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_92",
+    "id": "92",
     "question": "Which annotation/keyword is used for Async/Await?",
     "options": [
       "@Async/Await",
@@ -2084,7 +2084,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_93",
+    "id": "93",
     "question": "How would you design/implement Async/Await in a production system?",
     "options": [],
     "answer": "Design considerations and steps.",
@@ -2103,7 +2103,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_94",
+    "id": "94",
     "question": "Which command is used to Component lifecycle?",
     "options": [
       "cmd Component lifecycle",
@@ -2129,7 +2129,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_95",
+    "id": "95",
     "question": "Describe pros and cons of Component lifecycle.",
     "options": [],
     "answer": "Pros: ... Cons: ...",
@@ -2148,7 +2148,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_96",
+    "id": "96",
     "question": "What is the purpose of Closures in ReactJS & JavaScript?",
     "options": [
       "Option Closures",
@@ -2174,7 +2174,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_97",
+    "id": "97",
     "question": "Describe pros and cons of Closures.",
     "options": [],
     "answer": "Pros: ... Cons: ...",
@@ -2193,7 +2193,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_98",
+    "id": "98",
     "question": "What is the default behavior of Closures?",
     "options": [
       "Behavior Closures",
@@ -2219,7 +2219,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_99",
+    "id": "99",
     "question": "Explain how Closures works in ReactJS & JavaScript.",
     "options": [],
     "answer": "Detailed explanation about Closures.",
@@ -2238,7 +2238,7 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "reactjs_&_javascript_100",
+    "id": "100",
     "question": "What is the purpose of JSX in ReactJS & JavaScript?",
     "options": [
       "Option JSX",

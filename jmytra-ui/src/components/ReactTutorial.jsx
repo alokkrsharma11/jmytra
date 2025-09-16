@@ -3,20 +3,37 @@ import React, { useState, useEffect } from "react";
 import PageLayout from "./PageLayout";
 import { Box, Tabs, Tab } from "@mui/material";
 import './../App.css'
+import QuizContent from "./QuizContent";
 
 const ReactTutorial = () => {
   const [topics, setTopics] = useState([]);
+  const [quizA, setQuizA] = useState([]);
+  const [quizB, setQuizB] = useState([]);
   const [tabIndex, setTabIndex] = useState(0);
 
+  // Load first quiz
   useEffect(() => {
-    fetch("/reactjs_tutorial.json") // Replace with API later
+    fetch("./data/react_realistic_100.json")
       .then((res) => res.json())
-      .then((val) => {
-        console.log("Loaded JSON:", val);
-        setTopics(val);
-      })
+      .then((val) => setQuizA(val))
       .catch((err) => console.error("Error loading JSON:", err));
   }, []);
+
+  // Load second quiz
+  useEffect(() => {
+    fetch("/reactjs_tutorial.json")
+      .then((res) => res.json())
+      .then((val) => setQuizB(val))
+      .catch((err) => console.error("Error loading JSON:", err));
+  }, []);
+
+  // Merge both when either changes
+  useEffect(() => {
+    if (quizA.length > 0 || quizB.length > 0) {
+      setTopics([...quizA, ...quizB]);
+    }
+  }, [quizA, quizB]);
+
 
   // Group questions by type
   const grouped = topics.reduce((acc, q) => {
@@ -71,13 +88,22 @@ const ReactTutorial = () => {
         {types.map((type, index) =>
           tabIndex === index && (
             <Box key={type} sx={{ mb: 4 }}>
-              <PageLayout title={`📘 ${type} Questions`} />
+              
+                <PageLayout title={`📘 ${type} Questions`} />
+              
+              
 
               {grouped[type].map((topic, i) => (
+                <>
+                {topic.askedBy ? (
+                  <QuizContent  key={type} question={topic}/>
+                ):(
                 <div key={i} className="mb-6 p-4 border rounded-lg shadow-sm bg-white text-black">
+                  
                   <h2 className="text-2xl font-semibold mb-3">
                     {topic.question || topic.title}
                   </h2>
+                  
 
                   {/* Render items if they exist */}
                   {topic.items && (
@@ -226,8 +252,9 @@ const ReactTutorial = () => {
                 ))}
                 </div>
               )}
-
                 </div>
+                )}
+                </>  
               ))}
             </Box>
           )

@@ -1,0 +1,2266 @@
+[
+  {
+    "id": "reactjs_&_javascript_1",
+    "question": "Which hook is used to manage state in functional components?",
+    "options": [
+      "useState",
+      "useEffect",
+      "useContext",
+      "useReducer"
+    ],
+    "answer": "useState",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which hook is used to manage state in functional components?",
+      "points": [
+        "Correct answer: useState.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_2",
+    "question": "What does useEffect hook do?",
+    "options": [
+      "Manage side-effects",
+      "Create components",
+      "Style components",
+      "Handle events"
+    ],
+    "answer": "Manage side-effects",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What does useEffect hook do?",
+      "points": [
+        "Correct answer: Manage side-effects.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_3",
+    "question": "Which method is used to render React elements to the DOM?",
+    "options": [
+      "ReactDOM.render",
+      "renderDOM",
+      "React.renderDOM",
+      "mount"
+    ],
+    "answer": "ReactDOM.render",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which method is used to render React elements to the DOM?",
+      "points": [
+        "Correct answer: ReactDOM.render.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_4",
+    "question": "What is JSX?",
+    "options": [
+      "A CSS framework",
+      "A syntax extension to write HTML in JavaScript",
+      "A testing library",
+      "A build tool"
+    ],
+    "answer": "A syntax extension to write HTML in JavaScript",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is JSX?",
+      "points": [
+        "Correct answer: A syntax extension to write HTML in JavaScript.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_5",
+    "question": "Which is used for memoization in React?",
+    "options": [
+      "useMemo",
+      "useCallback",
+      "React.memo",
+      "All of the above"
+    ],
+    "answer": "All of the above",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which is used for memoization in React?",
+      "points": [
+        "Correct answer: All of the above.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_6",
+    "question": "Explain reconciliation in React.",
+    "options": [],
+    "answer": "Reconciliation is React's diffing algorithm to update the DOM efficiently by comparing virtual DOM trees and applying minimal changes.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain reconciliation in React.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_7",
+    "question": "How do you optimize performance in a React app?",
+    "options": [],
+    "answer": "Use memoization, code-splitting, virtualization, avoid unnecessary re-renders, usePureComponent/React.memo and appropriate keys.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: How do you optimize performance in a React app?",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_8",
+    "question": "What is the default behavior of Async/Await?",
+    "options": [
+      "Behavior Async/Await",
+      "Behavior B",
+      "Behavior C",
+      "Behavior D"
+    ],
+    "answer": "Behavior Async/Await",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the default behavior of Async/Await?",
+      "points": [
+        "Correct answer: Behavior Async/Await.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_9",
+    "question": "Explain how Async/Await works in ReactJS & JavaScript.",
+    "options": [],
+    "answer": "Detailed explanation about Async/Await.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Async/Await works in ReactJS & JavaScript.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_10",
+    "question": "Which annotation/keyword is used for Context API?",
+    "options": [
+      "@Context API",
+      "@B",
+      "@C",
+      "@D"
+    ],
+    "answer": "@Context API",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which annotation/keyword is used for Context API?",
+      "points": [
+        "Correct answer: @Context API.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_11",
+    "question": "Explain how Context API works in ReactJS & JavaScript.",
+    "options": [],
+    "answer": "Detailed explanation about Context API.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Context API works in ReactJS & JavaScript.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_12",
+    "question": "Which annotation/keyword is used for Component lifecycle?",
+    "options": [
+      "@Component lifecycle",
+      "@B",
+      "@C",
+      "@D"
+    ],
+    "answer": "@Component lifecycle",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which annotation/keyword is used for Component lifecycle?",
+      "points": [
+        "Correct answer: @Component lifecycle.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_13",
+    "question": "Explain how Component lifecycle works in ReactJS & JavaScript.",
+    "options": [],
+    "answer": "Detailed explanation about Component lifecycle.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Component lifecycle works in ReactJS & JavaScript.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_14",
+    "question": "What is the purpose of Virtual DOM in ReactJS & JavaScript?",
+    "options": [
+      "Option Virtual DOM",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": "Option Virtual DOM",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the purpose of Virtual DOM in ReactJS & JavaScript?",
+      "points": [
+        "Correct answer: Option Virtual DOM.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_15",
+    "question": "Explain how Virtual DOM works in ReactJS & JavaScript.",
+    "options": [],
+    "answer": "Detailed explanation about Virtual DOM.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Virtual DOM works in ReactJS & JavaScript.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_16",
+    "question": "Which command is used to JSX?",
+    "options": [
+      "cmd JSX",
+      "cmd B",
+      "cmd C",
+      "cmd D"
+    ],
+    "answer": "cmd JSX",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which command is used to JSX?",
+      "points": [
+        "Correct answer: cmd JSX.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_17",
+    "question": "Describe pros and cons of JSX.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of JSX.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_18",
+    "question": "Which command is used to Hooks?",
+    "options": [
+      "cmd Hooks",
+      "cmd B",
+      "cmd C",
+      "cmd D"
+    ],
+    "answer": "cmd Hooks",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which command is used to Hooks?",
+      "points": [
+        "Correct answer: cmd Hooks.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_19",
+    "question": "How would you design/implement Hooks in a production system?",
+    "options": [],
+    "answer": "Design considerations and steps.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: How would you design/implement Hooks in a production system?",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_20",
+    "question": "Which command is used to Event handlers?",
+    "options": [
+      "cmd Event handlers",
+      "cmd B",
+      "cmd C",
+      "cmd D"
+    ],
+    "answer": "cmd Event handlers",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which command is used to Event handlers?",
+      "points": [
+        "Correct answer: cmd Event handlers.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_21",
+    "question": "How would you design/implement Event handlers in a production system?",
+    "options": [],
+    "answer": "Design considerations and steps.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: How would you design/implement Event handlers in a production system?",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_22",
+    "question": "What is the purpose of Event handlers in ReactJS & JavaScript?",
+    "options": [
+      "Option Event handlers",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": "Option Event handlers",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the purpose of Event handlers in ReactJS & JavaScript?",
+      "points": [
+        "Correct answer: Option Event handlers.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_23",
+    "question": "Describe pros and cons of Event handlers.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of Event handlers.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_24",
+    "question": "Which annotation/keyword is used for Closures?",
+    "options": [
+      "@Closures",
+      "@B",
+      "@C",
+      "@D"
+    ],
+    "answer": "@Closures",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which annotation/keyword is used for Closures?",
+      "points": [
+        "Correct answer: @Closures.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_25",
+    "question": "Explain how Closures works in ReactJS & JavaScript.",
+    "options": [],
+    "answer": "Detailed explanation about Closures.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Closures works in ReactJS & JavaScript.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_26",
+    "question": "What is the purpose of Event handlers in ReactJS & JavaScript?",
+    "options": [
+      "Option Event handlers",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": "Option Event handlers",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the purpose of Event handlers in ReactJS & JavaScript?",
+      "points": [
+        "Correct answer: Option Event handlers.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_27",
+    "question": "How would you design/implement Event handlers in a production system?",
+    "options": [],
+    "answer": "Design considerations and steps.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: How would you design/implement Event handlers in a production system?",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_28",
+    "question": "Which command is used to Closures?",
+    "options": [
+      "cmd Closures",
+      "cmd B",
+      "cmd C",
+      "cmd D"
+    ],
+    "answer": "cmd Closures",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which command is used to Closures?",
+      "points": [
+        "Correct answer: cmd Closures.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_29",
+    "question": "Describe pros and cons of Closures.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of Closures.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_30",
+    "question": "Which statement about Async/Await is correct?",
+    "options": [
+      "True for Async/Await",
+      "True for B",
+      "True for C",
+      "None"
+    ],
+    "answer": "True for Async/Await",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which statement about Async/Await is correct?",
+      "points": [
+        "Correct answer: True for Async/Await.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_31",
+    "question": "How would you design/implement Async/Await in a production system?",
+    "options": [],
+    "answer": "Design considerations and steps.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: How would you design/implement Async/Await in a production system?",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_32",
+    "question": "What is the purpose of Promises in ReactJS & JavaScript?",
+    "options": [
+      "Option Promises",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": "Option Promises",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the purpose of Promises in ReactJS & JavaScript?",
+      "points": [
+        "Correct answer: Option Promises.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_33",
+    "question": "Explain how Promises works in ReactJS & JavaScript.",
+    "options": [],
+    "answer": "Detailed explanation about Promises.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Promises works in ReactJS & JavaScript.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_34",
+    "question": "What is the default behavior of Async/Await?",
+    "options": [
+      "Behavior Async/Await",
+      "Behavior B",
+      "Behavior C",
+      "Behavior D"
+    ],
+    "answer": "Behavior Async/Await",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the default behavior of Async/Await?",
+      "points": [
+        "Correct answer: Behavior Async/Await.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_35",
+    "question": "How would you design/implement Async/Await in a production system?",
+    "options": [],
+    "answer": "Design considerations and steps.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: How would you design/implement Async/Await in a production system?",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_36",
+    "question": "What is the default behavior of Promises?",
+    "options": [
+      "Behavior Promises",
+      "Behavior B",
+      "Behavior C",
+      "Behavior D"
+    ],
+    "answer": "Behavior Promises",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the default behavior of Promises?",
+      "points": [
+        "Correct answer: Behavior Promises.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_37",
+    "question": "Describe pros and cons of Promises.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of Promises.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_38",
+    "question": "What is the purpose of JSX in ReactJS & JavaScript?",
+    "options": [
+      "Option JSX",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": "Option JSX",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the purpose of JSX in ReactJS & JavaScript?",
+      "points": [
+        "Correct answer: Option JSX.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_39",
+    "question": "Describe pros and cons of JSX.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of JSX.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_40",
+    "question": "Which statement about Context API is correct?",
+    "options": [
+      "True for Context API",
+      "True for B",
+      "True for C",
+      "None"
+    ],
+    "answer": "True for Context API",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which statement about Context API is correct?",
+      "points": [
+        "Correct answer: True for Context API.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_41",
+    "question": "Explain how Context API works in ReactJS & JavaScript.",
+    "options": [],
+    "answer": "Detailed explanation about Context API.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Context API works in ReactJS & JavaScript.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_42",
+    "question": "Which annotation/keyword is used for Closures?",
+    "options": [
+      "@Closures",
+      "@B",
+      "@C",
+      "@D"
+    ],
+    "answer": "@Closures",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which annotation/keyword is used for Closures?",
+      "points": [
+        "Correct answer: @Closures.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_43",
+    "question": "Describe pros and cons of Closures.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of Closures.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_44",
+    "question": "Which statement about Closures is correct?",
+    "options": [
+      "True for Closures",
+      "True for B",
+      "True for C",
+      "None"
+    ],
+    "answer": "True for Closures",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which statement about Closures is correct?",
+      "points": [
+        "Correct answer: True for Closures.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_45",
+    "question": "Explain how Closures works in ReactJS & JavaScript.",
+    "options": [],
+    "answer": "Detailed explanation about Closures.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Closures works in ReactJS & JavaScript.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_46",
+    "question": "What is the purpose of Component lifecycle in ReactJS & JavaScript?",
+    "options": [
+      "Option Component lifecycle",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": "Option Component lifecycle",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the purpose of Component lifecycle in ReactJS & JavaScript?",
+      "points": [
+        "Correct answer: Option Component lifecycle.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_47",
+    "question": "How would you design/implement Component lifecycle in a production system?",
+    "options": [],
+    "answer": "Design considerations and steps.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: How would you design/implement Component lifecycle in a production system?",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_48",
+    "question": "Which statement about Component lifecycle is correct?",
+    "options": [
+      "True for Component lifecycle",
+      "True for B",
+      "True for C",
+      "None"
+    ],
+    "answer": "True for Component lifecycle",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which statement about Component lifecycle is correct?",
+      "points": [
+        "Correct answer: True for Component lifecycle.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_49",
+    "question": "Describe pros and cons of Component lifecycle.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of Component lifecycle.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_50",
+    "question": "Which annotation/keyword is used for Context API?",
+    "options": [
+      "@Context API",
+      "@B",
+      "@C",
+      "@D"
+    ],
+    "answer": "@Context API",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which annotation/keyword is used for Context API?",
+      "points": [
+        "Correct answer: @Context API.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_51",
+    "question": "Describe pros and cons of Context API.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of Context API.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_52",
+    "question": "What is the default behavior of Redux?",
+    "options": [
+      "Behavior Redux",
+      "Behavior B",
+      "Behavior C",
+      "Behavior D"
+    ],
+    "answer": "Behavior Redux",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the default behavior of Redux?",
+      "points": [
+        "Correct answer: Behavior Redux.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_53",
+    "question": "Describe pros and cons of Redux.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of Redux.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_54",
+    "question": "What is the purpose of Hooks in ReactJS & JavaScript?",
+    "options": [
+      "Option Hooks",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": "Option Hooks",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the purpose of Hooks in ReactJS & JavaScript?",
+      "points": [
+        "Correct answer: Option Hooks.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_55",
+    "question": "Explain how Hooks works in ReactJS & JavaScript.",
+    "options": [],
+    "answer": "Detailed explanation about Hooks.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Hooks works in ReactJS & JavaScript.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_56",
+    "question": "What is the default behavior of JSX?",
+    "options": [
+      "Behavior JSX",
+      "Behavior B",
+      "Behavior C",
+      "Behavior D"
+    ],
+    "answer": "Behavior JSX",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the default behavior of JSX?",
+      "points": [
+        "Correct answer: Behavior JSX.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_57",
+    "question": "How would you design/implement JSX in a production system?",
+    "options": [],
+    "answer": "Design considerations and steps.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: How would you design/implement JSX in a production system?",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_58",
+    "question": "Which annotation/keyword is used for Closures?",
+    "options": [
+      "@Closures",
+      "@B",
+      "@C",
+      "@D"
+    ],
+    "answer": "@Closures",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which annotation/keyword is used for Closures?",
+      "points": [
+        "Correct answer: @Closures.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_59",
+    "question": "Describe pros and cons of Closures.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of Closures.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_60",
+    "question": "Which annotation/keyword is used for Context API?",
+    "options": [
+      "@Context API",
+      "@B",
+      "@C",
+      "@D"
+    ],
+    "answer": "@Context API",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which annotation/keyword is used for Context API?",
+      "points": [
+        "Correct answer: @Context API.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_61",
+    "question": "Describe pros and cons of Context API.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of Context API.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_62",
+    "question": "Which command is used to Promises?",
+    "options": [
+      "cmd Promises",
+      "cmd B",
+      "cmd C",
+      "cmd D"
+    ],
+    "answer": "cmd Promises",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which command is used to Promises?",
+      "points": [
+        "Correct answer: cmd Promises.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_63",
+    "question": "Explain how Promises works in ReactJS & JavaScript.",
+    "options": [],
+    "answer": "Detailed explanation about Promises.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Promises works in ReactJS & JavaScript.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_64",
+    "question": "What is the default behavior of Event handlers?",
+    "options": [
+      "Behavior Event handlers",
+      "Behavior B",
+      "Behavior C",
+      "Behavior D"
+    ],
+    "answer": "Behavior Event handlers",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the default behavior of Event handlers?",
+      "points": [
+        "Correct answer: Behavior Event handlers.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_65",
+    "question": "Explain how Event handlers works in ReactJS & JavaScript.",
+    "options": [],
+    "answer": "Detailed explanation about Event handlers.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Event handlers works in ReactJS & JavaScript.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_66",
+    "question": "Which statement about Context API is correct?",
+    "options": [
+      "True for Context API",
+      "True for B",
+      "True for C",
+      "None"
+    ],
+    "answer": "True for Context API",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which statement about Context API is correct?",
+      "points": [
+        "Correct answer: True for Context API.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_67",
+    "question": "How would you design/implement Context API in a production system?",
+    "options": [],
+    "answer": "Design considerations and steps.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: How would you design/implement Context API in a production system?",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_68",
+    "question": "What is the default behavior of Hooks?",
+    "options": [
+      "Behavior Hooks",
+      "Behavior B",
+      "Behavior C",
+      "Behavior D"
+    ],
+    "answer": "Behavior Hooks",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the default behavior of Hooks?",
+      "points": [
+        "Correct answer: Behavior Hooks.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_69",
+    "question": "Describe pros and cons of Hooks.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of Hooks.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_70",
+    "question": "What is the purpose of Async/Await in ReactJS & JavaScript?",
+    "options": [
+      "Option Async/Await",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": "Option Async/Await",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the purpose of Async/Await in ReactJS & JavaScript?",
+      "points": [
+        "Correct answer: Option Async/Await.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_71",
+    "question": "Describe pros and cons of Async/Await.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of Async/Await.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_72",
+    "question": "Which command is used to Virtual DOM?",
+    "options": [
+      "cmd Virtual DOM",
+      "cmd B",
+      "cmd C",
+      "cmd D"
+    ],
+    "answer": "cmd Virtual DOM",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which command is used to Virtual DOM?",
+      "points": [
+        "Correct answer: cmd Virtual DOM.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_73",
+    "question": "How would you design/implement Virtual DOM in a production system?",
+    "options": [],
+    "answer": "Design considerations and steps.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: How would you design/implement Virtual DOM in a production system?",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_74",
+    "question": "What is the default behavior of Context API?",
+    "options": [
+      "Behavior Context API",
+      "Behavior B",
+      "Behavior C",
+      "Behavior D"
+    ],
+    "answer": "Behavior Context API",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the default behavior of Context API?",
+      "points": [
+        "Correct answer: Behavior Context API.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_75",
+    "question": "Explain how Context API works in ReactJS & JavaScript.",
+    "options": [],
+    "answer": "Detailed explanation about Context API.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Context API works in ReactJS & JavaScript.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_76",
+    "question": "Which command is used to JSX?",
+    "options": [
+      "cmd JSX",
+      "cmd B",
+      "cmd C",
+      "cmd D"
+    ],
+    "answer": "cmd JSX",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which command is used to JSX?",
+      "points": [
+        "Correct answer: cmd JSX.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_77",
+    "question": "Describe pros and cons of JSX.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of JSX.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_78",
+    "question": "What is the default behavior of Redux?",
+    "options": [
+      "Behavior Redux",
+      "Behavior B",
+      "Behavior C",
+      "Behavior D"
+    ],
+    "answer": "Behavior Redux",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the default behavior of Redux?",
+      "points": [
+        "Correct answer: Behavior Redux.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_79",
+    "question": "Explain how Redux works in ReactJS & JavaScript.",
+    "options": [],
+    "answer": "Detailed explanation about Redux.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Redux works in ReactJS & JavaScript.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_80",
+    "question": "Which statement about Event handlers is correct?",
+    "options": [
+      "True for Event handlers",
+      "True for B",
+      "True for C",
+      "None"
+    ],
+    "answer": "True for Event handlers",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which statement about Event handlers is correct?",
+      "points": [
+        "Correct answer: True for Event handlers.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_81",
+    "question": "Describe pros and cons of Event handlers.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of Event handlers.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_82",
+    "question": "Which statement about Hooks is correct?",
+    "options": [
+      "True for Hooks",
+      "True for B",
+      "True for C",
+      "None"
+    ],
+    "answer": "True for Hooks",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which statement about Hooks is correct?",
+      "points": [
+        "Correct answer: True for Hooks.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_83",
+    "question": "Explain how Hooks works in ReactJS & JavaScript.",
+    "options": [],
+    "answer": "Detailed explanation about Hooks.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Hooks works in ReactJS & JavaScript.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_84",
+    "question": "Which annotation/keyword is used for Redux?",
+    "options": [
+      "@Redux",
+      "@B",
+      "@C",
+      "@D"
+    ],
+    "answer": "@Redux",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which annotation/keyword is used for Redux?",
+      "points": [
+        "Correct answer: @Redux.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_85",
+    "question": "Explain how Redux works in ReactJS & JavaScript.",
+    "options": [],
+    "answer": "Detailed explanation about Redux.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Redux works in ReactJS & JavaScript.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_86",
+    "question": "Which statement about Event handlers is correct?",
+    "options": [
+      "True for Event handlers",
+      "True for B",
+      "True for C",
+      "None"
+    ],
+    "answer": "True for Event handlers",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which statement about Event handlers is correct?",
+      "points": [
+        "Correct answer: True for Event handlers.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_87",
+    "question": "How would you design/implement Event handlers in a production system?",
+    "options": [],
+    "answer": "Design considerations and steps.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: How would you design/implement Event handlers in a production system?",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_88",
+    "question": "Which statement about Hooks is correct?",
+    "options": [
+      "True for Hooks",
+      "True for B",
+      "True for C",
+      "None"
+    ],
+    "answer": "True for Hooks",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which statement about Hooks is correct?",
+      "points": [
+        "Correct answer: True for Hooks.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_89",
+    "question": "How would you design/implement Hooks in a production system?",
+    "options": [],
+    "answer": "Design considerations and steps.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: How would you design/implement Hooks in a production system?",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_90",
+    "question": "Which command is used to Context API?",
+    "options": [
+      "cmd Context API",
+      "cmd B",
+      "cmd C",
+      "cmd D"
+    ],
+    "answer": "cmd Context API",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which command is used to Context API?",
+      "points": [
+        "Correct answer: cmd Context API.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_91",
+    "question": "Explain how Context API works in ReactJS & JavaScript.",
+    "options": [],
+    "answer": "Detailed explanation about Context API.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Context API works in ReactJS & JavaScript.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_92",
+    "question": "Which annotation/keyword is used for Async/Await?",
+    "options": [
+      "@Async/Await",
+      "@B",
+      "@C",
+      "@D"
+    ],
+    "answer": "@Async/Await",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which annotation/keyword is used for Async/Await?",
+      "points": [
+        "Correct answer: @Async/Await.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_93",
+    "question": "How would you design/implement Async/Await in a production system?",
+    "options": [],
+    "answer": "Design considerations and steps.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: How would you design/implement Async/Await in a production system?",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_94",
+    "question": "Which command is used to Component lifecycle?",
+    "options": [
+      "cmd Component lifecycle",
+      "cmd B",
+      "cmd C",
+      "cmd D"
+    ],
+    "answer": "cmd Component lifecycle",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which command is used to Component lifecycle?",
+      "points": [
+        "Correct answer: cmd Component lifecycle.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_95",
+    "question": "Describe pros and cons of Component lifecycle.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of Component lifecycle.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_96",
+    "question": "What is the purpose of Closures in ReactJS & JavaScript?",
+    "options": [
+      "Option Closures",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": "Option Closures",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the purpose of Closures in ReactJS & JavaScript?",
+      "points": [
+        "Correct answer: Option Closures.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_97",
+    "question": "Describe pros and cons of Closures.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of Closures.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_98",
+    "question": "What is the default behavior of Closures?",
+    "options": [
+      "Behavior Closures",
+      "Behavior B",
+      "Behavior C",
+      "Behavior D"
+    ],
+    "answer": "Behavior Closures",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the default behavior of Closures?",
+      "points": [
+        "Correct answer: Behavior Closures.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_99",
+    "question": "Explain how Closures works in ReactJS & JavaScript.",
+    "options": [],
+    "answer": "Detailed explanation about Closures.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Closures works in ReactJS & JavaScript.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "ReactJS & JavaScript"
+  },
+  {
+    "id": "reactjs_&_javascript_100",
+    "question": "What is the purpose of JSX in ReactJS & JavaScript?",
+    "options": [
+      "Option JSX",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": "Option JSX",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the purpose of JSX in ReactJS & JavaScript?",
+      "points": [
+        "Correct answer: Option JSX.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "ReactJS & JavaScript"
+  }
+]

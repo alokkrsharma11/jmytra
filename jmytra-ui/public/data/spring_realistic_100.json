@@ -1,0 +1,2259 @@
+[
+  {
+    "id": "spring_boot_1",
+    "question": "Which annotation denotes a Spring Boot application?",
+    "options": [
+      "@Configuration",
+      "@Component",
+      "@SpringBootApplication",
+      "@Service"
+    ],
+    "answer": "@SpringBootApplication",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which annotation denotes a Spring Boot application?",
+      "points": [
+        "Correct answer: @SpringBootApplication.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_2",
+    "question": "Default embedded server in Spring Boot is?",
+    "options": [
+      "Tomcat",
+      "Jetty",
+      "Undertow",
+      "GlassFish"
+    ],
+    "answer": "Tomcat",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Default embedded server in Spring Boot is?",
+      "points": [
+        "Correct answer: Tomcat.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_3",
+    "question": "Which annotation is used to inject a bean by type?",
+    "options": [
+      "@Inject",
+      "@Autowired",
+      "@Resource",
+      "@Value"
+    ],
+    "answer": "@Autowired",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which annotation is used to inject a bean by type?",
+      "points": [
+        "Correct answer: @Autowired.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_4",
+    "question": "What does @RestController combine?",
+    "options": [
+      "@Controller + @ResponseBody",
+      "@Controller + @Service",
+      "@Component + @Bean",
+      "@Service + @Repository"
+    ],
+    "answer": "@Controller + @ResponseBody",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What does @RestController combine?",
+      "points": [
+        "Correct answer: @Controller + @ResponseBody.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_5",
+    "question": "Which property file is used by Spring Boot by default?",
+    "options": [
+      "application.yml",
+      "application.properties",
+      "settings.xml",
+      "config.json"
+    ],
+    "answer": "application.properties",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which property file is used by Spring Boot by default?",
+      "points": [
+        "Correct answer: application.properties.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_6",
+    "question": "Explain Spring Dependency Injection and its benefits.",
+    "options": [],
+    "answer": "DI injects dependencies rather than creating them; benefits include loose coupling, easier testing, and separation of concerns.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain Spring Dependency Injection and its benefits.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_7",
+    "question": "How does Spring Boot auto-configuration work?",
+    "options": [],
+    "answer": "Auto-configuration uses classpath and beans to apply sensible defaults; can be customized or disabled; @EnableAutoConfiguration triggers it.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: How does Spring Boot auto-configuration work?",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_8",
+    "question": "Describe transaction propagation behaviors in Spring.",
+    "options": [],
+    "answer": "Propagation settings like REQUIRED, REQUIRES_NEW, SUPPORTS affect transactional boundary joining or creation; important for nested calls.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe transaction propagation behaviors in Spring.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_9",
+    "question": "Which statement about Actuator is correct?",
+    "options": [
+      "True for Actuator",
+      "True for B",
+      "True for C",
+      "None"
+    ],
+    "answer": "True for Actuator",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which statement about Actuator is correct?",
+      "points": [
+        "Correct answer: True for Actuator.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_10",
+    "question": "How would you design/implement Actuator in a production system?",
+    "options": [],
+    "answer": "Design considerations and steps.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: How would you design/implement Actuator in a production system?",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_11",
+    "question": "Which annotation/keyword is used for Auto-configuration?",
+    "options": [
+      "@Auto-configuration",
+      "@B",
+      "@C",
+      "@D"
+    ],
+    "answer": "@Auto-configuration",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which annotation/keyword is used for Auto-configuration?",
+      "points": [
+        "Correct answer: @Auto-configuration.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_12",
+    "question": "Describe pros and cons of Auto-configuration.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of Auto-configuration.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_13",
+    "question": "Which statement about Controllers is correct?",
+    "options": [
+      "True for Controllers",
+      "True for B",
+      "True for C",
+      "None"
+    ],
+    "answer": "True for Controllers",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which statement about Controllers is correct?",
+      "points": [
+        "Correct answer: True for Controllers.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_14",
+    "question": "How would you design/implement Controllers in a production system?",
+    "options": [],
+    "answer": "Design considerations and steps.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: How would you design/implement Controllers in a production system?",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_15",
+    "question": "Which annotation/keyword is used for Actuator?",
+    "options": [
+      "@Actuator",
+      "@B",
+      "@C",
+      "@D"
+    ],
+    "answer": "@Actuator",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which annotation/keyword is used for Actuator?",
+      "points": [
+        "Correct answer: @Actuator.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_16",
+    "question": "Describe pros and cons of Actuator.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of Actuator.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_17",
+    "question": "Which command is used to Actuator?",
+    "options": [
+      "cmd Actuator",
+      "cmd B",
+      "cmd C",
+      "cmd D"
+    ],
+    "answer": "cmd Actuator",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which command is used to Actuator?",
+      "points": [
+        "Correct answer: cmd Actuator.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_18",
+    "question": "Describe pros and cons of Actuator.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of Actuator.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_19",
+    "question": "What is the default behavior of Data JPA?",
+    "options": [
+      "Behavior Data JPA",
+      "Behavior B",
+      "Behavior C",
+      "Behavior D"
+    ],
+    "answer": "Behavior Data JPA",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the default behavior of Data JPA?",
+      "points": [
+        "Correct answer: Behavior Data JPA.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_20",
+    "question": "Describe pros and cons of Data JPA.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of Data JPA.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_21",
+    "question": "Which statement about Controllers is correct?",
+    "options": [
+      "True for Controllers",
+      "True for B",
+      "True for C",
+      "None"
+    ],
+    "answer": "True for Controllers",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which statement about Controllers is correct?",
+      "points": [
+        "Correct answer: True for Controllers.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_22",
+    "question": "Describe pros and cons of Controllers.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of Controllers.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_23",
+    "question": "Which command is used to Controllers?",
+    "options": [
+      "cmd Controllers",
+      "cmd B",
+      "cmd C",
+      "cmd D"
+    ],
+    "answer": "cmd Controllers",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which command is used to Controllers?",
+      "points": [
+        "Correct answer: cmd Controllers.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_24",
+    "question": "Explain how Controllers works in Spring Boot.",
+    "options": [],
+    "answer": "Detailed explanation about Controllers.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Controllers works in Spring Boot.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_25",
+    "question": "Which annotation/keyword is used for Transactions?",
+    "options": [
+      "@Transactions",
+      "@B",
+      "@C",
+      "@D"
+    ],
+    "answer": "@Transactions",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which annotation/keyword is used for Transactions?",
+      "points": [
+        "Correct answer: @Transactions.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_26",
+    "question": "How would you design/implement Transactions in a production system?",
+    "options": [],
+    "answer": "Design considerations and steps.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: How would you design/implement Transactions in a production system?",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_27",
+    "question": "What is the purpose of Profiles in Spring Boot?",
+    "options": [
+      "Option Profiles",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": "Option Profiles",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the purpose of Profiles in Spring Boot?",
+      "points": [
+        "Correct answer: Option Profiles.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_28",
+    "question": "Describe pros and cons of Profiles.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of Profiles.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_29",
+    "question": "What is the default behavior of AOP?",
+    "options": [
+      "Behavior AOP",
+      "Behavior B",
+      "Behavior C",
+      "Behavior D"
+    ],
+    "answer": "Behavior AOP",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the default behavior of AOP?",
+      "points": [
+        "Correct answer: Behavior AOP.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_30",
+    "question": "How would you design/implement AOP in a production system?",
+    "options": [],
+    "answer": "Design considerations and steps.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: How would you design/implement AOP in a production system?",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_31",
+    "question": "Which statement about Bean lifecycle is correct?",
+    "options": [
+      "True for Bean lifecycle",
+      "True for B",
+      "True for C",
+      "None"
+    ],
+    "answer": "True for Bean lifecycle",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which statement about Bean lifecycle is correct?",
+      "points": [
+        "Correct answer: True for Bean lifecycle.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_32",
+    "question": "Explain how Bean lifecycle works in Spring Boot.",
+    "options": [],
+    "answer": "Detailed explanation about Bean lifecycle.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Bean lifecycle works in Spring Boot.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_33",
+    "question": "Which statement about Controllers is correct?",
+    "options": [
+      "True for Controllers",
+      "True for B",
+      "True for C",
+      "None"
+    ],
+    "answer": "True for Controllers",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which statement about Controllers is correct?",
+      "points": [
+        "Correct answer: True for Controllers.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_34",
+    "question": "Explain how Controllers works in Spring Boot.",
+    "options": [],
+    "answer": "Detailed explanation about Controllers.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Controllers works in Spring Boot.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_35",
+    "question": "What is the default behavior of Dependency Injection?",
+    "options": [
+      "Behavior Dependency Injection",
+      "Behavior B",
+      "Behavior C",
+      "Behavior D"
+    ],
+    "answer": "Behavior Dependency Injection",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the default behavior of Dependency Injection?",
+      "points": [
+        "Correct answer: Behavior Dependency Injection.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_36",
+    "question": "Explain how Dependency Injection works in Spring Boot.",
+    "options": [],
+    "answer": "Detailed explanation about Dependency Injection.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Dependency Injection works in Spring Boot.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_37",
+    "question": "Which statement about Bean lifecycle is correct?",
+    "options": [
+      "True for Bean lifecycle",
+      "True for B",
+      "True for C",
+      "None"
+    ],
+    "answer": "True for Bean lifecycle",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which statement about Bean lifecycle is correct?",
+      "points": [
+        "Correct answer: True for Bean lifecycle.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_38",
+    "question": "How would you design/implement Bean lifecycle in a production system?",
+    "options": [],
+    "answer": "Design considerations and steps.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: How would you design/implement Bean lifecycle in a production system?",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_39",
+    "question": "What is the purpose of Security in Spring Boot?",
+    "options": [
+      "Option Security",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": "Option Security",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the purpose of Security in Spring Boot?",
+      "points": [
+        "Correct answer: Option Security.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_40",
+    "question": "Describe pros and cons of Security.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of Security.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_41",
+    "question": "What is the purpose of Bean lifecycle in Spring Boot?",
+    "options": [
+      "Option Bean lifecycle",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": "Option Bean lifecycle",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the purpose of Bean lifecycle in Spring Boot?",
+      "points": [
+        "Correct answer: Option Bean lifecycle.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_42",
+    "question": "Explain how Bean lifecycle works in Spring Boot.",
+    "options": [],
+    "answer": "Detailed explanation about Bean lifecycle.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Bean lifecycle works in Spring Boot.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_43",
+    "question": "Which command is used to Dependency Injection?",
+    "options": [
+      "cmd Dependency Injection",
+      "cmd B",
+      "cmd C",
+      "cmd D"
+    ],
+    "answer": "cmd Dependency Injection",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which command is used to Dependency Injection?",
+      "points": [
+        "Correct answer: cmd Dependency Injection.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_44",
+    "question": "Explain how Dependency Injection works in Spring Boot.",
+    "options": [],
+    "answer": "Detailed explanation about Dependency Injection.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Dependency Injection works in Spring Boot.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_45",
+    "question": "Which statement about Bean lifecycle is correct?",
+    "options": [
+      "True for Bean lifecycle",
+      "True for B",
+      "True for C",
+      "None"
+    ],
+    "answer": "True for Bean lifecycle",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which statement about Bean lifecycle is correct?",
+      "points": [
+        "Correct answer: True for Bean lifecycle.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_46",
+    "question": "How would you design/implement Bean lifecycle in a production system?",
+    "options": [],
+    "answer": "Design considerations and steps.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: How would you design/implement Bean lifecycle in a production system?",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_47",
+    "question": "Which statement about AOP is correct?",
+    "options": [
+      "True for AOP",
+      "True for B",
+      "True for C",
+      "None"
+    ],
+    "answer": "True for AOP",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which statement about AOP is correct?",
+      "points": [
+        "Correct answer: True for AOP.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_48",
+    "question": "Describe pros and cons of AOP.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of AOP.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_49",
+    "question": "What is the default behavior of Security?",
+    "options": [
+      "Behavior Security",
+      "Behavior B",
+      "Behavior C",
+      "Behavior D"
+    ],
+    "answer": "Behavior Security",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the default behavior of Security?",
+      "points": [
+        "Correct answer: Behavior Security.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_50",
+    "question": "Describe pros and cons of Security.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of Security.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_51",
+    "question": "Which annotation/keyword is used for Data JPA?",
+    "options": [
+      "@Data JPA",
+      "@B",
+      "@C",
+      "@D"
+    ],
+    "answer": "@Data JPA",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which annotation/keyword is used for Data JPA?",
+      "points": [
+        "Correct answer: @Data JPA.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_52",
+    "question": "Explain how Data JPA works in Spring Boot.",
+    "options": [],
+    "answer": "Detailed explanation about Data JPA.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Data JPA works in Spring Boot.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_53",
+    "question": "Which statement about Actuator is correct?",
+    "options": [
+      "True for Actuator",
+      "True for B",
+      "True for C",
+      "None"
+    ],
+    "answer": "True for Actuator",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which statement about Actuator is correct?",
+      "points": [
+        "Correct answer: True for Actuator.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_54",
+    "question": "Describe pros and cons of Actuator.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of Actuator.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_55",
+    "question": "What is the purpose of Security in Spring Boot?",
+    "options": [
+      "Option Security",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": "Option Security",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the purpose of Security in Spring Boot?",
+      "points": [
+        "Correct answer: Option Security.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_56",
+    "question": "Explain how Security works in Spring Boot.",
+    "options": [],
+    "answer": "Detailed explanation about Security.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Security works in Spring Boot.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_57",
+    "question": "What is the purpose of Dependency Injection in Spring Boot?",
+    "options": [
+      "Option Dependency Injection",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": "Option Dependency Injection",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the purpose of Dependency Injection in Spring Boot?",
+      "points": [
+        "Correct answer: Option Dependency Injection.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_58",
+    "question": "How would you design/implement Dependency Injection in a production system?",
+    "options": [],
+    "answer": "Design considerations and steps.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: How would you design/implement Dependency Injection in a production system?",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_59",
+    "question": "Which statement about Controllers is correct?",
+    "options": [
+      "True for Controllers",
+      "True for B",
+      "True for C",
+      "None"
+    ],
+    "answer": "True for Controllers",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which statement about Controllers is correct?",
+      "points": [
+        "Correct answer: True for Controllers.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_60",
+    "question": "Describe pros and cons of Controllers.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of Controllers.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_61",
+    "question": "What is the purpose of Actuator in Spring Boot?",
+    "options": [
+      "Option Actuator",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": "Option Actuator",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the purpose of Actuator in Spring Boot?",
+      "points": [
+        "Correct answer: Option Actuator.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_62",
+    "question": "Explain how Actuator works in Spring Boot.",
+    "options": [],
+    "answer": "Detailed explanation about Actuator.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Actuator works in Spring Boot.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_63",
+    "question": "What is the default behavior of Profiles?",
+    "options": [
+      "Behavior Profiles",
+      "Behavior B",
+      "Behavior C",
+      "Behavior D"
+    ],
+    "answer": "Behavior Profiles",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the default behavior of Profiles?",
+      "points": [
+        "Correct answer: Behavior Profiles.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_64",
+    "question": "How would you design/implement Profiles in a production system?",
+    "options": [],
+    "answer": "Design considerations and steps.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: How would you design/implement Profiles in a production system?",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_65",
+    "question": "What is the default behavior of Controllers?",
+    "options": [
+      "Behavior Controllers",
+      "Behavior B",
+      "Behavior C",
+      "Behavior D"
+    ],
+    "answer": "Behavior Controllers",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the default behavior of Controllers?",
+      "points": [
+        "Correct answer: Behavior Controllers.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_66",
+    "question": "Explain how Controllers works in Spring Boot.",
+    "options": [],
+    "answer": "Detailed explanation about Controllers.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Controllers works in Spring Boot.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_67",
+    "question": "What is the default behavior of Actuator?",
+    "options": [
+      "Behavior Actuator",
+      "Behavior B",
+      "Behavior C",
+      "Behavior D"
+    ],
+    "answer": "Behavior Actuator",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the default behavior of Actuator?",
+      "points": [
+        "Correct answer: Behavior Actuator.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_68",
+    "question": "How would you design/implement Actuator in a production system?",
+    "options": [],
+    "answer": "Design considerations and steps.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: How would you design/implement Actuator in a production system?",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_69",
+    "question": "Which command is used to Controllers?",
+    "options": [
+      "cmd Controllers",
+      "cmd B",
+      "cmd C",
+      "cmd D"
+    ],
+    "answer": "cmd Controllers",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which command is used to Controllers?",
+      "points": [
+        "Correct answer: cmd Controllers.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_70",
+    "question": "Explain how Controllers works in Spring Boot.",
+    "options": [],
+    "answer": "Detailed explanation about Controllers.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Controllers works in Spring Boot.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_71",
+    "question": "Which statement about Data JPA is correct?",
+    "options": [
+      "True for Data JPA",
+      "True for B",
+      "True for C",
+      "None"
+    ],
+    "answer": "True for Data JPA",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which statement about Data JPA is correct?",
+      "points": [
+        "Correct answer: True for Data JPA.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_72",
+    "question": "How would you design/implement Data JPA in a production system?",
+    "options": [],
+    "answer": "Design considerations and steps.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: How would you design/implement Data JPA in a production system?",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_73",
+    "question": "Which statement about Security is correct?",
+    "options": [
+      "True for Security",
+      "True for B",
+      "True for C",
+      "None"
+    ],
+    "answer": "True for Security",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which statement about Security is correct?",
+      "points": [
+        "Correct answer: True for Security.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_74",
+    "question": "How would you design/implement Security in a production system?",
+    "options": [],
+    "answer": "Design considerations and steps.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: How would you design/implement Security in a production system?",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_75",
+    "question": "What is the default behavior of Data JPA?",
+    "options": [
+      "Behavior Data JPA",
+      "Behavior B",
+      "Behavior C",
+      "Behavior D"
+    ],
+    "answer": "Behavior Data JPA",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the default behavior of Data JPA?",
+      "points": [
+        "Correct answer: Behavior Data JPA.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_76",
+    "question": "How would you design/implement Data JPA in a production system?",
+    "options": [],
+    "answer": "Design considerations and steps.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: How would you design/implement Data JPA in a production system?",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_77",
+    "question": "Which statement about Transactions is correct?",
+    "options": [
+      "True for Transactions",
+      "True for B",
+      "True for C",
+      "None"
+    ],
+    "answer": "True for Transactions",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which statement about Transactions is correct?",
+      "points": [
+        "Correct answer: True for Transactions.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_78",
+    "question": "Explain how Transactions works in Spring Boot.",
+    "options": [],
+    "answer": "Detailed explanation about Transactions.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Transactions works in Spring Boot.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_79",
+    "question": "What is the default behavior of Security?",
+    "options": [
+      "Behavior Security",
+      "Behavior B",
+      "Behavior C",
+      "Behavior D"
+    ],
+    "answer": "Behavior Security",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the default behavior of Security?",
+      "points": [
+        "Correct answer: Behavior Security.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_80",
+    "question": "Explain how Security works in Spring Boot.",
+    "options": [],
+    "answer": "Detailed explanation about Security.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Security works in Spring Boot.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_81",
+    "question": "Which command is used to AOP?",
+    "options": [
+      "cmd AOP",
+      "cmd B",
+      "cmd C",
+      "cmd D"
+    ],
+    "answer": "cmd AOP",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which command is used to AOP?",
+      "points": [
+        "Correct answer: cmd AOP.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_82",
+    "question": "Explain how AOP works in Spring Boot.",
+    "options": [],
+    "answer": "Detailed explanation about AOP.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how AOP works in Spring Boot.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_83",
+    "question": "Which command is used to Profiles?",
+    "options": [
+      "cmd Profiles",
+      "cmd B",
+      "cmd C",
+      "cmd D"
+    ],
+    "answer": "cmd Profiles",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which command is used to Profiles?",
+      "points": [
+        "Correct answer: cmd Profiles.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_84",
+    "question": "How would you design/implement Profiles in a production system?",
+    "options": [],
+    "answer": "Design considerations and steps.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: How would you design/implement Profiles in a production system?",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_85",
+    "question": "What is the purpose of Dependency Injection in Spring Boot?",
+    "options": [
+      "Option Dependency Injection",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": "Option Dependency Injection",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the purpose of Dependency Injection in Spring Boot?",
+      "points": [
+        "Correct answer: Option Dependency Injection.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_86",
+    "question": "Describe pros and cons of Dependency Injection.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of Dependency Injection.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_87",
+    "question": "Which command is used to Bean lifecycle?",
+    "options": [
+      "cmd Bean lifecycle",
+      "cmd B",
+      "cmd C",
+      "cmd D"
+    ],
+    "answer": "cmd Bean lifecycle",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which command is used to Bean lifecycle?",
+      "points": [
+        "Correct answer: cmd Bean lifecycle.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_88",
+    "question": "Explain how Bean lifecycle works in Spring Boot.",
+    "options": [],
+    "answer": "Detailed explanation about Bean lifecycle.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Bean lifecycle works in Spring Boot.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_89",
+    "question": "Which annotation/keyword is used for Transactions?",
+    "options": [
+      "@Transactions",
+      "@B",
+      "@C",
+      "@D"
+    ],
+    "answer": "@Transactions",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which annotation/keyword is used for Transactions?",
+      "points": [
+        "Correct answer: @Transactions.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_90",
+    "question": "How would you design/implement Transactions in a production system?",
+    "options": [],
+    "answer": "Design considerations and steps.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: How would you design/implement Transactions in a production system?",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_91",
+    "question": "Which command is used to Data JPA?",
+    "options": [
+      "cmd Data JPA",
+      "cmd B",
+      "cmd C",
+      "cmd D"
+    ],
+    "answer": "cmd Data JPA",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which command is used to Data JPA?",
+      "points": [
+        "Correct answer: cmd Data JPA.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_92",
+    "question": "Explain how Data JPA works in Spring Boot.",
+    "options": [],
+    "answer": "Detailed explanation about Data JPA.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Data JPA works in Spring Boot.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_93",
+    "question": "What is the default behavior of Data JPA?",
+    "options": [
+      "Behavior Data JPA",
+      "Behavior B",
+      "Behavior C",
+      "Behavior D"
+    ],
+    "answer": "Behavior Data JPA",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the default behavior of Data JPA?",
+      "points": [
+        "Correct answer: Behavior Data JPA.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_94",
+    "question": "How would you design/implement Data JPA in a production system?",
+    "options": [],
+    "answer": "Design considerations and steps.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: How would you design/implement Data JPA in a production system?",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_95",
+    "question": "What is the purpose of Transactions in Spring Boot?",
+    "options": [
+      "Option Transactions",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": "Option Transactions",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the purpose of Transactions in Spring Boot?",
+      "points": [
+        "Correct answer: Option Transactions.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_96",
+    "question": "How would you design/implement Transactions in a production system?",
+    "options": [],
+    "answer": "Design considerations and steps.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: How would you design/implement Transactions in a production system?",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_97",
+    "question": "Which annotation/keyword is used for Auto-configuration?",
+    "options": [
+      "@Auto-configuration",
+      "@B",
+      "@C",
+      "@D"
+    ],
+    "answer": "@Auto-configuration",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which annotation/keyword is used for Auto-configuration?",
+      "points": [
+        "Correct answer: @Auto-configuration.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_98",
+    "question": "Describe pros and cons of Auto-configuration.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of Auto-configuration.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_99",
+    "question": "Which command is used to Bean lifecycle?",
+    "options": [
+      "cmd Bean lifecycle",
+      "cmd B",
+      "cmd C",
+      "cmd D"
+    ],
+    "answer": "cmd Bean lifecycle",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which command is used to Bean lifecycle?",
+      "points": [
+        "Correct answer: cmd Bean lifecycle.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Spring Boot"
+  },
+  {
+    "id": "spring_boot_100",
+    "question": "How would you design/implement Bean lifecycle in a production system?",
+    "options": [],
+    "answer": "Design considerations and steps.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: How would you design/implement Bean lifecycle in a production system?",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Spring Boot"
+  }
+]

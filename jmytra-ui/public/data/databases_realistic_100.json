@@ -1,0 +1,2259 @@
+[
+  {
+    "id": "database_(sql_&_mongodb)_1",
+    "question": "Which SQL clause is used to filter rows?",
+    "options": [
+      "WHERE",
+      "HAVING",
+      "GROUP BY",
+      "ORDER BY"
+    ],
+    "answer": "WHERE",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which SQL clause is used to filter rows?",
+      "points": [
+        "Correct answer: WHERE.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_2",
+    "question": "Which normal form removes transitive dependency?",
+    "options": [
+      "1NF",
+      "2NF",
+      "3NF",
+      "BCNF"
+    ],
+    "answer": "3NF",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which normal form removes transitive dependency?",
+      "points": [
+        "Correct answer: 3NF.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_3",
+    "question": "Which MongoDB command lists collections?",
+    "options": [
+      "show collections",
+      "db.collections()",
+      "listCollections()",
+      "db.show()"
+    ],
+    "answer": "show collections",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which MongoDB command lists collections?",
+      "points": [
+        "Correct answer: show collections.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_4",
+    "question": "Which SQL statement is used to remove a table?",
+    "options": [
+      "DROP",
+      "DELETE",
+      "TRUNCATE",
+      "REMOVE"
+    ],
+    "answer": "DROP",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which SQL statement is used to remove a table?",
+      "points": [
+        "Correct answer: DROP.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_5",
+    "question": "Which index type is used for text search in MongoDB?",
+    "options": [
+      "Hashed",
+      "Text",
+      "B-Tree",
+      "Geospatial"
+    ],
+    "answer": "Text",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which index type is used for text search in MongoDB?",
+      "points": [
+        "Correct answer: Text.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_6",
+    "question": "Explain ACID properties in databases.",
+    "options": [],
+    "answer": "Atomicity, Consistency, Isolation, Durability ensure reliable transactions; each property enforces correctness and recoverability.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain ACID properties in databases.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_7",
+    "question": "Describe differences between SQL and NoSQL databases.",
+    "options": [],
+    "answer": "SQL are relational, schema-based; NoSQL are flexible schema, often distributed, types include document, key-value, column-family.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe differences between SQL and NoSQL databases.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_8",
+    "question": "How does indexing improve query performance and its trade-offs?",
+    "options": [],
+    "answer": "Indexes speed up reads but slow writes and consume storage; proper index selection is crucial.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: How does indexing improve query performance and its trade-offs?",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_9",
+    "question": "Which annotation/keyword is used for Queries?",
+    "options": [
+      "@Queries",
+      "@B",
+      "@C",
+      "@D"
+    ],
+    "answer": "@Queries",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which annotation/keyword is used for Queries?",
+      "points": [
+        "Correct answer: @Queries.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_10",
+    "question": "Explain how Queries works in Database (SQL & MongoDB).",
+    "options": [],
+    "answer": "Detailed explanation about Queries.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Queries works in Database (SQL & MongoDB).",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_11",
+    "question": "Which command is used to Replication?",
+    "options": [
+      "cmd Replication",
+      "cmd B",
+      "cmd C",
+      "cmd D"
+    ],
+    "answer": "cmd Replication",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which command is used to Replication?",
+      "points": [
+        "Correct answer: cmd Replication.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_12",
+    "question": "Describe pros and cons of Replication.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of Replication.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_13",
+    "question": "Which statement about Aggregation pipeline is correct?",
+    "options": [
+      "True for Aggregation pipeline",
+      "True for B",
+      "True for C",
+      "None"
+    ],
+    "answer": "True for Aggregation pipeline",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which statement about Aggregation pipeline is correct?",
+      "points": [
+        "Correct answer: True for Aggregation pipeline.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_14",
+    "question": "Describe pros and cons of Aggregation pipeline.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of Aggregation pipeline.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_15",
+    "question": "Which annotation/keyword is used for Replication?",
+    "options": [
+      "@Replication",
+      "@B",
+      "@C",
+      "@D"
+    ],
+    "answer": "@Replication",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which annotation/keyword is used for Replication?",
+      "points": [
+        "Correct answer: @Replication.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_16",
+    "question": "How would you design/implement Replication in a production system?",
+    "options": [],
+    "answer": "Design considerations and steps.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: How would you design/implement Replication in a production system?",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_17",
+    "question": "What is the purpose of Aggregation pipeline in Database (SQL & MongoDB)?",
+    "options": [
+      "Option Aggregation pipeline",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": "Option Aggregation pipeline",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the purpose of Aggregation pipeline in Database (SQL & MongoDB)?",
+      "points": [
+        "Correct answer: Option Aggregation pipeline.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_18",
+    "question": "Describe pros and cons of Aggregation pipeline.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of Aggregation pipeline.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_19",
+    "question": "Which statement about Sharding is correct?",
+    "options": [
+      "True for Sharding",
+      "True for B",
+      "True for C",
+      "None"
+    ],
+    "answer": "True for Sharding",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which statement about Sharding is correct?",
+      "points": [
+        "Correct answer: True for Sharding.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_20",
+    "question": "Describe pros and cons of Sharding.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of Sharding.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_21",
+    "question": "Which statement about Indexing is correct?",
+    "options": [
+      "True for Indexing",
+      "True for B",
+      "True for C",
+      "None"
+    ],
+    "answer": "True for Indexing",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which statement about Indexing is correct?",
+      "points": [
+        "Correct answer: True for Indexing.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_22",
+    "question": "Describe pros and cons of Indexing.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of Indexing.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_23",
+    "question": "Which command is used to Normalization?",
+    "options": [
+      "cmd Normalization",
+      "cmd B",
+      "cmd C",
+      "cmd D"
+    ],
+    "answer": "cmd Normalization",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which command is used to Normalization?",
+      "points": [
+        "Correct answer: cmd Normalization.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_24",
+    "question": "Explain how Normalization works in Database (SQL & MongoDB).",
+    "options": [],
+    "answer": "Detailed explanation about Normalization.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Normalization works in Database (SQL & MongoDB).",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_25",
+    "question": "What is the purpose of ACID in Database (SQL & MongoDB)?",
+    "options": [
+      "Option ACID",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": "Option ACID",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the purpose of ACID in Database (SQL & MongoDB)?",
+      "points": [
+        "Correct answer: Option ACID.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_26",
+    "question": "Explain how ACID works in Database (SQL & MongoDB).",
+    "options": [],
+    "answer": "Detailed explanation about ACID.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how ACID works in Database (SQL & MongoDB).",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_27",
+    "question": "What is the purpose of Replication in Database (SQL & MongoDB)?",
+    "options": [
+      "Option Replication",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": "Option Replication",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the purpose of Replication in Database (SQL & MongoDB)?",
+      "points": [
+        "Correct answer: Option Replication.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_28",
+    "question": "How would you design/implement Replication in a production system?",
+    "options": [],
+    "answer": "Design considerations and steps.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: How would you design/implement Replication in a production system?",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_29",
+    "question": "What is the purpose of Stored procedures in Database (SQL & MongoDB)?",
+    "options": [
+      "Option Stored procedures",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": "Option Stored procedures",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the purpose of Stored procedures in Database (SQL & MongoDB)?",
+      "points": [
+        "Correct answer: Option Stored procedures.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_30",
+    "question": "Explain how Stored procedures works in Database (SQL & MongoDB).",
+    "options": [],
+    "answer": "Detailed explanation about Stored procedures.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Stored procedures works in Database (SQL & MongoDB).",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_31",
+    "question": "What is the default behavior of Stored procedures?",
+    "options": [
+      "Behavior Stored procedures",
+      "Behavior B",
+      "Behavior C",
+      "Behavior D"
+    ],
+    "answer": "Behavior Stored procedures",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the default behavior of Stored procedures?",
+      "points": [
+        "Correct answer: Behavior Stored procedures.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_32",
+    "question": "Explain how Stored procedures works in Database (SQL & MongoDB).",
+    "options": [],
+    "answer": "Detailed explanation about Stored procedures.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Stored procedures works in Database (SQL & MongoDB).",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_33",
+    "question": "Which annotation/keyword is used for ACID?",
+    "options": [
+      "@ACID",
+      "@B",
+      "@C",
+      "@D"
+    ],
+    "answer": "@ACID",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which annotation/keyword is used for ACID?",
+      "points": [
+        "Correct answer: @ACID.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_34",
+    "question": "Describe pros and cons of ACID.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of ACID.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_35",
+    "question": "Which command is used to Transactions?",
+    "options": [
+      "cmd Transactions",
+      "cmd B",
+      "cmd C",
+      "cmd D"
+    ],
+    "answer": "cmd Transactions",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which command is used to Transactions?",
+      "points": [
+        "Correct answer: cmd Transactions.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_36",
+    "question": "Describe pros and cons of Transactions.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of Transactions.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_37",
+    "question": "Which statement about Aggregation pipeline is correct?",
+    "options": [
+      "True for Aggregation pipeline",
+      "True for B",
+      "True for C",
+      "None"
+    ],
+    "answer": "True for Aggregation pipeline",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which statement about Aggregation pipeline is correct?",
+      "points": [
+        "Correct answer: True for Aggregation pipeline.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_38",
+    "question": "Explain how Aggregation pipeline works in Database (SQL & MongoDB).",
+    "options": [],
+    "answer": "Detailed explanation about Aggregation pipeline.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Aggregation pipeline works in Database (SQL & MongoDB).",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_39",
+    "question": "Which command is used to Queries?",
+    "options": [
+      "cmd Queries",
+      "cmd B",
+      "cmd C",
+      "cmd D"
+    ],
+    "answer": "cmd Queries",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which command is used to Queries?",
+      "points": [
+        "Correct answer: cmd Queries.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_40",
+    "question": "Describe pros and cons of Queries.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of Queries.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_41",
+    "question": "Which statement about Aggregation pipeline is correct?",
+    "options": [
+      "True for Aggregation pipeline",
+      "True for B",
+      "True for C",
+      "None"
+    ],
+    "answer": "True for Aggregation pipeline",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which statement about Aggregation pipeline is correct?",
+      "points": [
+        "Correct answer: True for Aggregation pipeline.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_42",
+    "question": "Describe pros and cons of Aggregation pipeline.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of Aggregation pipeline.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_43",
+    "question": "Which annotation/keyword is used for ACID?",
+    "options": [
+      "@ACID",
+      "@B",
+      "@C",
+      "@D"
+    ],
+    "answer": "@ACID",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which annotation/keyword is used for ACID?",
+      "points": [
+        "Correct answer: @ACID.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_44",
+    "question": "Explain how ACID works in Database (SQL & MongoDB).",
+    "options": [],
+    "answer": "Detailed explanation about ACID.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how ACID works in Database (SQL & MongoDB).",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_45",
+    "question": "Which statement about Aggregation pipeline is correct?",
+    "options": [
+      "True for Aggregation pipeline",
+      "True for B",
+      "True for C",
+      "None"
+    ],
+    "answer": "True for Aggregation pipeline",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which statement about Aggregation pipeline is correct?",
+      "points": [
+        "Correct answer: True for Aggregation pipeline.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_46",
+    "question": "Describe pros and cons of Aggregation pipeline.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of Aggregation pipeline.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_47",
+    "question": "Which annotation/keyword is used for Aggregation pipeline?",
+    "options": [
+      "@Aggregation pipeline",
+      "@B",
+      "@C",
+      "@D"
+    ],
+    "answer": "@Aggregation pipeline",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which annotation/keyword is used for Aggregation pipeline?",
+      "points": [
+        "Correct answer: @Aggregation pipeline.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_48",
+    "question": "Explain how Aggregation pipeline works in Database (SQL & MongoDB).",
+    "options": [],
+    "answer": "Detailed explanation about Aggregation pipeline.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Aggregation pipeline works in Database (SQL & MongoDB).",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_49",
+    "question": "What is the default behavior of Transactions?",
+    "options": [
+      "Behavior Transactions",
+      "Behavior B",
+      "Behavior C",
+      "Behavior D"
+    ],
+    "answer": "Behavior Transactions",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the default behavior of Transactions?",
+      "points": [
+        "Correct answer: Behavior Transactions.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_50",
+    "question": "Describe pros and cons of Transactions.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of Transactions.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_51",
+    "question": "What is the default behavior of Sharding?",
+    "options": [
+      "Behavior Sharding",
+      "Behavior B",
+      "Behavior C",
+      "Behavior D"
+    ],
+    "answer": "Behavior Sharding",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the default behavior of Sharding?",
+      "points": [
+        "Correct answer: Behavior Sharding.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_52",
+    "question": "Describe pros and cons of Sharding.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of Sharding.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_53",
+    "question": "What is the purpose of Stored procedures in Database (SQL & MongoDB)?",
+    "options": [
+      "Option Stored procedures",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": "Option Stored procedures",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the purpose of Stored procedures in Database (SQL & MongoDB)?",
+      "points": [
+        "Correct answer: Option Stored procedures.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_54",
+    "question": "Explain how Stored procedures works in Database (SQL & MongoDB).",
+    "options": [],
+    "answer": "Detailed explanation about Stored procedures.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Stored procedures works in Database (SQL & MongoDB).",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_55",
+    "question": "What is the purpose of Sharding in Database (SQL & MongoDB)?",
+    "options": [
+      "Option Sharding",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": "Option Sharding",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the purpose of Sharding in Database (SQL & MongoDB)?",
+      "points": [
+        "Correct answer: Option Sharding.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_56",
+    "question": "Describe pros and cons of Sharding.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of Sharding.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_57",
+    "question": "What is the purpose of Stored procedures in Database (SQL & MongoDB)?",
+    "options": [
+      "Option Stored procedures",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": "Option Stored procedures",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the purpose of Stored procedures in Database (SQL & MongoDB)?",
+      "points": [
+        "Correct answer: Option Stored procedures.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_58",
+    "question": "Explain how Stored procedures works in Database (SQL & MongoDB).",
+    "options": [],
+    "answer": "Detailed explanation about Stored procedures.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Stored procedures works in Database (SQL & MongoDB).",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_59",
+    "question": "Which annotation/keyword is used for Replication?",
+    "options": [
+      "@Replication",
+      "@B",
+      "@C",
+      "@D"
+    ],
+    "answer": "@Replication",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which annotation/keyword is used for Replication?",
+      "points": [
+        "Correct answer: @Replication.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_60",
+    "question": "Describe pros and cons of Replication.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of Replication.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_61",
+    "question": "What is the default behavior of JOIN?",
+    "options": [
+      "Behavior JOIN",
+      "Behavior B",
+      "Behavior C",
+      "Behavior D"
+    ],
+    "answer": "Behavior JOIN",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the default behavior of JOIN?",
+      "points": [
+        "Correct answer: Behavior JOIN.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_62",
+    "question": "Explain how JOIN works in Database (SQL & MongoDB).",
+    "options": [],
+    "answer": "Detailed explanation about JOIN.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how JOIN works in Database (SQL & MongoDB).",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_63",
+    "question": "Which annotation/keyword is used for Stored procedures?",
+    "options": [
+      "@Stored procedures",
+      "@B",
+      "@C",
+      "@D"
+    ],
+    "answer": "@Stored procedures",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which annotation/keyword is used for Stored procedures?",
+      "points": [
+        "Correct answer: @Stored procedures.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_64",
+    "question": "Describe pros and cons of Stored procedures.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of Stored procedures.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_65",
+    "question": "Which statement about Queries is correct?",
+    "options": [
+      "True for Queries",
+      "True for B",
+      "True for C",
+      "None"
+    ],
+    "answer": "True for Queries",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which statement about Queries is correct?",
+      "points": [
+        "Correct answer: True for Queries.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_66",
+    "question": "Explain how Queries works in Database (SQL & MongoDB).",
+    "options": [],
+    "answer": "Detailed explanation about Queries.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Queries works in Database (SQL & MongoDB).",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_67",
+    "question": "What is the purpose of Indexing in Database (SQL & MongoDB)?",
+    "options": [
+      "Option Indexing",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": "Option Indexing",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the purpose of Indexing in Database (SQL & MongoDB)?",
+      "points": [
+        "Correct answer: Option Indexing.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_68",
+    "question": "Explain how Indexing works in Database (SQL & MongoDB).",
+    "options": [],
+    "answer": "Detailed explanation about Indexing.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Indexing works in Database (SQL & MongoDB).",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_69",
+    "question": "What is the default behavior of Indexing?",
+    "options": [
+      "Behavior Indexing",
+      "Behavior B",
+      "Behavior C",
+      "Behavior D"
+    ],
+    "answer": "Behavior Indexing",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the default behavior of Indexing?",
+      "points": [
+        "Correct answer: Behavior Indexing.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_70",
+    "question": "Describe pros and cons of Indexing.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of Indexing.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_71",
+    "question": "Which annotation/keyword is used for Transactions?",
+    "options": [
+      "@Transactions",
+      "@B",
+      "@C",
+      "@D"
+    ],
+    "answer": "@Transactions",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which annotation/keyword is used for Transactions?",
+      "points": [
+        "Correct answer: @Transactions.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_72",
+    "question": "Explain how Transactions works in Database (SQL & MongoDB).",
+    "options": [],
+    "answer": "Detailed explanation about Transactions.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Transactions works in Database (SQL & MongoDB).",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_73",
+    "question": "What is the default behavior of Transactions?",
+    "options": [
+      "Behavior Transactions",
+      "Behavior B",
+      "Behavior C",
+      "Behavior D"
+    ],
+    "answer": "Behavior Transactions",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the default behavior of Transactions?",
+      "points": [
+        "Correct answer: Behavior Transactions.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_74",
+    "question": "Describe pros and cons of Transactions.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of Transactions.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_75",
+    "question": "Which command is used to Sharding?",
+    "options": [
+      "cmd Sharding",
+      "cmd B",
+      "cmd C",
+      "cmd D"
+    ],
+    "answer": "cmd Sharding",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which command is used to Sharding?",
+      "points": [
+        "Correct answer: cmd Sharding.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_76",
+    "question": "Describe pros and cons of Sharding.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of Sharding.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_77",
+    "question": "Which annotation/keyword is used for JOIN?",
+    "options": [
+      "@JOIN",
+      "@B",
+      "@C",
+      "@D"
+    ],
+    "answer": "@JOIN",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which annotation/keyword is used for JOIN?",
+      "points": [
+        "Correct answer: @JOIN.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_78",
+    "question": "How would you design/implement JOIN in a production system?",
+    "options": [],
+    "answer": "Design considerations and steps.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: How would you design/implement JOIN in a production system?",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_79",
+    "question": "What is the default behavior of Replication?",
+    "options": [
+      "Behavior Replication",
+      "Behavior B",
+      "Behavior C",
+      "Behavior D"
+    ],
+    "answer": "Behavior Replication",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the default behavior of Replication?",
+      "points": [
+        "Correct answer: Behavior Replication.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_80",
+    "question": "Explain how Replication works in Database (SQL & MongoDB).",
+    "options": [],
+    "answer": "Detailed explanation about Replication.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Replication works in Database (SQL & MongoDB).",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_81",
+    "question": "What is the default behavior of Normalization?",
+    "options": [
+      "Behavior Normalization",
+      "Behavior B",
+      "Behavior C",
+      "Behavior D"
+    ],
+    "answer": "Behavior Normalization",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the default behavior of Normalization?",
+      "points": [
+        "Correct answer: Behavior Normalization.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_82",
+    "question": "Describe pros and cons of Normalization.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of Normalization.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_83",
+    "question": "What is the default behavior of Replication?",
+    "options": [
+      "Behavior Replication",
+      "Behavior B",
+      "Behavior C",
+      "Behavior D"
+    ],
+    "answer": "Behavior Replication",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the default behavior of Replication?",
+      "points": [
+        "Correct answer: Behavior Replication.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_84",
+    "question": "Explain how Replication works in Database (SQL & MongoDB).",
+    "options": [],
+    "answer": "Detailed explanation about Replication.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Replication works in Database (SQL & MongoDB).",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_85",
+    "question": "Which statement about Indexing is correct?",
+    "options": [
+      "True for Indexing",
+      "True for B",
+      "True for C",
+      "None"
+    ],
+    "answer": "True for Indexing",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which statement about Indexing is correct?",
+      "points": [
+        "Correct answer: True for Indexing.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_86",
+    "question": "Explain how Indexing works in Database (SQL & MongoDB).",
+    "options": [],
+    "answer": "Detailed explanation about Indexing.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Indexing works in Database (SQL & MongoDB).",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_87",
+    "question": "What is the purpose of Queries in Database (SQL & MongoDB)?",
+    "options": [
+      "Option Queries",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "answer": "Option Queries",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: What is the purpose of Queries in Database (SQL & MongoDB)?",
+      "points": [
+        "Correct answer: Option Queries.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_88",
+    "question": "Describe pros and cons of Queries.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of Queries.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_89",
+    "question": "Which statement about Replication is correct?",
+    "options": [
+      "True for Replication",
+      "True for B",
+      "True for C",
+      "None"
+    ],
+    "answer": "True for Replication",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which statement about Replication is correct?",
+      "points": [
+        "Correct answer: True for Replication.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_90",
+    "question": "Explain how Replication works in Database (SQL & MongoDB).",
+    "options": [],
+    "answer": "Detailed explanation about Replication.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Replication works in Database (SQL & MongoDB).",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_91",
+    "question": "Which annotation/keyword is used for ACID?",
+    "options": [
+      "@ACID",
+      "@B",
+      "@C",
+      "@D"
+    ],
+    "answer": "@ACID",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which annotation/keyword is used for ACID?",
+      "points": [
+        "Correct answer: @ACID.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_92",
+    "question": "Explain how ACID works in Database (SQL & MongoDB).",
+    "options": [],
+    "answer": "Detailed explanation about ACID.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how ACID works in Database (SQL & MongoDB).",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_93",
+    "question": "Which annotation/keyword is used for Aggregation pipeline?",
+    "options": [
+      "@Aggregation pipeline",
+      "@B",
+      "@C",
+      "@D"
+    ],
+    "answer": "@Aggregation pipeline",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which annotation/keyword is used for Aggregation pipeline?",
+      "points": [
+        "Correct answer: @Aggregation pipeline.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_94",
+    "question": "How would you design/implement Aggregation pipeline in a production system?",
+    "options": [],
+    "answer": "Design considerations and steps.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: How would you design/implement Aggregation pipeline in a production system?",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_95",
+    "question": "Which annotation/keyword is used for Sharding?",
+    "options": [
+      "@Sharding",
+      "@B",
+      "@C",
+      "@D"
+    ],
+    "answer": "@Sharding",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which annotation/keyword is used for Sharding?",
+      "points": [
+        "Correct answer: @Sharding.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_96",
+    "question": "Explain how Sharding works in Database (SQL & MongoDB).",
+    "options": [],
+    "answer": "Detailed explanation about Sharding.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Explain how Sharding works in Database (SQL & MongoDB).",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_97",
+    "question": "Which annotation/keyword is used for ACID?",
+    "options": [
+      "@ACID",
+      "@B",
+      "@C",
+      "@D"
+    ],
+    "answer": "@ACID",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which annotation/keyword is used for ACID?",
+      "points": [
+        "Correct answer: @ACID.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_98",
+    "question": "Describe pros and cons of ACID.",
+    "options": [],
+    "answer": "Pros: ... Cons: ...",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: Describe pros and cons of ACID.",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_99",
+    "question": "Which annotation/keyword is used for Indexing?",
+    "options": [
+      "@Indexing",
+      "@B",
+      "@C",
+      "@D"
+    ],
+    "answer": "@Indexing",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Explanation: Which annotation/keyword is used for Indexing?",
+      "points": [
+        "Correct answer: @Indexing.",
+        "Key concept to remember related to the question."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "practice"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  },
+  {
+    "id": "database_(sql_&_mongodb)_100",
+    "question": "How would you design/implement Indexing in a production system?",
+    "options": [],
+    "answer": "Design considerations and steps.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "explanation": {
+      "intro": "Explanation: How would you design/implement Indexing in a production system?",
+      "points": [
+        "Detailed explanation to highlight important aspects."
+      ]
+    },
+    "askedBy": [
+      "interview"
+    ],
+    "technology": "Database (SQL & MongoDB)"
+  }
+]

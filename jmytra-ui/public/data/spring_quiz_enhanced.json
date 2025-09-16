@@ -1,0 +1,1262 @@
+[
+  {
+    "id": 1,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "What is Spring Bean scope 1?",
+    "options": [
+      "singleton",
+      "prototype",
+      "request",
+      "session"
+    ],
+    "answer": "singleton",
+    "explanation": "By default, Spring beans are singleton in scope.",
+    "askedBy": "System"
+  },
+  {
+    "id": 2,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "Which annotation is used for dependency injection in Spring? (Q2)",
+    "options": [
+      "@Bean",
+      "@Autowired",
+      "@Inject",
+      "@Service"
+    ],
+    "answer": "@Autowired",
+    "explanation": "@Autowired tells Spring to automatically resolve and inject collaborating beans.",
+    "askedBy": "System"
+  },
+  {
+    "id": 3,
+    "type": "Interview",
+    "isObjective": false,
+    "question": "Explain how Spring Boot simplifies microservice development. (Q3)",
+    "answer": "Spring Boot provides embedded servers, opinionated configuration, and integrations with Spring Cloud for building scalable microservices.",
+    "explanation": "Spring Boot reduces boilerplate setup, enabling rapid development of REST APIs and distributed systems.",
+    "askedBy": "Interviewer"
+  },
+  {
+    "id": 4,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "Which Spring annotation is used to mark a class as a configuration class? (Q4)",
+    "options": [
+      "@Configuration",
+      "@Component",
+      "@Service",
+      "@Repository"
+    ],
+    "answer": "@Configuration",
+    "explanation": "@Configuration classes contain bean definitions for the Spring container.",
+    "askedBy": "System"
+  },
+  {
+    "id": 5,
+    "type": "Interview",
+    "isObjective": false,
+    "question": "What is the role of Spring Security in enterprise applications? (Q5)",
+    "answer": "Spring Security provides authentication, authorization, and protection against common vulnerabilities.",
+    "explanation": "It integrates seamlessly with Spring applications and supports OAuth2, JWT, and custom security models.",
+    "askedBy": "Interviewer"
+  },
+  {
+    "id": 6,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "What is Spring Bean scope 6?",
+    "options": [
+      "singleton",
+      "prototype",
+      "request",
+      "session"
+    ],
+    "answer": "singleton",
+    "explanation": "By default, Spring beans are singleton in scope.",
+    "askedBy": "System"
+  },
+  {
+    "id": 7,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "Which annotation is used for dependency injection in Spring? (Q7)",
+    "options": [
+      "@Bean",
+      "@Autowired",
+      "@Inject",
+      "@Service"
+    ],
+    "answer": "@Autowired",
+    "explanation": "@Autowired tells Spring to automatically resolve and inject collaborating beans.",
+    "askedBy": "System"
+  },
+  {
+    "id": 8,
+    "type": "Interview",
+    "isObjective": false,
+    "question": "Explain how Spring Boot simplifies microservice development. (Q8)",
+    "answer": "Spring Boot provides embedded servers, opinionated configuration, and integrations with Spring Cloud for building scalable microservices.",
+    "explanation": "Spring Boot reduces boilerplate setup, enabling rapid development of REST APIs and distributed systems.",
+    "askedBy": "Interviewer"
+  },
+  {
+    "id": 9,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "Which Spring annotation is used to mark a class as a configuration class? (Q9)",
+    "options": [
+      "@Configuration",
+      "@Component",
+      "@Service",
+      "@Repository"
+    ],
+    "answer": "@Configuration",
+    "explanation": "@Configuration classes contain bean definitions for the Spring container.",
+    "askedBy": "System"
+  },
+  {
+    "id": 10,
+    "type": "Interview",
+    "isObjective": false,
+    "question": "What is the role of Spring Security in enterprise applications? (Q10)",
+    "answer": "Spring Security provides authentication, authorization, and protection against common vulnerabilities.",
+    "explanation": "It integrates seamlessly with Spring applications and supports OAuth2, JWT, and custom security models.",
+    "askedBy": "Interviewer"
+  },
+  {
+    "id": 11,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "What is Spring Bean scope 11?",
+    "options": [
+      "singleton",
+      "prototype",
+      "request",
+      "session"
+    ],
+    "answer": "singleton",
+    "explanation": "By default, Spring beans are singleton in scope.",
+    "askedBy": "System"
+  },
+  {
+    "id": 12,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "Which annotation is used for dependency injection in Spring? (Q12)",
+    "options": [
+      "@Bean",
+      "@Autowired",
+      "@Inject",
+      "@Service"
+    ],
+    "answer": "@Autowired",
+    "explanation": "@Autowired tells Spring to automatically resolve and inject collaborating beans.",
+    "askedBy": "System"
+  },
+  {
+    "id": 13,
+    "type": "Interview",
+    "isObjective": false,
+    "question": "Explain how Spring Boot simplifies microservice development. (Q13)",
+    "answer": "Spring Boot provides embedded servers, opinionated configuration, and integrations with Spring Cloud for building scalable microservices.",
+    "explanation": "Spring Boot reduces boilerplate setup, enabling rapid development of REST APIs and distributed systems.",
+    "askedBy": "Interviewer"
+  },
+  {
+    "id": 14,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "Which Spring annotation is used to mark a class as a configuration class? (Q14)",
+    "options": [
+      "@Configuration",
+      "@Component",
+      "@Service",
+      "@Repository"
+    ],
+    "answer": "@Configuration",
+    "explanation": "@Configuration classes contain bean definitions for the Spring container.",
+    "askedBy": "System"
+  },
+  {
+    "id": 15,
+    "type": "Interview",
+    "isObjective": false,
+    "question": "What is the role of Spring Security in enterprise applications? (Q15)",
+    "answer": "Spring Security provides authentication, authorization, and protection against common vulnerabilities.",
+    "explanation": "It integrates seamlessly with Spring applications and supports OAuth2, JWT, and custom security models.",
+    "askedBy": "Interviewer"
+  },
+  {
+    "id": 16,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "What is Spring Bean scope 16?",
+    "options": [
+      "singleton",
+      "prototype",
+      "request",
+      "session"
+    ],
+    "answer": "singleton",
+    "explanation": "By default, Spring beans are singleton in scope.",
+    "askedBy": "System"
+  },
+  {
+    "id": 17,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "Which annotation is used for dependency injection in Spring? (Q17)",
+    "options": [
+      "@Bean",
+      "@Autowired",
+      "@Inject",
+      "@Service"
+    ],
+    "answer": "@Autowired",
+    "explanation": "@Autowired tells Spring to automatically resolve and inject collaborating beans.",
+    "askedBy": "System"
+  },
+  {
+    "id": 18,
+    "type": "Interview",
+    "isObjective": false,
+    "question": "Explain how Spring Boot simplifies microservice development. (Q18)",
+    "answer": "Spring Boot provides embedded servers, opinionated configuration, and integrations with Spring Cloud for building scalable microservices.",
+    "explanation": "Spring Boot reduces boilerplate setup, enabling rapid development of REST APIs and distributed systems.",
+    "askedBy": "Interviewer"
+  },
+  {
+    "id": 19,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "Which Spring annotation is used to mark a class as a configuration class? (Q19)",
+    "options": [
+      "@Configuration",
+      "@Component",
+      "@Service",
+      "@Repository"
+    ],
+    "answer": "@Configuration",
+    "explanation": "@Configuration classes contain bean definitions for the Spring container.",
+    "askedBy": "System"
+  },
+  {
+    "id": 20,
+    "type": "Interview",
+    "isObjective": false,
+    "question": "What is the role of Spring Security in enterprise applications? (Q20)",
+    "answer": "Spring Security provides authentication, authorization, and protection against common vulnerabilities.",
+    "explanation": "It integrates seamlessly with Spring applications and supports OAuth2, JWT, and custom security models.",
+    "askedBy": "Interviewer"
+  },
+  {
+    "id": 21,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "What is Spring Bean scope 21?",
+    "options": [
+      "singleton",
+      "prototype",
+      "request",
+      "session"
+    ],
+    "answer": "singleton",
+    "explanation": "By default, Spring beans are singleton in scope.",
+    "askedBy": "System"
+  },
+  {
+    "id": 22,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "Which annotation is used for dependency injection in Spring? (Q22)",
+    "options": [
+      "@Bean",
+      "@Autowired",
+      "@Inject",
+      "@Service"
+    ],
+    "answer": "@Autowired",
+    "explanation": "@Autowired tells Spring to automatically resolve and inject collaborating beans.",
+    "askedBy": "System"
+  },
+  {
+    "id": 23,
+    "type": "Interview",
+    "isObjective": false,
+    "question": "Explain how Spring Boot simplifies microservice development. (Q23)",
+    "answer": "Spring Boot provides embedded servers, opinionated configuration, and integrations with Spring Cloud for building scalable microservices.",
+    "explanation": "Spring Boot reduces boilerplate setup, enabling rapid development of REST APIs and distributed systems.",
+    "askedBy": "Interviewer"
+  },
+  {
+    "id": 24,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "Which Spring annotation is used to mark a class as a configuration class? (Q24)",
+    "options": [
+      "@Configuration",
+      "@Component",
+      "@Service",
+      "@Repository"
+    ],
+    "answer": "@Configuration",
+    "explanation": "@Configuration classes contain bean definitions for the Spring container.",
+    "askedBy": "System"
+  },
+  {
+    "id": 25,
+    "type": "Interview",
+    "isObjective": false,
+    "question": "What is the role of Spring Security in enterprise applications? (Q25)",
+    "answer": "Spring Security provides authentication, authorization, and protection against common vulnerabilities.",
+    "explanation": "It integrates seamlessly with Spring applications and supports OAuth2, JWT, and custom security models.",
+    "askedBy": "Interviewer"
+  },
+  {
+    "id": 26,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "What is Spring Bean scope 26?",
+    "options": [
+      "singleton",
+      "prototype",
+      "request",
+      "session"
+    ],
+    "answer": "singleton",
+    "explanation": "By default, Spring beans are singleton in scope.",
+    "askedBy": "System"
+  },
+  {
+    "id": 27,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "Which annotation is used for dependency injection in Spring? (Q27)",
+    "options": [
+      "@Bean",
+      "@Autowired",
+      "@Inject",
+      "@Service"
+    ],
+    "answer": "@Autowired",
+    "explanation": "@Autowired tells Spring to automatically resolve and inject collaborating beans.",
+    "askedBy": "System"
+  },
+  {
+    "id": 28,
+    "type": "Interview",
+    "isObjective": false,
+    "question": "Explain how Spring Boot simplifies microservice development. (Q28)",
+    "answer": "Spring Boot provides embedded servers, opinionated configuration, and integrations with Spring Cloud for building scalable microservices.",
+    "explanation": "Spring Boot reduces boilerplate setup, enabling rapid development of REST APIs and distributed systems.",
+    "askedBy": "Interviewer"
+  },
+  {
+    "id": 29,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "Which Spring annotation is used to mark a class as a configuration class? (Q29)",
+    "options": [
+      "@Configuration",
+      "@Component",
+      "@Service",
+      "@Repository"
+    ],
+    "answer": "@Configuration",
+    "explanation": "@Configuration classes contain bean definitions for the Spring container.",
+    "askedBy": "System"
+  },
+  {
+    "id": 30,
+    "type": "Interview",
+    "isObjective": false,
+    "question": "What is the role of Spring Security in enterprise applications? (Q30)",
+    "answer": "Spring Security provides authentication, authorization, and protection against common vulnerabilities.",
+    "explanation": "It integrates seamlessly with Spring applications and supports OAuth2, JWT, and custom security models.",
+    "askedBy": "Interviewer"
+  },
+  {
+    "id": 31,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "What is Spring Bean scope 31?",
+    "options": [
+      "singleton",
+      "prototype",
+      "request",
+      "session"
+    ],
+    "answer": "singleton",
+    "explanation": "By default, Spring beans are singleton in scope.",
+    "askedBy": "System"
+  },
+  {
+    "id": 32,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "Which annotation is used for dependency injection in Spring? (Q32)",
+    "options": [
+      "@Bean",
+      "@Autowired",
+      "@Inject",
+      "@Service"
+    ],
+    "answer": "@Autowired",
+    "explanation": "@Autowired tells Spring to automatically resolve and inject collaborating beans.",
+    "askedBy": "System"
+  },
+  {
+    "id": 33,
+    "type": "Interview",
+    "isObjective": false,
+    "question": "Explain how Spring Boot simplifies microservice development. (Q33)",
+    "answer": "Spring Boot provides embedded servers, opinionated configuration, and integrations with Spring Cloud for building scalable microservices.",
+    "explanation": "Spring Boot reduces boilerplate setup, enabling rapid development of REST APIs and distributed systems.",
+    "askedBy": "Interviewer"
+  },
+  {
+    "id": 34,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "Which Spring annotation is used to mark a class as a configuration class? (Q34)",
+    "options": [
+      "@Configuration",
+      "@Component",
+      "@Service",
+      "@Repository"
+    ],
+    "answer": "@Configuration",
+    "explanation": "@Configuration classes contain bean definitions for the Spring container.",
+    "askedBy": "System"
+  },
+  {
+    "id": 35,
+    "type": "Interview",
+    "isObjective": false,
+    "question": "What is the role of Spring Security in enterprise applications? (Q35)",
+    "answer": "Spring Security provides authentication, authorization, and protection against common vulnerabilities.",
+    "explanation": "It integrates seamlessly with Spring applications and supports OAuth2, JWT, and custom security models.",
+    "askedBy": "Interviewer"
+  },
+  {
+    "id": 36,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "What is Spring Bean scope 36?",
+    "options": [
+      "singleton",
+      "prototype",
+      "request",
+      "session"
+    ],
+    "answer": "singleton",
+    "explanation": "By default, Spring beans are singleton in scope.",
+    "askedBy": "System"
+  },
+  {
+    "id": 37,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "Which annotation is used for dependency injection in Spring? (Q37)",
+    "options": [
+      "@Bean",
+      "@Autowired",
+      "@Inject",
+      "@Service"
+    ],
+    "answer": "@Autowired",
+    "explanation": "@Autowired tells Spring to automatically resolve and inject collaborating beans.",
+    "askedBy": "System"
+  },
+  {
+    "id": 38,
+    "type": "Interview",
+    "isObjective": false,
+    "question": "Explain how Spring Boot simplifies microservice development. (Q38)",
+    "answer": "Spring Boot provides embedded servers, opinionated configuration, and integrations with Spring Cloud for building scalable microservices.",
+    "explanation": "Spring Boot reduces boilerplate setup, enabling rapid development of REST APIs and distributed systems.",
+    "askedBy": "Interviewer"
+  },
+  {
+    "id": 39,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "Which Spring annotation is used to mark a class as a configuration class? (Q39)",
+    "options": [
+      "@Configuration",
+      "@Component",
+      "@Service",
+      "@Repository"
+    ],
+    "answer": "@Configuration",
+    "explanation": "@Configuration classes contain bean definitions for the Spring container.",
+    "askedBy": "System"
+  },
+  {
+    "id": 40,
+    "type": "Interview",
+    "isObjective": false,
+    "question": "What is the role of Spring Security in enterprise applications? (Q40)",
+    "answer": "Spring Security provides authentication, authorization, and protection against common vulnerabilities.",
+    "explanation": "It integrates seamlessly with Spring applications and supports OAuth2, JWT, and custom security models.",
+    "askedBy": "Interviewer"
+  },
+  {
+    "id": 41,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "What is Spring Bean scope 41?",
+    "options": [
+      "singleton",
+      "prototype",
+      "request",
+      "session"
+    ],
+    "answer": "singleton",
+    "explanation": "By default, Spring beans are singleton in scope.",
+    "askedBy": "System"
+  },
+  {
+    "id": 42,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "Which annotation is used for dependency injection in Spring? (Q42)",
+    "options": [
+      "@Bean",
+      "@Autowired",
+      "@Inject",
+      "@Service"
+    ],
+    "answer": "@Autowired",
+    "explanation": "@Autowired tells Spring to automatically resolve and inject collaborating beans.",
+    "askedBy": "System"
+  },
+  {
+    "id": 43,
+    "type": "Interview",
+    "isObjective": false,
+    "question": "Explain how Spring Boot simplifies microservice development. (Q43)",
+    "answer": "Spring Boot provides embedded servers, opinionated configuration, and integrations with Spring Cloud for building scalable microservices.",
+    "explanation": "Spring Boot reduces boilerplate setup, enabling rapid development of REST APIs and distributed systems.",
+    "askedBy": "Interviewer"
+  },
+  {
+    "id": 44,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "Which Spring annotation is used to mark a class as a configuration class? (Q44)",
+    "options": [
+      "@Configuration",
+      "@Component",
+      "@Service",
+      "@Repository"
+    ],
+    "answer": "@Configuration",
+    "explanation": "@Configuration classes contain bean definitions for the Spring container.",
+    "askedBy": "System"
+  },
+  {
+    "id": 45,
+    "type": "Interview",
+    "isObjective": false,
+    "question": "What is the role of Spring Security in enterprise applications? (Q45)",
+    "answer": "Spring Security provides authentication, authorization, and protection against common vulnerabilities.",
+    "explanation": "It integrates seamlessly with Spring applications and supports OAuth2, JWT, and custom security models.",
+    "askedBy": "Interviewer"
+  },
+  {
+    "id": 46,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "What is Spring Bean scope 46?",
+    "options": [
+      "singleton",
+      "prototype",
+      "request",
+      "session"
+    ],
+    "answer": "singleton",
+    "explanation": "By default, Spring beans are singleton in scope.",
+    "askedBy": "System"
+  },
+  {
+    "id": 47,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "Which annotation is used for dependency injection in Spring? (Q47)",
+    "options": [
+      "@Bean",
+      "@Autowired",
+      "@Inject",
+      "@Service"
+    ],
+    "answer": "@Autowired",
+    "explanation": "@Autowired tells Spring to automatically resolve and inject collaborating beans.",
+    "askedBy": "System"
+  },
+  {
+    "id": 48,
+    "type": "Interview",
+    "isObjective": false,
+    "question": "Explain how Spring Boot simplifies microservice development. (Q48)",
+    "answer": "Spring Boot provides embedded servers, opinionated configuration, and integrations with Spring Cloud for building scalable microservices.",
+    "explanation": "Spring Boot reduces boilerplate setup, enabling rapid development of REST APIs and distributed systems.",
+    "askedBy": "Interviewer"
+  },
+  {
+    "id": 49,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "Which Spring annotation is used to mark a class as a configuration class? (Q49)",
+    "options": [
+      "@Configuration",
+      "@Component",
+      "@Service",
+      "@Repository"
+    ],
+    "answer": "@Configuration",
+    "explanation": "@Configuration classes contain bean definitions for the Spring container.",
+    "askedBy": "System"
+  },
+  {
+    "id": 50,
+    "type": "Interview",
+    "isObjective": false,
+    "question": "What is the role of Spring Security in enterprise applications? (Q50)",
+    "answer": "Spring Security provides authentication, authorization, and protection against common vulnerabilities.",
+    "explanation": "It integrates seamlessly with Spring applications and supports OAuth2, JWT, and custom security models.",
+    "askedBy": "Interviewer"
+  },
+  {
+    "id": 51,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "What is Spring Bean scope 51?",
+    "options": [
+      "singleton",
+      "prototype",
+      "request",
+      "session"
+    ],
+    "answer": "singleton",
+    "explanation": "By default, Spring beans are singleton in scope.",
+    "askedBy": "System"
+  },
+  {
+    "id": 52,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "Which annotation is used for dependency injection in Spring? (Q52)",
+    "options": [
+      "@Bean",
+      "@Autowired",
+      "@Inject",
+      "@Service"
+    ],
+    "answer": "@Autowired",
+    "explanation": "@Autowired tells Spring to automatically resolve and inject collaborating beans.",
+    "askedBy": "System"
+  },
+  {
+    "id": 53,
+    "type": "Interview",
+    "isObjective": false,
+    "question": "Explain how Spring Boot simplifies microservice development. (Q53)",
+    "answer": "Spring Boot provides embedded servers, opinionated configuration, and integrations with Spring Cloud for building scalable microservices.",
+    "explanation": "Spring Boot reduces boilerplate setup, enabling rapid development of REST APIs and distributed systems.",
+    "askedBy": "Interviewer"
+  },
+  {
+    "id": 54,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "Which Spring annotation is used to mark a class as a configuration class? (Q54)",
+    "options": [
+      "@Configuration",
+      "@Component",
+      "@Service",
+      "@Repository"
+    ],
+    "answer": "@Configuration",
+    "explanation": "@Configuration classes contain bean definitions for the Spring container.",
+    "askedBy": "System"
+  },
+  {
+    "id": 55,
+    "type": "Interview",
+    "isObjective": false,
+    "question": "What is the role of Spring Security in enterprise applications? (Q55)",
+    "answer": "Spring Security provides authentication, authorization, and protection against common vulnerabilities.",
+    "explanation": "It integrates seamlessly with Spring applications and supports OAuth2, JWT, and custom security models.",
+    "askedBy": "Interviewer"
+  },
+  {
+    "id": 56,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "What is Spring Bean scope 56?",
+    "options": [
+      "singleton",
+      "prototype",
+      "request",
+      "session"
+    ],
+    "answer": "singleton",
+    "explanation": "By default, Spring beans are singleton in scope.",
+    "askedBy": "System"
+  },
+  {
+    "id": 57,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "Which annotation is used for dependency injection in Spring? (Q57)",
+    "options": [
+      "@Bean",
+      "@Autowired",
+      "@Inject",
+      "@Service"
+    ],
+    "answer": "@Autowired",
+    "explanation": "@Autowired tells Spring to automatically resolve and inject collaborating beans.",
+    "askedBy": "System"
+  },
+  {
+    "id": 58,
+    "type": "Interview",
+    "isObjective": false,
+    "question": "Explain how Spring Boot simplifies microservice development. (Q58)",
+    "answer": "Spring Boot provides embedded servers, opinionated configuration, and integrations with Spring Cloud for building scalable microservices.",
+    "explanation": "Spring Boot reduces boilerplate setup, enabling rapid development of REST APIs and distributed systems.",
+    "askedBy": "Interviewer"
+  },
+  {
+    "id": 59,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "Which Spring annotation is used to mark a class as a configuration class? (Q59)",
+    "options": [
+      "@Configuration",
+      "@Component",
+      "@Service",
+      "@Repository"
+    ],
+    "answer": "@Configuration",
+    "explanation": "@Configuration classes contain bean definitions for the Spring container.",
+    "askedBy": "System"
+  },
+  {
+    "id": 60,
+    "type": "Interview",
+    "isObjective": false,
+    "question": "What is the role of Spring Security in enterprise applications? (Q60)",
+    "answer": "Spring Security provides authentication, authorization, and protection against common vulnerabilities.",
+    "explanation": "It integrates seamlessly with Spring applications and supports OAuth2, JWT, and custom security models.",
+    "askedBy": "Interviewer"
+  },
+  {
+    "id": 61,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "What is Spring Bean scope 61?",
+    "options": [
+      "singleton",
+      "prototype",
+      "request",
+      "session"
+    ],
+    "answer": "singleton",
+    "explanation": "By default, Spring beans are singleton in scope.",
+    "askedBy": "System"
+  },
+  {
+    "id": 62,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "Which annotation is used for dependency injection in Spring? (Q62)",
+    "options": [
+      "@Bean",
+      "@Autowired",
+      "@Inject",
+      "@Service"
+    ],
+    "answer": "@Autowired",
+    "explanation": "@Autowired tells Spring to automatically resolve and inject collaborating beans.",
+    "askedBy": "System"
+  },
+  {
+    "id": 63,
+    "type": "Interview",
+    "isObjective": false,
+    "question": "Explain how Spring Boot simplifies microservice development. (Q63)",
+    "answer": "Spring Boot provides embedded servers, opinionated configuration, and integrations with Spring Cloud for building scalable microservices.",
+    "explanation": "Spring Boot reduces boilerplate setup, enabling rapid development of REST APIs and distributed systems.",
+    "askedBy": "Interviewer"
+  },
+  {
+    "id": 64,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "Which Spring annotation is used to mark a class as a configuration class? (Q64)",
+    "options": [
+      "@Configuration",
+      "@Component",
+      "@Service",
+      "@Repository"
+    ],
+    "answer": "@Configuration",
+    "explanation": "@Configuration classes contain bean definitions for the Spring container.",
+    "askedBy": "System"
+  },
+  {
+    "id": 65,
+    "type": "Interview",
+    "isObjective": false,
+    "question": "What is the role of Spring Security in enterprise applications? (Q65)",
+    "answer": "Spring Security provides authentication, authorization, and protection against common vulnerabilities.",
+    "explanation": "It integrates seamlessly with Spring applications and supports OAuth2, JWT, and custom security models.",
+    "askedBy": "Interviewer"
+  },
+  {
+    "id": 66,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "What is Spring Bean scope 66?",
+    "options": [
+      "singleton",
+      "prototype",
+      "request",
+      "session"
+    ],
+    "answer": "singleton",
+    "explanation": "By default, Spring beans are singleton in scope.",
+    "askedBy": "System"
+  },
+  {
+    "id": 67,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "Which annotation is used for dependency injection in Spring? (Q67)",
+    "options": [
+      "@Bean",
+      "@Autowired",
+      "@Inject",
+      "@Service"
+    ],
+    "answer": "@Autowired",
+    "explanation": "@Autowired tells Spring to automatically resolve and inject collaborating beans.",
+    "askedBy": "System"
+  },
+  {
+    "id": 68,
+    "type": "Interview",
+    "isObjective": false,
+    "question": "Explain how Spring Boot simplifies microservice development. (Q68)",
+    "answer": "Spring Boot provides embedded servers, opinionated configuration, and integrations with Spring Cloud for building scalable microservices.",
+    "explanation": "Spring Boot reduces boilerplate setup, enabling rapid development of REST APIs and distributed systems.",
+    "askedBy": "Interviewer"
+  },
+  {
+    "id": 69,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "Which Spring annotation is used to mark a class as a configuration class? (Q69)",
+    "options": [
+      "@Configuration",
+      "@Component",
+      "@Service",
+      "@Repository"
+    ],
+    "answer": "@Configuration",
+    "explanation": "@Configuration classes contain bean definitions for the Spring container.",
+    "askedBy": "System"
+  },
+  {
+    "id": 70,
+    "type": "Interview",
+    "isObjective": false,
+    "question": "What is the role of Spring Security in enterprise applications? (Q70)",
+    "answer": "Spring Security provides authentication, authorization, and protection against common vulnerabilities.",
+    "explanation": "It integrates seamlessly with Spring applications and supports OAuth2, JWT, and custom security models.",
+    "askedBy": "Interviewer"
+  },
+  {
+    "id": 71,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "What is Spring Bean scope 71?",
+    "options": [
+      "singleton",
+      "prototype",
+      "request",
+      "session"
+    ],
+    "answer": "singleton",
+    "explanation": "By default, Spring beans are singleton in scope.",
+    "askedBy": "System"
+  },
+  {
+    "id": 72,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "Which annotation is used for dependency injection in Spring? (Q72)",
+    "options": [
+      "@Bean",
+      "@Autowired",
+      "@Inject",
+      "@Service"
+    ],
+    "answer": "@Autowired",
+    "explanation": "@Autowired tells Spring to automatically resolve and inject collaborating beans.",
+    "askedBy": "System"
+  },
+  {
+    "id": 73,
+    "type": "Interview",
+    "isObjective": false,
+    "question": "Explain how Spring Boot simplifies microservice development. (Q73)",
+    "answer": "Spring Boot provides embedded servers, opinionated configuration, and integrations with Spring Cloud for building scalable microservices.",
+    "explanation": "Spring Boot reduces boilerplate setup, enabling rapid development of REST APIs and distributed systems.",
+    "askedBy": "Interviewer"
+  },
+  {
+    "id": 74,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "Which Spring annotation is used to mark a class as a configuration class? (Q74)",
+    "options": [
+      "@Configuration",
+      "@Component",
+      "@Service",
+      "@Repository"
+    ],
+    "answer": "@Configuration",
+    "explanation": "@Configuration classes contain bean definitions for the Spring container.",
+    "askedBy": "System"
+  },
+  {
+    "id": 75,
+    "type": "Interview",
+    "isObjective": false,
+    "question": "What is the role of Spring Security in enterprise applications? (Q75)",
+    "answer": "Spring Security provides authentication, authorization, and protection against common vulnerabilities.",
+    "explanation": "It integrates seamlessly with Spring applications and supports OAuth2, JWT, and custom security models.",
+    "askedBy": "Interviewer"
+  },
+  {
+    "id": 76,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "What is Spring Bean scope 76?",
+    "options": [
+      "singleton",
+      "prototype",
+      "request",
+      "session"
+    ],
+    "answer": "singleton",
+    "explanation": "By default, Spring beans are singleton in scope.",
+    "askedBy": "System"
+  },
+  {
+    "id": 77,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "Which annotation is used for dependency injection in Spring? (Q77)",
+    "options": [
+      "@Bean",
+      "@Autowired",
+      "@Inject",
+      "@Service"
+    ],
+    "answer": "@Autowired",
+    "explanation": "@Autowired tells Spring to automatically resolve and inject collaborating beans.",
+    "askedBy": "System"
+  },
+  {
+    "id": 78,
+    "type": "Interview",
+    "isObjective": false,
+    "question": "Explain how Spring Boot simplifies microservice development. (Q78)",
+    "answer": "Spring Boot provides embedded servers, opinionated configuration, and integrations with Spring Cloud for building scalable microservices.",
+    "explanation": "Spring Boot reduces boilerplate setup, enabling rapid development of REST APIs and distributed systems.",
+    "askedBy": "Interviewer"
+  },
+  {
+    "id": 79,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "Which Spring annotation is used to mark a class as a configuration class? (Q79)",
+    "options": [
+      "@Configuration",
+      "@Component",
+      "@Service",
+      "@Repository"
+    ],
+    "answer": "@Configuration",
+    "explanation": "@Configuration classes contain bean definitions for the Spring container.",
+    "askedBy": "System"
+  },
+  {
+    "id": 80,
+    "type": "Interview",
+    "isObjective": false,
+    "question": "What is the role of Spring Security in enterprise applications? (Q80)",
+    "answer": "Spring Security provides authentication, authorization, and protection against common vulnerabilities.",
+    "explanation": "It integrates seamlessly with Spring applications and supports OAuth2, JWT, and custom security models.",
+    "askedBy": "Interviewer"
+  },
+  {
+    "id": 81,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "What is Spring Bean scope 81?",
+    "options": [
+      "singleton",
+      "prototype",
+      "request",
+      "session"
+    ],
+    "answer": "singleton",
+    "explanation": "By default, Spring beans are singleton in scope.",
+    "askedBy": "System"
+  },
+  {
+    "id": 82,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "Which annotation is used for dependency injection in Spring? (Q82)",
+    "options": [
+      "@Bean",
+      "@Autowired",
+      "@Inject",
+      "@Service"
+    ],
+    "answer": "@Autowired",
+    "explanation": "@Autowired tells Spring to automatically resolve and inject collaborating beans.",
+    "askedBy": "System"
+  },
+  {
+    "id": 83,
+    "type": "Interview",
+    "isObjective": false,
+    "question": "Explain how Spring Boot simplifies microservice development. (Q83)",
+    "answer": "Spring Boot provides embedded servers, opinionated configuration, and integrations with Spring Cloud for building scalable microservices.",
+    "explanation": "Spring Boot reduces boilerplate setup, enabling rapid development of REST APIs and distributed systems.",
+    "askedBy": "Interviewer"
+  },
+  {
+    "id": 84,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "Which Spring annotation is used to mark a class as a configuration class? (Q84)",
+    "options": [
+      "@Configuration",
+      "@Component",
+      "@Service",
+      "@Repository"
+    ],
+    "answer": "@Configuration",
+    "explanation": "@Configuration classes contain bean definitions for the Spring container.",
+    "askedBy": "System"
+  },
+  {
+    "id": 85,
+    "type": "Interview",
+    "isObjective": false,
+    "question": "What is the role of Spring Security in enterprise applications? (Q85)",
+    "answer": "Spring Security provides authentication, authorization, and protection against common vulnerabilities.",
+    "explanation": "It integrates seamlessly with Spring applications and supports OAuth2, JWT, and custom security models.",
+    "askedBy": "Interviewer"
+  },
+  {
+    "id": 86,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "What is Spring Bean scope 86?",
+    "options": [
+      "singleton",
+      "prototype",
+      "request",
+      "session"
+    ],
+    "answer": "singleton",
+    "explanation": "By default, Spring beans are singleton in scope.",
+    "askedBy": "System"
+  },
+  {
+    "id": 87,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "Which annotation is used for dependency injection in Spring? (Q87)",
+    "options": [
+      "@Bean",
+      "@Autowired",
+      "@Inject",
+      "@Service"
+    ],
+    "answer": "@Autowired",
+    "explanation": "@Autowired tells Spring to automatically resolve and inject collaborating beans.",
+    "askedBy": "System"
+  },
+  {
+    "id": 88,
+    "type": "Interview",
+    "isObjective": false,
+    "question": "Explain how Spring Boot simplifies microservice development. (Q88)",
+    "answer": "Spring Boot provides embedded servers, opinionated configuration, and integrations with Spring Cloud for building scalable microservices.",
+    "explanation": "Spring Boot reduces boilerplate setup, enabling rapid development of REST APIs and distributed systems.",
+    "askedBy": "Interviewer"
+  },
+  {
+    "id": 89,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "Which Spring annotation is used to mark a class as a configuration class? (Q89)",
+    "options": [
+      "@Configuration",
+      "@Component",
+      "@Service",
+      "@Repository"
+    ],
+    "answer": "@Configuration",
+    "explanation": "@Configuration classes contain bean definitions for the Spring container.",
+    "askedBy": "System"
+  },
+  {
+    "id": 90,
+    "type": "Interview",
+    "isObjective": false,
+    "question": "What is the role of Spring Security in enterprise applications? (Q90)",
+    "answer": "Spring Security provides authentication, authorization, and protection against common vulnerabilities.",
+    "explanation": "It integrates seamlessly with Spring applications and supports OAuth2, JWT, and custom security models.",
+    "askedBy": "Interviewer"
+  },
+  {
+    "id": 91,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "What is Spring Bean scope 91?",
+    "options": [
+      "singleton",
+      "prototype",
+      "request",
+      "session"
+    ],
+    "answer": "singleton",
+    "explanation": "By default, Spring beans are singleton in scope.",
+    "askedBy": "System"
+  },
+  {
+    "id": 92,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "Which annotation is used for dependency injection in Spring? (Q92)",
+    "options": [
+      "@Bean",
+      "@Autowired",
+      "@Inject",
+      "@Service"
+    ],
+    "answer": "@Autowired",
+    "explanation": "@Autowired tells Spring to automatically resolve and inject collaborating beans.",
+    "askedBy": "System"
+  },
+  {
+    "id": 93,
+    "type": "Interview",
+    "isObjective": false,
+    "question": "Explain how Spring Boot simplifies microservice development. (Q93)",
+    "answer": "Spring Boot provides embedded servers, opinionated configuration, and integrations with Spring Cloud for building scalable microservices.",
+    "explanation": "Spring Boot reduces boilerplate setup, enabling rapid development of REST APIs and distributed systems.",
+    "askedBy": "Interviewer"
+  },
+  {
+    "id": 94,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "Which Spring annotation is used to mark a class as a configuration class? (Q94)",
+    "options": [
+      "@Configuration",
+      "@Component",
+      "@Service",
+      "@Repository"
+    ],
+    "answer": "@Configuration",
+    "explanation": "@Configuration classes contain bean definitions for the Spring container.",
+    "askedBy": "System"
+  },
+  {
+    "id": 95,
+    "type": "Interview",
+    "isObjective": false,
+    "question": "What is the role of Spring Security in enterprise applications? (Q95)",
+    "answer": "Spring Security provides authentication, authorization, and protection against common vulnerabilities.",
+    "explanation": "It integrates seamlessly with Spring applications and supports OAuth2, JWT, and custom security models.",
+    "askedBy": "Interviewer"
+  },
+  {
+    "id": 96,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "What is Spring Bean scope 96?",
+    "options": [
+      "singleton",
+      "prototype",
+      "request",
+      "session"
+    ],
+    "answer": "singleton",
+    "explanation": "By default, Spring beans are singleton in scope.",
+    "askedBy": "System"
+  },
+  {
+    "id": 97,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "Which annotation is used for dependency injection in Spring? (Q97)",
+    "options": [
+      "@Bean",
+      "@Autowired",
+      "@Inject",
+      "@Service"
+    ],
+    "answer": "@Autowired",
+    "explanation": "@Autowired tells Spring to automatically resolve and inject collaborating beans.",
+    "askedBy": "System"
+  },
+  {
+    "id": 98,
+    "type": "Interview",
+    "isObjective": false,
+    "question": "Explain how Spring Boot simplifies microservice development. (Q98)",
+    "answer": "Spring Boot provides embedded servers, opinionated configuration, and integrations with Spring Cloud for building scalable microservices.",
+    "explanation": "Spring Boot reduces boilerplate setup, enabling rapid development of REST APIs and distributed systems.",
+    "askedBy": "Interviewer"
+  },
+  {
+    "id": 99,
+    "type": "MCQ",
+    "isObjective": true,
+    "question": "Which Spring annotation is used to mark a class as a configuration class? (Q99)",
+    "options": [
+      "@Configuration",
+      "@Component",
+      "@Service",
+      "@Repository"
+    ],
+    "answer": "@Configuration",
+    "explanation": "@Configuration classes contain bean definitions for the Spring container.",
+    "askedBy": "System"
+  },
+  {
+    "id": 100,
+    "type": "Interview",
+    "isObjective": false,
+    "question": "What is the role of Spring Security in enterprise applications? (Q100)",
+    "answer": "Spring Security provides authentication, authorization, and protection against common vulnerabilities.",
+    "explanation": "It integrates seamlessly with Spring applications and supports OAuth2, JWT, and custom security models.",
+    "askedBy": "Interviewer"
+  }
+]

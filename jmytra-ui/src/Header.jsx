@@ -9,6 +9,7 @@ const Header = ({title, subtitle}) => {
       <div style={{paddingRight: '1rem', maxHeight: '8rem',
       zIndex: 1000,}}>
           <table style={{width:'100%'}}>
+            <thead>
             <tr  style={{width:'100%'}}>
                 <td style={{width:'50%'}}>
                     <img src={logo} alt="logo" style={{width: '17rem', height: '10rem', marginLeft: '-3rem'}}/>
@@ -20,6 +21,7 @@ const Header = ({title, subtitle}) => {
                     </div>
                 </td>
             </tr>
+            </thead>
           </table>
       </div>
     </>

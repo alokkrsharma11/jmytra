@@ -1,0 +1,1232 @@
+[
+  {
+    "id": 1,
+    "question": "What does JVM stand for?",
+    "options": [
+      "Java Variable Machine",
+      "Java Virtual Machine",
+      "Just Virtual Machine",
+      "Java Verified Module"
+    ],
+    "answer": "Java Virtual Machine",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true
+  },
+  {
+    "id": 2,
+    "question": "Which keyword is used to inherit a class in Java?",
+    "options": [
+      "implements",
+      "extends",
+      "inherits",
+      "super"
+    ],
+    "answer": "extends",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true
+  },
+  {
+    "id": 3,
+    "question": "What is the output of: System.out.println(2 + \"2\")?",
+    "options": [
+      "4",
+      "22",
+      "Error",
+      "2 2"
+    ],
+    "answer": "22",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true
+  },
+  {
+    "id": 4,
+    "question": "Which collection allows duplicate elements?",
+    "options": [
+      "Set",
+      "Map",
+      "List",
+      "None"
+    ],
+    "answer": "List",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true
+  },
+  {
+    "id": 5,
+    "question": "What is autoboxing in Java?",
+    "options": [
+      "Converting primitive to wrapper object automatically",
+      "Converting wrapper to primitive",
+      "Manual boxing of objects",
+      "A JVM optimization"
+    ],
+    "answer": "Converting primitive to wrapper object automatically",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true
+  },
+  {
+    "id": 6,
+    "question": "What is the difference between == and .equals() in Java?",
+    "options": [
+      "== compares references, equals() compares values",
+      "== compares values, equals() compares references",
+      "Both same",
+      "None"
+    ],
+    "answer": "== compares references, equals() compares values",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true
+  },
+  {
+    "id": 7,
+    "question": "Which interface does java.util.HashMap implement?",
+    "options": [
+      "List",
+      "Map",
+      "Set",
+      "Collection"
+    ],
+    "answer": "Map",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true
+  },
+  {
+    "id": 8,
+    "question": "What is a checked exception?",
+    "options": [
+      "An exception that must be declared or handled",
+      "An exception that is unchecked",
+      "Runtime exception",
+      "Error"
+    ],
+    "answer": "An exception that must be declared or handled",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true
+  },
+  {
+    "id": 9,
+    "question": "What keyword is used to create a thread by extending a class?",
+    "options": [
+      "Runnable",
+      "Thread",
+      "synchronized",
+      "extends"
+    ],
+    "answer": "Thread",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true
+  },
+  {
+    "id": 10,
+    "question": "Explain the difference between ArrayList and LinkedList.",
+    "options": [],
+    "answer": "ArrayList is backed by a dynamic array and offers fast random access; LinkedList is a doubly-linked list offering fast insertions/removals at ends or middle but slower random access.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false
+  },
+  {
+    "id": 11,
+    "question": "Which Java version introduced lambda expressions?",
+    "options": [
+      "Java 6",
+      "Java 7",
+      "Java 8",
+      "Java 9"
+    ],
+    "answer": "Java 8",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true
+  },
+  {
+    "id": 12,
+    "question": "What is Stream API used for?",
+    "options": [
+      "Database access",
+      "Functional-style operations on collections",
+      "GUI rendering",
+      "Network IO"
+    ],
+    "answer": "Functional-style operations on collections",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true
+  },
+  {
+    "id": 13,
+    "question": "How do you prevent a method from being overridden?",
+    "options": [
+      "Declare method as private",
+      "Declare method as final",
+      "Use @Override",
+      "Make it static"
+    ],
+    "answer": "Declare method as final",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true
+  },
+  {
+    "id": 14,
+    "question": "What is the purpose of the volatile keyword?",
+    "options": [
+      "Make variable immutable",
+      "Ensure visibility of changes across threads",
+      "Make it static",
+      "Prevent garbage collection"
+    ],
+    "answer": "Ensure visibility of changes across threads",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true
+  },
+  {
+    "id": 15,
+    "question": "What is a deadlock?",
+    "options": [],
+    "answer": "A situation where two or more threads are blocked forever, each waiting for the other to release locks.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false
+  },
+  {
+    "id": 16,
+    "question": "Which collection is synchronized by default?",
+    "options": [
+      "ArrayList",
+      "Vector",
+      "HashMap",
+      "HashSet"
+    ],
+    "answer": "Vector",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true
+  },
+  {
+    "id": 17,
+    "question": "How do you create an immutable class in Java?",
+    "options": [],
+    "answer": "Make class final, make fields private final, initialize via constructor, do not provide setters, and defensively copy mutable fields on input/output.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false
+  },
+  {
+    "id": 18,
+    "question": "What is the use of Optional in Java 8?",
+    "options": [
+      "Store primitive values only",
+      "Avoid null checks and prevent NullPointerException",
+      "Replace collections",
+      "Handle exceptions"
+    ],
+    "answer": "Avoid null checks and prevent NullPointerException",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true
+  },
+  {
+    "id": 19,
+    "question": "Which method must be implemented for Runnable?",
+    "options": [
+      "run()",
+      "start()",
+      "execute()",
+      "call()"
+    ],
+    "answer": "run()",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true
+  },
+  {
+    "id": 20,
+    "question": "Explain difference between synchronized block and synchronized method.",
+    "options": [],
+    "answer": "A synchronized method locks on 'this' (or class for static methods) covering the whole method; synchronized block allows locking on a specific object and limits scope to a block for finer control and better concurrency.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false
+  },
+  {
+    "id": 21,
+    "question": "What is the output of: Integer a=128; Integer b=128; System.out.println(a==b);",
+    "options": [
+      "true",
+      "false",
+      "Compilation error",
+      "Runtime exception"
+    ],
+    "answer": "false",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true
+  },
+  {
+    "id": 22,
+    "question": "What does 'final' on a class mean?",
+    "options": [
+      "Class cannot be instantiated",
+      "Class cannot be subclassed",
+      "Class is immutable",
+      "Class methods are final"
+    ],
+    "answer": "Class cannot be subclassed",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true
+  },
+  {
+    "id": 23,
+    "question": "What is JIT compiler?",
+    "options": [
+      "Just-In-Time compiler that compiles bytecode to native code at runtime",
+      "A build tool",
+      "A testing framework",
+      "A type of garbage collector"
+    ],
+    "answer": "Just-In-Time compiler that compiles bytecode to native code at runtime",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true
+  },
+  {
+    "id": 24,
+    "question": "Describe how garbage collection works in Java.",
+    "options": [],
+    "answer": "Garbage collection reclaims memory by identifying unreachable objects (no live references). Various algorithms (mark-and-sweep, generational GC) and JVM garbage collectors (G1, CMS, Parallel) manage object reclamation and memory compaction transparently.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false
+  },
+  {
+    "id": 25,
+    "question": "Which interface is a subinterface of Collection?",
+    "options": [
+      "Map",
+      "List",
+      "Iterator",
+      "Comparator"
+    ],
+    "answer": "List",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true
+  },
+  {
+    "id": 26,
+    "question": "What is the default value of boolean in Java?",
+    "options": [
+      "true",
+      "false",
+      "null",
+      "0"
+    ],
+    "answer": "false",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true
+  },
+  {
+    "id": 27,
+    "question": "How to convert a Stream to a List?",
+    "options": [
+      "stream.collect(Collectors.toList())",
+      "stream.toListL()",
+      "stream.asList()",
+      "stream.convert()"
+    ],
+    "answer": "stream.collect(Collectors.toList())",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true
+  },
+  {
+    "id": 28,
+    "question": "What is the difference between Callable and Runnable?",
+    "options": [
+      "Callable returns a value and can throw checked exceptions; Runnable does not",
+      "Runnable returns value; Callable does not",
+      "Both same",
+      "Callable is for I/O only"
+    ],
+    "answer": "Callable returns a value and can throw checked exceptions; Runnable does not",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true
+  },
+  {
+    "id": 29,
+    "question": "Explain method overloading vs overriding.",
+    "options": [],
+    "answer": "Overloading: same method name, different parameter lists within same class (compile-time polymorphism). Overriding: subclass provides new implementation for superclass method with same signature (runtime polymorphism).",
+    "type": "Interview",
+    "difficulty": "Easy",
+    "isObjective": false
+  },
+  {
+    "id": 30,
+    "question": "Which class loads classes in JVM?",
+    "options": [
+      "ClassLoader",
+      "ClassManager",
+      "ClassFinder",
+      "Loader"
+    ],
+    "answer": "ClassLoader",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true
+  },
+  {
+    "id": 31,
+    "question": "What is serialization in Java?",
+    "options": [
+      "Converting object to byte stream",
+      "Converting byte stream to object",
+      "Compiling class to bytecode",
+      "Encrypting object"
+    ],
+    "answer": "Converting object to byte stream",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true
+  },
+  {
+    "id": 32,
+    "question": "How do you prevent serialization of a field?",
+    "options": [
+      "Make it transient",
+      "Mark as private",
+      "Declare as static",
+      "Use final"
+    ],
+    "answer": "Make it transient",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true
+  },
+  {
+    "id": 33,
+    "question": "Explain the Java memory model briefly.",
+    "options": [],
+    "answer": "The Java Memory Model defines how threads interact through memory and guarantees about visibility, ordering, and atomicity. It specifies happens-before relationships and ensures safe publication and synchronization for concurrent Java programs.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false
+  },
+  {
+    "id": 34,
+    "question": "What is the purpose of StringBuilder over StringBuffer?",
+    "options": [
+      "StringBuilder is synchronized",
+      "StringBuilder is faster and unsynchronized",
+      "StringBuilder immutable",
+      "Both same"
+    ],
+    "answer": "StringBuilder is faster and unsynchronized",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true
+  },
+  {
+    "id": 35,
+    "question": "Which operator checks if object is instance of a class?",
+    "options": [
+      "instanceof",
+      "is",
+      "typeof",
+      "check"
+    ],
+    "answer": "instanceof",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true
+  },
+  {
+    "id": 36,
+    "question": "What is reflection in Java?",
+    "options": [],
+    "answer": "Reflection allows inspection and modification of classes, methods, fields, and constructors at runtime. It enables dynamic invocation, loading classes by name, and frameworks often use it (e.g., DI containers).",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false
+  },
+  {
+    "id": 37,
+    "question": "How to create an unmodifiable list in Java 9+?",
+    "options": [
+      "Collections.unmodifiableList(list)",
+      "List.of(...)",
+      "Arrays.asList()",
+      "new ArrayList<>()"
+    ],
+    "answer": "List.of(...)",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true
+  },
+  {
+    "id": 38,
+    "question": "What is the significance of serialVersionUID?",
+    "options": [],
+    "answer": "serialVersionUID is used during deserialization to verify that sender and receiver of a serialized object have compatible classes. Mismatched IDs cause InvalidClassException.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false
+  },
+  {
+    "id": 39,
+    "question": "Which keyword is used to handle exceptions?",
+    "options": [
+      "catch",
+      "throw",
+      "throws",
+      "try"
+    ],
+    "answer": "try",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true
+  },
+  {
+    "id": 40,
+    "question": "Explain how HashMap works in Java.",
+    "options": [],
+    "answer": "HashMap stores key-value pairs using hashing. It computes a hash for the key, maps to a bucket, and stores entries in linked lists or tree nodes (after threshold). It offers average O(1) get/put; collisions handled by chaining/trees.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false
+  },
+  {
+    "id": 41,
+    "question": "Which collection preserves insertion order?",
+    "options": [
+      "HashSet",
+      "TreeSet",
+      "LinkedHashSet",
+      "ConcurrentSkipListSet"
+    ],
+    "answer": "LinkedHashSet",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true
+  },
+  {
+    "id": 42,
+    "question": "What will be the output: System.out.println(\"abc\".substring(1,2));",
+    "options": [
+      "a",
+      "b",
+      "ab",
+      "bc"
+    ],
+    "answer": "b",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true
+  },
+  {
+    "id": 43,
+    "question": "What is the difference between == for primitives and objects?",
+    "options": [],
+    "answer": "For primitives, == compares values. For objects, == compares references (memory addresses). Use equals() for logical value equality for many classes.",
+    "type": "Interview",
+    "difficulty": "Easy",
+    "isObjective": false
+  },
+  {
+    "id": 44,
+    "question": "Which data structure is used by Stack class?",
+    "options": [
+      "ArrayList",
+      "LinkedList",
+      "Vector",
+      "Deque"
+    ],
+    "answer": "Vector",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true
+  },
+  {
+    "id": 45,
+    "question": "What does 'transient' keyword do?",
+    "options": [
+      "Prevents serialization of field",
+      "Prevents inheritance",
+      "Makes variable constant",
+      "Marks method as temporary"
+    ],
+    "answer": "Prevents serialization of field",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true
+  },
+  {
+    "id": 46,
+    "question": "Explain difference between HashMap and Hashtable.",
+    "options": [],
+    "answer": "Hashtable is synchronized and legacy (does not allow null keys/values). HashMap is unsynchronized, allows one null key and multiple null values, and generally preferred in single-threaded contexts.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false
+  },
+  {
+    "id": 47,
+    "question": "Which package contains Collections framework?",
+    "options": [
+      "java.lang",
+      "java.util",
+      "java.collection",
+      "java.framework"
+    ],
+    "answer": "java.util",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true
+  },
+  {
+    "id": 48,
+    "question": "What is the use of 'super' keyword?",
+    "options": [
+      "Reference parent class object",
+      "Call subclass method",
+      "Declare constructor",
+      "Create new object"
+    ],
+    "answer": "Reference parent class object",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true
+  },
+  {
+    "id": 49,
+    "question": "Explain how synchronized keyword affects thread safety.",
+    "options": [],
+    "answer": "synchronized enforces mutual exclusion, ensuring only one thread can execute the synchronized block or method at a time for the same lock, and also establishes happens-before relationships to guarantee visibility of changes across threads.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false
+  },
+  {
+    "id": 50,
+    "question": "What is a functional interface?",
+    "options": [
+      "An interface with default methods",
+      "An interface with a single abstract method",
+      "An interface with static methods only",
+      "An interface without methods"
+    ],
+    "answer": "An interface with a single abstract method",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true
+  },
+  {
+    "id": 51,
+    "question": "Which of these is immutable?",
+    "options": [
+      "String",
+      "StringBuilder",
+      "StringBuffer",
+      "StringWriter"
+    ],
+    "answer": "String",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true
+  },
+  {
+    "id": 52,
+    "question": "What is method reference in Java?",
+    "options": [],
+    "answer": "Method reference is a shorthand syntax for lambda expressions that refer to methods by name (e.g., Class::method), improving readability when a lambda merely calls an existing method.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false
+  },
+  {
+    "id": 53,
+    "question": "How to create a thread-safe singleton in Java?",
+    "options": [],
+    "answer": "Use enum singleton, or use static holder pattern (Initialization-on-demand holder idiom), or double-checked locking with volatile instance to ensure thread safety.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false
+  },
+  {
+    "id": 54,
+    "question": "Which collection is best for FIFO access?",
+    "options": [
+      "Stack",
+      "Queue",
+      "LinkedList",
+      "Hashtable"
+    ],
+    "answer": "Queue",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true
+  },
+  {
+    "id": 55,
+    "question": "What is diamond operator <> used for?",
+    "options": [
+      "Generics inference for constructors",
+      "Placeholder for arrays",
+      "XML parsing",
+      "Deprecated operator"
+    ],
+    "answer": "Generics inference for constructors",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true
+  },
+  {
+    "id": 56,
+    "question": "Explain 'happens-before' concept briefly.",
+    "options": [],
+    "answer": "Happens-before is a relation that defines ordering guarantees in the Java Memory Model: if one action happens-before another, then effects of the first are visible to the second; used to reason about concurrency and synchronization.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false
+  },
+  {
+    "id": 57,
+    "question": "What is the role of Class.forName()?",
+    "options": [
+      "Create new class",
+      "Load and initialize class by name at runtime",
+      "Delete class",
+      "Compile class"
+    ],
+    "answer": "Load and initialize class by name at runtime",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true
+  },
+  {
+    "id": 58,
+    "question": "Which JVM memory area stores method frames?",
+    "options": [
+      "Heap",
+      "Stack",
+      "Metaspace",
+      "Code Cache"
+    ],
+    "answer": "Stack",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true
+  },
+  {
+    "id": 59,
+    "question": "Explain tail recursion and whether Java optimizes it.",
+    "options": [],
+    "answer": "Tail recursion is when a function's final action is a call to itself. Java does not guarantee tail-call optimization, so deep recursion may lead to stack overflow.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false
+  },
+  {
+    "id": 60,
+    "question": "Which class is the superclass of all exceptions that are unchecked?",
+    "options": [
+      "Exception",
+      "RuntimeException",
+      "Error",
+      "Throwable"
+    ],
+    "answer": "RuntimeException",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true
+  },
+  {
+    "id": 61,
+    "question": "What is the advantage of using Enum in Java?",
+    "options": [],
+    "answer": "Enums provide type-safe constants with methods and fields, implicit static final instances, good readability, and support for switch-case and serialization with controlled instances.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false
+  },
+  {
+    "id": 62,
+    "question": "Which method is used to start a thread?",
+    "options": [
+      "run()",
+      "start()",
+      "execute()",
+      "call()"
+    ],
+    "answer": "start()",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true
+  },
+  {
+    "id": 63,
+    "question": "What is ConcurrentHashMap used for?",
+    "options": [
+      "Synchronized list",
+      "Thread-safe Map with lock stripping",
+      "Database access",
+      "I/O buffering"
+    ],
+    "answer": "Thread-safe Map with lock stripping",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true
+  },
+  {
+    "id": 64,
+    "question": "Explain difference between stack and heap memory in JVM.",
+    "options": [],
+    "answer": "Stack stores method frames and local variables with LIFO lifetimes, heap stores objects and is garbage-collected; stack is thread-local and faster, heap is shared across threads.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false
+  },
+  {
+    "id": 65,
+    "question": "What is a weak reference in Java?",
+    "options": [],
+    "answer": "A WeakReference allows referenced object to be reclaimed by GC when only weak references exist; often used in caches to allow memory-sensitive caching.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false
+  },
+  {
+    "id": 66,
+    "question": "Which Stream operation is lazy?",
+    "options": [
+      "collect",
+      "forEach",
+      "map",
+      "count"
+    ],
+    "answer": "map",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true
+  },
+  {
+    "id": 67,
+    "question": "What happens if equals() is overridden without overriding hashCode()?",
+    "options": [],
+    "answer": "Violating the equals-hashCode contract may cause incorrect behavior in hash-based collections (HashMap/HashSet) because equal objects must have same hashCode; failing to override leads to inconsistent lookup.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false
+  },
+  {
+    "id": 68,
+    "question": "Which API introduced the Date-Time (java.time) package?",
+    "options": [
+      "Java 6",
+      "Java 7",
+      "Java 8",
+      "Java 9"
+    ],
+    "answer": "Java 8",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true
+  },
+  {
+    "id": 69,
+    "question": "How to create a fixed thread pool?",
+    "options": [
+      "Executors.newFixedThreadPool(n)",
+      "new ThreadPool(n)",
+      "Thread.createFixed(n)",
+      "ExecutorService.create(n)"
+    ],
+    "answer": "Executors.newFixedThreadPool(n)",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true
+  },
+  {
+    "id": 70,
+    "question": "Explain memory leak causes in Java and how to detect them.",
+    "options": [],
+    "answer": "Memory leaks occur when references to unused objects remain reachable preventing GC (static collections, listeners, caches). Detect via profilers (VisualVM, YourKit), heap dumps, and monitoring memory usage and GC logs.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false
+  },
+  {
+    "id": 71,
+    "question": "What is the effect of String s = \"hello\"; String t = new String(\"hello\"); s==t ?",
+    "options": [
+      "true",
+      "false",
+      "compile error",
+      "depends"
+    ],
+    "answer": "false",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true
+  },
+  {
+    "id": 72,
+    "question": "What is method handle (java.lang.invoke.MethodHandle)?",
+    "options": [],
+    "answer": "MethodHandle is a typed, directly executable reference to underlying methods, constructors, or fields used by invokedynamic and advanced dynamic language support.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false
+  },
+  {
+    "id": 73,
+    "question": "Which modifier makes a method visible to subclasses only in same package?",
+    "options": [
+      "protected",
+      "private",
+      "public",
+      "package"
+    ],
+    "answer": "protected",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true
+  },
+  {
+    "id": 74,
+    "question": "What is functional programming feature present in Java 8?",
+    "options": [
+      "Streams and Lambdas",
+      "Generics",
+      "Reflection",
+      "Annotations"
+    ],
+    "answer": "Streams and Lambdas",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true
+  },
+  {
+    "id": 75,
+    "question": "Explain copy-on-write collections and where to use them.",
+    "options": [],
+    "answer": "CopyOnWriteArrayList duplicates internal array on writes, providing snapshot-style iteration without locking. Useful for mostly-read scenarios with infrequent writes (listeners registries).",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false
+  },
+  {
+    "id": 76,
+    "question": "What is the default character encoding in Java source?",
+    "options": [
+      "UTF-8",
+      "ISO-8859-1",
+      "ASCII",
+      "Depends on platform"
+    ],
+    "answer": "Depends on platform",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true
+  },
+  {
+    "id": 77,
+    "question": "How to safely publish an object to other threads?",
+    "options": [],
+    "answer": "Use final fields set in constructor, volatile references, synchronized blocks, or proper concurrent collections to ensure visibility and safe publication.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false
+  },
+  {
+    "id": 78,
+    "question": "Which exception is thrown when you try to access index out of bounds in array?",
+    "options": [
+      "ArrayIndexOutOfBoundsException",
+      "IndexOutOfRangeException",
+      "OutOfBoundsException",
+      "IllegalArgumentException"
+    ],
+    "answer": "ArrayIndexOutOfBoundsException",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true
+  },
+  {
+    "id": 79,
+    "question": "What is the Collections.synchronizedList() return type?",
+    "options": [
+      "Synchronized list wrapper",
+      "Copy of list",
+      "Concurrent list",
+      "Immutable list"
+    ],
+    "answer": "Synchronized list wrapper",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true
+  },
+  {
+    "id": 80,
+    "question": "Explain volatile vs atomic variables.",
+    "options": [],
+    "answer": "volatile ensures visibility of updates to variables across threads but doesn't provide atomic compound operations. Atomic classes (AtomicInteger etc.) provide atomic read-modify-write operations without locks.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false
+  },
+  {
+    "id": 81,
+    "question": "Which annotation marks a method as deprecated?",
+    "options": [
+      "@Deprecated",
+      "@deprecated",
+      "@Obsolete",
+      "@Remove"
+    ],
+    "answer": "@Deprecated",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true
+  },
+  {
+    "id": 82,
+    "question": "How do you create an immutable Map in Java 9+?",
+    "options": [
+      "Map.of(k,v)",
+      "new HashMap<>()",
+      "Collections.unmodifiableMap()",
+      "Both 1 and 3"
+    ],
+    "answer": "Both 1 and 3",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true
+  },
+  {
+    "id": 83,
+    "question": "Explain role of module-info.java in Java 9+.",
+    "options": [],
+    "answer": "module-info.java declares module name and exports/opens packages, specifies module dependencies (requires) enabling strong encapsulation and modular JDK usage in JPMS.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false
+  },
+  {
+    "id": 84,
+    "question": "Which method converts primitive int to Integer (autoboxing)?",
+    "options": [
+      "Integer.valueOf(primitive)",
+      "new Integer(primitive)",
+      "Both 1 and 2",
+      "None"
+    ],
+    "answer": "Integer.valueOf(primitive)",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true
+  },
+  {
+    "id": 85,
+    "question": "What is the time complexity of HashMap get/put on average?",
+    "options": [
+      "O(1)",
+      "O(log n)",
+      "O(n)",
+      "O(n log n)"
+    ],
+    "answer": "O(1)",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true
+  },
+  {
+    "id": 86,
+    "question": "Explain how CompletableFuture helps with async programming.",
+    "options": [],
+    "answer": "CompletableFuture provides a rich API for asynchronous computation, allowing chaining, combining, and handling results/errors without blocking, using callbacks and functional transformations.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false
+  },
+  {
+    "id": 87,
+    "question": "Which keyword is used to inherit from interface in Java 8 for default method?",
+    "options": [
+      "implements",
+      "extends",
+      "uses",
+      "inherits"
+    ],
+    "answer": "implements",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true
+  },
+  {
+    "id": 88,
+    "question": "What is split-brain in clustering?",
+    "options": [],
+    "answer": "Split-brain occurs when cluster nodes lose communication and form partitions, leading to inconsistent state; handling requires quorum, coordination, or leader election strategies.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false
+  },
+  {
+    "id": 89,
+    "question": "Which method from Objects class checks null-safe equality?",
+    "options": [
+      "Objects.equals(a,b)",
+      "Objects.compare(a,b)",
+      "Objects.nullSafe(a,b)",
+      "Objects.isEqual(a,b)"
+    ],
+    "answer": "Objects.equals(a,b)",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true
+  },
+  {
+    "id": 90,
+    "question": "What does 'boxing' and 'unboxing' refer to?",
+    "options": [],
+    "answer": "Boxing converts primitives to wrapper objects; unboxing converts wrapper to primitive. Autoboxing/unboxing perform these conversions automatically.",
+    "type": "Interview",
+    "difficulty": "Easy",
+    "isObjective": false
+  },
+  {
+    "id": 91,
+    "question": "How do you limit parallelism level of parallelStream?",
+    "options": [
+      "Use .parallelStream() only",
+      "Use ForkJoinPool.commonPool() size system property or submit to custom ForkJoinPool",
+      "Use Collections.synchronizedList()",
+      "Set System.setThreads()"
+    ],
+    "answer": "Use ForkJoinPool.commonPool() size system property or submit to custom ForkJoinPool",
+    "type": "MCQ",
+    "difficulty": "Hard",
+    "isObjective": true
+  },
+  {
+    "id": 92,
+    "question": "What is the behavior of WeakHashMap?",
+    "options": [],
+    "answer": "WeakHashMap uses weak references for keys; entries are removed when keys are no longer in ordinary use (garbage collected), useful for caches keyed by external objects.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false
+  },
+  {
+    "id": 93,
+    "question": "Which utility converts Stream to Array?",
+    "options": [
+      "stream.toArray()",
+      "stream.asArray()",
+      "stream.convertToArray()",
+      "stream.array()"
+    ],
+    "answer": "stream.toArray()",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true
+  },
+  {
+    "id": 94,
+    "question": "Explain pros and cons of using reflection.",
+    "options": [],
+    "answer": "Pros: flexibility, dynamic frameworks, dependency injection, testing tools. Cons: performance overhead, security risks, breaks encapsulation, brittle with refactoring.",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false
+  },
+  {
+    "id": 95,
+    "question": "Which interface represents an ordered collection that may contain duplicates?",
+    "options": [
+      "Set",
+      "Map",
+      "List",
+      "Queue"
+    ],
+    "answer": "List",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true
+  },
+  {
+    "id": 96,
+    "question": "What is the output of Math.round(2.5) in Java?",
+    "options": [
+      "2",
+      "3",
+      "2.5",
+      "Error"
+    ],
+    "answer": "3",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true
+  },
+  {
+    "id": 97,
+    "question": "How to read a file line-by-line using Java 8 API?",
+    "options": [
+      "Files.lines(Paths.get(path))",
+      "new BufferedReader(path).lines()",
+      "File.readAllLines()",
+      "Scanner.nextLine()"
+    ],
+    "answer": "Files.lines(Paths.get(path))",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true
+  },
+  {
+    "id": 98,
+    "question": "Explain escape analysis in JVM.",
+    "options": [],
+    "answer": "Escape analysis determines whether an object can be safely allocated on stack instead of heap by analyzing whether its reference escapes the method or thread; if not, JVM may optimize allocation and synchronization away.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false
+  },
+  {
+    "id": 99,
+    "question": "Which collection provides ordering by natural order or comparator?",
+    "options": [
+      "HashSet",
+      "TreeSet",
+      "LinkedHashSet",
+      "PriorityQueue"
+    ],
+    "answer": "TreeSet",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true
+  },
+  {
+    "id": 100,
+    "question": "What are best practices to write thread-safe code in Java?",
+    "options": [],
+    "answer": "Use immutable objects, prefer high-level concurrency utilities (java.util.concurrent), minimize shared mutable state, use proper synchronization, use concurrent collections, avoid deadlocks, and document thread-safety contracts.",
+    "type": "Interview",
+    "difficulty": "Hard",
+    "isObjective": false
+  }
+]

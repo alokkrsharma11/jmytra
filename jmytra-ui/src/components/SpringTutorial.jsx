@@ -54,12 +54,12 @@ const SpringTutorial = () => {
         onClick={() => setSidebarOpen(!sidebarOpen)}
         sx={{
           position: "absolute",
-          top: "1rem",
+          top: "14rem",
           left: sidebarOpen ? 220 : 0,
           zIndex: 1200,
-          bgcolor: "grey.700",
-          color: "white",
-          "&:hover": { bgcolor: "grey.600" },
+          bgcolor: "#bbab97ff",
+          color: "black",
+          "&:hover": { bgcolor: "#d2b48c" },
           transition: "left 0.3s ease",
         }}
       >
@@ -71,12 +71,11 @@ const SpringTutorial = () => {
         sx={{
           borderRight: 1,
           borderColor: "divider",
-          bgcolor: "grey.800",
+          bgcolor: "#201f1fff",
           width: 220,
           transform: sidebarOpen ? "translateX(0)" : "translateX(-100%)",
           transition: "transform 0.3s ease",
           position: "relative",
-          zIndex: 1100,
         }}
       >
         <Tabs
@@ -88,16 +87,20 @@ const SpringTutorial = () => {
           sx={{
             "& .MuiTab-root": {
               alignItems: "flex-start",
-              color: "grey.400",
+              color: "#d2b48c",
               textTransform: "none",
               fontSize: "0.95rem",
               fontWeight: 500,
             },
             "& .Mui-selected": {
-              color: "white",
-              bgcolor: "grey.700",
+              color: "#d2b48c !important",
+              bgcolor: "#665656 !important",
+              fontWeight: 700,
               borderRadius: "8px",
             },
+            "& .MuiTabs-indicator": {
+              bgcolor: "#d2b48c"
+            }
           }}
         >
           {types.map((type, index) => (

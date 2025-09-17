@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { Tabs, Tab, Box } from "@mui/material";
+import { Tabs, Tab, Box, IconButton } from "@mui/material";
+import { ChevronRight, ChevronLeft } from "@mui/icons-material";
 import QuizContent from "./QuizContent";
 import PageLayout from "./PageLayout";
 import './../App.css'
@@ -9,6 +10,7 @@ const DbTutorial = () => {
   const [quizB, setQuizB] = useState([]);
   const [questions, setQuestions] = useState([]);
   const [tabIndex, setTabIndex] = useState(0);
+  const [sidebarOpen, setSidebarOpen] = useState(false); // control sidebar
 
   // Load first quiz
   useEffect(() => {
@@ -48,8 +50,35 @@ const DbTutorial = () => {
 
   return (
     <Box sx={{ display: "flex", minHeight: "100vh", bgcolor: "grey.900", color: "white" }}>
+      {/* Toggle Button */}
+      <IconButton
+        onClick={() => setSidebarOpen(!sidebarOpen)}
+        sx={{
+          position: "absolute",
+          top: "14rem",
+          left: sidebarOpen ? 220 : 0,
+          zIndex: 1200,
+          bgcolor: "#bbab97ff",
+          color: "black",
+          "&:hover": { bgcolor: "#d2b48c" },
+          transition: "left 0.3s ease",
+        }}
+      >
+        {sidebarOpen ? <ChevronLeft /> : <ChevronRight />}
+      </IconButton>
+
       {/* Sidebar Tabs */}
-      <Box sx={{ borderRight: 1, borderColor: "divider", bgcolor: "grey.800", width: 220 }}>
+      <Box
+        sx={{
+          borderRight: 1,
+          borderColor: "divider",
+          bgcolor: "#201f1fff",
+          width: 220,
+          transform: sidebarOpen ? "translateX(0)" : "translateX(-100%)",
+          transition: "transform 0.3s ease",
+          position: "relative",
+        }}
+      >
         <Tabs
           orientation="vertical"
           variant="scrollable"
@@ -59,16 +88,20 @@ const DbTutorial = () => {
           sx={{
             "& .MuiTab-root": {
               alignItems: "flex-start",
-              color: "grey.400",
+              color: "#d2b48c",
               textTransform: "none",
               fontSize: "0.95rem",
               fontWeight: 500,
             },
             "& .Mui-selected": {
-              color: "white",
-              bgcolor: "grey.700",
+              color: "#d2b48c !important",
+              bgcolor: "#665656 !important",
+              fontWeight: 700,
               borderRadius: "8px",
             },
+            "& .MuiTabs-indicator": {
+              bgcolor: "#d2b48c"
+            }
           }}
         >
           {types.map((type, index) => (
@@ -78,17 +111,25 @@ const DbTutorial = () => {
       </Box>
 
       {/* Main content */}
-      <Box sx={{ flex: 1, p: 4, overflowY: "auto" }}>
+      <Box sx={{
+            flex: 1,
+            p: 4,
+            overflowY: "auto",
+            transition: "margin-left 0.3s ease",   // smooth shifting
+            marginLeft: sidebarOpen ? "0px" : "-220px", // shift by sidebar width
+          }}>
         {types.map((type, index) => (
           tabIndex === index && (
+            <div className="container">
             <Box key={type} sx={{ mb: 4 }}>
-              <PageLayout title={`📘 ${type} Questions`} />
+              <PageLayout title={`📘 Databases (Sql & NoSql): ${type} Questions`} />
               {grouped[type].map((question) => (
                 <QuizContent
                   question={question}
                 />
               ))}
             </Box>
+            </div>
           )
         ))}
       </Box>

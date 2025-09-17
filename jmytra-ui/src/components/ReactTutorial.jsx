@@ -1,7 +1,8 @@
 // src/pages/LearnPage.jsx
 import React, { useState, useEffect } from "react";
 import PageLayout from "./PageLayout";
-import { Box, Tabs, Tab } from "@mui/material";
+import { Tabs, Tab, Box, IconButton } from "@mui/material";
+import { ChevronRight, ChevronLeft } from "@mui/icons-material";
 import './../App.css'
 import QuizContent from "./QuizContent";
 
@@ -10,6 +11,7 @@ const ReactTutorial = () => {
   const [quizA, setQuizA] = useState([]);
   const [quizB, setQuizB] = useState([]);
   const [tabIndex, setTabIndex] = useState(0);
+  const [sidebarOpen, setSidebarOpen] = useState(false); // control sidebar
 
   // Load first quiz
   useEffect(() => {
@@ -54,8 +56,35 @@ const ReactTutorial = () => {
 
   return (
     <Box sx={{ display: "flex", minHeight: "100vh", bgcolor: "grey.900", color: "white" }}>
+      {/* Toggle Button */}
+      <IconButton
+        onClick={() => setSidebarOpen(!sidebarOpen)}
+        sx={{
+          position: "absolute",
+          top: "14rem",
+          left: sidebarOpen ? 220 : 0,
+          zIndex: 1200,
+          bgcolor: "#bbab97ff",
+          color: "black",
+          "&:hover": { bgcolor: "#d2b48c" },
+          transition: "left 0.3s ease",
+        }}
+      >
+        {sidebarOpen ? <ChevronLeft /> : <ChevronRight />}
+      </IconButton>
+
       {/* Sidebar Tabs */}
-      <Box sx={{ borderRight: 1, borderColor: "divider", bgcolor: "grey.800", width: 220 }}>
+      <Box
+        sx={{
+          borderRight: 1,
+          borderColor: "divider",
+          bgcolor: "#201f1fff",
+          width: 220,
+          transform: sidebarOpen ? "translateX(0)" : "translateX(-100%)",
+          transition: "transform 0.3s ease",
+          position: "relative",
+        }}
+      >
         <Tabs
           orientation="vertical"
           variant="scrollable"
@@ -65,16 +94,20 @@ const ReactTutorial = () => {
           sx={{
             "& .MuiTab-root": {
               alignItems: "flex-start",
-              color: "grey.400",
+              color: "#d2b48c",
               textTransform: "none",
               fontSize: "0.95rem",
               fontWeight: 500,
             },
             "& .Mui-selected": {
-              color: "white",
-              bgcolor: "grey.700",
+              color: "#d2b48c !important",
+              bgcolor: "#665656 !important",
+              fontWeight: 700,
               borderRadius: "8px",
             },
+            "& .MuiTabs-indicator": {
+              bgcolor: "#d2b48c"
+            }
           }}
         >
           {types.map((type) => (
@@ -84,15 +117,18 @@ const ReactTutorial = () => {
       </Box>
 
       {/* Main content */}
-      <Box sx={{ flex: 1, p: 4, overflowY: "auto" }}>
+      <Box  sx={{
+            flex: 1,
+            p: 4,
+            overflowY: "auto",
+            transition: "margin-left 0.3s ease",   // smooth shifting
+            marginLeft: sidebarOpen ? "0px" : "-220px", // shift by sidebar width
+          }}>
         {types.map((type, index) =>
           tabIndex === index && (
+            <div className="container">
             <Box key={type} sx={{ mb: 4 }}>
-              
-                <PageLayout title={`📘 ${type} Questions`} />
-              
-              
-
+              <PageLayout title={`📘 ReactJS: ${type} Questions`} />
               {grouped[type].map((topic, i) => (
                 <>
                 {topic.askedBy ? (
@@ -257,6 +293,7 @@ const ReactTutorial = () => {
                 </>  
               ))}
             </Box>
+            </div>
           )
         )}
       </Box>

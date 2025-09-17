@@ -77,19 +77,3 @@ BrowserRouter {
 button.MuiButtonBase-root.MuiTab-root.MuiTab-textColorPrimary.Mui-selected.css-1usuzwp-MuiButtonBase-root-MuiTab-root {
     color: #eee;
 }
-
-.css-yxa6fs-MuiButtonBase-root-MuiIconButton-root {
-  top: 14rem !important;
-  left: 200px !important;
-  background-color: #32717a !important;
-}
-
-.css-zxvb6m-MuiButtonBase-root-MuiIconButton-root {
-  top: 14rem !important;
-  left: 0 !important;
-  background-color: #32717a !important;
-}
-
-.css-48m1da {
-  z-index: 0 !important;
-}

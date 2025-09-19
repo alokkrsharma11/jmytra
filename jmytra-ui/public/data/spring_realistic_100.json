@@ -138,10 +138,19 @@
     "difficulty": "Medium",
     "isObjective": false,
     "explanation": {
-      "intro": "Explanation: Explain Spring Dependency Injection and its benefits.",
+      "intro": "Dependency Injection (DI) in Spring is a design pattern where the container (Spring IoC container) is responsible for creating and injecting dependencies into objects instead of objects creating their own dependencies. It decouples object creation from business logic, making applications more modular and testable.",
       "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
+          "\n\n### Types of DI in Spring:",
+          "\n         1. **Constructor Injection** – Dependencies are provided through the constructor.",
+          "\n         2. **Setter Injection** – Dependencies are set via setter methods.",
+          "\n         3. **Field Injection** – Dependencies are injected directly into fields using annotations like `@Autowired`.",
+          "\n\n### Benefits of DI:\n",
+          "           - **Loose coupling**: Reduces dependency between classes.",
+          "\n         - **Easier testing**: Mock dependencies can be injected during unit testing.",
+          "\n         - **Improved maintainability**: Changing a dependency does not require modifying dependent classes.",
+          "\n         - **Better modularization**: Promotes cleaner and reusable code."
+      ],
+      "code":"\n\n### Example:\n```java\n@Component\nclass Engine {}\n\n@Component\nclass Car {\n    private final Engine engine;\n\n    @Autowired\n    public Car(Engine engine) { // Constructor Injection\n        this.engine = engine;\n    }\n}\n```\nHere, Spring automatically injects an `Engine` object into the `Car` object."
     },
     "askedBy": [
       "interview"
@@ -157,10 +166,16 @@
     "difficulty": "Hard",
     "isObjective": false,
     "explanation": {
-      "intro": "Explanation: How does Spring Boot auto-configuration work?",
+      "intro": "Spring Boot auto-configuration automatically sets up Spring application components based on the libraries in the classpath and configurations provided, reducing the need for manual XML or Java config.",
       "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
+        "**Trigger**: Enabled via `@EnableAutoConfiguration` (included in `@SpringBootApplication`).",
+        "**Discovery**: Uses `SpringFactoriesLoader` to load configuration classes listed in `META-INF/spring.factories`.",
+        "**Conditions**: Auto-config classes are guarded by `@Conditional` annotations (e.g., `@ConditionalOnClass`, `@ConditionalOnMissingBean`).",
+        "**Customization**: Developers can override defaults using `application.properties` or by defining beans manually.",
+        "**Example**: With `spring-boot-starter-data-jpa` in the classpath, Spring Boot configures a `DataSource`, `EntityManagerFactory`, and `TransactionManager` automatically."
+      ],
+      "code": "import org.springframework.boot.SpringApplication;\nimport org.springframework.boot.autoconfigure.SpringBootApplication;\n\n@SpringBootApplication  // includes @EnableAutoConfiguration\npublic class MyApp {\n    public static void main(String[] args) {\n        SpringApplication.run(MyApp.class, args);\n    }\n}\n",
+      "diagram": "```mermaid\ngraph TD;\n    A[Start Application] --> B[@SpringBootApplication]\n    B --> C[EnableAutoConfiguration]\n    C --> D[SpringFactoriesLoader loads META-INF/spring.factories]\n    D --> E[Check @Conditional annotations]\n    E --> F[Auto-configure beans if conditions met]\n    F --> G[Developer beans override defaults]\n```"
     },
     "askedBy": [
       "interview"
@@ -176,10 +191,18 @@
     "difficulty": "Hard",
     "isObjective": false,
     "explanation": {
-      "intro": "Explanation: Describe transaction propagation behaviors in Spring.",
+      "intro": "Transaction propagation in Spring defines how methods with transactional boundaries interact when called within existing transactions. It controls whether a new transaction is created, joined, or executed without one.",
       "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
+        "**REQUIRED (default)**: Joins current transaction if exists, else creates a new one.",
+        "**REQUIRES_NEW**: Always starts a new transaction, suspends existing one.",
+        "**SUPPORTS**: Joins current transaction if exists, else runs non-transactionally.",
+        "**NOT_SUPPORTED**: Runs without a transaction, suspends if one exists.",
+        "**MANDATORY**: Must run within an existing transaction, else throws exception.",
+        "**NEVER**: Must not run within a transaction, throws exception if one exists.",
+        "**NESTED**: Creates a nested transaction using savepoints (dependent on database support)."
+      ],
+      "code": "import org.springframework.transaction.annotation.Propagation;\nimport org.springframework.transaction.annotation.Transactional;\n\npublic class PaymentService {\n\n    @Transactional(propagation = Propagation.REQUIRED)\n    public void processPayment() {\n        // joins existing or creates new transaction\n    }\n\n    @Transactional(propagation = Propagation.REQUIRES_NEW)\n    public void logTransaction() {\n        // always starts a new transaction\n    }\n}\n",
+      "diagram": "```mermaid\ngraph TD;\n    A[Caller Method] -->|Calls Service Method| B[Transaction Exists?]\n    B -->|Yes + REQUIRED| C[Join Existing Transaction]\n    B -->|No + REQUIRED| D[Create New Transaction]\n    B -->|REQUIRES_NEW| E[Always New Transaction]\n    B -->|SUPPORTS| F[Join If Exists, Else Non-Transactional]\n    B -->|NOT_SUPPORTED| G[Suspend Existing, Run Without Tx]\n    B -->|MANDATORY| H[Throws Exception if No Tx]\n    B -->|NEVER| I[Throws Exception if Tx Exists]\n    B -->|NESTED| J[Savepoint / Nested Transaction]\n```"
     },
     "askedBy": [
       "interview"

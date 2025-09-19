@@ -822,7 +822,7 @@
         "Not thread-safe; use `ConcurrentHashMap` for thread-safe operations."
       ],
       "code": "import java.util.*;\n\npublic class HashMapExample {\n    public static void main(String[] args) {\n        HashMap<Integer, String> map = new HashMap<>();\n        map.put(1, \"Apple\");\n        map.put(2, \"Banana\");\n        map.put(3, \"Cherry\");\n\n        System.out.println(map.get(2)); // Output: Banana\n    }\n}",
-      "diagram": "HashMap structure:\n\n   HashMap\n     |\n     +-- Bucket[0] --> (Key1=Apple)\n     +-- Bucket[1] --> (Key2=Banana) --> (Key12=Orange)  // Collision handled via LinkedList/Tree\n     +-- Bucket[2] --> (Key3=Cherry)\n     +-- Bucket[3] --> null\n\nEach key's hashCode() decides the bucket index. If multiple keys hash to the same bucket, they are chained in a LinkedList or Tree."
+      "diagram": "graph TD;\n\n   HashMap\n     |\n     +-- Bucket[0] --> (Key1=Apple)\n     +-- Bucket[1] --> (Key2=Banana) --> (Key12=Orange)  // Collision handled via LinkedList/Tree\n     +-- Bucket[2] --> (Key3=Cherry)\n     +-- Bucket[3] --> null\n\nEach key's hashCode() decides the bucket index. If multiple keys hash to the same bucket, they are chained in a LinkedList or Tree."
     }
   },
   {
@@ -959,6 +959,7 @@
         "Introduced later, HashMap is part of Java 1.2 Collections Framework, while Hashtable is legacy (pre-1.2).",
         "Iteration order is not guaranteed in both, but HashMap usually performs better in single-threaded scenarios."
       ],
+      "diagram": "```mermaid\nflowchart TD\n    A[Key Input] --> B[Hash Function]\n    B --> C[Calculate Index]\n    C --> D[HashMap: Allows null key, not synchronized]\n    C --> E[Hashtable: No null key, synchronized]\n```",
       "code": "import java.util.*;\n\npublic class MapDemo {\n    public static void main(String[] args) {\n        HashMap<Integer, String> hashMap = new HashMap<>();\n        hashMap.put(1, \"Alice\");\n        hashMap.put(null, \"NullKey\"); // Allowed\n\n        Hashtable<Integer, String> hashtable = new Hashtable<>();\n        hashtable.put(1, \"Bob\");\n        // hashtable.put(null, \"NullKey\"); // Throws NullPointerException\n\n        System.out.println(\"HashMap: \" + hashMap);\n        System.out.println(\"Hashtable: \" + hashtable);\n    }\n}"
     },
     "differences": [

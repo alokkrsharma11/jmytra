@@ -6,6 +6,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import YouTubeIcon from "@mui/icons-material/YouTube";
 
 const Footer = () => {
   return (
@@ -24,7 +25,7 @@ const Footer = () => {
       <BottomNavigationAction
         icon={<FacebookIcon />}
         component="a"
-        href="https://www.facebook.com/alokkrsharma11" // 🔗 replace with your actual profile link
+        href="https://www.facebook.com/jmytra4u" // 🔗 replace with your actual profile link
         target="_blank" // open in new tab
         rel="noopener noreferrer" // security best practice
         sx={{
@@ -41,7 +42,7 @@ const Footer = () => {
       <BottomNavigationAction
           icon={<LinkedInIcon />}
           component="a"
-          href="https://www.linkedin.com/in/alokkrsharma11/" // 🔗 replace with your actual profile link
+          href="https://www.linkedin.com/groups/14957071/" // 🔗 replace with your actual profile link
           target="_blank" // open in new tab
           rel="noopener noreferrer" // security best practice
           sx={{
@@ -58,7 +59,7 @@ const Footer = () => {
       <BottomNavigationAction
         icon={<TwitterIcon />}
         component="a"
-        href="https://x.com//alokkrsharma11/" // 🔗 replace with your actual profile link
+        href="https://x.com/jmytra4u/" // 🔗 replace with your actual profile link
         target="_blank" // open in new tab
         rel="noopener noreferrer" // security best practice
         sx={{
@@ -75,7 +76,7 @@ const Footer = () => {
       <BottomNavigationAction
         icon={<InstagramIcon />}
         component="a"
-        href="https://www.instagram.com/alokkrsharma.in/" // 🔗 replace with your actual profile link
+        href="https://www.instagram.com/jmytra4u/" // 🔗 replace with your actual profile link
         target="_blank" // open in new tab
         rel="noopener noreferrer" // security best practice
         sx={{
@@ -89,10 +90,11 @@ const Footer = () => {
           },
         }}
       />
+      
       <BottomNavigationAction
-        icon={<GitHubIcon />}
+        icon={<YouTubeIcon />}
         component="a"
-        href="https://github.com/alokkrsharma11"  // 🔗 replace with your GitHub profile
+        href="https://www.youtube.com/@jmytra" // 🔗 replace with your YouTube channel link
         target="_blank"
         rel="noopener noreferrer"
         sx={{

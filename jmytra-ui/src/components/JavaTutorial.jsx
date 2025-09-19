@@ -37,7 +37,7 @@ const JavaTutorial = () => {
 
   // Group questions by type
   const grouped = questions.reduce((acc, q) => {
-    const type = q.type || "General";
+    const type = q.type || "Advance Concepts";
     (acc[type] ||= []).push(q);
     return acc;
   }, {});
@@ -46,6 +46,7 @@ const JavaTutorial = () => {
 
   const handleChange = (_, newValue) => {
     setTabIndex(newValue);
+    setSidebarOpen(!sidebarOpen);
   };
 
   return (
@@ -73,7 +74,7 @@ const JavaTutorial = () => {
           borderRight: 1,
           borderColor: "divider",
           bgcolor: "#201f1fff",
-          width: 220,
+          width: 250,
           transform: sidebarOpen ? "translateX(0)" : "translateX(-100%)",
           transition: "transform 0.3s ease",
           position: "relative",
@@ -121,13 +122,16 @@ const JavaTutorial = () => {
         {types.map(
           (type, index) =>
             tabIndex === index && (
+              <div>
+              <PageLayout key={index} title={`📘 Java Programming Language: ${type} Questions`} sidebarOpen={{sidebarOpen}}/>
               <div className="container">
               <Box key={type} sx={{ mb: 4 }}>
-                <PageLayout key={index} title={`📘 Java Programming Language: ${type} Questions`} />
+                
                 {grouped[type].map((question, i) => (
                   <QuizContent key={i} question={question} />
                 ))}
               </Box>
+              </div>
               </div>
             )
         )}

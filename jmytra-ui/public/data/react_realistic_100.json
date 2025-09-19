@@ -132,1320 +132,1033 @@
   {
     "id": "6",
     "question": "Explain reconciliation in React.",
-    "options": [],
-    "answer": "Reconciliation is React's diffing algorithm to update the DOM efficiently by comparing virtual DOM trees and applying minimal changes.",
     "type": "Interview",
     "difficulty": "Medium",
     "isObjective": false,
+    "answer": "Reconciliation is the process by which React updates the DOM with changes in the component's state or props, using a virtual DOM to optimize updates.",
     "explanation": {
-      "intro": "Explanation: Explain reconciliation in React.",
+      "intro": "React uses a virtual DOM to improve performance by minimizing direct DOM manipulations.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "When a component's state or props change, React creates a new virtual DOM representation.",
+        "React compares the new virtual DOM with the previous one using a diffing algorithm.",
+        "Only the differences (diffs) are applied to the real DOM, which improves efficiency.",
+        "Keys in lists help React identify which items have changed, been added, or removed."
       ]
     },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "ReactJS & JavaScript"
+    "askedBy": ["interview", "quiz"],
+    "technology": "React"
   },
   {
     "id": "7",
     "question": "How do you optimize performance in a React app?",
-    "options": [],
-    "answer": "Use memoization, code-splitting, virtualization, avoid unnecessary re-renders, usePureComponent/React.memo and appropriate keys.",
     "type": "Interview",
-    "difficulty": "Hard",
+    "difficulty": "Medium",
     "isObjective": false,
+    "answer": "Performance in React can be optimized by minimizing unnecessary re-renders, using memoization, code-splitting, and efficient state management.",
     "explanation": {
-      "intro": "Explanation: How do you optimize performance in a React app?",
+      "intro": "React apps can face performance issues if the component tree is large or frequently updated.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "Use `React.memo` to prevent re-rendering of functional components when props haven't changed.",
+        "Use `useMemo` and `useCallback` hooks to memoize expensive calculations or functions.",
+        "Implement code-splitting with `React.lazy` and `Suspense` to load components only when needed.",
+        "Avoid unnecessary state in parent components to reduce re-renders of child components.",
+        "Use key props properly in lists to help React optimize updates during reconciliation."
       ]
     },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "ReactJS & JavaScript"
+    "askedBy": ["interview", "quiz"],
+    "technology": "React"
   },
   {
     "id": "8",
-    "question": "What is the default behavior of Async/Await?",
+    "question": "What is the default behavior of Async/Await in JavaScript?",
     "options": [
-      "Behavior Async/Await",
-      "Behavior B",
-      "Behavior C",
-      "Behavior D"
+      "Async functions run synchronously",
+      "Async functions return a Promise and execute asynchronously",
+      "Await blocks the entire thread until the function completes",
+      "Async/Await is only used for multi-threading"
     ],
-    "answer": "Behavior Async/Await",
+    "answer": "Async functions return a Promise and execute asynchronously",
     "type": "MCQ",
-    "difficulty": "Easy",
+    "difficulty": "Medium",
     "isObjective": true,
     "explanation": {
-      "intro": "Explanation: What is the default behavior of Async/Await?",
+      "intro": "Async/Await is syntactic sugar in JavaScript to handle asynchronous operations more cleanly than traditional Promises.",
       "points": [
-        "Correct answer: Behavior Async/Await.",
-        "Key concept to remember related to the question."
+        "An async function always returns a Promise, even if you explicitly return a value.",
+        "The await keyword pauses execution within the async function until the awaited Promise resolves, but does not block the main thread.",
+        "Async/Await allows writing asynchronous code in a synchronous-like manner, improving readability.",
+        "Errors can be caught using try/catch blocks inside async functions."
       ]
     },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "ReactJS & JavaScript"
+    "askedBy": ["interview", "quiz"],
+    "technology": "JavaScript / Async-Await"
   },
   {
     "id": "9",
     "question": "Explain how Async/Await works in ReactJS & JavaScript.",
-    "options": [],
-    "answer": "Detailed explanation about Async/Await.",
     "type": "Interview",
-    "difficulty": "Hard",
+    "difficulty": "Medium",
     "isObjective": false,
+    "answer": "Async/Await allows handling asynchronous operations in a more readable, synchronous-like manner by using Promises under the hood.",
     "explanation": {
-      "intro": "Explanation: Explain how Async/Await works in ReactJS & JavaScript.",
+      "intro": "Async/Await is syntactic sugar over Promises that simplifies asynchronous code in JavaScript and React.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "An `async` function always returns a Promise. The returned value is automatically wrapped in a resolved Promise.",
+        "The `await` keyword pauses the execution of the `async` function until the awaited Promise resolves, without blocking the main thread.",
+        "Errors in async functions can be caught using try/catch blocks.",
+        "In React, Async/Await is often used with data fetching inside `useEffect` or event handlers to handle API calls efficiently.",
+        "Using Async/Await makes the code easier to read and maintain compared to chaining multiple `.then()` calls on Promises."
       ]
     },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "ReactJS & JavaScript"
+    "askedBy": ["interview", "quiz"],
+    "technology": "JavaScript / ReactJS"
   },
   {
     "id": "10",
-    "question": "Which annotation/keyword is used for Context API?",
-    "options": [
-      "@Context API",
-      "@B",
-      "@C",
-      "@D"
-    ],
-    "answer": "@Context API",
+    "question": "Which annotation/keyword is used for Context API in React?",
     "type": "MCQ",
-    "difficulty": "Hard",
+    "difficulty": "Medium",
     "isObjective": true,
+    "options": [
+      "useContext",
+      "useState",
+      "useEffect",
+      "useReducer"
+    ],
+    "answer": "useContext",
     "explanation": {
-      "intro": "Explanation: Which annotation/keyword is used for Context API?",
+      "intro": "The Context API in React provides a way to pass data through the component tree without passing props down manually at every level.",
       "points": [
-        "Correct answer: @Context API.",
-        "Key concept to remember related to the question."
+        "`useContext` hook allows functional components to consume context values directly.",
+        "Context is created using `React.createContext()`.",
+        "It helps in managing global state or passing down theme, language, or other shared data across components."
       ]
     },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "ReactJS & JavaScript"
+    "askedBy": ["interview", "quiz"],
+    "technology": "ReactJS"
   },
   {
     "id": "11",
     "question": "Explain how Context API works in ReactJS & JavaScript.",
-    "options": [],
-    "answer": "Detailed explanation about Context API.",
     "type": "Interview",
-    "difficulty": "Hard",
+    "difficulty": "Medium",
     "isObjective": false,
+    "answer": "The Context API allows sharing state or data across the component tree without manually passing props at every level.",
     "explanation": {
-      "intro": "Explanation: Explain how Context API works in ReactJS & JavaScript.",
+      "intro": "React Context API provides a way to manage global state in a simpler way than prop drilling.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "Create a context using `React.createContext()` which returns a Provider and a Consumer.",
+        "Wrap components that need access to shared data with the Context Provider and pass the state as a value.",
+        "Functional components can consume the context using the `useContext` hook.",
+        "It is useful for theming, authentication state, language settings, or any data that needs to be accessible by multiple components.",
+        "Context updates trigger re-renders only for components that consume the changed context values, not the entire tree."
       ]
     },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "ReactJS & JavaScript"
+    "askedBy": ["interview", "quiz"],
+    "technology": "ReactJS / JavaScript"
   },
   {
     "id": "12",
-    "question": "Which annotation/keyword is used for Component lifecycle?",
-    "options": [
-      "@Component lifecycle",
-      "@B",
-      "@C",
-      "@D"
-    ],
-    "answer": "@Component lifecycle",
+    "question": "Which annotation/keyword is used for Component lifecycle in React?",
     "type": "MCQ",
     "difficulty": "Medium",
     "isObjective": true,
+    "options": [
+      "useEffect",
+      "useState",
+      "useContext",
+      "useReducer"
+    ],
+    "answer": "useEffect",
     "explanation": {
-      "intro": "Explanation: Which annotation/keyword is used for Component lifecycle?",
+      "intro": "In React functional components, the `useEffect` hook is used to handle side effects, which effectively covers the component lifecycle methods of class components.",
       "points": [
-        "Correct answer: @Component lifecycle.",
-        "Key concept to remember related to the question."
+        "`useEffect` runs after the component renders and can be used for fetching data, subscribing to events, or manually changing the DOM.",
+        "Passing an empty dependency array `[]` makes `useEffect` behave like `componentDidMount`.",
+        "Returning a cleanup function inside `useEffect` acts like `componentWillUnmount`.",
+        "Updating values in the dependency array triggers the effect, similar to `componentDidUpdate`."
       ]
     },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "ReactJS & JavaScript"
+    "askedBy": ["interview", "quiz"],
+    "technology": "ReactJS"
   },
   {
     "id": "13",
     "question": "Explain how Component lifecycle works in ReactJS & JavaScript.",
-    "options": [],
-    "answer": "Detailed explanation about Component lifecycle.",
     "type": "Interview",
-    "difficulty": "Hard",
+    "difficulty": "Medium",
     "isObjective": false,
+    "answer": "Component lifecycle in React defines the different stages a component goes through, from creation to updates and unmounting, allowing developers to run code at specific points.",
     "explanation": {
-      "intro": "Explanation: Explain how Component lifecycle works in ReactJS & JavaScript.",
+      "intro": "React components (class or functional) have distinct lifecycle phases which can be leveraged for side effects, data fetching, or cleanup.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "In class components, lifecycle methods include `constructor`, `componentDidMount`, `shouldComponentUpdate`, `componentDidUpdate`, and `componentWillUnmount`.",
+        "In functional components, the `useEffect` hook is used to replicate lifecycle behavior.",
+        "`useEffect` with no dependencies runs after every render, similar to `componentDidUpdate`.",
+        "`useEffect` with an empty dependency array `[]` runs only once after the first render, similar to `componentDidMount`.",
+        "Returning a cleanup function in `useEffect` replicates `componentWillUnmount` for cleanup tasks like unsubscribing from events or clearing timers."
       ]
     },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "ReactJS & JavaScript"
+    "askedBy": ["interview", "quiz"],
+    "technology": "ReactJS / JavaScript"
   },
   {
     "id": "14",
     "question": "What is the purpose of Virtual DOM in ReactJS & JavaScript?",
-    "options": [
-      "Option Virtual DOM",
-      "Option B",
-      "Option C",
-      "Option D"
-    ],
-    "answer": "Option Virtual DOM",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "isObjective": true,
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "answer": "The Virtual DOM is a lightweight representation of the actual DOM used to optimize updates and improve performance in React applications.",
     "explanation": {
-      "intro": "Explanation: What is the purpose of Virtual DOM in ReactJS & JavaScript?",
+      "intro": "React uses a Virtual DOM to minimize expensive direct manipulations of the real DOM.",
       "points": [
-        "Correct answer: Option Virtual DOM.",
-        "Key concept to remember related to the question."
+        "React creates a Virtual DOM tree in memory representing the UI.",
+        "When state or props change, a new Virtual DOM is created and compared (diffing) with the previous Virtual DOM.",
+        "Only the differences are applied to the real DOM, reducing unnecessary updates.",
+        "This approach improves rendering performance and provides a more predictable UI update process.",
+        "Keys in lists help React efficiently identify elements that have changed during reconciliation."
       ]
     },
-    "askedBy": [
-      "interview",
-      "practice"
+    "askedBy": ["interview", "quiz"],
+    "technology": "ReactJS / JavaScript"
+  },
+  {
+    "id": 141,
+    "question": "What is the purpose of Virtual DOM in ReactJS & JavaScript?",
+    "type": "MCQ",
+    "difficulty": "Medium",
+    "isObjective": true,
+    "options": [
+      "To directly manipulate the real DOM",
+      "To optimize UI updates and improve performance",
+      "To store component state",
+      "To replace React components"
     ],
-    "technology": "ReactJS & JavaScript"
+    "answer": "To optimize UI updates and improve performance",
+    "explanation": {
+      "intro": "React uses a Virtual DOM to minimize expensive direct manipulations of the real DOM.",
+      "points": [
+        "React creates a Virtual DOM tree in memory representing the UI.",
+        "When state or props change, a new Virtual DOM is created and compared (diffing) with the previous Virtual DOM.",
+        "Only the differences are applied to the real DOM, reducing unnecessary updates.",
+        "This approach improves rendering performance and provides a more predictable UI update process."
+      ]
+    },
+    "askedBy": ["interview", "quiz"],
+    "technology": "ReactJS / JavaScript"
   },
   {
     "id": "15",
     "question": "Explain how Virtual DOM works in ReactJS & JavaScript.",
-    "options": [],
-    "answer": "Detailed explanation about Virtual DOM.",
     "type": "Interview",
-    "difficulty": "Hard",
+    "difficulty": "Medium",
     "isObjective": false,
+    "answer": "The Virtual DOM is a lightweight copy of the real DOM that allows React to efficiently update the UI by minimizing direct DOM manipulations.",
     "explanation": {
-      "intro": "Explanation: Explain how Virtual DOM works in ReactJS & JavaScript.",
+      "intro": "React uses the Virtual DOM to optimize rendering performance and make UI updates predictable.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "React maintains a Virtual DOM tree in memory representing the current UI state.",
+        "When the state or props of a component change, React creates a new Virtual DOM tree.",
+        "React performs a diffing algorithm between the new and previous Virtual DOM to detect changes.",
+        "Only the parts of the real DOM that actually changed are updated, reducing costly re-rendering operations.",
+        "This process ensures efficient UI updates and enhances performance, especially in complex applications.",
+        "Keys in lists help React identify which elements have changed, been added, or removed during reconciliation."
       ]
     },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "ReactJS & JavaScript"
+    "askedBy": ["interview", "quiz"],
+    "technology": "ReactJS / JavaScript"
   },
   {
     "id": "16",
-    "question": "Which command is used to JSX?",
-    "options": [
-      "cmd JSX",
-      "cmd B",
-      "cmd C",
-      "cmd D"
-    ],
-    "answer": "cmd JSX",
+    "question": "Which command/feature is used for JSX in React?",
     "type": "MCQ",
     "difficulty": "Medium",
     "isObjective": true,
+    "options": [
+      "React.createElement",
+      "useState",
+      "useEffect",
+      "useContext"
+    ],
+    "answer": "React.createElement",
     "explanation": {
-      "intro": "Explanation: Which command is used to JSX?",
+      "intro": "JSX is a syntax extension for JavaScript that looks like HTML and is used in React to describe UI elements.",
       "points": [
-        "Correct answer: cmd JSX.",
-        "Key concept to remember related to the question."
+        "JSX is compiled into `React.createElement` calls by Babel.",
+        "It allows writing UI code in a declarative syntax, improving readability.",
+        "JSX supports embedding JavaScript expressions using `{}`.",
+        "Although it looks like HTML, JSX is just syntactic sugar for JavaScript function calls."
       ]
     },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "ReactJS & JavaScript"
+    "askedBy": ["interview", "quiz"],
+    "technology": "ReactJS / JavaScript"
   },
   {
     "id": "17",
     "question": "Describe pros and cons of JSX.",
     "options": [],
-    "answer": "Pros: ... Cons: ...",
+    "answer": "Pros: JSX allows writing HTML-like syntax in JavaScript, improving readability and maintainability. It enables easier creation of React elements and better integration with JavaScript logic. Cons: JSX requires compilation via Babel, adds a learning curve for beginners, and may sometimes make debugging slightly harder due to abstraction over plain JavaScript.",
     "type": "Interview",
     "difficulty": "Hard",
     "isObjective": false,
     "explanation": {
-      "intro": "Explanation: Describe pros and cons of JSX.",
+      "intro": "Explanation: JSX is a syntax extension that allows developers to write HTML-like code in JavaScript for React components. It has both advantages and disadvantages.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "Pros: Improves readability by combining UI markup and logic, integrates seamlessly with JavaScript expressions, and allows React to optimize rendering through Virtual DOM.",
+        "Cons: Requires a build step (Babel), may be confusing for beginners unfamiliar with HTML/JS integration, and errors may appear in compiled JS rather than original JSX."
       ]
     },
-    "askedBy": [
-      "interview"
-    ],
+    "askedBy": ["interview"],
     "technology": "ReactJS & JavaScript"
   },
   {
     "id": "18",
-    "question": "Which command is used to Hooks?",
-    "options": [
-      "cmd Hooks",
-      "cmd B",
-      "cmd C",
-      "cmd D"
-    ],
-    "answer": "cmd Hooks",
+    "question": "Which command/feature is used for Hooks in ReactJS?",
     "type": "MCQ",
-    "difficulty": "Hard",
+    "difficulty": "Medium",
     "isObjective": true,
+    "options": [
+      "useState, useEffect, useContext, useReducer",
+      "React.createElement",
+      "JSX syntax",
+      "Component lifecycle methods only"
+    ],
+    "answer": "useState, useEffect, useContext, useReducer",
     "explanation": {
-      "intro": "Explanation: Which command is used to Hooks?",
+      "intro": "Hooks are special functions in React that let you use state and other React features in functional components.",
       "points": [
-        "Correct answer: cmd Hooks.",
-        "Key concept to remember related to the question."
+        "useState allows you to add state to functional components.",
+        "useEffect lets you perform side effects similar to lifecycle methods.",
+        "useContext allows accessing context data in functional components.",
+        "useReducer is an alternative to useState for complex state management.",
+        "Hooks enable functional components to handle logic that previously required class components."
       ]
     },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "ReactJS & JavaScript"
+    "askedBy": ["interview", "quiz"],
+    "technology": "ReactJS / JavaScript"
   },
   {
     "id": "19",
     "question": "How would you design/implement Hooks in a production system?",
-    "options": [],
-    "answer": "Design considerations and steps.",
     "type": "Interview",
     "difficulty": "Medium",
     "isObjective": false,
+    "answer": "Hooks should be used in functional components to manage state, side effects, context, and reusable logic while keeping code modular and testable.",
     "explanation": {
-      "intro": "Explanation: How would you design/implement Hooks in a production system?",
+      "intro": "In production React applications, Hooks allow clean and maintainable state management and logic sharing.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "Use `useState` for local component state and `useReducer` for complex state logic.",
+        "Use `useEffect` for side effects like API calls, subscriptions, and DOM updates.",
+        "Leverage `useContext` or custom context hooks for global state management without prop drilling.",
+        "Create custom hooks to encapsulate reusable logic across multiple components.",
+        "Follow best practices: always call hooks at the top level, avoid conditional calls, and keep them small and focused.",
+        "Ensure testing of hooks using React Testing Library or Jest to maintain reliability."
       ]
     },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "ReactJS & JavaScript"
+    "askedBy": ["interview"],
+    "technology": "ReactJS / JavaScript"
   },
   {
     "id": "20",
-    "question": "Which command is used to Event handlers?",
-    "options": [
-      "cmd Event handlers",
-      "cmd B",
-      "cmd C",
-      "cmd D"
-    ],
-    "answer": "cmd Event handlers",
+    "question": "Which command/feature is used for Event Handlers in ReactJS?",
     "type": "MCQ",
     "difficulty": "Medium",
     "isObjective": true,
+    "options": [
+      "onClick, onChange, onSubmit, onMouseEnter",
+      "useState, useEffect",
+      "React.createElement",
+      "JSX syntax only"
+    ],
+    "answer": "onClick, onChange, onSubmit, onMouseEnter",
     "explanation": {
-      "intro": "Explanation: Which command is used to Event handlers?",
+      "intro": "Event handlers in React are used to handle user interactions like clicks, typing, and form submissions.",
       "points": [
-        "Correct answer: cmd Event handlers.",
-        "Key concept to remember related to the question."
+        "React event handlers use camelCase syntax (e.g., onClick instead of onclick).",
+        "Functions passed as handlers are typically defined in the component and can access component state.",
+        "Handlers can be attached directly in JSX, allowing declarative UI behavior.",
+        "Using event handlers properly ensures predictable user interaction and state updates."
       ]
     },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "ReactJS & JavaScript"
+    "askedBy": ["interview", "quiz"],
+    "technology": "ReactJS / JavaScript"
   },
   {
     "id": "21",
-    "question": "How would you design/implement Event handlers in a production system?",
-    "options": [],
-    "answer": "Design considerations and steps.",
+    "question": "How would you design/implement Event Handlers in a production system?",
     "type": "Interview",
     "difficulty": "Medium",
     "isObjective": false,
+    "answer": "Event handlers should be designed to handle user interactions declaratively, manage state efficiently, and remain reusable and testable across components.",
     "explanation": {
-      "intro": "Explanation: How would you design/implement Event handlers in a production system?",
+      "intro": "In production React applications, proper event handler design ensures maintainable and performant UI behavior.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "Define event handler functions clearly within components or custom hooks.",
+        "Use arrow functions or `bind` to maintain correct `this` context when necessary.",
+        "Keep handlers small and focused to handle one task, improving readability and testing.",
+        "Avoid inline functions in JSX where possible to prevent unnecessary re-renders.",
+        "Attach handlers declaratively in JSX using camelCase syntax (e.g., onClick, onChange).",
+        "For global events, consider using custom hooks or context for centralized management.",
+        "Ensure thorough testing of event handlers to validate user interactions and state updates."
       ]
     },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "ReactJS & JavaScript"
+    "askedBy": ["interview"],
+    "technology": "ReactJS / JavaScript"
   },
   {
     "id": "22",
-    "question": "What is the purpose of Event handlers in ReactJS & JavaScript?",
-    "options": [
-      "Option Event handlers",
-      "Option B",
-      "Option C",
-      "Option D"
-    ],
-    "answer": "Option Event handlers",
+    "question": "What is the purpose of Event Handlers in ReactJS & JavaScript?",
     "type": "MCQ",
-    "difficulty": "Hard",
+    "difficulty": "Medium",
     "isObjective": true,
+    "options": [
+      "To handle user interactions like clicks, typing, and form submissions",
+      "To define component state",
+      "To render JSX elements only",
+      "To create custom hooks"
+    ],
+    "answer": "To handle user interactions like clicks, typing, and form submissions",
     "explanation": {
-      "intro": "Explanation: What is the purpose of Event handlers in ReactJS & JavaScript?",
+      "intro": "Event handlers allow React components to respond to user actions and update state or perform side effects accordingly.",
       "points": [
-        "Correct answer: Option Event handlers.",
-        "Key concept to remember related to the question."
+        "They are attached declaratively in JSX using camelCase syntax (e.g., onClick, onChange).",
+        "Handlers can call functions to update state, trigger effects, or interact with APIs.",
+        "Properly designed handlers help maintain predictable and responsive UI behavior."
       ]
     },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "ReactJS & JavaScript"
+    "askedBy": ["interview", "quiz"],
+    "technology": "ReactJS / JavaScript"
   },
   {
     "id": "23",
     "question": "Describe pros and cons of Event handlers.",
     "options": [],
-    "answer": "Pros: ... Cons: ...",
+    "answer": "Pros: Enable interactive and dynamic UI, declarative syntax improves readability, and easy integration with component state. Cons: Improper use can lead to unnecessary re-renders, inline functions may impact performance, and complex handlers can reduce code maintainability.",
     "type": "Interview",
     "difficulty": "Medium",
     "isObjective": false,
     "explanation": {
-      "intro": "Explanation: Describe pros and cons of Event handlers.",
+      "intro": "Explanation: Event handlers allow components to respond to user interactions but come with design considerations.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "Pros: Provide interactivity, allow state management, and integrate seamlessly with JSX.",
+        "Cons: Inline handlers may cause extra re-renders, large functions reduce readability, and improper binding can cause bugs."
       ]
     },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "ReactJS & JavaScript"
+    "askedBy": ["interview"],
+    "technology": "ReactJS / JavaScript"
   },
   {
     "id": "24",
-    "question": "Which annotation/keyword is used for Closures?",
-    "options": [
-      "@Closures",
-      "@B",
-      "@C",
-      "@D"
-    ],
-    "answer": "@Closures",
+    "question": "Which feature/keyword is used for Closures in JavaScript?",
     "type": "MCQ",
-    "difficulty": "Easy",
+    "difficulty": "Medium",
     "isObjective": true,
+    "options": [
+      "Functions that capture outer scope variables",
+      "useState",
+      "class components",
+      "JSX syntax"
+    ],
+    "answer": "Functions that capture outer scope variables",
     "explanation": {
-      "intro": "Explanation: Which annotation/keyword is used for Closures?",
+      "intro": "Closures are functions that have access to variables from an outer function scope even after the outer function has executed.",
       "points": [
-        "Correct answer: @Closures.",
-        "Key concept to remember related to the question."
+        "They enable data encapsulation and private variables.",
+        "Closures are commonly used in callbacks, event handlers, and functional programming.",
+        "In JavaScript, any function can create a closure if it references variables from an outer scope."
       ]
     },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "ReactJS & JavaScript"
+    "askedBy": ["interview", "quiz"],
+    "technology": "JavaScript / ReactJS"
   },
   {
     "id": "25",
     "question": "Explain how Closures works in ReactJS & JavaScript.",
-    "options": [],
-    "answer": "Detailed explanation about Closures.",
     "type": "Interview",
-    "difficulty": "Hard",
+    "difficulty": "Medium",
     "isObjective": false,
+    "answer": "Closures are functions that retain access to variables from their outer scope even after the outer function has executed. They are widely used for encapsulation, callbacks, and maintaining state in functional components.",
     "explanation": {
-      "intro": "Explanation: Explain how Closures works in ReactJS & JavaScript.",
+      "intro": "In ReactJS and JavaScript, closures allow functions to access and manipulate variables defined in an outer scope, enabling advanced patterns like memoization and private state.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "A closure is created whenever a function references variables from an outer scope.",
+        "Closures are used in React for event handlers, functional components, and custom hooks to retain state or props context.",
+        "They help in maintaining private variables and avoiding global scope pollution.",
+        "Closures can be used for creating higher-order functions and callbacks with persistent state."
       ]
     },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "ReactJS & JavaScript"
-  },
-  {
-    "id": "26",
-    "question": "What is the purpose of Event handlers in ReactJS & JavaScript?",
-    "options": [
-      "Option Event handlers",
-      "Option B",
-      "Option C",
-      "Option D"
-    ],
-    "answer": "Option Event handlers",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "isObjective": true,
-    "explanation": {
-      "intro": "Explanation: What is the purpose of Event handlers in ReactJS & JavaScript?",
-      "points": [
-        "Correct answer: Option Event handlers.",
-        "Key concept to remember related to the question."
-      ]
-    },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "ReactJS & JavaScript"
-  },
-  {
-    "id": "27",
-    "question": "How would you design/implement Event handlers in a production system?",
-    "options": [],
-    "answer": "Design considerations and steps.",
-    "type": "Interview",
-    "difficulty": "Hard",
-    "isObjective": false,
-    "explanation": {
-      "intro": "Explanation: How would you design/implement Event handlers in a production system?",
-      "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
-    },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "ReactJS & JavaScript"
+    "askedBy": ["interview"],
+    "technology": "ReactJS / JavaScript"
   },
   {
     "id": "28",
-    "question": "Which command is used to Closures?",
-    "options": [
-      "cmd Closures",
-      "cmd B",
-      "cmd C",
-      "cmd D"
-    ],
-    "answer": "cmd Closures",
+    "question": "Which command/feature is used to create Closures in JavaScript?",
     "type": "MCQ",
-    "difficulty": "Easy",
+    "difficulty": "Medium",
     "isObjective": true,
+    "options": [
+      "Defining a function inside another function and accessing outer variables",
+      "useState hook",
+      "JSX syntax",
+      "React component class"
+    ],
+    "answer": "Defining a function inside another function and accessing outer variables",
     "explanation": {
-      "intro": "Explanation: Which command is used to Closures?",
+      "intro": "Closures in JavaScript are created by defining functions inside other functions and referencing variables from the outer function.",
       "points": [
-        "Correct answer: cmd Closures.",
-        "Key concept to remember related to the question."
+        "The inner function retains access to the outer function's scope even after the outer function has executed.",
+        "Closures are useful for encapsulating data, maintaining state, and creating callbacks with preserved context.",
+        "In React, closures are often used in hooks, event handlers, and functional components to capture props or state."
       ]
     },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "ReactJS & JavaScript"
+    "askedBy": ["interview", "quiz"],
+    "technology": "JavaScript / ReactJS"
   },
   {
     "id": "29",
     "question": "Describe pros and cons of Closures.",
     "options": [],
-    "answer": "Pros: ... Cons: ...",
+    "answer": "Pros: Enable data encapsulation, allow persistent state in functions, and useful for callbacks and functional programming patterns. Cons: Can lead to memory leaks if not managed properly, may increase complexity, and improper use can make debugging harder.",
     "type": "Interview",
     "difficulty": "Medium",
     "isObjective": false,
     "explanation": {
-      "intro": "Explanation: Describe pros and cons of Closures.",
+      "intro": "Closures allow functions to retain access to variables from an outer scope, providing flexibility but requiring careful management.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "Pros: Encapsulation of private variables, ability to maintain state, and powerful for functional programming.",
+        "Cons: Potential memory leaks if references are kept unnecessarily, can increase code complexity, and may lead to unexpected behavior if outer scope variables change unexpectedly."
       ]
     },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "ReactJS & JavaScript"
+    "askedBy": ["interview"],
+    "technology": "ReactJS / JavaScript"
   },
   {
     "id": "30",
     "question": "Which statement about Async/Await is correct?",
-    "options": [
-      "True for Async/Await",
-      "True for B",
-      "True for C",
-      "None"
-    ],
-    "answer": "True for Async/Await",
     "type": "MCQ",
     "difficulty": "Medium",
     "isObjective": true,
+    "options": [
+      "Async functions always return a promise",
+      "Await can be used outside an async function",
+      "Async/Await blocks the main thread",
+      "Async functions do not support error handling"
+    ],
+    "answer": "Async functions always return a promise",
     "explanation": {
-      "intro": "Explanation: Which statement about Async/Await is correct?",
+      "intro": "Async/Await is syntactic sugar over Promises, making asynchronous code easier to read and write.",
       "points": [
-        "Correct answer: True for Async/Await.",
-        "Key concept to remember related to the question."
+        "An async function automatically returns a promise.",
+        "The await keyword pauses execution within the async function until the promise resolves.",
+        "Async/Await does not block the main thread; it allows asynchronous operations to run while keeping code readable.",
+        "Error handling is done via try/catch inside async functions."
       ]
     },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "ReactJS & JavaScript"
+    "askedBy": ["interview", "quiz"],
+    "technology": "JavaScript / ReactJS"
   },
   {
     "id": "31",
     "question": "How would you design/implement Async/Await in a production system?",
-    "options": [],
-    "answer": "Design considerations and steps.",
     "type": "Interview",
-    "difficulty": "Hard",
+    "difficulty": "Medium",
     "isObjective": false,
+    "answer": "Use async functions to handle asynchronous operations like API calls, database queries, or file I/O. Always handle errors using try/catch blocks and avoid blocking the main thread by running long-running tasks in separate async functions.",
     "explanation": {
-      "intro": "Explanation: How would you design/implement Async/Await in a production system?",
+      "intro": "Async/Await helps manage asynchronous code in a readable, sequential manner while avoiding callback hell.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "Wrap asynchronous operations in async functions and use await for promises.",
+        "Use try/catch to handle errors gracefully and avoid unhandled promise rejections.",
+        "For performance, run independent async tasks concurrently using Promise.all or similar patterns.",
+        "Keep functions small and focused to improve maintainability and readability.",
+        "In React, use Async/Await inside useEffect or custom hooks for API calls and state updates."
       ]
     },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "ReactJS & JavaScript"
+    "askedBy": ["interview"],
+    "technology": "JavaScript / ReactJS"
   },
   {
     "id": "32",
     "question": "What is the purpose of Promises in ReactJS & JavaScript?",
-    "options": [
-      "Option Promises",
-      "Option B",
-      "Option C",
-      "Option D"
-    ],
-    "answer": "Option Promises",
     "type": "MCQ",
-    "difficulty": "Hard",
+    "difficulty": "Medium",
     "isObjective": true,
+    "options": [
+      "To handle asynchronous operations and avoid callback hell",
+      "To declare variables",
+      "To create classes",
+      "To manipulate the DOM"
+    ],
+    "answer": "To handle asynchronous operations and avoid callback hell",
     "explanation": {
-      "intro": "Explanation: What is the purpose of Promises in ReactJS & JavaScript?",
+      "intro": "Promises provide a cleaner way to handle asynchronous operations compared to callbacks.",
       "points": [
-        "Correct answer: Option Promises.",
-        "Key concept to remember related to the question."
+        "A promise represents the eventual completion (or failure) of an asynchronous operation.",
+        "They help chain multiple asynchronous tasks with .then() and .catch(), improving readability.",
+        "Promises are the foundation for async/await syntax in JavaScript.",
+        "In React, promises are used for API calls, fetching data, and handling asynchronous side-effects."
       ]
     },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "ReactJS & JavaScript"
+    "askedBy": ["interview", "quiz"],
+    "technology": "JavaScript / ReactJS"
   },
   {
     "id": "33",
     "question": "Explain how Promises works in ReactJS & JavaScript.",
-    "options": [],
-    "answer": "Detailed explanation about Promises.",
     "type": "Interview",
     "difficulty": "Medium",
     "isObjective": false,
+    "answer": "Promises represent an asynchronous operation that may complete in the future. They have three states: pending, fulfilled, or rejected. You can attach callbacks using .then() for success and .catch() for errors, allowing sequential or parallel execution of asynchronous tasks.",
     "explanation": {
-      "intro": "Explanation: Explain how Promises works in ReactJS & JavaScript.",
+      "intro": "Promises simplify handling asynchronous operations, avoiding nested callbacks and making code more readable.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "A Promise is created using `new Promise((resolve, reject) => { ... })`.",
+        "The `resolve` function is called when the operation succeeds; `reject` is called when it fails.",
+        "Use `.then()` to handle resolved values and `.catch()` for errors.",
+        "Multiple promises can be executed concurrently using `Promise.all()` or `Promise.race()`.",
+        "In React, promises are commonly used in data fetching, API calls, and async state updates."
       ]
     },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "ReactJS & JavaScript"
-  },
-  {
-    "id": "34",
-    "question": "What is the default behavior of Async/Await?",
-    "options": [
-      "Behavior Async/Await",
-      "Behavior B",
-      "Behavior C",
-      "Behavior D"
-    ],
-    "answer": "Behavior Async/Await",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "isObjective": true,
-    "explanation": {
-      "intro": "Explanation: What is the default behavior of Async/Await?",
-      "points": [
-        "Correct answer: Behavior Async/Await.",
-        "Key concept to remember related to the question."
-      ]
-    },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "ReactJS & JavaScript"
-  },
-  {
-    "id": "35",
-    "question": "How would you design/implement Async/Await in a production system?",
-    "options": [],
-    "answer": "Design considerations and steps.",
-    "type": "Interview",
-    "difficulty": "Hard",
-    "isObjective": false,
-    "explanation": {
-      "intro": "Explanation: How would you design/implement Async/Await in a production system?",
-      "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
-    },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "ReactJS & JavaScript"
+    "askedBy": ["interview"],
+    "technology": "JavaScript / ReactJS"
   },
   {
     "id": "36",
     "question": "What is the default behavior of Promises?",
-    "options": [
-      "Behavior Promises",
-      "Behavior B",
-      "Behavior C",
-      "Behavior D"
-    ],
-    "answer": "Behavior Promises",
     "type": "MCQ",
-    "difficulty": "Easy",
+    "difficulty": "Medium",
     "isObjective": true,
+    "options": [
+      "Promises are immediately executed and remain pending until resolved or rejected",
+      "Promises block the main thread until resolved",
+      "Promises always fail by default",
+      "Promises are synchronous by default"
+    ],
+    "answer": "Promises are immediately executed and remain pending until resolved or rejected",
     "explanation": {
-      "intro": "Explanation: What is the default behavior of Promises?",
+      "intro": "Promises provide a way to handle asynchronous operations in JavaScript without blocking the main thread.",
       "points": [
-        "Correct answer: Behavior Promises.",
-        "Key concept to remember related to the question."
+        "When a promise is created, it starts execution immediately.",
+        "It remains in a 'pending' state until either `resolve` or `reject` is called.",
+        "Promises allow chaining via `.then()` and `.catch()` for handling success and error states.",
+        "They do not block the main thread and help manage asynchronous tasks cleanly."
       ]
     },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "ReactJS & JavaScript"
+    "askedBy": ["interview", "quiz"],
+    "technology": "JavaScript / ReactJS"
   },
   {
     "id": "37",
     "question": "Describe pros and cons of Promises.",
     "options": [],
-    "answer": "Pros: ... Cons: ...",
+    "answer": "Pros: Avoid callback hell, provide cleaner syntax for async operations, support chaining and composition, easier error handling. Cons: Can become complex for large chains, may hide execution order issues, still requires careful error handling for nested promises.",
     "type": "Interview",
     "difficulty": "Medium",
     "isObjective": false,
     "explanation": {
-      "intro": "Explanation: Describe pros and cons of Promises.",
+      "intro": "Promises simplify asynchronous programming by providing a structured approach to handling async tasks.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "Pros: Enable sequential and parallel async execution, improve readability, easier debugging compared to nested callbacks.",
+        "Cons: Large promise chains can be hard to maintain, improper handling can lead to unhandled rejections, and chaining does not automatically handle all errors."
       ]
     },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "ReactJS & JavaScript"
+    "askedBy": ["interview"],
+    "technology": "JavaScript / ReactJS"
   },
   {
     "id": "38",
     "question": "What is the purpose of JSX in ReactJS & JavaScript?",
-    "options": [
-      "Option JSX",
-      "Option B",
-      "Option C",
-      "Option D"
-    ],
-    "answer": "Option JSX",
     "type": "MCQ",
     "difficulty": "Medium",
     "isObjective": true,
+    "options": [
+      "To write HTML-like syntax in JavaScript for building UI components",
+      "To manage asynchronous operations",
+      "To style components",
+      "To handle events"
+    ],
+    "answer": "To write HTML-like syntax in JavaScript for building UI components",
     "explanation": {
-      "intro": "Explanation: What is the purpose of JSX in ReactJS & JavaScript?",
+      "intro": "JSX allows developers to write UI components in a syntax that closely resembles HTML, which React transforms into JavaScript function calls.",
       "points": [
-        "Correct answer: Option JSX.",
-        "Key concept to remember related to the question."
+        "JSX improves readability and maintainability of React components.",
+        "It allows embedding expressions and JavaScript logic within markup.",
+        "React transpiles JSX into `React.createElement()` calls.",
+        "JSX supports attributes, children, and conditional rendering in a clean syntax."
       ]
     },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "ReactJS & JavaScript"
-  },
-  {
-    "id": "39",
-    "question": "Describe pros and cons of JSX.",
-    "options": [],
-    "answer": "Pros: ... Cons: ...",
-    "type": "Interview",
-    "difficulty": "Hard",
-    "isObjective": false,
-    "explanation": {
-      "intro": "Explanation: Describe pros and cons of JSX.",
-      "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
-    },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "ReactJS & JavaScript"
+    "askedBy": ["interview", "quiz"],
+    "technology": "ReactJS / JavaScript"
   },
   {
     "id": "40",
     "question": "Which statement about Context API is correct?",
-    "options": [
-      "True for Context API",
-      "True for B",
-      "True for C",
-      "None"
-    ],
-    "answer": "True for Context API",
     "type": "MCQ",
     "difficulty": "Medium",
     "isObjective": true,
-    "explanation": {
-      "intro": "Explanation: Which statement about Context API is correct?",
-      "points": [
-        "Correct answer: True for Context API.",
-        "Key concept to remember related to the question."
-      ]
-    },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "ReactJS & JavaScript"
-  },
-  {
-    "id": "41",
-    "question": "Explain how Context API works in ReactJS & JavaScript.",
-    "options": [],
-    "answer": "Detailed explanation about Context API.",
-    "type": "Interview",
-    "difficulty": "Hard",
-    "isObjective": false,
-    "explanation": {
-      "intro": "Explanation: Explain how Context API works in ReactJS & JavaScript.",
-      "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
-    },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "ReactJS & JavaScript"
-  },
-  {
-    "id": "42",
-    "question": "Which annotation/keyword is used for Closures?",
     "options": [
-      "@Closures",
-      "@B",
-      "@C",
-      "@D"
+      "Context API allows passing data through the component tree without props drilling",
+      "Context API is used to manage component lifecycle",
+      "Context API is used for styling components",
+      "Context API replaces state entirely"
     ],
-    "answer": "@Closures",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "isObjective": true,
+    "answer": "Context API allows passing data through the component tree without props drilling",
     "explanation": {
-      "intro": "Explanation: Which annotation/keyword is used for Closures?",
+      "intro": "Context API in React helps in sharing data globally across components without manually passing props at every level.",
       "points": [
-        "Correct answer: @Closures.",
-        "Key concept to remember related to the question."
+        "It is useful for theming, authentication, language settings, and other global data.",
+        "You create a context using `React.createContext()` and provide it via a Provider.",
+        "Consumers or `useContext()` hook can access the provided data anywhere in the component tree.",
+        "It reduces the complexity of passing props through multiple nested components."
       ]
     },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "ReactJS & JavaScript"
-  },
-  {
-    "id": "43",
-    "question": "Describe pros and cons of Closures.",
-    "options": [],
-    "answer": "Pros: ... Cons: ...",
-    "type": "Interview",
-    "difficulty": "Hard",
-    "isObjective": false,
-    "explanation": {
-      "intro": "Explanation: Describe pros and cons of Closures.",
-      "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
-    },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "ReactJS & JavaScript"
+    "askedBy": ["interview", "quiz"],
+    "technology": "ReactJS / JavaScript"
   },
   {
     "id": "44",
     "question": "Which statement about Closures is correct?",
-    "options": [
-      "True for Closures",
-      "True for B",
-      "True for C",
-      "None"
-    ],
-    "answer": "True for Closures",
     "type": "MCQ",
     "difficulty": "Medium",
     "isObjective": true,
+    "options": [
+      "A closure allows a function to access variables from its outer scope even after the outer function has returned",
+      "A closure only works inside classes",
+      "Closures are only available in React and not in JavaScript",
+      "Closures prevent functions from accessing outer scope variables"
+    ],
+    "answer": "A closure allows a function to access variables from its outer scope even after the outer function has returned",
     "explanation": {
-      "intro": "Explanation: Which statement about Closures is correct?",
+      "intro": "Closures are a fundamental concept in JavaScript and play a key role in React for state and event handling.",
       "points": [
-        "Correct answer: True for Closures.",
-        "Key concept to remember related to the question."
+        "They are created whenever a function is defined inside another function and gains access to the outer function’s variables.",
+        "Closures are commonly used in callbacks, event handlers, and functional components in React.",
+        "They help maintain state across function executions.",
+        "Misuse of closures may cause memory leaks if references are not handled properly."
       ]
     },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "ReactJS & JavaScript"
+    "askedBy": ["interview", "quiz"],
+    "technology": "ReactJS / JavaScript"
   },
   {
-    "id": "45",
-    "question": "Explain how Closures works in ReactJS & JavaScript.",
-    "options": [],
-    "answer": "Detailed explanation about Closures.",
-    "type": "Interview",
-    "difficulty": "Medium",
-    "isObjective": false,
+    "id": 45,
+    "question": "What is the main purpose of the Component lifecycle in ReactJS & JavaScript?",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "options": [
+      "A) To define how components fetch and update data during different stages of their existence",
+      "B) To permanently store data across multiple components",
+      "C) To replace state and props in React components",
+      "D) To handle routing between different components"
+    ],
+    "answer": "A) To define how components fetch and update data during different stages of their existence",
     "explanation": {
-      "intro": "Explanation: Explain how Closures works in ReactJS & JavaScript.",
+      "intro": "Component lifecycle in React manages the creation, updating, and removal of components.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "Lifecycle methods/hooks allow developers to run logic at specific stages.",
+        "Useful for data fetching, DOM manipulation, performance optimization, and cleanup.",
+        "Functional components use hooks like useEffect and useLayoutEffect instead of traditional lifecycle methods."
       ]
     },
-    "askedBy": [
-      "interview"
-    ],
+    "askedBy": ["quiz", "interview"],
     "technology": "ReactJS & JavaScript"
   },
   {
     "id": "46",
     "question": "What is the purpose of Component lifecycle in ReactJS & JavaScript?",
-    "options": [
-      "Option Component lifecycle",
-      "Option B",
-      "Option C",
-      "Option D"
-    ],
-    "answer": "Option Component lifecycle",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "isObjective": true,
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "options": [],
+    "answer": "The purpose of the Component lifecycle in ReactJS is to provide developers with a way to control and manage the different stages of a component’s existence—from its creation (mounting), updates (re-rendering), to its removal (unmounting). This allows efficient resource management, data fetching, DOM manipulation, and cleanup operations.",
     "explanation": {
-      "intro": "Explanation: What is the purpose of Component lifecycle in ReactJS & JavaScript?",
+      "intro": "React components go through different phases during their lifetime. The lifecycle methods/hooks help developers hook into these phases for better control.",
       "points": [
-        "Correct answer: Option Component lifecycle.",
-        "Key concept to remember related to the question."
+        "Mounting phase: Initialize component, fetch initial data, and set up subscriptions.",
+        "Updating phase: Handle state/prop changes efficiently, optimize re-renders, and apply side effects.",
+        "Unmounting phase: Clean up resources like event listeners, intervals, or subscriptions.",
+        "In functional components, lifecycle is managed using React Hooks such as useEffect and useLayoutEffect."
       ]
     },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
+    "askedBy": ["interview", "quiz"],
     "technology": "ReactJS & JavaScript"
   },
   {
     "id": "47",
     "question": "How would you design/implement Component lifecycle in a production system?",
-    "options": [],
-    "answer": "Design considerations and steps.",
     "type": "Interview",
     "difficulty": "Medium",
     "isObjective": false,
+    "answer": "In a production system, Component lifecycle should be designed with proper use of hooks (for functional components) or lifecycle methods (for class components) to handle initialization, updates, and cleanup efficiently.",
     "explanation": {
-      "intro": "Explanation: How would you design/implement Component lifecycle in a production system?",
+      "intro": "React’s Component lifecycle helps manage different phases: mounting, updating, and unmounting.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "Use `useEffect` for data fetching, subscriptions, and DOM manipulations in functional components.",
+        "Provide cleanup functions inside `useEffect` (like unsubscribing WebSocket connections, clearing intervals) to avoid memory leaks.",
+        "Separate concerns by using multiple `useEffect` hooks for different purposes instead of combining everything in one.",
+        "Use `useMemo` and `useCallback` to optimize performance and avoid unnecessary re-renders.",
+        "For class components, leverage `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` appropriately.",
+        "Always handle errors and cancellations (like aborting fetch requests) to make lifecycle handling production-ready."
       ]
     },
-    "askedBy": [
-      "interview"
-    ],
+    "askedBy": ["interview", "system design"],
     "technology": "ReactJS & JavaScript"
   },
   {
     "id": "48",
     "question": "Which statement about Component lifecycle is correct?",
-    "options": [
-      "True for Component lifecycle",
-      "True for B",
-      "True for C",
-      "None"
-    ],
-    "answer": "True for Component lifecycle",
     "type": "MCQ",
-    "difficulty": "Hard",
+    "difficulty": "Easy",
     "isObjective": true,
+    "options": [
+      "Component lifecycle in React only applies to class components, not functional components.",
+      "Functional components can also use lifecycle behavior via Hooks like useEffect.",
+      "Lifecycle methods are called randomly by React without any specific order.",
+      "Component lifecycle does not include cleanup or unmounting."
+    ],
+    "answer": "Functional components can also use lifecycle behavior via Hooks like useEffect.",
     "explanation": {
-      "intro": "Explanation: Which statement about Component lifecycle is correct?",
+      "intro": "React’s Component lifecycle is structured into mounting, updating, and unmounting phases.",
       "points": [
-        "Correct answer: True for Component lifecycle.",
-        "Key concept to remember related to the question."
+        "Class components use lifecycle methods such as componentDidMount, componentDidUpdate, and componentWillUnmount.",
+        "Functional components achieve lifecycle behavior using Hooks like useEffect.",
+        "Cleanup functions inside useEffect handle unmounting and resource cleanup.",
+        "Lifecycle is deterministic and follows React’s rendering phases."
       ]
     },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
+    "askedBy": ["quiz", "interview"],
     "technology": "ReactJS & JavaScript"
   },
   {
     "id": "49",
     "question": "Describe pros and cons of Component lifecycle.",
-    "options": [],
-    "answer": "Pros: ... Cons: ...",
     "type": "Interview",
     "difficulty": "Medium",
     "isObjective": false,
+    "options": [],
+    "answer": "Pros: Provides clear structure for handling mounting, updating, and cleanup; Enables predictable side-effect management; Hooks allow functional components to replicate lifecycle behavior. Cons: Class lifecycle methods can be verbose and lead to complex code; Misuse of useEffect can cause unnecessary re-renders; Multiple lifecycle stages can make debugging harder.",
     "explanation": {
-      "intro": "Explanation: Describe pros and cons of Component lifecycle.",
+      "intro": "The Component lifecycle in React describes how components are created, updated, and destroyed, helping developers manage side effects and resources effectively.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "Pros:",
+        "- Structured phases (mount, update, unmount) provide clarity.",
+        "- Enables resource management, subscriptions, and cleanup.",
+        "- Hooks unify lifecycle logic in functional components.",
+        "Cons:",
+        "- Class-based lifecycle methods can feel boilerplate-heavy.",
+        "- Complex lifecycle chains may introduce bugs.",
+        "- Overuse or incorrect use of useEffect can cause performance issues."
       ]
     },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "ReactJS & JavaScript"
-  },
-  {
-    "id": "50",
-    "question": "Which annotation/keyword is used for Context API?",
-    "options": [
-      "@Context API",
-      "@B",
-      "@C",
-      "@D"
-    ],
-    "answer": "@Context API",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "isObjective": true,
-    "explanation": {
-      "intro": "Explanation: Which annotation/keyword is used for Context API?",
-      "points": [
-        "Correct answer: @Context API.",
-        "Key concept to remember related to the question."
-      ]
-    },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
+    "askedBy": ["interview", "quiz"],
     "technology": "ReactJS & JavaScript"
   },
   {
     "id": "51",
     "question": "Describe pros and cons of Context API.",
-    "options": [],
-    "answer": "Pros: ... Cons: ...",
     "type": "Interview",
-    "difficulty": "Hard",
+    "difficulty": "Medium",
     "isObjective": false,
+    "options": [],
+    "answer": "Pros: Simplifies state sharing across deeply nested components; Eliminates the need for prop drilling; Provides a cleaner structure for global state. Cons: Can cause unnecessary re-renders if not optimized; Not ideal for very large-scale state management compared to Redux; Debugging context changes can be harder.",
     "explanation": {
-      "intro": "Explanation: Describe pros and cons of Context API.",
+      "intro": "The Context API in React provides a way to share values between components without explicitly passing props through every level of the tree.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "Pros:",
+        "- Avoids prop drilling in deep component trees.",
+        "- Easy to use and built into React (no external libraries required).",
+        "- Good for global state like themes, authentication, and language settings.",
+        "Cons:",
+        "- Can trigger re-renders across all consumers when context changes.",
+        "- May become harder to manage as the app grows compared to dedicated state libraries.",
+        "- Debugging context value updates can be less straightforward."
       ]
     },
-    "askedBy": [
-      "interview"
-    ],
+    "askedBy": ["interview", "quiz"],
     "technology": "ReactJS & JavaScript"
   },
   {
     "id": "52",
     "question": "What is the default behavior of Redux?",
-    "options": [
-      "Behavior Redux",
-      "Behavior B",
-      "Behavior C",
-      "Behavior D"
-    ],
-    "answer": "Behavior Redux",
     "type": "MCQ",
-    "difficulty": "Hard",
+    "difficulty": "Medium",
     "isObjective": true,
+    "options": [
+      "A. State is centralized in a single store",
+      "B. State is mutable and can be updated directly",
+      "C. Reducers must always return promises",
+      "D. Actions automatically update the UI without reducers"
+    ],
+    "answer": "A. State is centralized in a single store",
     "explanation": {
-      "intro": "Explanation: What is the default behavior of Redux?",
+      "intro": "Redux is a predictable state container for JavaScript applications.",
       "points": [
-        "Correct answer: Behavior Redux.",
-        "Key concept to remember related to the question."
+        "The default behavior of Redux is to maintain the entire application state in a single centralized store.",
+        "State is immutable and updated only through dispatched actions and pure reducers.",
+        "Reducers define how state transitions occur based on actions.",
+        "This ensures predictability and easier debugging."
       ]
     },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
+    "askedBy": ["interview", "quiz"],
     "technology": "ReactJS & JavaScript"
   },
   {
     "id": "53",
     "question": "Describe pros and cons of Redux.",
-    "options": [],
-    "answer": "Pros: ... Cons: ...",
     "type": "Interview",
     "difficulty": "Hard",
     "isObjective": false,
+    "options": [],
+    "answer": "Pros: Centralized state management, predictable state transitions, great for debugging, works well with large apps. Cons: Boilerplate code, steep learning curve, can be overkill for small apps, requires additional setup.",
     "explanation": {
-      "intro": "Explanation: Describe pros and cons of Redux.",
+      "intro": "Redux is a predictable state container that provides a single source of truth for application state in JavaScript apps.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "Pros:",
+        "- Centralized store makes state management consistent and predictable.",
+        "- Strict unidirectional data flow improves maintainability.",
+        "- DevTools provide powerful debugging and time-travel features.",
+        "- Scales well for complex applications with many components.",
+        "Cons:",
+        "- Requires writing a lot of boilerplate code (actions, reducers, store).",
+        "- Can feel complex and overwhelming for beginners.",
+        "- Overhead may be unnecessary for small or medium projects.",
+        "- Middleware setup can add extra complexity."
       ]
     },
-    "askedBy": [
-      "interview"
-    ],
+    "askedBy": ["interview", "quiz"],
     "technology": "ReactJS & JavaScript"
   },
   {
     "id": "54",
     "question": "What is the purpose of Hooks in ReactJS & JavaScript?",
-    "options": [
-      "Option Hooks",
-      "Option B",
-      "Option C",
-      "Option D"
-    ],
-    "answer": "Option Hooks",
     "type": "MCQ",
     "difficulty": "Medium",
     "isObjective": true,
+    "options": [
+      "A. To add lifecycle and state management features to functional components",
+      "B. To replace all JavaScript functions with classes",
+      "C. To automatically connect React to Redux",
+      "D. To define CSS styles inside JavaScript"
+    ],
+    "answer": "A. To add lifecycle and state management features to functional components",
     "explanation": {
-      "intro": "Explanation: What is the purpose of Hooks in ReactJS & JavaScript?",
+      "intro": "Hooks were introduced in React 16.8 to allow functional components to use state and other React features without writing classes.",
       "points": [
-        "Correct answer: Option Hooks.",
-        "Key concept to remember related to the question."
+        "Hooks let developers use React state, lifecycle methods, and context in functional components.",
+        "They simplify component logic reuse without higher-order components (HOCs) or render props.",
+        "Common hooks: useState, useEffect, useContext, useReducer, useMemo, and custom hooks."
       ]
     },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
+    "askedBy": ["interview", "quiz"],
     "technology": "ReactJS & JavaScript"
   },
   {
     "id": "55",
     "question": "Explain how Hooks works in ReactJS & JavaScript.",
-    "options": [],
-    "answer": "Detailed explanation about Hooks.",
     "type": "Interview",
-    "difficulty": "Hard",
+    "difficulty": "Medium",
     "isObjective": false,
+    "options": [],
+    "answer": "Hooks let functional components use state and lifecycle features without classes. React keeps track of state between renders using a consistent order of hook calls, and re-runs effects after updates.",
     "explanation": {
-      "intro": "Explanation: Explain how Hooks works in ReactJS & JavaScript.",
+      "intro": "Hooks are special functions in React that allow developers to use state, side effects, and other React features in functional components.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "React internally maintains a list of Hooks for each component, ensuring they are called in the same order every render.",
+        "useState allows managing local state within functional components.",
+        "useEffect lets you handle side effects like fetching data, subscriptions, or DOM updates.",
+        "Hooks like useContext, useReducer, useMemo, and useCallback provide additional ways to handle context, complex state logic, and performance optimizations.",
+        "Rules of Hooks: only call hooks at the top level of your component and only call them from React functions."
       ]
     },
-    "askedBy": [
-      "interview"
-    ],
+    "askedBy": ["interview", "quiz"],
     "technology": "ReactJS & JavaScript"
   },
   {
     "id": "56",
     "question": "What is the default behavior of JSX?",
-    "options": [
-      "Behavior JSX",
-      "Behavior B",
-      "Behavior C",
-      "Behavior D"
-    ],
-    "answer": "Behavior JSX",
     "type": "MCQ",
-    "difficulty": "Hard",
+    "difficulty": "Easy",
     "isObjective": true,
-    "explanation": {
-      "intro": "Explanation: What is the default behavior of JSX?",
-      "points": [
-        "Correct answer: Behavior JSX.",
-        "Key concept to remember related to the question."
-      ]
-    },
-    "askedBy": [
-      "interview",
-      "practice"
+    "options": [
+      "JSX compiles directly into HTML",
+      "JSX is ignored by browsers and must be compiled to JavaScript",
+      "JSX automatically executes as JavaScript in browsers",
+      "JSX is used only for styling components"
     ],
-    "technology": "ReactJS & JavaScript"
+    "answer": "JSX is ignored by browsers and must be compiled to JavaScript",
+    "explanation": {
+      "intro": "JSX is syntactic sugar for React.createElement(). Browsers cannot interpret JSX directly, so tools like Babel transpile JSX into plain JavaScript before execution."
+    }
   },
   {
     "id": "57",
     "question": "How would you design/implement JSX in a production system?",
-    "options": [],
-    "answer": "Design considerations and steps.",
     "type": "Interview",
-    "difficulty": "Hard",
+    "difficulty": "Medium",
     "isObjective": false,
+    "options": [],
+    "answer": "Design JSX for production by using a robust build pipeline (Babel/TypeScript + bundler), organizing components for reusability, enforcing linting/formatting and type checks, optimizing rendering (memoization, code-splitting, SSR/CSR choices), ensuring accessibility and security, and validating via tests and CI/CD.",
     "explanation": {
-      "intro": "Explanation: How would you design/implement JSX in a production system?",
+      "intro": "JSX is the UI markup for React. In production you should treat it as maintainable, testable, and performant code — not just template text.",
       "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
-    },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "ReactJS & JavaScript"
-  },
-  {
-    "id": "58",
-    "question": "Which annotation/keyword is used for Closures?",
-    "options": [
-      "@Closures",
-      "@B",
-      "@C",
-      "@D"
-    ],
-    "answer": "@Closures",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "isObjective": true,
-    "explanation": {
-      "intro": "Explanation: Which annotation/keyword is used for Closures?",
-      "points": [
-        "Correct answer: @Closures.",
-        "Key concept to remember related to the question."
+        "Build pipeline & toolchain: Use Babel or TypeScript to transpile JSX, configure a bundler (Webpack/Vite/Rollup) for tree-shaking, code-splitting, and production optimizations (minify, sourcemaps).",
+        "Project structure & components: Organize components into clear folders (atoms, molecules, organisms or feature-based). Create small, testable, reusable components and prefer composition over inheritance.",
+        "Type safety & linting: Enforce types (TypeScript) and static analysis (ESLint, plugin: react-hooks) plus formatting (Prettier) to catch issues early and keep code consistent.",
+        "Performance optimizations: Avoid unnecessary re-renders with React.memo, useMemo, useCallback; lazy-load heavy components with React.lazy/Suspense; optimize list rendering with keys and virtualization for large lists.",
+        "Server vs Client rendering: Choose SSR/SSG (Next.js) when SEO or first-paint latency matters; otherwise use client-side rendering. Handle hydration carefully to avoid mismatches.",
+        "CSS & styling strategy: Use scoped styling (CSS Modules, styled-components, Tailwind) to prevent style leakage and enable critical CSS extraction for faster paint.",
+        "Accessibility & UX: Build accessible components (ARIA attributes, keyboard navigation), test with tools (axe) and screen readers to meet accessibility standards.",
+        "Security & sanitization: Never dangerouslySetInnerHTML with untrusted input; sanitize user content and escape values to avoid XSS.",
+        "Testing & QA: Write unit tests (React Testing Library + Jest) for components, snapshot tests for UI contracts, and integration/e2e tests (Cypress) for flows.",
+        "CI/CD & observability: Integrate lint/type/test steps into CI, produce production builds in CI, deploy via CD, and collect runtime telemetry and user-facing errors for quick diagnosis.",
+        "Developer ergonomics: Create a component library, storybook for visual documentation, and strong docs/examples to speed onboarding and reduce regressions.",
+        "Runtime considerations: Ship small bundles, use CDN for static assets, enable long-term caching and cache-busting, and monitor performance (Lighthouse, Real User Monitoring)."
       ]
     },
     "askedBy": [
       "interview",
-      "practice"
+      "system-design"
     ],
-    "technology": "ReactJS & JavaScript"
-  },
-  {
-    "id": "59",
-    "question": "Describe pros and cons of Closures.",
-    "options": [],
-    "answer": "Pros: ... Cons: ...",
-    "type": "Interview",
-    "difficulty": "Hard",
-    "isObjective": false,
-    "explanation": {
-      "intro": "Explanation: Describe pros and cons of Closures.",
-      "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
-    },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "ReactJS & JavaScript"
-  },
-  {
-    "id": "60",
-    "question": "Which annotation/keyword is used for Context API?",
-    "options": [
-      "@Context API",
-      "@B",
-      "@C",
-      "@D"
-    ],
-    "answer": "@Context API",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "isObjective": true,
-    "explanation": {
-      "intro": "Explanation: Which annotation/keyword is used for Context API?",
-      "points": [
-        "Correct answer: @Context API.",
-        "Key concept to remember related to the question."
-      ]
-    },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "ReactJS & JavaScript"
-  },
-  {
-    "id": "61",
-    "question": "Describe pros and cons of Context API.",
-    "options": [],
-    "answer": "Pros: ... Cons: ...",
-    "type": "Interview",
-    "difficulty": "Medium",
-    "isObjective": false,
-    "explanation": {
-      "intro": "Explanation: Describe pros and cons of Context API.",
-      "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
-    },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "ReactJS & JavaScript"
+    "technology": "ReactJS / JavaScript"
   },
   {
     "id": "62",
     "question": "Which command is used to Promises?",
-    "options": [
-      "cmd Promises",
-      "cmd B",
-      "cmd C",
-      "cmd D"
-    ],
-    "answer": "cmd Promises",
     "type": "MCQ",
-    "difficulty": "Medium",
+    "difficulty": "Easy",
     "isObjective": true,
+    "options": [
+      "new Promise()",
+      "Promise.run()",
+      "createPromise()",
+      "initPromise()"
+    ],
+    "answer": "new Promise()",
     "explanation": {
-      "intro": "Explanation: Which command is used to Promises?",
-      "points": [
-        "Correct answer: cmd Promises.",
-        "Key concept to remember related to the question."
-      ]
+      "points": "In JavaScript, a Promise is created using the `new Promise()` constructor, which takes an executor function with `resolve` and `reject` as parameters."
     },
     "askedBy": [
       "interview",
       "practice"
-    ],
-    "technology": "ReactJS & JavaScript"
-  },
-  {
-    "id": "63",
-    "question": "Explain how Promises works in ReactJS & JavaScript.",
-    "options": [],
-    "answer": "Detailed explanation about Promises.",
-    "type": "Interview",
-    "difficulty": "Hard",
-    "isObjective": false,
-    "explanation": {
-      "intro": "Explanation: Explain how Promises works in ReactJS & JavaScript.",
-      "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
-    },
-    "askedBy": [
-      "interview"
     ],
     "technology": "ReactJS & JavaScript"
   },
   {
     "id": "64",
     "question": "What is the default behavior of Event handlers?",
-    "options": [
-      "Behavior Event handlers",
-      "Behavior B",
-      "Behavior C",
-      "Behavior D"
-    ],
-    "answer": "Behavior Event handlers",
     "type": "MCQ",
-    "difficulty": "Hard",
+    "difficulty": "Medium",
     "isObjective": true,
+    "options": [
+      "They automatically stop event propagation",
+      "They bubble up the DOM hierarchy by default",
+      "They execute asynchronously by default",
+      "They run only once unless specified otherwise"
+    ],
+    "answer": "They bubble up the DOM hierarchy by default",
     "explanation": {
-      "intro": "Explanation: What is the default behavior of Event handlers?",
-      "points": [
-        "Correct answer: Behavior Event handlers.",
-        "Key concept to remember related to the question."
-      ]
+      "points": "In JavaScript, event handlers follow the event bubbling model by default, meaning the event is first handled at the target element and then propagates upward through the DOM tree unless stopped with `event.stopPropagation()`."
     },
     "askedBy": [
       "interview",
@@ -1456,315 +1169,255 @@
   {
     "id": "65",
     "question": "Explain how Event handlers works in ReactJS & JavaScript.",
-    "options": [],
-    "answer": "Detailed explanation about Event handlers.",
     "type": "Interview",
-    "difficulty": "Hard",
+    "difficulty": "Medium",
     "isObjective": false,
+    "answer": "Event handlers in JavaScript are functions that respond to user actions such as clicks, key presses, or mouse movements. In React, event handling is done using camelCase syntax (e.g., onClick) and functions, often passed as props. Unlike traditional JavaScript, React wraps events in a SyntheticEvent for cross-browser compatibility.",
     "explanation": {
-      "intro": "Explanation: Explain how Event handlers works in ReactJS & JavaScript.",
+      "intro": "Event handlers provide a way to respond to user interactions in both plain JavaScript and React applications.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "In JavaScript, event handlers can be attached via addEventListener or inline attributes like onclick.",
+        "Events propagate in two phases: capturing (downward) and bubbling (upward). By default, they bubble.",
+        "React uses SyntheticEvent, a wrapper around the browser's native event, ensuring consistency across browsers.",
+        "Event handlers in React are defined as functions and passed using camelCase, e.g., onClick={handleClick}.",
+        "React automatically binds `this` context for class components when using arrow functions, avoiding manual binding."
       ]
     },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "ReactJS & JavaScript"
-  },
-  {
-    "id": "66",
-    "question": "Which statement about Context API is correct?",
-    "options": [
-      "True for Context API",
-      "True for B",
-      "True for C",
-      "None"
-    ],
-    "answer": "True for Context API",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "isObjective": true,
-    "explanation": {
-      "intro": "Explanation: Which statement about Context API is correct?",
-      "points": [
-        "Correct answer: True for Context API.",
-        "Key concept to remember related to the question."
-      ]
-    },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
+    "askedBy": ["interview"],
     "technology": "ReactJS & JavaScript"
   },
   {
     "id": "67",
     "question": "How would you design/implement Context API in a production system?",
-    "options": [],
-    "answer": "Design considerations and steps.",
     "type": "Interview",
-    "difficulty": "Hard",
+    "difficulty": "Medium",
     "isObjective": false,
+    "options": [],
+    "answer": "Design Context API usage by scoping context to specific concerns (theme, auth, settings), keeping providers minimal and localized, memoizing values, using selector-like patterns to avoid unnecessary re-renders, and combining Context with other state tools (useReducer/Redux) where appropriate.",
     "explanation": {
-      "intro": "Explanation: How would you design/implement Context API in a production system?",
+      "intro": "In production, Context should be used thoughtfully to share cross-cutting state while avoiding performance and maintenance pitfalls.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "Scope contexts narrowly: create separate contexts for distinct concerns (e.g., AuthContext, ThemeContext, LocaleContext) rather than a single large global context.",
+        "Localize providers: wrap only the subtree that needs the context instead of placing providers at the app root when not necessary.",
+        "Memoize context values: use useMemo to provide stable value objects so consumers don't re-render unnecessarily when unrelated state changes.",
+        "Prefer primitive values or stable references: avoid passing freshly created objects/functions as context values; if needed, wrap them with useCallback/useMemo.",
+        "Use selector patterns or split contexts: for large contexts, either split into multiple contexts or implement selector hooks (consume only the piece of state needed) to minimize re-renders.",
+        "Combine with useReducer for complex state: useReducer inside a provider centralizes state logic and makes actions explicit and testable.",
+        "Avoid putting frequently changing UI state in Context: keep rapidly changing local state in component state to prevent wide re-renders.",
+        "Testing & types: provide typed context shapes (TypeScript) and write unit tests for provider logic and custom hooks.",
+        "Performance tools: monitor renders (React DevTools Profiler), and use React.memo, useMemo, and useCallback where appropriate.",
+        "Documentation & API: document context contract (what values and functions are exposed), and provide small, focused custom hooks (e.g., useAuth, useTheme) as the public API for consumers.",
+        "Security & lifecycle: ensure sensitive values (tokens) are handled securely, limit exposure, and clear or rotate values on logout; clean up subscriptions in provider effects.",
+        "Interoperability: when app grows, evaluate whether a more feature-rich state solution (Redux, Zustand, Recoil) is better for global, complex state while keeping Context for lightweight, localized sharing."
       ]
     },
     "askedBy": [
-      "interview"
+      "interview",
+      "system-design"
     ],
-    "technology": "ReactJS & JavaScript"
+    "technology": "ReactJS / JavaScript"
   },
   {
     "id": "68",
     "question": "What is the default behavior of Hooks?",
-    "options": [
-      "Behavior Hooks",
-      "Behavior B",
-      "Behavior C",
-      "Behavior D"
-    ],
-    "answer": "Behavior Hooks",
     "type": "MCQ",
-    "difficulty": "Medium",
+    "difficulty": "Easy",
     "isObjective": true,
+    "options": [
+      "Hooks can only be called inside class components",
+      "Hooks run in the order they are called on every render",
+      "Hooks execute conditionally depending on if-statements",
+      "Hooks automatically memoize all state and effects"
+    ],
+    "answer": "Hooks run in the order they are called on every render",
     "explanation": {
-      "intro": "Explanation: What is the default behavior of Hooks?",
+      "intro": "React Hooks follow strict rules to maintain consistency across renders.",
       "points": [
-        "Correct answer: Behavior Hooks.",
-        "Key concept to remember related to the question."
+        "Hooks must be called in the same order on every render.",
+        "They can only be called inside functional components or custom hooks, never in class components.",
+        "They should not be called conditionally (inside loops or if-statements), otherwise React loses track of their state.",
+        "By default, hooks do not memoize unless explicitly done with useMemo or useCallback."
       ]
     },
     "askedBy": [
       "interview",
-      "practice"
+      "mcq"
     ],
-    "technology": "ReactJS & JavaScript"
+    "technology": "ReactJS / JavaScript"
   },
   {
     "id": "69",
     "question": "Describe pros and cons of Hooks.",
-    "options": [],
-    "answer": "Pros: ... Cons: ...",
     "type": "Interview",
     "difficulty": "Medium",
     "isObjective": false,
+    "options": [],
+    "answer": "Pros: Simplifies stateful logic, reusable with custom hooks, eliminates class component boilerplate, improves readability. Cons: Can lead to complex dependency management, risk of misuse (e.g., calling hooks conditionally), performance pitfalls if not optimized, steep learning curve for beginners.",
     "explanation": {
-      "intro": "Explanation: Describe pros and cons of Hooks.",
+      "intro": "React Hooks were introduced to simplify state and side-effect management in functional components, replacing many use cases of class components.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "✅ Pros:",
+        "- Enable using state and lifecycle features in functional components.",
+        "- Promote code reusability with custom hooks.",
+        "- Reduce boilerplate compared to class components.",
+        "- Improve readability and testing since logic is more modular.",
+        "⚠️ Cons:",
+        "- Dependency arrays in useEffect/useCallback can be confusing and error-prone.",
+        "- Can cause unnecessary re-renders if not used carefully.",
+        "- Overuse of custom hooks may lead to fragmented or less maintainable code.",
+        "- Beginners may struggle with rules of hooks and debugging issues."
       ]
     },
     "askedBy": [
       "interview"
     ],
-    "technology": "ReactJS & JavaScript"
+    "technology": "ReactJS / JavaScript"
   },
+
   {
     "id": "70",
-    "question": "What is the purpose of Async/Await in ReactJS & JavaScript?",
-    "options": [
-      "Option Async/Await",
-      "Option B",
-      "Option C",
-      "Option D"
-    ],
-    "answer": "Option Async/Await",
+    "question": "What is the primary purpose of Async/Await in ReactJS & JavaScript?",
     "type": "MCQ",
     "difficulty": "Medium",
     "isObjective": true,
+    "options": [
+      "A. To make asynchronous code look and behave like synchronous code",
+      "B. To completely replace Promises in JavaScript",
+      "C. To increase the execution speed of JavaScript functions",
+      "D. To allow React components to render without using state"
+    ],
+    "answer": "A. To make asynchronous code look and behave like synchronous code",
     "explanation": {
-      "intro": "Explanation: What is the purpose of Async/Await in ReactJS & JavaScript?",
+      "intro": "Async/Await provides syntactic sugar for working with Promises.",
       "points": [
-        "Correct answer: Option Async/Await.",
-        "Key concept to remember related to the question."
+        "It simplifies asynchronous programming by making code easier to read and maintain.",
+        "It does not replace Promises but is built on top of them.",
+        "It does not inherently make code run faster, but it improves developer productivity.",
+        "Commonly used in React for handling API calls and asynchronous logic."
       ]
     },
     "askedBy": [
       "interview",
-      "practice"
+      "quiz",
+      "technical test"
     ],
-    "technology": "ReactJS & JavaScript"
+    "technology": "ReactJS / JavaScript"
   },
   {
     "id": "71",
     "question": "Describe pros and cons of Async/Await.",
-    "options": [],
-    "answer": "Pros: ... Cons: ...",
     "type": "Interview",
-    "difficulty": "Medium",
-    "isObjective": false,
-    "explanation": {
-      "intro": "Explanation: Describe pros and cons of Async/Await.",
-      "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
-    },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "ReactJS & JavaScript"
-  },
-  {
-    "id": "72",
-    "question": "Which command is used to Virtual DOM?",
-    "options": [
-      "cmd Virtual DOM",
-      "cmd B",
-      "cmd C",
-      "cmd D"
-    ],
-    "answer": "cmd Virtual DOM",
-    "type": "MCQ",
     "difficulty": "Hard",
-    "isObjective": true,
+    "isObjective": false,
+    "options": [],
+    "answer": "Pros: Cleaner, more readable syntax, error handling with try/catch, easier to debug than nested Promises. Cons: Sequential execution by default can reduce performance, requires modern JavaScript environment, error handling can become tricky with multiple awaits, not always optimal for parallel tasks.",
     "explanation": {
-      "intro": "Explanation: Which command is used to Virtual DOM?",
+      "intro": "Async/Await simplifies asynchronous programming but has trade-offs.",
       "points": [
-        "Correct answer: cmd Virtual DOM.",
-        "Key concept to remember related to the question."
+        "Pros:",
+        "- Provides synchronous-like syntax for asynchronous operations, improving readability.",
+        "- Works seamlessly with try/catch for error handling.",
+        "- Avoids callback hell and deeply nested Promises.",
+        "- Easier to debug compared to chains of .then().",
+        "Cons:",
+        "- Awaits run sequentially by default, which may cause slower performance when parallel execution is possible.",
+        "- Requires ES2017+ support, limiting compatibility in older environments.",
+        "- Error handling in multiple awaits may become complex if not managed carefully.",
+        "- Not always the best choice for tasks that benefit from Promise.all for parallel execution."
       ]
     },
     "askedBy": [
       "interview",
-      "practice"
+      "technical discussion"
+    ],
+    "technology": "ReactJS / JavaScript"
+  },
+  {
+    "id": "72",
+    "question": "Which command is used to Virtual DOM?",
+    "type": "MCQ",
+    "difficulty": "Easy",
+    "isObjective": true,
+    "options": [
+      "A. React.createElement()",
+      "B. ReactDOM.render()",
+      "C. document.getElementById()",
+      "D. window.onload"
+    ],
+    "answer": "A. React.createElement()",
+    "explanation": {
+      "intro": "The Virtual DOM in React is created using React's APIs.",
+      "points": [
+        "React.createElement() is the command used to create Virtual DOM nodes.",
+        "ReactDOM.render() is used to render elements into the actual DOM, not directly to create Virtual DOM.",
+        "document.getElementById() and window.onload are standard JavaScript DOM operations, unrelated to Virtual DOM."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "MCQ test"
     ],
     "technology": "ReactJS & JavaScript"
   },
   {
     "id": "73",
     "question": "How would you design/implement Virtual DOM in a production system?",
-    "options": [],
-    "answer": "Design considerations and steps.",
     "type": "Interview",
-    "difficulty": "Hard",
+    "difficulty": "Medium",
     "isObjective": false,
+    "options": [],
+    "answer": "Leverage the Virtual DOM (via React or a similar library) to minimize direct DOM writes, organize component updates to be minimal and predictable, optimize diffing and reconciliation by using keys and memoization, and choose rendering strategy (CSR/SSR/SSG) and hydration approach that match performance and SEO needs.",
     "explanation": {
-      "intro": "Explanation: How would you design/implement Virtual DOM in a production system?",
+      "intro": "Designing for the Virtual DOM in production focuses on minimizing real DOM mutations, reducing re-renders, and choosing appropriate rendering strategies to improve perceived and actual performance.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "Use a battle-tested framework: Rely on libraries like React that implement an efficient Virtual DOM and optimized reconciliation rather than building a custom Virtual DOM from scratch.",
+        "Component design & granularity: Build small, focused, and reusable components to localize updates; avoid overly large components that force wide re-renders.",
+        "Keys & stable identity: Always provide stable keys for lists so the diffing algorithm can correctly match and reuse elements, avoiding unnecessary DOM operations.",
+        "Avoid unnecessary renders: Use React.memo, PureComponent, useMemo, and useCallback to prevent re-rendering when props/state haven't meaningfully changed.",
+        "Minimize props churn: Pass only required data to children and avoid creating new object/array/function references inline (or memoize them) to reduce shallow-compare diffs.",
+        "Batch updates & state co-location: Co-locate state to the nearest common ancestor to minimize the number of components updated; batch state updates where appropriate.",
+        "Efficient list rendering: For long lists use virtualization (react-window/react-virtualized) to render only visible items, drastically reducing DOM nodes.",
+        "Choose the right rendering strategy: Use SSR/SSG (Next.js, Remix) for better first-contentful-paint and SEO when needed; use client-side rendering for highly interactive apps. Optimize hydration to avoid blocking the main thread.",
+        "Code-splitting & lazy loading: Split bundles and lazy-load non-critical components (React.lazy + Suspense) to reduce initial render work and improve Time-to-Interactive.",
+        "Profile and measure: Use React DevTools Profiler, Lighthouse, and RUM to find hot spots — optimize expensive renders rather than guessing.",
+        "DOM-friendly operations: Move heavy calculations off the main thread (web workers) and avoid synchronous DOM reads after writes which cause layout thrashing.",
+        "Accessibility & correctness: Ensure updates preserve focus and accessibility attributes; manage ARIA and focus restoration during dynamic updates.",
+        "Testing & regression: Add performance/regression tests to detect accidental re-rendering or bundle size regressions; include snapshot and integration tests for critical UI flows.",
+        "Operational concerns: Monitor client-side metrics (TTI, LCP, JS execution time) and set budgets; use CDN + caching for static assets and preconnect/prefetch hints where appropriate.",
+        "Developer ergonomics: Provide patterns and linting rules (eslint-plugin-react-hooks), a component library, and Storybook to encourage consistent, optimized component design across teams."
       ]
     },
     "askedBy": [
-      "interview"
+      "interview",
+      "system-design"
     ],
-    "technology": "ReactJS & JavaScript"
+    "technology": "ReactJS / Virtual DOM"
   },
   {
     "id": "74",
     "question": "What is the default behavior of Context API?",
-    "options": [
-      "Behavior Context API",
-      "Behavior B",
-      "Behavior C",
-      "Behavior D"
-    ],
-    "answer": "Behavior Context API",
     "type": "MCQ",
-    "difficulty": "Hard",
-    "isObjective": true,
-    "explanation": {
-      "intro": "Explanation: What is the default behavior of Context API?",
-      "points": [
-        "Correct answer: Behavior Context API.",
-        "Key concept to remember related to the question."
-      ]
-    },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "ReactJS & JavaScript"
-  },
-  {
-    "id": "75",
-    "question": "Explain how Context API works in ReactJS & JavaScript.",
-    "options": [],
-    "answer": "Detailed explanation about Context API.",
-    "type": "Interview",
     "difficulty": "Medium",
-    "isObjective": false,
-    "explanation": {
-      "intro": "Explanation: Explain how Context API works in ReactJS & JavaScript.",
-      "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
-    },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "ReactJS & JavaScript"
-  },
-  {
-    "id": "76",
-    "question": "Which command is used to JSX?",
-    "options": [
-      "cmd JSX",
-      "cmd B",
-      "cmd C",
-      "cmd D"
-    ],
-    "answer": "cmd JSX",
-    "type": "MCQ",
-    "difficulty": "Hard",
     "isObjective": true,
+    "options": [
+      "A. Context provides global state and updates are propagated only to subscribed consumers.",
+      "B. Context automatically prevents unnecessary re-renders in all consuming components.",
+      "C. Context shares state only across sibling components without a provider.",
+      "D. Context replaces Redux and handles asynchronous actions by default."
+    ],
+    "answer": "A. Context provides global state and updates are propagated only to subscribed consumers.",
     "explanation": {
-      "intro": "Explanation: Which command is used to JSX?",
+      "intro": "The default behavior of Context API is to propagate values from a Provider to all consuming components in the component tree.",
       "points": [
-        "Correct answer: cmd JSX.",
-        "Key concept to remember related to the question."
+        "Context provides a way to pass data through the component tree without manually passing props at every level.",
+        "By default, all components that use `useContext` or `<Context.Consumer>` will re-render when the provided value changes.",
+        "Context does not optimize re-renders by itself — memoization and state structuring may be needed.",
+        "It is mainly used for global or shared state like themes, authentication, or localization."
       ]
     },
     "askedBy": [
       "interview",
-      "practice"
-    ],
-    "technology": "ReactJS & JavaScript"
-  },
-  {
-    "id": "77",
-    "question": "Describe pros and cons of JSX.",
-    "options": [],
-    "answer": "Pros: ... Cons: ...",
-    "type": "Interview",
-    "difficulty": "Hard",
-    "isObjective": false,
-    "explanation": {
-      "intro": "Explanation: Describe pros and cons of JSX.",
-      "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
-    },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "ReactJS & JavaScript"
-  },
-  {
-    "id": "78",
-    "question": "What is the default behavior of Redux?",
-    "options": [
-      "Behavior Redux",
-      "Behavior B",
-      "Behavior C",
-      "Behavior D"
-    ],
-    "answer": "Behavior Redux",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "isObjective": true,
-    "explanation": {
-      "intro": "Explanation: What is the default behavior of Redux?",
-      "points": [
-        "Correct answer: Behavior Redux.",
-        "Key concept to remember related to the question."
-      ]
-    },
-    "askedBy": [
-      "interview",
-      "practice"
+      "quiz"
     ],
     "technology": "ReactJS & JavaScript"
   },
@@ -1772,18 +1425,24 @@
     "id": "79",
     "question": "Explain how Redux works in ReactJS & JavaScript.",
     "options": [],
-    "answer": "Detailed explanation about Redux.",
+    "answer": "Redux is a predictable state container for JavaScript apps. It centralizes the application state in a single store, allows state updates only through dispatched actions, and uses pure reducer functions to determine the next state based on the current state and the action.",
     "type": "Interview",
-    "difficulty": "Medium",
+    "difficulty": "Hard",
     "isObjective": false,
     "explanation": {
-      "intro": "Explanation: Explain how Redux works in ReactJS & JavaScript.",
+      "intro": "Redux works by enforcing a unidirectional data flow and centralizing state management.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "The entire application state is stored in a single store as a JavaScript object.",
+        "State can only be updated by dispatching actions — plain objects describing what happened.",
+        "Reducers are pure functions that take the current state and an action, and return a new state.",
+        "The store notifies all subscribed components whenever the state changes.",
+        "React components connect to the store using `react-redux` (`useSelector` and `useDispatch`) to read state and dispatch actions.",
+        "Middleware (like Redux Thunk or Saga) can be used to handle side effects and async operations."
       ]
     },
     "askedBy": [
-      "interview"
+      "interview",
+      "quiz"
     ],
     "technology": "ReactJS & JavaScript"
   },
@@ -1791,43 +1450,26 @@
     "id": "80",
     "question": "Which statement about Event handlers is correct?",
     "options": [
-      "True for Event handlers",
-      "True for B",
-      "True for C",
-      "None"
+      "A) Event handlers in React must be named with a `handle` prefix.",
+      "B) Event handlers in React are written in camelCase and passed as functions, not strings.",
+      "C) Event handlers in React must always be declared inside class components.",
+      "D) Event handlers in React are automatically bound to `this`."
     ],
-    "answer": "True for Event handlers",
+    "answer": "B) Event handlers in React are written in camelCase and passed as functions, not strings.",
     "type": "MCQ",
-    "difficulty": "Medium",
+    "difficulty": "Easy",
     "isObjective": true,
     "explanation": {
-      "intro": "Explanation: Which statement about Event handlers is correct?",
+      "intro": "Event handlers in React differ slightly from standard DOM event handling.",
       "points": [
-        "Correct answer: True for Event handlers.",
-        "Key concept to remember related to the question."
+        "React uses camelCase naming convention for event handlers (e.g., `onClick` instead of `onclick`).",
+        "Event handlers are passed as functions, not as string references like in plain HTML.",
+        "They can be used in both function and class components.",
+        "Binding is required only in class components if not using arrow functions."
       ]
     },
     "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "ReactJS & JavaScript"
-  },
-  {
-    "id": "81",
-    "question": "Describe pros and cons of Event handlers.",
-    "options": [],
-    "answer": "Pros: ... Cons: ...",
-    "type": "Interview",
-    "difficulty": "Hard",
-    "isObjective": false,
-    "explanation": {
-      "intro": "Explanation: Describe pros and cons of Event handlers.",
-      "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
-    },
-    "askedBy": [
+      "quiz",
       "interview"
     ],
     "technology": "ReactJS & JavaScript"
@@ -1836,43 +1478,26 @@
     "id": "82",
     "question": "Which statement about Hooks is correct?",
     "options": [
-      "True for Hooks",
-      "True for B",
-      "True for C",
-      "None"
+      "A) Hooks can only be used inside class components.",
+      "B) Hooks allow functional components to use state and lifecycle features.",
+      "C) Hooks replace JavaScript functions entirely.",
+      "D) Hooks must be called conditionally inside loops and if statements."
     ],
-    "answer": "True for Hooks",
+    "answer": "B) Hooks allow functional components to use state and lifecycle features.",
     "type": "MCQ",
     "difficulty": "Medium",
     "isObjective": true,
     "explanation": {
-      "intro": "Explanation: Which statement about Hooks is correct?",
+      "intro": "Hooks are a feature introduced in React 16.8 to allow functional components to manage state and lifecycle.",
       "points": [
-        "Correct answer: True for Hooks.",
-        "Key concept to remember related to the question."
+        "Hooks can only be used inside functional components or other custom hooks.",
+        "They enable the use of state (`useState`), side effects (`useEffect`), and other React features in functional components.",
+        "Hooks must follow the Rules of Hooks — only call them at the top level and not inside loops, conditions, or nested functions.",
+        "They do not work inside class components."
       ]
     },
     "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "ReactJS & JavaScript"
-  },
-  {
-    "id": "83",
-    "question": "Explain how Hooks works in ReactJS & JavaScript.",
-    "options": [],
-    "answer": "Detailed explanation about Hooks.",
-    "type": "Interview",
-    "difficulty": "Hard",
-    "isObjective": false,
-    "explanation": {
-      "intro": "Explanation: Explain how Hooks works in ReactJS & JavaScript.",
-      "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
-    },
-    "askedBy": [
+      "quiz",
       "interview"
     ],
     "technology": "ReactJS & JavaScript"
@@ -1881,133 +1506,26 @@
     "id": "84",
     "question": "Which annotation/keyword is used for Redux?",
     "options": [
-      "@Redux",
-      "@B",
-      "@C",
-      "@D"
+      "A) @redux",
+      "B) useSelector and useDispatch",
+      "C) @store",
+      "D) @state"
     ],
-    "answer": "@Redux",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "isObjective": true,
-    "explanation": {
-      "intro": "Explanation: Which annotation/keyword is used for Redux?",
-      "points": [
-        "Correct answer: @Redux.",
-        "Key concept to remember related to the question."
-      ]
-    },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "ReactJS & JavaScript"
-  },
-  {
-    "id": "85",
-    "question": "Explain how Redux works in ReactJS & JavaScript.",
-    "options": [],
-    "answer": "Detailed explanation about Redux.",
-    "type": "Interview",
-    "difficulty": "Hard",
-    "isObjective": false,
-    "explanation": {
-      "intro": "Explanation: Explain how Redux works in ReactJS & JavaScript.",
-      "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
-    },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "ReactJS & JavaScript"
-  },
-  {
-    "id": "86",
-    "question": "Which statement about Event handlers is correct?",
-    "options": [
-      "True for Event handlers",
-      "True for B",
-      "True for C",
-      "None"
-    ],
-    "answer": "True for Event handlers",
+    "answer": "B) useSelector and useDispatch",
     "type": "MCQ",
     "difficulty": "Medium",
     "isObjective": true,
     "explanation": {
-      "intro": "Explanation: Which statement about Event handlers is correct?",
+      "intro": "Redux itself does not use annotations like in Spring Boot or Java; instead, it relies on specific functions and hooks.",
       "points": [
-        "Correct answer: True for Event handlers.",
-        "Key concept to remember related to the question."
+        "`useSelector` is used to read data from the Redux store in functional components.",
+        "`useDispatch` is used to dispatch actions to update the store.",
+        "In class components, `connect` from `react-redux` is commonly used instead of hooks.",
+        "There are no annotations like `@redux`; integration is done via functions and hooks."
       ]
     },
     "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "ReactJS & JavaScript"
-  },
-  {
-    "id": "87",
-    "question": "How would you design/implement Event handlers in a production system?",
-    "options": [],
-    "answer": "Design considerations and steps.",
-    "type": "Interview",
-    "difficulty": "Medium",
-    "isObjective": false,
-    "explanation": {
-      "intro": "Explanation: How would you design/implement Event handlers in a production system?",
-      "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
-    },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "ReactJS & JavaScript"
-  },
-  {
-    "id": "88",
-    "question": "Which statement about Hooks is correct?",
-    "options": [
-      "True for Hooks",
-      "True for B",
-      "True for C",
-      "None"
-    ],
-    "answer": "True for Hooks",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "isObjective": true,
-    "explanation": {
-      "intro": "Explanation: Which statement about Hooks is correct?",
-      "points": [
-        "Correct answer: True for Hooks.",
-        "Key concept to remember related to the question."
-      ]
-    },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "ReactJS & JavaScript"
-  },
-  {
-    "id": "89",
-    "question": "How would you design/implement Hooks in a production system?",
-    "options": [],
-    "answer": "Design considerations and steps.",
-    "type": "Interview",
-    "difficulty": "Hard",
-    "isObjective": false,
-    "explanation": {
-      "intro": "Explanation: How would you design/implement Hooks in a production system?",
-      "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
-    },
-    "askedBy": [
+      "quiz",
       "interview"
     ],
     "technology": "ReactJS & JavaScript"
@@ -2016,43 +1534,26 @@
     "id": "90",
     "question": "Which command is used to Context API?",
     "options": [
-      "cmd Context API",
-      "cmd B",
-      "cmd C",
-      "cmd D"
+      "A) createContext and useContext",
+      "B) @context",
+      "C) new Context()",
+      "D) contextAPI()"
     ],
-    "answer": "cmd Context API",
+    "answer": "A) createContext and useContext",
     "type": "MCQ",
-    "difficulty": "Easy",
+    "difficulty": "Medium",
     "isObjective": true,
     "explanation": {
-      "intro": "Explanation: Which command is used to Context API?",
+      "intro": "React's Context API provides a way to share values like themes or user data across components without prop drilling.",
       "points": [
-        "Correct answer: cmd Context API.",
-        "Key concept to remember related to the question."
+        "`createContext` is used to create a new Context object.",
+        "`useContext` is used to consume the context value inside functional components.",
+        "The `Provider` component from the created context is used to supply values to the tree.",
+        "There is no `@context` or `new Context()` command in React."
       ]
     },
     "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "ReactJS & JavaScript"
-  },
-  {
-    "id": "91",
-    "question": "Explain how Context API works in ReactJS & JavaScript.",
-    "options": [],
-    "answer": "Detailed explanation about Context API.",
-    "type": "Interview",
-    "difficulty": "Medium",
-    "isObjective": false,
-    "explanation": {
-      "intro": "Explanation: Explain how Context API works in ReactJS & JavaScript.",
-      "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
-    },
-    "askedBy": [
+      "quiz",
       "interview"
     ],
     "technology": "ReactJS & JavaScript"
@@ -2061,88 +1562,53 @@
     "id": "92",
     "question": "Which annotation/keyword is used for Async/Await?",
     "options": [
-      "@Async/Await",
-      "@B",
-      "@C",
-      "@D"
+      "A) async and await",
+      "B) @async/@await",
+      "C) promise.await",
+      "D) function*"
     ],
-    "answer": "@Async/Await",
+    "answer": "A) async and await",
     "type": "MCQ",
     "difficulty": "Easy",
     "isObjective": true,
     "explanation": {
-      "intro": "Explanation: Which annotation/keyword is used for Async/Await?",
+      "intro": "Async/Await are JavaScript keywords that simplify working with asynchronous operations.",
       "points": [
-        "Correct answer: @Async/Await.",
-        "Key concept to remember related to the question."
+        "`async` is placed before a function declaration to make it return a Promise.",
+        "`await` is used inside an async function to pause execution until a Promise is resolved or rejected.",
+        "They provide a cleaner and more readable alternative to `.then()` chaining with Promises.",
+        "There are no `@async/@await` annotations in JavaScript."
       ]
     },
     "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "ReactJS & JavaScript"
-  },
-  {
-    "id": "93",
-    "question": "How would you design/implement Async/Await in a production system?",
-    "options": [],
-    "answer": "Design considerations and steps.",
-    "type": "Interview",
-    "difficulty": "Hard",
-    "isObjective": false,
-    "explanation": {
-      "intro": "Explanation: How would you design/implement Async/Await in a production system?",
-      "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
-    },
-    "askedBy": [
+      "quiz",
       "interview"
     ],
-    "technology": "ReactJS & JavaScript"
+    "technology": "JavaScript & ReactJS"
   },
   {
     "id": "94",
     "question": "Which command is used to Component lifecycle?",
     "options": [
-      "cmd Component lifecycle",
-      "cmd B",
-      "cmd C",
-      "cmd D"
+      "A) componentDidMount, componentDidUpdate, componentWillUnmount",
+      "B) useEffect Hook",
+      "C) Both A and B",
+      "D) @Lifecycle"
     ],
-    "answer": "cmd Component lifecycle",
+    "answer": "C) Both A and B",
     "type": "MCQ",
-    "difficulty": "Hard",
+    "difficulty": "Medium",
     "isObjective": true,
     "explanation": {
-      "intro": "Explanation: Which command is used to Component lifecycle?",
+      "intro": "Component lifecycle in React can be implemented differently depending on whether you are using class components or functional components.",
       "points": [
-        "Correct answer: cmd Component lifecycle.",
-        "Key concept to remember related to the question."
+        "In class components, lifecycle methods like `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` are used.",
+        "In functional components, the `useEffect` Hook is the primary way to handle lifecycle-like behavior.",
+        "There is no `@Lifecycle` annotation in React/JavaScript."
       ]
     },
     "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "ReactJS & JavaScript"
-  },
-  {
-    "id": "95",
-    "question": "Describe pros and cons of Component lifecycle.",
-    "options": [],
-    "answer": "Pros: ... Cons: ...",
-    "type": "Interview",
-    "difficulty": "Hard",
-    "isObjective": false,
-    "explanation": {
-      "intro": "Explanation: Describe pros and cons of Component lifecycle.",
-      "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
-    },
-    "askedBy": [
+      "quiz",
       "interview"
     ],
     "technology": "ReactJS & JavaScript"
@@ -2151,43 +1617,25 @@
     "id": "96",
     "question": "What is the purpose of Closures in ReactJS & JavaScript?",
     "options": [
-      "Option Closures",
-      "Option B",
-      "Option C",
-      "Option D"
+      "A) To directly manipulate the DOM",
+      "B) To allow a function to access variables from its outer scope even after the scope has closed",
+      "C) To define React components",
+      "D) To replace Promises"
     ],
-    "answer": "Option Closures",
+    "answer": "B) To allow a function to access variables from its outer scope even after the scope has closed",
     "type": "MCQ",
-    "difficulty": "Hard",
+    "difficulty": "Medium",
     "isObjective": true,
     "explanation": {
-      "intro": "Explanation: What is the purpose of Closures in ReactJS & JavaScript?",
+      "intro": "Closures are a core JavaScript concept frequently leveraged in React.",
       "points": [
-        "Correct answer: Option Closures.",
-        "Key concept to remember related to the question."
+        "Closures allow inner functions to remember and access variables from their outer function’s scope, even after the outer function has executed.",
+        "They are often used in React for event handlers, hooks, and encapsulating state logic.",
+        "They help in data privacy by restricting direct access to variables but allowing controlled manipulation."
       ]
     },
     "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "ReactJS & JavaScript"
-  },
-  {
-    "id": "97",
-    "question": "Describe pros and cons of Closures.",
-    "options": [],
-    "answer": "Pros: ... Cons: ...",
-    "type": "Interview",
-    "difficulty": "Hard",
-    "isObjective": false,
-    "explanation": {
-      "intro": "Explanation: Describe pros and cons of Closures.",
-      "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
-    },
-    "askedBy": [
+      "quiz",
       "interview"
     ],
     "technology": "ReactJS & JavaScript"
@@ -2196,71 +1644,51 @@
     "id": "98",
     "question": "What is the default behavior of Closures?",
     "options": [
-      "Behavior Closures",
-      "Behavior B",
-      "Behavior C",
-      "Behavior D"
+      "A) Variables inside a function are always private and inaccessible after execution",
+      "B) Inner functions retain access to variables from their outer scope even after the outer function has finished execution",
+      "C) Closures automatically convert synchronous code to asynchronous",
+      "D) Closures destroy variables after the function completes"
     ],
-    "answer": "Behavior Closures",
+    "answer": "B) Inner functions retain access to variables from their outer scope even after the outer function has finished execution",
     "type": "MCQ",
-    "difficulty": "Hard",
+    "difficulty": "Medium",
     "isObjective": true,
     "explanation": {
-      "intro": "Explanation: What is the default behavior of Closures?",
+      "intro": "The default behavior of closures in JavaScript is to maintain scope chain access.",
       "points": [
-        "Correct answer: Behavior Closures.",
-        "Key concept to remember related to the question."
+        "A closure is created whenever a function is defined inside another function.",
+        "The inner function keeps a reference to the outer function's scope.",
+        "This means variables from the outer scope remain accessible as long as the inner function is referenced."
       ]
     },
     "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "ReactJS & JavaScript"
-  },
-  {
-    "id": "99",
-    "question": "Explain how Closures works in ReactJS & JavaScript.",
-    "options": [],
-    "answer": "Detailed explanation about Closures.",
-    "type": "Interview",
-    "difficulty": "Hard",
-    "isObjective": false,
-    "explanation": {
-      "intro": "Explanation: Explain how Closures works in ReactJS & JavaScript.",
-      "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
-    },
-    "askedBy": [
+      "quiz",
       "interview"
     ],
     "technology": "ReactJS & JavaScript"
   },
   {
-    "id": "100",
-    "question": "What is the purpose of JSX in ReactJS & JavaScript?",
-    "options": [
-      "Option JSX",
-      "Option B",
-      "Option C",
-      "Option D"
-    ],
-    "answer": "Option JSX",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "isObjective": true,
-    "explanation": {
-      "intro": "Explanation: What is the purpose of JSX in ReactJS & JavaScript?",
-      "points": [
-        "Correct answer: Option JSX.",
-        "Key concept to remember related to the question."
-      ]
-    },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "ReactJS & JavaScript"
-  }
+  "id": 99,
+  "question": "What is the purpose of Async/Await in ReactJS & JavaScript?",
+  "type": "Interview",
+  "difficulty": "Medium",
+  "isObjective": false,
+  "options": [],
+  "answer": "The purpose of async/await is to simplify asynchronous programming by allowing developers to write asynchronous code that looks and behaves like synchronous code. It improves readability, reduces callback nesting, and makes error handling easier.",
+  "explanation": {
+    "intro": "Async/Await is a syntactic feature built on top of Promises in JavaScript.",
+    "points": [
+      "Async functions always return a Promise, making them inherently asynchronous.",
+      "Await pauses the execution of the function until the Promise is resolved or rejected.",
+      "It eliminates the need for complex Promise chains (`.then().catch()`) and makes code cleaner.",
+      "Error handling can be done using try/catch, which is more intuitive compared to chained `.catch()` methods.",
+      "In React, async/await is commonly used for fetching data in hooks like useEffect or in event handlers."
+    ]
+  },
+  "askedBy": [
+    "interview",
+    "technical test"
+  ],
+  "technology": "ReactJS / JavaScript"
+}
 ]

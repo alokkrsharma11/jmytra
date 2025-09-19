@@ -37,7 +37,7 @@ const DbTutorial = () => {
 
   // Group questions by type
   const grouped = questions.reduce((acc, q) => {
-    const type = q.type || "General";
+    const type = q.type || "Advance Concepts";
     (acc[type] ||= []).push(q);
     return acc;
   }, {});
@@ -46,6 +46,7 @@ const DbTutorial = () => {
 
   const handleChange = (_, newValue) => {
     setTabIndex(newValue);
+    setSidebarOpen(!sidebarOpen);
   };
 
   return (
@@ -118,20 +119,22 @@ const DbTutorial = () => {
             transition: "margin-left 0.3s ease",   // smooth shifting
             marginLeft: sidebarOpen ? "0px" : "-220px", // shift by sidebar width
           }}>
-        {types.map((type, index) => (
-          tabIndex === index && (
-            <div className="container">
-            <Box key={type} sx={{ mb: 4 }}>
-              <PageLayout title={`📘 Databases (Sql & NoSql): ${type} Questions`} />
-              {grouped[type].map((question) => (
-                <QuizContent
-                  question={question}
-                />
-              ))}
-            </Box>
-            </div>
-          )
-        ))}
+        {types.map(
+          (type, index) =>
+            tabIndex === index && (
+              <div>
+              <PageLayout key={index} title={`📘 Databases (Sql & NoSql): ${type} Questions`}  sidebarOpen={{sidebarOpen}}/>
+              <div className="container">
+              <Box key={type} sx={{ mb: 4 }}>
+                
+                {grouped[type].map((question, i) => (
+                  <QuizContent key={i} question={question} />
+                ))}
+              </Box>
+              </div>
+              </div>
+            )
+        )}
       </Box>
     </Box>
   );

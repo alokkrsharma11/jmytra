@@ -273,6 +273,58 @@
         "Detailed explanation to highlight important aspects."
       ]
     },
+    "differences": [
+      {
+        "keyword": "Data Structure",
+        "ArrayList": "Dynamic array",
+        "LinkedList": "Doubly linked list"
+      },
+      {
+        "keyword": "Memory Allocation",
+        "ArrayList": "Contiguous memory",
+        "LinkedList": "Nodes scattered; each node stores data + prev & next references"
+      },
+      {
+        "keyword": "Access by Index",
+        "ArrayList": "Fast, O(1)",
+        "LinkedList": "Slow, O(n)"
+      },
+      {
+        "keyword": "Add at End",
+        "ArrayList": "Amortized O(1)",
+        "LinkedList": "O(1)"
+      },
+      {
+        "keyword": "Add at Middle",
+        "ArrayList": "Slow, O(n) (shifting required)",
+        "LinkedList": "Fast, O(1) after reaching node"
+      },
+      {
+        "keyword": "Remove by Index",
+        "ArrayList": "Slow, O(n) (shifting required)",
+        "LinkedList": "Fast, O(1) after reaching node"
+      },
+      {
+        "keyword": "Search",
+        "ArrayList": "O(n)",
+        "LinkedList": "O(n)"
+      },
+      {
+        "keyword": "Iteration",
+        "ArrayList": "Cache-friendly, faster",
+        "LinkedList": "Slower, memory scattered"
+      },
+      {
+        "keyword": "Memory Usage",
+        "ArrayList": "Lower overhead",
+        "LinkedList": "Higher overhead (extra pointers)"
+      },
+      {
+        "keyword": "Best Use Case",
+        "ArrayList": "Frequent index-based access, fewer middle insertions/deletions",
+        "LinkedList": "Frequent insertions/deletions in middle/start, sequential access"
+      }
+    ],
     "askedBy": [
       "interview"
     ],

@@ -11,7 +11,11 @@
     "answer": "Java Virtual Machine",
     "type": "MCQ",
     "difficulty": "Easy",
-    "isObjective": true
+    "isObjective": true,
+    "askedBy": "Exam",
+    "explanation": {
+      "intro": "JVM stands for Java Virtual Machine. It is the engine that executes Java bytecode, providing platform independence for Java applications."
+    }
   },
   {
     "id": 2,
@@ -25,7 +29,11 @@
     "answer": "extends",
     "type": "MCQ",
     "difficulty": "Easy",
-    "isObjective": true
+    "isObjective": true,
+    "explanation": {
+      "intro" : "In Java, a class can inherit the properties and methods of another class using the extends keyword. The class that inherits is called the subclass (or derived class), and the class being inherited from is called the superclass (or base class). This allows code reuse and establishes an is-a relationship between classes.",
+      "code": "\n\nclass Animal {\n    void eat() {\n        System.out.println(\"This animal eats food.\");\n    }\n}\n\nclass Dog extends Animal {\n    void bark() {\n        System.out.println(\"Dog barks.\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Dog d = new Dog();\n        d.eat();  // inherited from Animal\n        d.bark();\n    }\n}"
+    }
   },
   {
     "id": 3,
@@ -39,7 +47,11 @@
     "answer": "22",
     "type": "MCQ",
     "difficulty": "Easy",
-    "isObjective": true
+    "isObjective": true,
+    "explanation":{
+      "intro": "In Java, the '+' operator is used for both addition and string concatenation. When one of the operands is a string, Java converts the other operand to a string and performs concatenation instead of addition. \n\nHere, 2 (integer) + \"2\" (string) results in \"22\" (string concatenation), not 4.\n\nExample:",
+      "code": "\nSystem.out.println(2 + \"2\"); // Output: 22"
+    }
   },
   {
     "id": 4,
@@ -53,7 +65,10 @@
     "answer": "List",
     "type": "MCQ",
     "difficulty": "Easy",
-    "isObjective": true
+    "isObjective": true,
+    "explanation":{
+      "intro": "In Java, the `List` interface (implemented by classes like `ArrayList`, `LinkedList`) allows duplicate elements. Elements in a list are ordered, and you can have multiple occurrences of the same element. \n\nOther collections like `Set` do not allow duplicates."
+    }
   },
   {
     "id": 5,
@@ -67,7 +82,11 @@
     "answer": "Converting primitive to wrapper object automatically",
     "type": "MCQ",
     "difficulty": "Easy",
-    "isObjective": true
+    "isObjective": true,
+    "explanation": {
+      "intro": "In Java, autoboxing is the automatic conversion that the Java compiler makes between primitive types (like `int`, `double`) and their corresponding wrapper classes (`Integer`, `Double`). This allows you to assign a primitive value to a wrapper class object without explicitly creating an object.\n\nFor example:",
+      "code": "Integer num = 10; // int 10 is automatically converted to Integer\nDouble d = 3.14;   // double 3.14 is automatically converted to Double"
+    }
   },
   {
     "id": 6,
@@ -81,7 +100,12 @@
     "answer": "== compares references, equals() compares values",
     "type": "MCQ",
     "difficulty": "Easy",
-    "isObjective": true
+    "isObjective": true,
+    "explanation": {
+      "intro": "In Java, `==` compares the memory addresses (references) of two objects, so it tells whether both references point to the exact same object. On the other hand, `.equals()` is a method that checks whether two objects are logically equivalent, based on the implementation of the `equals()` method in the class.\n\nFor example:",
+      "code": "String s1 = new String(\"Hello\");\nString s2 = new String(\"Hello\");\n\nSystem.out.println(s1 == s2); "
+    }
+    
   },
   {
     "id": 7,
@@ -95,7 +119,11 @@
     "answer": "Map",
     "type": "MCQ",
     "difficulty": "Easy",
-    "isObjective": true
+    "isObjective": true,
+    "explanation": {
+      "intro": "In Java, `HashMap` is part of the `java.util` package and implements the `Map` interface. This allows it to store key-value pairs, where each key is unique. The `Map` interface defines methods like `put()`, `get()`, `remove()`, and `containsKey()`, which `HashMap` provides concrete implementations for.",
+      "code": "import java.util.HashMap;\nimport java.util.Map;\n\npublic class Main {\n    public static void main(String[] args) {\n        Map<String, Integer> map = new HashMap<>();\n        map.put(\"One\", 1);\n        map.put(\"Two\", 2);\n        \n        System.out.println(map.get(\"One\")); // Output: 1\n    }\n}"
+    }
   },
   {
     "id": 8,
@@ -109,7 +137,11 @@
     "answer": "An exception that must be declared or handled",
     "type": "MCQ",
     "difficulty": "Easy",
-    "isObjective": true
+    "isObjective": true,
+    "explanation":{
+      "intro": "In Java, exceptions are categorized into checked and unchecked exceptions. Checked exceptions are subclasses of `Exception` (but not `RuntimeException`) and must be either caught using a `try-catch` block or declared in the method signature using the `throws` keyword. This ensures that the programmer handles potential exceptional conditions at compile time, improving program reliability.",
+      "code": "import java.io.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        try {\n            FileReader file = new FileReader(\"test.txt\"); // may throw FileNotFoundException\n            BufferedReader fileInput = new BufferedReader(file);\n            System.out.println(fileInput.readLine());\n            fileInput.close();\n        } catch (FileNotFoundException e) {\n            System.out.println(\"File not found: \" + e);\n        } catch (IOException e) {\n            System.out.println(\"IO Exception: \" + e);\n        }\n    }\n}"
+    }
   },
   {
     "id": 9,
@@ -123,7 +155,11 @@
     "answer": "Thread",
     "type": "MCQ",
     "difficulty": "Easy",
-    "isObjective": true
+    "isObjective": true,
+    "explanation": {
+      "intro": "In Java, one way to create a thread is by extending the `Thread` class. By doing so, your class becomes a subclass of `Thread` and can override the `run()` method to define the thread's task. You then create an instance of your class and call the `start()` method to begin execution in a new thread.",
+      "code": "class MyThread extends Thread {\n    public void run() {\n        System.out.println(\"Thread is running\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        MyThread t1 = new MyThread();\n        t1.start(); // starts the new thread\n    }\n}"
+    }
   },
   {
     "id": 10,
@@ -132,7 +168,11 @@
     "answer": "ArrayList is backed by a dynamic array and offers fast random access; LinkedList is a doubly-linked list offering fast insertions/removals at ends or middle but slower random access.",
     "type": "Interview",
     "difficulty": "Medium",
-    "isObjective": false
+    "isObjective": false,
+    "explanation":{
+      "intro": "ArrayList uses a dynamic array to store elements, which allows fast random access (O(1)) but slow insertions and deletions in the middle (O(n)) because elements need to be shifted. LinkedList uses a doubly linked list, which allows fast insertions and deletions (O(1)) but slower random access (O(n)) since you have to traverse the list to reach an element.",
+      "code": "// Example showing basic usage\nimport java.util.ArrayList;\nimport java.util.LinkedList;\n\npublic class ListExample {\n    public static void main(String[] args) {\n        ArrayList<String> arrayList = new ArrayList<>();\n        arrayList.add(\"A\");\n        arrayList.add(\"B\");\n        arrayList.add(\"C\");\n        System.out.println(\"ArrayList: \" + arrayList);\n\n        LinkedList<String> linkedList = new LinkedList<>();\n        linkedList.add(\"X\");\n        linkedList.add(\"Y\");\n        linkedList.add(\"Z\");\n        System.out.println(\"LinkedList: \" + linkedList);\n    }\n}"
+    }
   },
   {
     "id": 11,
@@ -146,7 +186,11 @@
     "answer": "Java 8",
     "type": "MCQ",
     "difficulty": "Easy",
-    "isObjective": true
+    "isObjective": true,
+    "explanation":{
+      "intro": "Lambda expressions were introduced in Java 8 to provide a clear and concise way to represent one method interface using an expression. They enable functional programming in Java by allowing you to treat functionality as a method argument or treat code as data.",
+      "code": "// Example of a lambda expression\nimport java.util.Arrays;\nimport java.util.List;\n\npublic class LambdaExample {\n    public static void main(String[] args) {\n        List<String> names = Arrays.asList(\"Alice\", \"Bob\", \"Charlie\");\n        // Using lambda to iterate and print each name\n        names.forEach(name -> System.out.println(name));\n    }\n}"
+    }
   },
   {
     "id": 12,
@@ -160,7 +204,11 @@
     "answer": "Functional-style operations on collections",
     "type": "MCQ",
     "difficulty": "Medium",
-    "isObjective": true
+    "isObjective": true,
+    "explanation":{
+      "intro": "The Stream API, introduced in Java 8, allows developers to perform operations on collections of data in a declarative and functional way. It supports operations like filter, map, reduce, and collect, making code concise and readable while enabling parallel processing.",
+      "code": "// Example of Stream API usage\nimport java.util.Arrays;\nimport java.util.List;\nimport java.util.stream.Collectors;\n\npublic class StreamExample {\n    public static void main(String[] args) {\n        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);\n        // Using Stream to filter even numbers and collect them into a new list\n        List<Integer> evenNumbers = numbers.stream()\n                                           .filter(n -> n % 2 == 0)\n                                           .collect(Collectors.toList());\n        System.out.println(evenNumbers); // Output: [2, 4]\n    }\n}"
+    }
   },
   {
     "id": 13,
@@ -174,7 +222,11 @@
     "answer": "Declare method as final",
     "type": "MCQ",
     "difficulty": "Easy",
-    "isObjective": true
+    "isObjective": true,
+    "explanation":{
+      "intro": "In Java, if you want to ensure that a method in a class cannot be overridden by any subclass, you use the `final` keyword. A `final` method cannot be modified in subclasses, which is useful for maintaining consistent behavior.",
+      "code": "// Example of final method\nclass Parent {\n    public final void showMessage() {\n        System.out.println(\"This method cannot be overridden\");\n    }\n}\n\nclass Child extends Parent {\n    // The following would cause a compile-time error\n    // public void showMessage() {\n    //     System.out.println(\"Trying to override\");\n    // }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Child c = new Child();\n        c.showMessage(); // Output: This method cannot be overridden\n    }\n}"
+    }
   },
   {
     "id": 14,
@@ -188,7 +240,11 @@
     "answer": "Ensure visibility of changes across threads",
     "type": "MCQ",
     "difficulty": "Medium",
-    "isObjective": true
+    "isObjective": true,
+    "explanation":{
+      "intro": "In Java, when multiple threads access a shared variable, changes made by one thread may not be immediately visible to other threads due to caching or compiler optimizations. Declaring a variable as `volatile` ensures that reads and writes to that variable are done directly from main memory, providing a lightweight synchronization mechanism for visibility (though it does not guarantee atomicity for compound operations).",
+      "code": "// Example of volatile variable\nclass SharedResource {\n    public volatile boolean flag = false;\n}\n\nclass Worker extends Thread {\n    private SharedResource resource;\n\n    public Worker(SharedResource resource) {\n        this.resource = resource;\n    }\n\n    public void run() {\n        while (!resource.flag) {\n            // wait until flag becomes true\n        }\n        System.out.println(\"Flag is true, thread proceeding\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) throws InterruptedException {\n        SharedResource resource = new SharedResource();\n        Worker worker = new Worker(resource);\n        worker.start();\n\n        Thread.sleep(1000); // simulate some work\n        resource.flag = true; // changes are immediately visible to worker thread\n    }\n}"
+    }
   },
   {
     "id": 15,
@@ -197,7 +253,11 @@
     "answer": "A situation where two or more threads are blocked forever, each waiting for the other to release locks.",
     "type": "Interview",
     "difficulty": "Medium",
-    "isObjective": false
+    "isObjective": false,
+    "explanation":{
+      "intro": "Deadlock occurs when multiple threads are waiting for resources held by each other, and none of them can proceed. It typically involves four conditions: mutual exclusion (resources cannot be shared), hold and wait (threads hold resources while waiting for others), no preemption (resources cannot be forcibly taken away), and circular wait (a circular chain of threads each waiting for a resource held by the next thread).",
+      "code": "// Example of potential deadlock\nclass Resource {\n    synchronized void methodA(Resource r) {\n        System.out.println(Thread.currentThread().getName() + \" entered methodA\");\n        r.methodB(this);\n    }\n\n    synchronized void methodB(Resource r) {\n        System.out.println(Thread.currentThread().getName() + \" entered methodB\");\n    }\n}\n\npublic class DeadlockExample {\n    public static void main(String[] args) {\n        Resource r1 = new Resource();\n        Resource r2 = new Resource();\n\n        Thread t1 = new Thread(() -> r1.methodA(r2), \"Thread-1\");\n        Thread t2 = new Thread(() -> r2.methodA(r1), \"Thread-2\");\n\n        t1.start();\n        t2.start();\n    }\n}"
+    }
   },
   {
     "id": 16,
@@ -211,7 +271,11 @@
     "answer": "Vector",
     "type": "MCQ",
     "difficulty": "Easy",
-    "isObjective": true
+    "isObjective": true,
+    "explanation":{
+      "intro": "Synchronized collections ensure that only one thread can access the collection at a time, providing thread safety. Vector and Hashtable are legacy classes in Java that are synchronized by default, whereas newer collections like ArrayList and HashMap are not synchronized and need external synchronization if used in multithreaded environments.",
+      "code": "// Example of synchronized Vector\nimport java.util.Vector;\n\npublic class SynchronizedCollectionExample {\n    public static void main(String[] args) {\n        Vector<Integer> vector = new Vector<>();\n        vector.add(1);\n        vector.add(2);\n        vector.add(3);\n\n        // Thread-safe access\n        synchronized(vector) {\n            for(Integer i : vector) {\n                System.out.println(i);\n            }\n        }\n    }\n}"
+    }
   },
   {
     "id": 17,
@@ -220,7 +284,18 @@
     "answer": "Make class final, make fields private final, initialize via constructor, do not provide setters, and defensively copy mutable fields on input/output.",
     "type": "Interview",
     "difficulty": "Hard",
-    "isObjective": false
+    "isObjective": false,
+    "explanation":{
+      "intro": "An immutable class is one whose objects cannot be modified once created. Key points:",
+      "points":[
+          "\n1. Declare the class as `final` so it cannot be subclassed.",
+          "\n2. Make all fields `private` and `final`.",
+          "\n3. Provide only getters for accessing fields.",
+          "\n4. Initialize all fields through the constructor.",
+          "\n5. If a field is a mutable object, return a copy in the getter to prevent modification of internal state."
+      ],
+      "code": "final class ImmutableExample {\n    private final int id;\n    private final String name;\n\n    public ImmutableExample(int id, String name) {\n        this.id = id;\n        this.name = name;\n    }\n\n    public int getId() {\n        return id;\n    }\n\n    public String getName() {\n        return name;\n    }\n\n    // No setters provided\n}\n\npublic class TestImmutable {\n    public static void main(String[] args) {\n        ImmutableExample obj = new ImmutableExample(1, \"Alok\");\n        System.out.println(obj.getId() + \", \" + obj.getName());\n    }\n}"
+    }
   },
   {
     "id": 18,
@@ -234,7 +309,11 @@
     "answer": "Avoid null checks and prevent NullPointerException",
     "type": "MCQ",
     "difficulty": "Medium",
-    "isObjective": true
+    "isObjective": true,
+    "explanation":{
+      "intro": "The `Optional` class is a container object which may or may not contain a non-null value. Instead of returning null, methods can return an Optional to indicate the possibility of 'no value'. This improves code readability and encourages safe handling of absent values.\n\nKey uses:\n1. Avoid `NullPointerException`.\n2. Provide default values using `orElse()`.\n3. Execute code only if value is present using `ifPresent()`.\n4. Chain transformations with `map()` and `flatMap()`.",
+      "code": "import java.util.Optional;\n\npublic class OptionalExample {\n    public static void main(String[] args) {\n        Optional<String> name = Optional.ofNullable(null);\n\n        // Avoid null check manually\n        System.out.println(name.orElse(\"Default Name\"));\n\n        name.ifPresent(n -> System.out.println(\"Name: \" + n));\n    }\n}"
+    }
   },
   {
     "id": 19,
@@ -248,7 +327,11 @@
     "answer": "run()",
     "type": "MCQ",
     "difficulty": "Easy",
-    "isObjective": true
+    "isObjective": true,
+    "explanation":{
+      "explanation": "The `Runnable` interface in Java is a functional interface with a single abstract method: `run()`. Any class that implements `Runnable` must provide an implementation for the `run()` method. This method contains the code that constitutes the new thread's task. The `start()` method, however, belongs to the `Thread` class and is responsible for invoking the `run()` method indirectly.",
+      "code": "class MyRunnable implements Runnable {\n    public void run() {\n        System.out.println(\"Thread is running...\");\n    }\n\n    public static void main(String[] args) {\n        Thread t = new Thread(new MyRunnable());\n        t.start();\n    }\n}"
+    }
   },
   {
     "id": 20,
@@ -257,7 +340,17 @@
     "answer": "A synchronized method locks on 'this' (or class for static methods) covering the whole method; synchronized block allows locking on a specific object and limits scope to a block for finer control and better concurrency.",
     "type": "Interview",
     "difficulty": "Medium",
-    "isObjective": false
+    "isObjective": false,
+    "explanation": {
+      "intro": "In Java, synchronization is used to control access to shared resources in multithreading. Both synchronized methods and synchronized blocks provide thread-safety but differ in scope and performance.",
+      "points": [
+        "Synchronized Method: Locks the entire method, preventing multiple threads from accessing it simultaneously. This can lead to lower performance if only a small part of the method actually needs synchronization.",
+        "Synchronized Block: Locks only a specific section of code within a method. This provides better performance since only the critical section is locked while other parts of the method can run concurrently.",
+        "Flexibility: Synchronized blocks allow you to lock on objects other than `this`, giving finer control over synchronization.",
+        "Granularity: Methods provide coarse-grained synchronization, while blocks provide fine-grained synchronization."
+      ],
+      "code": "// Example of synchronized method\nclass Counter {\n    private int count = 0;\n\n    public synchronized void increment() {\n        count++;\n    }\n}\n\n// Example of synchronized block\nclass CounterBlock {\n    private int count = 0;\n    private final Object lock = new Object();\n\n    public void increment() {\n        synchronized (lock) {\n            count++;\n        }\n    }\n}"
+    }
   },
   {
     "id": 21,
@@ -271,7 +364,17 @@
     "answer": "false",
     "type": "MCQ",
     "difficulty": "Medium",
-    "isObjective": true
+    "isObjective": true,
+    "explanation": {
+      "intro": "In Java, Integer objects between -128 and 127 are cached by the JVM. Values outside this range are not cached, so new objects are created.",
+      "points": [
+        "`==` compares object references, not values, when used with wrapper classes like Integer.",
+        "For values between -128 and 127, `Integer` uses cached objects, so `==` may return true.",
+        "For 128, a new Integer object is created for both `a` and `b`, so their references are different.",
+        "Therefore, `a == b` returns false even though their values are equal."
+      ],
+      "code": "public class Test {\n    public static void main(String[] args) {\n        Integer a = 128;\n        Integer b = 128;\n        System.out.println(a == b); // false\n        System.out.println(a.equals(b)); // true\n    }\n}"
+    }
   },
   {
     "id": 22,
@@ -285,6 +388,16 @@
     "answer": "Class cannot be subclassed",
     "type": "MCQ",
     "difficulty": "Easy",
+    "explanation": {
+      "intro": "In Java, marking a class as `final` prevents it from being subclassed.",
+      "points": [
+        "A `final` class cannot be extended by any other class.",
+        "This is often used to maintain immutability or security.",
+        "Examples include `java.lang.String` and `java.lang.Math`.",
+        "Methods inside a `final` class can still be used, but not overridden in subclasses (since no subclass can exist)."
+      ],
+      "code": "public final class MyFinalClass {\n    public void display() {\n        System.out.println(\"This is a final class.\");\n    }\n}\n\n// The following will cause a compile-time error:\n// class Child extends MyFinalClass {}"
+    },
     "isObjective": true
   },
   {
@@ -299,6 +412,17 @@
     "answer": "Just-In-Time compiler that compiles bytecode to native code at runtime",
     "type": "MCQ",
     "difficulty": "Medium",
+    "explanation": {
+    "intro": "The JIT compiler is part of the JVM that enhances execution speed by converting bytecode into optimized native machine code at runtime.",
+    "points": [
+        "JIT stands for Just-In-Time compiler.",
+        "It works alongside the JVM to improve performance.",
+        "Instead of interpreting bytecode line by line, JIT compiles frequently used code paths into native machine instructions.",
+        "This reduces execution time significantly for repeated method calls.",
+        "JIT optimizes code at runtime based on actual execution context."
+      ],
+      "code": "public class JITDemo {\n    public static void main(String[] args) {\n        for (int i = 0; i < 1000000; i++) {\n            calculate();\n        }\n    }\n\n    static void calculate() {\n        int x = 10;\n        int y = 20;\n        int sum = x + y;\n    }\n}\n\n// The JVM will optimize 'calculate()' with JIT after multiple executions."
+    },
     "isObjective": true
   },
   {
@@ -308,6 +432,17 @@
     "answer": "Garbage collection reclaims memory by identifying unreachable objects (no live references). Various algorithms (mark-and-sweep, generational GC) and JVM garbage collectors (G1, CMS, Parallel) manage object reclamation and memory compaction transparently.",
     "type": "Interview",
     "difficulty": "Hard",
+    "explanation": {
+    "intro": "Garbage collection (GC) in Java is an automatic process that frees memory by destroying objects that are no longer accessible by any active part of the application.",
+    "points": [
+        "Java uses an automatic garbage collector to manage memory, reducing the need for manual memory deallocation like in C/C++.",
+        "The GC identifies objects that are no longer reachable and removes them to free heap space.",
+        "GC works in the background and can use algorithms like Mark-and-Sweep, Copying, or Generational collection.",
+        "Objects in the Young Generation are collected frequently, while objects that survive longer move to the Old Generation.",
+        "The `System.gc()` method can be called to suggest garbage collection, but it is not guaranteed."
+      ],
+      "code": "public class GCDemo {\n    public static void main(String[] args) {\n        GCDemo obj = new GCDemo();\n        obj = null; // Eligible for garbage collection\n\n        System.gc(); // Request garbage collection (not guaranteed)\n    }\n\n    @Override\n    protected void finalize() throws Throwable {\n        System.out.println(\"Garbage collected: \" + this);\n    }\n}\n\n// Output may vary: JVM decides when to run GC"
+    },
     "isObjective": false
   },
   {
@@ -322,6 +457,16 @@
     "answer": "List",
     "type": "MCQ",
     "difficulty": "Easy",
+    "explanation": {
+      "intro": "In Java, the `List` interface is a subinterface of the `Collection` interface. It provides an ordered collection that can contain duplicate elements.",
+      "points": [
+        "`Collection` is the root interface for representing groups of objects (collections).",
+        "`List` extends `Collection` and adds positional access and duplicate allowance.",
+        "Other interfaces like `Set` and `Queue` are also subinterfaces of `Collection`.",
+        "`Map` is not a subinterface of `Collection` because it represents key-value pairs rather than a group of individual elements."
+      ],
+      "code": "import java.util.*;\n\npublic class SubInterfaceDemo {\n    public static void main(String[] args) {\n        List<String> list = new ArrayList<>();\n        list.add(\"A\");\n        list.add(\"B\");\n        list.add(\"A\"); // Duplicates allowed\n        System.out.println(list);\n    }\n}\n\n// Output: [A, B, A]"
+    },
     "isObjective": true
   },
   {
@@ -336,6 +481,16 @@
     "answer": "false",
     "type": "MCQ",
     "difficulty": "Easy",
+    "explanation": {
+      "intro": "In Java, instance variables of primitive types have default values assigned by the JVM. For the `boolean` type, the default value is `false`.",
+      "points": [
+        "Default values are only assigned to instance variables, not local variables.",
+        "Local variables must be explicitly initialized before use.",
+        "Other default values: `0` for numeric primitives, `null` for object references, `\\u0000` for `char`.",
+        "Using uninitialized local variables causes a compilation error."
+      ],
+      "code": "public class DefaultValueDemo {\n    static boolean flag;\n\n    public static void main(String[] args) {\n        System.out.println(flag); // prints false\n    }\n}"
+    },
     "isObjective": true
   },
   {
@@ -350,6 +505,16 @@
     "answer": "stream.collect(Collectors.toList())",
     "type": "MCQ",
     "difficulty": "Medium",
+    "explanation": {
+      "intro": "In Java 8 and later, you can convert a Stream into a List using the `collect` method with a Collector.",
+      "points": [
+        "`stream.collect(Collectors.toList())` is the standard approach.",
+        "This collects elements from the stream into a `List` implementation (usually `ArrayList`).",
+        "From Java 16, you can also use `stream.toList()` which returns an unmodifiable list.",
+        "`toArray()` can convert to an array, not directly to a `List`."
+      ],
+      "code": "import java.util.*;\nimport java.util.stream.*;\n\npublic class StreamToListDemo {\n    public static void main(String[] args) {\n        Stream<String> stream = Stream.of(\"A\", \"B\", \"C\");\n\n        // Java 8+ approach\n        List<String> list1 = stream.collect(Collectors.toList());\n        System.out.println(list1); // [A, B, C]\n\n        // Java 16+ approach\n        List<String> list2 = Stream.of(\"X\", \"Y\", \"Z\").toList();\n        System.out.println(list2); // [X, Y, Z]\n    }\n}"
+    },
     "isObjective": true
   },
   {
@@ -364,15 +529,41 @@
     "answer": "Callable returns a value and can throw checked exceptions; Runnable does not",
     "type": "MCQ",
     "difficulty": "Medium",
+    "explanation": {
+      "intro": "`Runnable` and `Callable` are two interfaces used for concurrent programming in Java. They look similar but serve different purposes.",
+      "points": [
+        "`Runnable`'s `run()` method returns `void`, so it cannot return a result.",
+        "`Callable<V>`'s `call()` method returns a result of type `V`.",
+        "`Callable` can throw checked exceptions, but `Runnable` cannot.",
+        "`Callable` is often used with `ExecutorService.submit()` to get a `Future` object, while `Runnable` is used with `Thread` or `ExecutorService.execute()`."
+      ],
+      "code": "import java.util.concurrent.*;\n\npublic class CallableVsRunnableDemo {\n    public static void main(String[] args) throws Exception {\n        // Runnable Example\n        Runnable task1 = () -> System.out.println(\"Runnable executed\");\n        new Thread(task1).start();\n\n        // Callable Example\n        Callable<String> task2 = () -> \"Callable executed\";\n        ExecutorService executor = Executors.newSingleThreadExecutor();\n        Future<String> future = executor.submit(task2);\n        System.out.println(future.get()); // Callable executed\n        executor.shutdown();\n    }\n}"
+    },
     "isObjective": true
   },
   {
     "id": 29,
     "question": "Explain method overloading vs overriding.",
-    "options": [],
-    "answer": "Overloading: same method name, different parameter lists within same class (compile-time polymorphism). Overriding: subclass provides new implementation for superclass method with same signature (runtime polymorphism).",
-    "type": "Interview",
-    "difficulty": "Easy",
+    "options": [
+      "Overloading allows multiple methods with same name but different parameters, Overriding redefines a method in subclass with same signature",
+      "Overloading is runtime polymorphism, Overriding is compile-time polymorphism",
+      "Overloading requires inheritance, Overriding does not",
+      "Overloading methods must have different return types, Overriding methods must have different names"
+    ],
+    "answer": "Overloading allows multiple methods with same name but different parameters, Overriding redefines a method in subclass with same signature",
+    "explanation": {
+      "intro": "Method overloading and overriding are two core concepts of polymorphism in Java.",
+      "points": [
+        "Overloading: Same method name, but different parameter lists (number or type of parameters). It is resolved at compile-time (compile-time polymorphism).",
+        "Overriding: A subclass provides its own implementation of a method defined in the parent class, with the same method signature. It is resolved at runtime (runtime polymorphism).",
+        "Overloading can happen within the same class, while overriding always involves inheritance.",
+        "Return type must be compatible in overriding but can be different in overloading if the parameter list is different."
+      ],
+      "code": "class OverloadExample {\n    void show(int a) { System.out.println(\"Integer: \" + a); }\n    void show(String b) { System.out.println(\"String: \" + b); }\n}\n\nclass Parent {\n    void display() { System.out.println(\"Parent\"); }\n}\n\nclass Child extends Parent {\n    @Override\n    void display() { System.out.println(\"Child\"); }\n}\n\npublic class Demo {\n    public static void main(String[] args) {\n        OverloadExample obj = new OverloadExample();\n        obj.show(10); // Overloading\n        obj.show(\"Hello\");\n\n        Parent p = new Child();\n        p.display(); // Overriding\n    }\n}"
+    },
+    "askedBy": "Interview",
+    "difficulty": "Medium",
+    "type": "MCQ",
     "isObjective": false
   },
   {
@@ -385,22 +576,44 @@
       "Loader"
     ],
     "answer": "ClassLoader",
+    "explanation": {
+      "intro": "In Java, classes are loaded into the JVM dynamically at runtime using the ClassLoader subsystem.",
+      "points": [
+        "ClassLoader is responsible for loading classes into the JVM on demand.",
+        "It follows a parent delegation model: first asking the parent loader before attempting to load the class itself.",
+        "There are three main types: Bootstrap ClassLoader (loads core Java classes), Extension ClassLoader (loads extension libraries), and Application/System ClassLoader (loads application classes).",
+        "Custom class loaders can also be created to load classes from different sources (e.g., network, encrypted files)."
+      ],
+      "code": "public class Demo {\n    public static void main(String[] args) throws ClassNotFoundException {\n        Class<?> clazz = Class.forName(\"java.util.ArrayList\");\n        System.out.println(\"Class loaded by: \" + clazz.getClassLoader());\n    }\n}"
+    },
+    "askedBy": "Certification",
+    "difficulty": "Easy",
     "type": "MCQ",
-    "difficulty": "Medium",
     "isObjective": true
   },
   {
     "id": 31,
     "question": "What is serialization in Java?",
     "options": [
-      "Converting object to byte stream",
-      "Converting byte stream to object",
-      "Compiling class to bytecode",
-      "Encrypting object"
+      "Process of saving an object’s state into a byte stream",
+      "Process of executing multiple threads simultaneously",
+      "Process of converting primitive types to objects",
+      "Process of compiling Java code into bytecode"
     ],
-    "answer": "Converting object to byte stream",
+    "answer": "Process of saving an object’s state into a byte stream",
+    "explanation": {
+      "intro": "Serialization in Java is the mechanism of converting the state of an object into a byte stream so that it can be persisted or transmitted over a network.",
+      "points": [
+        "Serialization is done using the `Serializable` interface, which is a marker interface.",
+        "The serialized byte stream can later be deserialized to recreate the original object.",
+        "Commonly used for saving objects to files, sending objects over the network, or storing them in databases.",
+        "Not all objects can be serialized; objects containing non-serializable fields must be marked as `transient`."
+      ],
+      "code": "import java.io.*;\n\nclass Student implements Serializable {\n    int id;\n    String name;\n    public Student(int id, String name) {\n        this.id = id;\n        this.name = name;\n    }\n}\n\npublic class SerializeDemo {\n    public static void main(String[] args) {\n        try {\n            Student s1 = new Student(101, \"John\");\n            FileOutputStream fos = new FileOutputStream(\"student.ser\");\n            ObjectOutputStream oos = new ObjectOutputStream(fos);\n            oos.writeObject(s1);\n            oos.close();\n            fos.close();\n            System.out.println(\"Object has been serialized\");\n        } catch (Exception e) {\n            e.printStackTrace();\n        }\n    }\n}"
+    },
+    "askedBy": "Interview",
+    "difficulty": "Medium",
     "type": "MCQ",
-    "difficulty": "Easy",
     "isObjective": true
   },
   {
@@ -413,8 +626,19 @@
       "Use final"
     ],
     "answer": "Make it transient",
-    "type": "MCQ",
+    "explanation": {
+      "intro": "In Java, if you want to prevent a specific field of a class from being serialized, you can mark it as `transient`.",
+      "points": [
+        "The `transient` keyword tells the JVM to skip this field during serialization.",
+        "This is useful for sensitive information (like passwords) or derived values that can be recalculated.",
+        "Private, static, or final modifiers do not prevent serialization.",
+        "During deserialization, transient fields are initialized with their default values."
+      ],
+      "code": "import java.io.*;\n\nclass User implements Serializable {\n    String username;\n    transient String password; // will not be serialized\n\n    User(String username, String password) {\n        this.username = username;\n        this.password = password;\n    }\n}\n\npublic class TransientDemo {\n    public static void main(String[] args) throws Exception {\n        User user = new User(\"John\", \"secret123\");\n        \n        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(\"user.ser\"));\n        oos.writeObject(user);\n        oos.close();\n\n        ObjectInputStream ois = new ObjectInputStream(new FileInputStream(\"user.ser\"));\n        User deserialized = (User) ois.readObject();\n        ois.close();\n\n        System.out.println(\"Username: \" + deserialized.username);\n        System.out.println(\"Password: \" + deserialized.password); // will be null\n    }\n}"
+    },
+    "askedBy": "Interview",
     "difficulty": "Medium",
+    "type": "MCQ",
     "isObjective": true
   },
   {
@@ -422,8 +646,21 @@
     "question": "Explain the Java memory model briefly.",
     "options": [],
     "answer": "The Java Memory Model defines how threads interact through memory and guarantees about visibility, ordering, and atomicity. It specifies happens-before relationships and ensures safe publication and synchronization for concurrent Java programs.",
-    "type": "Interview",
+    "explanation": {
+      "intro": "The Java Memory Model (JMM) specifies how Java threads interact with memory and what behaviors are allowed in concurrent execution.",
+      "points": [
+        "It defines rules for reading and writing variables across threads.",
+        "The `main memory` stores shared variables, while each thread has its own `working memory` (cache).",
+        "Threads can read and write to main memory only through working memory.",
+        "The JMM ensures visibility, ordering, and atomicity guarantees for concurrent programs.",
+        "Keywords like `volatile`, `synchronized`, and `final` play important roles in enforcing memory visibility and ordering."
+      ],
+      "code": "class SharedData {\n    private volatile boolean flag = false;\n\n    public void writer() {\n        flag = true; // write visible to other threads\n    }\n\n    public void reader() {\n        if (flag) {\n            System.out.println(\"Flag is true\");\n        }\n    }\n}\n\n// Without 'volatile', another thread may not see updated value immediately.",
+      "diagram": "graph TD;\n    MainMemory[Main Memory] -->|Read/Write| Thread1Cache[Thread 1 Working Memory]\n    MainMemory[Main Memory] -->|Read/Write| Thread2Cache[Thread 2 Working Memory]\n    Thread1Cache --> Thread1[Thread 1]\n    Thread2Cache --> Thread2[Thread 2]\n    note1[Volatile/Synchronized ensures visibility between caches]:::note\n\n    classDef note fill:#f9f,stroke:#333,stroke-width:1px;"
+    },
+    "askedBy": "Interview",
     "difficulty": "Hard",
+    "type": "Advance Concepts",
     "isObjective": false
   },
   {
@@ -436,9 +673,19 @@
       "Both same"
     ],
     "answer": "StringBuilder is faster and unsynchronized",
+    "askedBy": "Interview",
+    "difficulty": "Medium",
     "type": "MCQ",
-    "difficulty": "Easy",
-    "isObjective": true
+    "isObjective": true,
+    "explanation": {
+      "intro": "The main difference between StringBuilder and StringBuffer is synchronization.",
+      "points": [
+        "StringBuffer is synchronized and thread-safe but slower.",
+        "StringBuilder is unsynchronized, hence faster in single-threaded operations.",
+        "Both are mutable classes used for modifying strings."
+      ],
+      "code": "StringBuilder sb = new StringBuilder(\"Hello\");\nsb.append(\" World\");\nSystem.out.println(sb); // Output: Hello World"
+    }
   },
   {
     "id": 35,
@@ -450,18 +697,39 @@
       "check"
     ],
     "answer": "instanceof",
-    "type": "MCQ",
+    "askedBy": "Exam",
     "difficulty": "Easy",
-    "isObjective": true
+    "type": "MCQ",
+    "isObjective": true,
+    "explanation": {
+      "intro": "In Java, the `instanceof` operator is used to test whether an object is an instance of a specific class or implements an interface.",
+      "points": [
+        "`instanceof` returns true if the object is of the specified type.",
+        "It helps prevent `ClassCastException` before performing type casting.",
+        "It can also be used with interfaces."
+      ],
+      "code": "String s = \"Hello\";\nif (s instanceof String) {\n    System.out.println(\"s is a String\");\n}"
+    }
   },
   {
     "id": 36,
     "question": "What is reflection in Java?",
     "options": [],
-    "answer": "Reflection allows inspection and modification of classes, methods, fields, and constructors at runtime. It enables dynamic invocation, loading classes by name, and frameworks often use it (e.g., DI containers).",
+    "answer": "Reflection allows inspection and modification of classes, methods, fields, and constructors at runtime. It enables dynamic invocation, loading classes by name, and is widely used in frameworks such as dependency injection (DI) containers and ORMs.",
+    "askedBy": "Interview",
+    "difficulty": "Medium",
     "type": "Interview",
-    "difficulty": "Hard",
-    "isObjective": false
+    "isObjective": false,
+    "explanation": {
+      "intro": "Reflection in Java is a powerful feature that allows runtime analysis and manipulation of classes and objects.",
+      "points": [
+        "It enables discovering class information such as fields, methods, and constructors at runtime.",
+        "You can dynamically create objects, invoke methods, and access fields.",
+        "Commonly used in frameworks like Spring, Hibernate, and testing libraries (JUnit, Mockito).",
+        "Has performance overhead compared to direct method calls."
+      ],
+      "code": "import java.lang.reflect.*;\n\nclass Example {\n    private String msg = \"Hello\";\n    public void show() {\n        System.out.println(\"Message: \" + msg);\n    }\n}\n\npublic class ReflectionDemo {\n    public static void main(String[] args) throws Exception {\n        Class<?> clazz = Class.forName(\"Example\");\n        Object obj = clazz.getDeclaredConstructor().newInstance();\n        Method method = clazz.getMethod(\"show\");\n        method.invoke(obj); // invokes show() dynamically\n    }\n}"
+    }
   },
   {
     "id": 37,
@@ -473,18 +741,40 @@
       "new ArrayList<>()"
     ],
     "answer": "List.of(...)",
+    "askedBy": "Interview",
+    "difficulty": "Easy",
     "type": "MCQ",
-    "difficulty": "Medium",
-    "isObjective": true
+    "isObjective": true,
+    "explanation": {
+      "intro": "Java 9 introduced convenient factory methods for creating unmodifiable collections.",
+      "points": [
+        "List.of(...) creates an immutable list that cannot be modified (no add, remove, or set).",
+        "Unlike Arrays.asList(), it does not allow modifications and is truly unmodifiable.",
+        "Collections.unmodifiableList(list) returns an unmodifiable view but still depends on the original list, meaning changes to the underlying list reflect in the view.",
+        "List.of() is more concise, safe, and guarantees immutability."
+      ],
+      "code": "import java.util.*;\n\npublic class UnmodifiableListDemo {\n    public static void main(String[] args) {\n        List<String> list = List.of(\"A\", \"B\", \"C\");\n        System.out.println(list);\n        // list.add(\"D\"); // UnsupportedOperationException\n    }\n}"
+    }
   },
   {
     "id": 38,
     "question": "What is the significance of serialVersionUID?",
     "options": [],
     "answer": "serialVersionUID is used during deserialization to verify that sender and receiver of a serialized object have compatible classes. Mismatched IDs cause InvalidClassException.",
-    "type": "Interview",
+    "askedBy": "Interview",
     "difficulty": "Medium",
-    "isObjective": false
+    "type": "Advance Concepts",
+    "isObjective": false,
+    "explanation": {
+      "intro": "In Java serialization, serialVersionUID is a unique identifier for Serializable classes.",
+      "points": [
+        "It ensures version compatibility between serialized objects and their corresponding class definitions.",
+        "If the serialVersionUID of the sender’s class does not match the receiver’s class, deserialization fails with InvalidClassException.",
+        "If not explicitly declared, JVM automatically generates one based on class details, which may change when the class is modified.",
+        "It is recommended to explicitly declare serialVersionUID for Serializable classes to avoid unexpected issues."
+      ],
+      "code": "import java.io.*;\n\nclass Employee implements Serializable {\n    private static final long serialVersionUID = 1L;\n    private String name;\n\n    public Employee(String name) {\n        this.name = name;\n    }\n}\n"
+    }
   },
   {
     "id": 39,
@@ -495,19 +785,45 @@
       "throws",
       "try"
     ],
-    "answer": "try",
-    "type": "MCQ",
+    "answer": "catch",
+    "askedBy": "Exam",
     "difficulty": "Easy",
-    "isObjective": true
+    "type": "MCQ",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Java provides several keywords to work with exceptions, but the one used to handle them is `catch`.",
+      "points": [
+        "`try` is used to define a block of code that may throw exceptions.",
+        "`catch` is used to handle exceptions by catching them after they are thrown.",
+        "`throw` is used to explicitly throw an exception.",
+        "`throws` is used in method signatures to declare exceptions a method might throw."
+      ],
+      "code": "try {\n    int result = 10 / 0; // This will throw ArithmeticException\n} catch (ArithmeticException e) {\n    System.out.println(\"Exception handled: \" + e);\n}"
+    }
   },
   {
     "id": 40,
     "question": "Explain how HashMap works in Java.",
     "options": [],
-    "answer": "HashMap stores key-value pairs using hashing. It computes a hash for the key, maps to a bucket, and stores entries in linked lists or tree nodes (after threshold). It offers average O(1) get/put; collisions handled by chaining/trees.",
-    "type": "Interview",
+    "answer": "HashMap in Java stores key-value pairs using a hashing mechanism. It uses the `hashCode()` of the key to determine the bucket location and `equals()` to resolve collisions. If multiple keys map to the same bucket (collision), entries are stored in a linked list or tree (since Java 8). HashMap allows one null key and multiple null values, and it is not synchronized.",
+    "askedBy": "Interview",
     "difficulty": "Medium",
-    "isObjective": false
+    "type": "Advance Concepts",
+    "isObjective": false,
+    "explanation": {
+      "intro": "HashMap is one of the most commonly used data structures in Java for fast data access.",
+      "points": [
+        "Stores data as key-value pairs.",
+        "Uses hashing for quick lookups and insertions.",
+        "`hashCode()` determines the bucket location.",
+        "`equals()` ensures uniqueness of keys.",
+        "Handles collisions using LinkedList (pre-Java 8) or Balanced Tree (Java 8+ when many collisions occur).",
+        "Allows one null key and multiple null values.",
+        "Not thread-safe; use `ConcurrentHashMap` for thread-safe operations."
+      ],
+      "code": "import java.util.*;\n\npublic class HashMapExample {\n    public static void main(String[] args) {\n        HashMap<Integer, String> map = new HashMap<>();\n        map.put(1, \"Apple\");\n        map.put(2, \"Banana\");\n        map.put(3, \"Cherry\");\n\n        System.out.println(map.get(2)); // Output: Banana\n    }\n}",
+      "diagram": "HashMap structure:\n\n   HashMap\n     |\n     +-- Bucket[0] --> (Key1=Apple)\n     +-- Bucket[1] --> (Key2=Banana) --> (Key12=Orange)  // Collision handled via LinkedList/Tree\n     +-- Bucket[2] --> (Key3=Cherry)\n     +-- Bucket[3] --> null\n\nEach key's hashCode() decides the bucket index. If multiple keys hash to the same bucket, they are chained in a LinkedList or Tree."
+    }
   },
   {
     "id": 41,
@@ -519,9 +835,20 @@
       "ConcurrentSkipListSet"
     ],
     "answer": "LinkedHashSet",
-    "type": "MCQ",
+    "askedBy": "Exam",
     "difficulty": "Easy",
-    "isObjective": true
+    "type": "MCQ",
+    "isObjective": true,
+    "explanation": {
+      "intro": "Some Java collections preserve the order in which elements are inserted, while others do not.",
+      "points": [
+        "HashSet does not guarantee any order of elements.",
+        "TreeSet stores elements in sorted order, not insertion order.",
+        "LinkedHashSet maintains insertion order of elements.",
+        "ConcurrentSkipListSet maintains a sorted order but not insertion order."
+      ],
+      "code": "import java.util.*;\n\npublic class LinkedHashSetExample {\n    public static void main(String[] args) {\n        Set<String> set = new LinkedHashSet<>();\n        set.add(\"Banana\");\n        set.add(\"Apple\");\n        set.add(\"Cherry\");\n\n        System.out.println(set); // Output: [Banana, Apple, Cherry]\n    }\n}"
+    }
   },
   {
     "id": 42,
@@ -533,18 +860,39 @@
       "bc"
     ],
     "answer": "b",
-    "type": "MCQ",
+    "askedBy": "Exam",
     "difficulty": "Easy",
-    "isObjective": true
+    "type": "MCQ",
+    "isObjective": true,
+    "explanation": {
+      "intro": "The substring(beginIndex, endIndex) method in Java returns the part of the string starting from beginIndex (inclusive) to endIndex (exclusive).",
+      "points": [
+        "The string is 'abc'.",
+        "beginIndex = 1 → character at index 1 is 'b'.",
+        "endIndex = 2 → substring takes characters until index 2 (exclusive).",
+        "So only character at index 1 → 'b'."
+      ],
+      "code": "public class SubstringExample {\n    public static void main(String[] args) {\n        String str = \"abc\";\n        System.out.println(str.substring(1, 2)); // Output: b\n    }\n}"
+    }
   },
   {
     "id": 43,
     "question": "What is the difference between == for primitives and objects?",
     "options": [],
-    "answer": "For primitives, == compares values. For objects, == compares references (memory addresses). Use equals() for logical value equality for many classes.",
+    "answer": "For primitives, '==' compares actual values. For objects, '==' compares references (memory addresses), not content. To compare object content, use .equals().",
+    "askedBy": "Interview",
+    "difficulty": "Medium",
     "type": "Interview",
-    "difficulty": "Easy",
-    "isObjective": false
+    "isObjective": false,
+    "explanation": {
+      "intro": "In Java, the '==' operator behaves differently for primitives and objects.",
+      "points": [
+        "For primitive types (int, char, double, etc.), '==' checks actual values.",
+        "For object types (String, Integer, custom classes), '==' checks whether both references point to the same memory location.",
+        "To compare the data/content of objects, the .equals() method is used instead."
+      ],
+      "code": "public class EqualityDemo {\n    public static void main(String[] args) {\n        int a = 10, b = 10;\n        System.out.println(a == b); // true (compares values)\n\n        String s1 = new String(\"Hello\");\n        String s2 = new String(\"Hello\");\n        System.out.println(s1 == s2); // false (different objects in memory)\n        System.out.println(s1.equals(s2)); // true (content comparison)\n    }\n}"
+    }
   },
   {
     "id": 44,
@@ -556,9 +904,19 @@
       "Deque"
     ],
     "answer": "Vector",
+    "askedBy": "Exam",
+    "difficulty": "Easy",
     "type": "MCQ",
-    "difficulty": "Medium",
-    "isObjective": true
+    "isObjective": true,
+    "explanation": {
+      "intro": "In Java, the Stack class is a subclass of Vector and inherits its methods.",
+      "points": [
+        "Stack is part of the java.util package.",
+        "It extends the Vector class and provides standard stack operations like push(), pop(), and peek().",
+        "Because it extends Vector, Stack is synchronized, which can make it slower compared to modern alternatives like Deque."
+      ],
+      "code": "import java.util.*;\n\npublic class StackDemo {\n    public static void main(String[] args) {\n        Stack<Integer> stack = new Stack<>();\n        stack.push(10);\n        stack.push(20);\n        System.out.println(stack.pop()); // 20\n        System.out.println(stack.peek()); // 10\n    }\n}"
+    }
   },
   {
     "id": 45,
@@ -570,18 +928,61 @@
       "Marks method as temporary"
     ],
     "answer": "Prevents serialization of field",
-    "type": "MCQ",
+    "askedBy": "Certification",
     "difficulty": "Medium",
-    "isObjective": true
+    "type": "MCQ",
+    "isObjective": true,
+    "explanation": {
+      "intro": "The 'transient' keyword in Java is used to indicate that a variable should not be serialized when the object is persisted.",
+      "points": [
+        "Serialization ignores fields marked as transient.",
+        "Useful for sensitive information like passwords or large fields that should not be stored.",
+        "During deserialization, transient fields are initialized with their default values (e.g., null, 0, false)."
+      ],
+      "code": "import java.io.*;\n\nclass User implements Serializable {\n    private String username;\n    private transient String password; // will not be serialized\n\n    public User(String username, String password) {\n        this.username = username;\n        this.password = password;\n    }\n}\n\npublic class TransientDemo {\n    public static void main(String[] args) throws Exception {\n        User user = new User(\"Alice\", \"secret123\");\n        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(\"user.ser\"));\n        oos.writeObject(user);\n        oos.close();\n    }\n}"
+    }
   },
   {
     "id": 46,
     "question": "Explain difference between HashMap and Hashtable.",
     "options": [],
-    "answer": "Hashtable is synchronized and legacy (does not allow null keys/values). HashMap is unsynchronized, allows one null key and multiple null values, and generally preferred in single-threaded contexts.",
-    "type": "Interview",
+    "answer": "HashMap is non-synchronized, allows one null key and multiple null values, while Hashtable is synchronized, thread-safe, and does not allow null keys or values.",
+    "askedBy": "Interview",
     "difficulty": "Medium",
-    "isObjective": false
+    "type": "Interview",
+    "isObjective": false,
+    "explanation": {
+      "intro": "HashMap and Hashtable are both Map implementations in Java but have important differences in synchronization, null handling, and performance.",
+      "points": [
+        "HashMap is non-synchronized and hence faster, while Hashtable is synchronized and thread-safe.",
+        "HashMap allows one null key and multiple null values, Hashtable does not allow null keys or null values.",
+        "Introduced later, HashMap is part of Java 1.2 Collections Framework, while Hashtable is legacy (pre-1.2).",
+        "Iteration order is not guaranteed in both, but HashMap usually performs better in single-threaded scenarios."
+      ],
+      "code": "import java.util.*;\n\npublic class MapDemo {\n    public static void main(String[] args) {\n        HashMap<Integer, String> hashMap = new HashMap<>();\n        hashMap.put(1, \"Alice\");\n        hashMap.put(null, \"NullKey\"); // Allowed\n\n        Hashtable<Integer, String> hashtable = new Hashtable<>();\n        hashtable.put(1, \"Bob\");\n        // hashtable.put(null, \"NullKey\"); // Throws NullPointerException\n\n        System.out.println(\"HashMap: \" + hashMap);\n        System.out.println(\"Hashtable: \" + hashtable);\n    }\n}"
+    },
+    "differences": [
+      {
+        "keyword": "Thread Safety",
+        "ArrayList": "Not synchronized (faster, not thread-safe)",
+        "LinkedList": "Synchronized (thread-safe)"
+      },
+      {
+        "keyword": "Null Handling",
+        "ArrayList": "Allows one null key and multiple null values",
+        "LinkedList": "Does not allow null keys or null values"
+      },
+      {
+        "keyword": "Legacy",
+        "ArrayList": "Introduced in Java 1.2 (part of Collections Framework)",
+        "LinkedList": "Legacy class (pre-1.2)"
+      },
+      {
+        "keyword": "Performance",
+        "ArrayList": "Faster in single-threaded applications",
+        "LinkedList": "Slower due to synchronization overhead"
+      }
+    ]
   },
   {
     "id": 47,
@@ -593,9 +994,14 @@
       "java.framework"
     ],
     "answer": "java.util",
-    "type": "MCQ",
+    "askedBy": "Interview",
     "difficulty": "Easy",
-    "isObjective": true
+    "type": "MCQ",
+    "isObjective": true,
+    "explanation": {
+      "intro": "The Java Collections Framework provides a set of classes and interfaces to work with data structures like lists, sets, and maps.",
+      "details": "All core collection interfaces and classes (like List, Set, Map, HashMap, ArrayList, etc.) are part of the java.util package. You need to import java.util.* or the specific class to use them."
+    }
   },
   {
     "id": 48,
@@ -609,14 +1015,28 @@
     "answer": "Reference parent class object",
     "type": "MCQ",
     "difficulty": "Easy",
-    "isObjective": true
+    "isObjective": true,
+    "explanation": {
+      "intro": "The 'super' keyword in Java is used to refer to the immediate parent class object. It can be used to access parent class methods, constructors, or variables that are hidden or overridden in the subclass."
+    }
   },
   {
     "id": 49,
     "question": "Explain how synchronized keyword affects thread safety.",
     "options": [],
-    "answer": "synchronized enforces mutual exclusion, ensuring only one thread can execute the synchronized block or method at a time for the same lock, and also establishes happens-before relationships to guarantee visibility of changes across threads.",
-    "type": "Interview",
+    "answer": "The synchronized keyword ensures that only one thread can execute a block or method at a time for a given object, preventing race conditions and ensuring thread safety.",
+    "explanation": {
+      "points": [
+        "1. `synchronized` can be applied to methods or code blocks.",
+        "2. When a thread enters a synchronized method/block, it acquires a lock on the object (or class if static).",
+        "3. Other threads trying to access the same synchronized resource must wait until the lock is released.",
+        "4. Helps prevent inconsistent or corrupted data when multiple threads access shared resources.",
+        "5. Excessive synchronization can lead to performance issues or deadlocks if not used carefully."
+      ],
+      "code": "class Counter {\n    private int count = 0;\n\n    // synchronized method\n    public synchronized void increment() {\n        count++;\n    }\n\n    public int getCount() {\n        return count;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) throws InterruptedException {\n        Counter counter = new Counter();\n\n        Runnable task = () -> {\n            for (int i = 0; i < 1000; i++) {\n                counter.increment();\n            }\n        };\n\n        Thread t1 = new Thread(task);\n        Thread t2 = new Thread(task);\n\n        t1.start();\n        t2.start();\n\n        t1.join();\n        t2.join();\n\n        System.out.println(counter.getCount()); // Always 2000\n    }\n}",
+      "diagram": "```mermaid\nflowchart TD\n    A[Thread 1 wants to enter synchronized method] -->|Acquires Lock| B[Thread 1 executes method]\n    C[Thread 2 wants to enter synchronized method] -->|Waits for lock| B\n    B -->|Releases Lock| D[Thread 2 acquires lock and executes method]\n```"
+    },
+    "type":"Advance Concepts",
     "difficulty": "Medium",
     "isObjective": false
   },
@@ -632,6 +1052,15 @@
     "answer": "An interface with a single abstract method",
     "type": "MCQ",
     "difficulty": "Easy",
+    "explanation": {
+      "points": [
+        "1. A functional interface contains exactly one abstract method.",
+        "2. It can have multiple default or static methods alongside the single abstract method.",
+        "3. Functional interfaces are used as the target types for lambda expressions and method references in Java 8 and later.",
+        "4. The @FunctionalInterface annotation can be used to enforce the rule of having a single abstract method."
+      ],
+      "code": "import java.util.function.*;\n\n@FunctionalInterface\ninterface MyFunctionalInterface {\n    void performAction();\n\n    default void defaultMethod() {\n        System.out.println(\"Default method\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        MyFunctionalInterface lambda = () -> System.out.println(\"Action performed!\");\n        lambda.performAction();\n        lambda.defaultMethod();\n    }\n}"
+    },
     "isObjective": true
   },
   {
@@ -646,6 +1075,15 @@
     "answer": "String",
     "type": "MCQ",
     "difficulty": "Easy",
+    "explanation": {
+      "points": [
+        "1. Immutable objects cannot be changed once created.",
+        "2. In Java, `String` objects are immutable; any modification creates a new String object.",
+        "3. `StringBuilder` and `StringBuffer` are mutable, allowing modifications without creating new objects.",
+        "4. Immutability makes `String` objects thread-safe and suitable for use as keys in collections like HashMap."
+      ],
+      "code": "public class Main {\n    public static void main(String[] args) {\n        String str = \"Hello\";\n        String str2 = str.concat(\" World\");\n\n        System.out.println(str);  // Output: Hello\n        System.out.println(str2); // Output: Hello World\n    }\n}"
+    },
     "isObjective": true
   },
   {
@@ -655,6 +1093,18 @@
     "answer": "Method reference is a shorthand syntax for lambda expressions that refer to methods by name (e.g., Class::method), improving readability when a lambda merely calls an existing method.",
     "type": "Interview",
     "difficulty": "Medium",
+    "explanation": {
+      "points": [
+        "1. Method references provide a way to refer to a method without invoking it.",
+        "2. They are often used with functional interfaces like Runnable, Comparator, or custom ones.",
+        "3. Syntax types:",
+        "   - Static method reference: ClassName::staticMethodName",
+        "   - Instance method of particular object: instance::methodName",
+        "   - Instance method of an arbitrary object of a class: ClassName::methodName",
+        "   - Constructor reference: ClassName::new"
+      ],
+      "code": "// Using method reference with Runnable\npublic class Main {\n    public static void sayHello() {\n        System.out.println(\"Hello!\");\n    }\n\n    public static void main(String[] args) {\n        // Lambda version\n        Runnable r1 = () -> sayHello();\n        r1.run();\n\n        // Method reference version\n        Runnable r2 = Main::sayHello;\n        r2.run();\n    }\n}"
+    },
     "isObjective": false
   },
   {
@@ -664,6 +1114,16 @@
     "answer": "Use enum singleton, or use static holder pattern (Initialization-on-demand holder idiom), or double-checked locking with volatile instance to ensure thread safety.",
     "type": "Interview",
     "difficulty": "Hard",
+    "explanation": {
+      "intro": "A thread-safe singleton ensures only one instance of the class is created even in multithreaded environments.",
+      "points": [
+        "1. Use synchronized method to control access.",
+        "2. Use double-checked locking to reduce synchronization overhead.",
+        "3. Use static inner helper class for lazy initialization.",
+        "4. Enum-based singleton is inherently thread-safe and simple."
+      ],
+      "code": "// Thread-safe singleton using double-checked locking\npublic class Singleton {\n    private static volatile Singleton instance;\n\n    private Singleton() {\n        // private constructor\n    }\n\n    public static Singleton getInstance() {\n        if (instance == null) {\n            synchronized (Singleton.class) {\n                if (instance == null) {\n                    instance = new Singleton();\n                }\n            }\n        }\n        return instance;\n    }\n}\n\n// Enum-based singleton\npublic enum SingletonEnum {\n    INSTANCE;\n    public void doSomething() {\n        System.out.println(\"Doing something...\");\n    }\n}"
+    },
     "isObjective": false
   },
   {
@@ -678,6 +1138,15 @@
     "answer": "Queue",
     "type": "MCQ",
     "difficulty": "Easy",
+    "explanation": {
+      "points": [
+        "FIFO stands for First-In-First-Out, meaning elements are processed in the order they were added.",
+        "Queue interface in Java provides methods like add(), poll(), and peek() to manage FIFO order.",
+        "LinkedList can also implement Queue, but Queue interface explicitly represents FIFO behavior.",
+        "Stack uses LIFO (Last-In-First-Out) order, so it's not suitable for FIFO."
+      ],
+      "code": "// Using Java Queue for FIFO\nimport java.util.Queue;\nimport java.util.LinkedList;\n\npublic class FifoExample {\n    public static void main(String[] args) {\n        Queue<String> queue = new LinkedList<>();\n        queue.add(\"First\");\n        queue.add(\"Second\");\n        queue.add(\"Third\");\n\n        while(!queue.isEmpty()) {\n            System.out.println(queue.poll()); // Prints in FIFO order\n        }\n    }\n}"
+    },
     "isObjective": true
   },
   {
@@ -692,6 +1161,14 @@
     "answer": "Generics inference for constructors",
     "type": "MCQ",
     "difficulty": "Medium",
+    "explanation": {
+      "points": [
+        "Introduced in Java 7 to simplify generic code.",
+        "Allows the compiler to infer the type parameters of a generic class from the context.",
+        "Reduces code verbosity by avoiding repetitive type declarations."
+      ],
+      "code": "// Without diamond operator\nMap<String, Integer> map = new HashMap<String, Integer>();\n\n// With diamond operator\nMap<String, Integer> map = new HashMap<>();"
+    },
     "isObjective": true
   },
   {
@@ -701,6 +1178,15 @@
     "answer": "Happens-before is a relation that defines ordering guarantees in the Java Memory Model: if one action happens-before another, then effects of the first are visible to the second; used to reason about concurrency and synchronization.",
     "type": "Interview",
     "difficulty": "Hard",
+    "explanation": {
+      "intro": "'Happens-before' is known as a principle in the Java Memory Model that defines the order of execution and visibility of memory operations in multithreaded programs. If one action happens-before another, then the first is visible and ordered before the second.",
+      "points": [
+        "Ensures memory consistency in multithreaded environments.",
+        "If Thread A writes to a variable and Thread B reads it, a happens-before relationship guarantees Thread B sees the value written by Thread A.",
+        "Common examples include: synchronization blocks, volatile variables, and thread start/join operations."
+      ],
+      "diagram": "graph LR\nA[Thread A writes variable X] -->|happens-before| B[Thread B reads variable X]"
+    },
     "isObjective": false
   },
   {
@@ -715,6 +1201,15 @@
     "answer": "Load and initialize class by name at runtime",
     "type": "MCQ",
     "difficulty": "Medium",
+    "explanation": {
+      "points": [
+        "Dynamically loads a class at runtime using its fully qualified name.",
+        "Triggers static block execution of the class.",
+        "Commonly used in JDBC to load database drivers: Class.forName(\"com.mysql.cj.jdbc.Driver\");",
+        "Helps in reflection and dynamic class loading."
+      ],
+      "code": "try {\n    Class.forName(\"com.mysql.cj.jdbc.Driver\");\n    System.out.println(\"Driver loaded successfully\");\n} catch (ClassNotFoundException e) {\n    e.printStackTrace();\n}"
+    },
     "isObjective": true
   },
   {
@@ -729,6 +1224,15 @@
     "answer": "Stack",
     "type": "MCQ",
     "difficulty": "Medium",
+    "explanation": {
+      "points": [
+        "The Stack memory area stores frames for each method invocation.",
+        "Each frame contains local variables, operand stack, and references to runtime constant pool.",
+        "Stack memory is thread-private; each thread has its own stack.",
+        "Helps in method execution and return handling."
+      ],
+      "diagram": "mermaid\nflowchart TD\n    Thread --> Stack[Method Stack]\n    Stack --> Frame1[Frame for Method A]\n    Stack --> Frame2[Frame for Method B]\n    Frame1 --> LocalVarsA[Local Variables]\n    Frame1 --> OperandStackA[Operand Stack]\n    Frame2 --> LocalVarsB[Local Variables]\n    Frame2 --> OperandStackB[Operand Stack]"
+    },
     "isObjective": true
   },
   {
@@ -738,6 +1242,16 @@
     "answer": "Tail recursion is when a function's final action is a call to itself. Java does not guarantee tail-call optimization, so deep recursion may lead to stack overflow.",
     "type": "Interview",
     "difficulty": "Medium",
+    "explanation": {
+      "points": [
+        "Tail recursion is a type of recursion where the recursive call is the **last operation** in the function.",
+        "No additional work is done after the recursive call returns.",
+        "Tail-recursive functions can be optimized by the compiler/interpreter to reuse the current function's stack frame, preventing stack overflow.",
+        "Java **does not perform tail call optimization**, so deep tail recursion may still lead to `StackOverflowError`."
+      ],
+      "code": "```java\n// Example of tail recursion in Java\npublic class TailRecursion {\n    static int factorial(int n, int result) {\n        if (n == 0) return result;\n        return factorial(n - 1, n * result); // tail recursive call\n    }\n\n    public static void main(String[] args) {\n        System.out.println(factorial(5, 1)); // Output: 120\n    }\n}\n```",
+      "diagram": "mermaid\nflowchart TD\n    Start[Start: factorial(n=5, result=1)] --> Call1[factorial(4, 5*1)]\n    Call1 --> Call2[factorial(3, 4*5)]\n    Call2 --> Call3[factorial(2, 3*20)]\n    Call3 --> Call4[factorial(1, 2*60)]\n    Call4 --> Call5[factorial(0, 120)]\n    Call5 --> End[Return 120]"
+    },
     "isObjective": false
   },
   {
@@ -752,6 +1266,15 @@
     "answer": "RuntimeException",
     "type": "MCQ",
     "difficulty": "Medium",
+    "explanation": {
+      "points": [
+        "Unchecked exceptions are exceptions that **do not need to be declared in a method's `throws` clause**.",
+        "They are subclasses of **RuntimeException**.",
+        "Examples include `NullPointerException`, `ArrayIndexOutOfBoundsException`, `ArithmeticException`.",
+        "Checked exceptions, in contrast, must extend `Exception` (but not `RuntimeException`) and be declared or handled."
+      ],
+      "diagram": "mermaid\nclassDiagram\n    Throwable <|-- Exception\n    Throwable <|-- Error\n    Exception <|-- RuntimeException\n    RuntimeException <|-- NullPointerException\n    RuntimeException <|-- ArithmeticException"
+    },
     "isObjective": true
   },
   {
@@ -761,6 +1284,15 @@
     "answer": "Enums provide type-safe constants with methods and fields, implicit static final instances, good readability, and support for switch-case and serialization with controlled instances.",
     "type": "Interview",
     "difficulty": "Medium",
+    "explanation": {
+      "points": [
+        "Enums represent a **fixed set of constants**, improving code readability.",
+        "They provide **type safety**, preventing invalid values.",
+        "Enums can have **fields, methods, and constructors**, making them more powerful than simple constants.",
+        "They can be used in **switch statements** for cleaner logic."
+      ],
+      "code": "enum Day {\n    MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY;\n}\n\nDay today = Day.MONDAY;\nif (today == Day.MONDAY) {\n    System.out.println(\"Start of the work week!\");\n}"
+    },
     "isObjective": false
   },
   {
@@ -775,6 +1307,14 @@
     "answer": "start()",
     "type": "MCQ",
     "difficulty": "Easy",
+    "explanation": {
+      "points": [
+        "The `start()` method **creates a new thread** and calls the `run()` method internally.",
+        "Calling `run()` directly **does not start a new thread**; it executes in the current thread.",
+        "Always use `start()` to execute code concurrently in a separate thread."
+      ],
+      "code": "class MyThread extends Thread {\n    public void run() {\n        System.out.println(\"Thread is running\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        MyThread t = new MyThread();\n        t.start(); // Correct way to start a thread\n    }\n}"
+    },
     "isObjective": true
   },
   {
@@ -789,6 +1329,15 @@
     "answer": "Thread-safe Map with lock stripping",
     "type": "MCQ",
     "difficulty": "Medium",
+    "explanation": {
+      "points": [
+        "ConcurrentHashMap is a thread-safe variant of HashMap.",
+        "It allows **concurrent read and write operations** without locking the entire map.",
+        "It uses **bucket-level locking (or segments)** to minimize contention.",
+        "Ideal for **high-concurrency scenarios** where multiple threads access and modify the map."
+      ],
+      "code": "import java.util.concurrent.ConcurrentHashMap;\n\npublic class Main {\n    public static void main(String[] args) {\n        ConcurrentHashMap<String, Integer> map = new ConcurrentHashMap<>();\n        map.put(\"A\", 1);\n        map.put(\"B\", 2);\n\n        System.out.println(map.get(\"A\")); // 1\n    }\n}"
+    },
     "isObjective": true
   },
   {
@@ -796,7 +1345,25 @@
     "question": "Explain difference between stack and heap memory in JVM.",
     "options": [],
     "answer": "Stack stores method frames and local variables with LIFO lifetimes, heap stores objects and is garbage-collected; stack is thread-local and faster, heap is shared across threads.",
-    "type": "Interview",
+    "type": "Advance Concepts",
+    "explanation": {
+      "points": [
+        "**Stack Memory:**",
+        "1. Stores **method frames, local variables, and references**.",
+        "2. **LIFO (Last In First Out)** structure.",
+        "3. Automatically managed; memory is freed when method call ends.",
+        "4. Thread-specific (each thread has its own stack).",
+        "5. Faster access.",
+        
+        "**Heap Memory:**",
+        "1. Stores **objects and class instances**.",
+        "2. Shared among all threads.",
+        "3. Managed by **Garbage Collector**.",
+        "4. Slower access compared to stack.",
+        "5. Dynamic memory allocation; size can grow as needed."
+      ],
+      "diagram": "mermaid\nflowchart LR\n    A[Stack Memory] --> B[Local variables & Method calls]\n    C[Heap Memory] --> D[Objects & Instances]\n    B -. Thread-specific .-> E[Each thread has its own stack]\n    D -. Shared across threads .-> F[Accessible by all threads]"
+    },
     "difficulty": "Medium",
     "isObjective": false
   },
@@ -807,6 +1374,15 @@
     "answer": "A WeakReference allows referenced object to be reclaimed by GC when only weak references exist; often used in caches to allow memory-sensitive caching.",
     "type": "Interview",
     "difficulty": "Hard",
+    "explanation": {
+      "points": [
+        "A **WeakReference** allows the referenced object to be **garbage collected** if there are no strong references to it.",
+        "Useful for implementing **caches or mappings** that should not prevent memory from being reclaimed.",
+        "Unlike strong references, weak references **do not prevent GC** from collecting the object.",
+        "Part of `java.lang.ref` package."
+      ],
+      "code": "import java.lang.ref.WeakReference;\n\npublic class WeakRefExample {\n    public static void main(String[] args) {\n        String str = new String(\"Hello\");\n        WeakReference<String> weakRef = new WeakReference<>(str);\n\n        System.out.println(\"Before nulling strong ref: \" + weakRef.get());\n        str = null;\n        System.gc(); // Suggest garbage collection\n\n        System.out.println(\"After GC: \" + weakRef.get()); // May print null if GC collected it\n    }\n}"
+    },
     "isObjective": false
   },
   {
@@ -821,6 +1397,14 @@
     "answer": "map",
     "type": "MCQ",
     "difficulty": "Medium",
+    "explanation": {
+      "points": [
+        "In Java Streams, **intermediate operations** like `map()`, `filter()`, and `sorted()` are **lazy**.",
+        "Lazy means these operations **are not executed until a terminal operation** is invoked.",
+        "Terminal operations like `collect()`, `forEach()`, or `count()` **trigger the processing** of the stream."
+      ],
+      "code": "import java.util.stream.Stream;\n\npublic class StreamLazyExample {\n    public static void main(String[] args) {\n        Stream<Integer> stream = Stream.of(1, 2, 3, 4)\n                                       .map(i -> {\n                                           System.out.println(\"Mapping: \" + i);\n                                           return i * 2;\n                                       });\n\n        System.out.println(\"Before terminal operation\");\n        stream.collect(java.util.stream.Collectors.toList()); // Trigger execution\n    }\n}"
+    },
     "isObjective": true
   },
   {
@@ -830,6 +1414,15 @@
     "answer": "Violating the equals-hashCode contract may cause incorrect behavior in hash-based collections (HashMap/HashSet) because equal objects must have same hashCode; failing to override leads to inconsistent lookup.",
     "type": "Interview",
     "difficulty": "Medium",
+    "explanation": {
+      "intro": "Objects may behave incorrectly in hash-based collections like HashMap or HashSet",
+      "points": [
+        "In Java, **hashCode() and equals() must be consistent**: if two objects are equal according to `equals()`, they must have the same `hashCode()`.",
+        "If `equals()` is overridden but `hashCode()` is not, objects may appear equal but reside in different hash buckets in hash-based collections.",
+        "This can cause **unexpected behavior** in collections like `HashMap`, `HashSet`, or `Hashtable`."
+      ],
+      "code": "import java.util.*;\n\nclass Person {\n    String name;\n    Person(String name) { this.name = name; }\n\n    @Override\n    public boolean equals(Object o) {\n        if (this == o) return true;\n        if (!(o instanceof Person)) return false;\n        Person p = (Person) o;\n        return name.equals(p.name);\n    }\n    // hashCode() not overridden\n}\n\npublic class Test {\n    public static void main(String[] args) {\n        Set<Person> set = new HashSet<>();\n        set.add(new Person(\"Alice\"));\n        System.out.println(set.contains(new Person(\"Alice\"))); // Might print false\n    }\n}"
+    },
     "isObjective": false
   },
   {
@@ -844,6 +1437,14 @@
     "answer": "Java 8",
     "type": "MCQ",
     "difficulty": "Easy",
+    "explanation": {
+      "points": [
+        "The `java.time` package was introduced in **Java 8** as part of the new Date-Time API (JSR 310).",
+        "It provides immutable classes like `LocalDate`, `LocalTime`, `LocalDateTime`, `ZonedDateTime` for handling date and time in a thread-safe way.",
+        "It replaces the old `java.util.Date` and `java.util.Calendar` classes which were mutable and error-prone."
+      ],
+      "code": "import java.time.*;\n\npublic class DateTimeExample {\n    public static void main(String[] args) {\n        LocalDate date = LocalDate.now();\n        LocalTime time = LocalTime.now();\n        LocalDateTime dateTime = LocalDateTime.now();\n\n        System.out.println(\"Date: \" + date);\n        System.out.println(\"Time: \" + time);\n        System.out.println(\"DateTime: \" + dateTime);\n    }\n}"
+    },
     "isObjective": true
   },
   {
@@ -856,6 +1457,14 @@
       "ExecutorService.create(n)"
     ],
     "answer": "Executors.newFixedThreadPool(n)",
+    "explanation": {
+      "points": [
+        "A fixed thread pool is a pool of threads with a fixed number of threads that are reused to execute tasks.",
+        "Using a fixed thread pool helps in managing system resources efficiently and prevents creating too many threads.",
+        "The `Executors` utility class provides factory methods to create different types of thread pools, including fixed thread pools."
+      ],
+      "code": "import java.util.concurrent.*;\n\npublic class FixedThreadPoolExample {\n    public static void main(String[] args) {\n        ExecutorService executor = Executors.newFixedThreadPool(3); // Pool of 3 threads\n\n        for (int i = 1; i <= 5; i++) {\n            int taskId = i;\n            executor.submit(() -> {\n                System.out.println(\"Executing task \" + taskId + \" by \" + Thread.currentThread().getName());\n            });\n        }\n\n        executor.shutdown();\n    }\n}"
+    },
     "type": "MCQ",
     "difficulty": "Medium",
     "isObjective": true
@@ -865,8 +1474,25 @@
     "question": "Explain memory leak causes in Java and how to detect them.",
     "options": [],
     "answer": "Memory leaks occur when references to unused objects remain reachable preventing GC (static collections, listeners, caches). Detect via profilers (VisualVM, YourKit), heap dumps, and monitoring memory usage and GC logs.",
-    "type": "Interview",
+    "type": "Advance Concepts",
     "difficulty": "Hard",
+    "explanation": {
+      "intro": "Memory leaks in Java occur when objects are no longer needed but still referenced, preventing the garbage collector from reclaiming memory. Common causes include static references, unclosed resources, listeners, or caches holding references.",
+      "points": [
+        "Memory leaks happen when objects that are no longer used are still reachable through references.",
+        "Common causes:",
+        "1. **Static references** holding objects longer than necessary.",
+        "2. **Unclosed I/O streams, connections, or files**.",
+        "3. **Event listeners or callbacks** that are not removed.",
+        "4. **Large caches** without eviction strategies.",
+        "Detection methods:",
+        "1. **Profiling tools**: VisualVM, JProfiler, YourKit.",
+        "2. **Heap dumps**: Analyze with Eclipse MAT or similar tools.",
+        "3. **Monitoring GC logs**: Identify memory growth patterns.",
+        "4. **Unit tests with memory assertions**: Detect unintentional retention."
+      ],
+      "diagram": "graph LR\nA[Application Objects] --> B{Garbage Collector}\nB --> C[Heap Memory]\nD[Leaked Objects] -.-> C\nnote right of D: Objects still referenced and not collected"
+    },
     "isObjective": false
   },
   {
@@ -879,6 +1505,16 @@
       "depends"
     ],
     "answer": "false",
+    "explanation": {
+      "intro": "In Java, the '==' operator compares references, not content. String literals are interned, whereas 'new String()' creates a new object on the heap.",
+      "points": [
+        "s points to the string literal \"hello\" in the string pool.",
+        "t points to a new String object created on the heap with the same content.",
+        "'s == t' compares the references, which are different, so it returns false.",
+        "To compare content, use 's.equals(t)', which would return true."
+      ],
+      "code": "public class StringTest {\n    public static void main(String[] args) {\n        String s = \"hello\";\n        String t = new String(\"hello\");\n        System.out.println(s == t);   // false\n        System.out.println(s.equals(t)); // true\n    }\n}"
+    },
     "type": "MCQ",
     "difficulty": "Easy",
     "isObjective": true
@@ -888,8 +1524,18 @@
     "question": "What is method handle (java.lang.invoke.MethodHandle)?",
     "options": [],
     "answer": "MethodHandle is a typed, directly executable reference to underlying methods, constructors, or fields used by invokedynamic and advanced dynamic language support.",
-    "type": "Interview",
+    "type": "Advance Concepts",
     "difficulty": "Hard",
+    "explanation": {
+      "intro": "MethodHandle provides a way to invoke methods dynamically with type safety and better performance than traditional reflection.",
+      "points": [
+        "Represents a reference to a method, constructor, or field.",
+        "Supports dynamic method invocation with exact type checking.",
+        "Often used in frameworks and dynamic language support on the JVM.",
+        "Can be obtained via MethodHandles.lookup() methods."
+      ],
+      "code": "import java.lang.invoke.MethodHandle;\nimport java.lang.invoke.MethodHandles;\nimport java.lang.invoke.MethodType;\n\npublic class MethodHandleExample {\n    public static void hello(String name) {\n        System.out.println(\"Hello, \" + name);\n    }\n\n    public static void main(String[] args) throws Throwable {\n        MethodHandles.Lookup lookup = MethodHandles.lookup();\n        MethodType type = MethodType.methodType(void.class, String.class);\n        MethodHandle mh = lookup.findStatic(MethodHandleExample.class, \"hello\", type);\n        mh.invokeExact(\"World\"); // Prints: Hello, World\n    }\n}"
+    },
     "isObjective": false
   },
   {
@@ -904,6 +1550,16 @@
     "answer": "protected",
     "type": "MCQ",
     "difficulty": "Easy",
+    "explanation": {
+      "intro": "In Java, access modifiers control the visibility of classes, methods, and fields. The `protected` modifier allows visibility to subclasses and other classes in the same package.",
+      "points": [
+        "private → visible only within the same class",
+        "default (no modifier) → visible within the same package",
+        "protected → visible in the same package and to subclasses even if in different packages",
+        "public → visible everywhere"
+      ],
+      "code": "package example;\n\nclass Parent {\n    protected void showMessage() {\n        System.out.println(\"Hello from protected method\");\n    }\n}\n\nclass Child extends Parent {\n    void test() {\n        showMessage(); // Accessible because it's protected\n    }\n}"
+    },
     "isObjective": true
   },
   {
@@ -918,14 +1574,32 @@
     "answer": "Streams and Lambdas",
     "type": "MCQ",
     "difficulty": "Easy",
+    "explanation": {
+      "intro": "Java 8 introduced functional programming features, allowing developers to write more concise and expressive code using functions as first-class citizens.",
+      "points": [
+        "Lambda expressions: provide a clear and concise way to represent a single method interface using an expression.",
+        "Streams API: allows processing collections in a functional style, supporting operations like map, filter, and reduce.",
+        "Encourages immutability and stateless functions, which are core principles of functional programming."
+      ],
+      "code": "import java.util.*;\n\npublic class FunctionalExample {\n    public static void main(String[] args) {\n        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);\n        // Using Stream and Lambda to filter and print even numbers\n        numbers.stream()\n               .filter(n -> n % 2 == 0)\n               .forEach(System.out::println);\n    }\n}"
+    },
     "isObjective": true
   },
   {
     "id": 75,
     "question": "Explain copy-on-write collections and where to use them.",
     "options": [],
-    "answer": "CopyOnWriteArrayList duplicates internal array on writes, providing snapshot-style iteration without locking. Useful for mostly-read scenarios with infrequent writes (listeners registries).",
+    "answer": "CopyOnWriteArrayList duplicates internal array on writes, providing snapshot-style iteration without locking. Useful for mostly-read scenarios with infrequent writes (listeners registries). Copy-on-write collections (like CopyOnWriteArrayList and CopyOnWriteArraySet) create a new copy of the underlying array whenever a modification (add, remove, etc.) is made. Iterators on these collections operate on a stable snapshot and do not throw ConcurrentModificationException.",
     "type": "Interview",
+    "explanation": {
+      "intro": "Copy-on-write collections are thread-safe variants of collections in Java that optimize read-heavy scenarios by creating a new copy of the data structure upon modification.",
+      "points": [
+        "Safe iteration: Iterators never throw ConcurrentModificationException because they work on a snapshot.",
+        "High read, low write: Best suited when reads are frequent and modifications are rare.",
+        "Thread safety: Multiple threads can read concurrently without synchronization, while writes are safely handled via copying."
+      ],
+      "code": "import java.util.concurrent.CopyOnWriteArrayList;\n\npublic class CopyOnWriteExample {\n    public static void main(String[] args) {\n        CopyOnWriteArrayList<String> list = new CopyOnWriteArrayList<>();\n        list.add(\"A\");\n        list.add(\"B\");\n\n        for (String s : list) {\n            System.out.println(s);\n            list.add(\"C\"); // Safe, does not throw ConcurrentModificationException\n        }\n        System.out.println(\"Final List: \" + list);\n    }\n}"
+    },
     "difficulty": "Medium",
     "isObjective": false
   },
@@ -941,7 +1615,16 @@
     "answer": "Depends on platform",
     "type": "MCQ",
     "difficulty": "Medium",
-    "isObjective": true
+    "isObjective": true,
+    "explanation": {
+      "intro": "Java source files are by default encoded in UTF-8, which supports all Unicode characters. This ensures that source code can include international characters reliably.",
+      "points": [
+        "UTF-8 is the standard encoding for Java source files since Java 9.",
+        "Before Java 9, the default encoding could depend on the platform.",
+        "Using UTF-8 avoids issues with special characters and ensures portability."
+      ],
+      "code": "public class EncodingExample {\n    public static void main(String[] args) {\n        String text = \"こんにちは\"; // Japanese greeting\n        System.out.println(text);\n    }\n}"
+    }
   },
   {
     "id": 77,
@@ -950,7 +1633,16 @@
     "answer": "Use final fields set in constructor, volatile references, synchronized blocks, or proper concurrent collections to ensure visibility and safe publication.",
     "type": "Interview",
     "difficulty": "Hard",
-    "isObjective": false
+    "isObjective": false,
+    "explanation": {
+      "intro": "Safe publication ensures that an object constructed by one thread is visible correctly to other threads without seeing partially constructed state.",
+      "points": [
+        "Declaring a reference as volatile ensures visibility of the object to other threads.",
+        "Using final fields guarantees that once the constructor finishes, other threads see correctly initialized fields.",
+        "Publishing through a synchronized block ensures memory visibility due to the happens-before relationship."
+      ],
+      "code": "class SafePublish {\n    private final int value;\n    private static SafePublish instance;\n\n    public SafePublish(int value) {\n        this.value = value;\n    }\n\n    public static synchronized void publish(SafePublish obj) {\n        instance = obj;\n    }\n\n    public static SafePublish getInstance() {\n        return instance;\n    }\n}"
+    }
   },
   {
     "id": 78,
@@ -964,7 +1656,11 @@
     "answer": "ArrayIndexOutOfBoundsException",
     "type": "MCQ",
     "difficulty": "Easy",
-    "isObjective": true
+    "isObjective": true,
+    "explanation": {
+      "intro": "When you try to access an array element with an index that is negative or greater than or equal to the array size, Java throws a runtime exception to indicate invalid access.",
+      "code": "public class ArrayExample {\n    public static void main(String[] args) {\n        int[] arr = {1, 2, 3};\n        System.out.println(arr[3]); // Throws ArrayIndexOutOfBoundsException\n    }\n}"
+    }
   },
   {
     "id": 79,
@@ -978,7 +1674,11 @@
     "answer": "Synchronized list wrapper",
     "type": "MCQ",
     "difficulty": "Medium",
-    "isObjective": true
+    "isObjective": true,
+    "explanation": {
+      "intro": "The `Collections.synchronizedList()` method wraps an existing list with a synchronized (thread-safe) wrapper. This ensures that all access to the list is synchronized to prevent concurrent modification issues.",
+      "code": "import java.util.*;\n\npublic class SynchronizedListExample {\n    public static void main(String[] args) {\n        List<String> list = new ArrayList<>();\n        List<String> syncList = Collections.synchronizedList(list);\n        syncList.add(\"Hello\");\n        syncList.add(\"World\");\n        \n        synchronized(syncList) { // Required for iteration\n            for(String s : syncList) {\n                System.out.println(s);\n            }\n        }\n    }\n}"
+    }
   },
   {
     "id": 80,
@@ -987,7 +1687,17 @@
     "answer": "volatile ensures visibility of updates to variables across threads but doesn't provide atomic compound operations. Atomic classes (AtomicInteger etc.) provide atomic read-modify-write operations without locks.",
     "type": "Interview",
     "difficulty": "Medium",
-    "isObjective": false
+    "isObjective": false,
+    "explanation": {
+      "intro": "Both `volatile` and atomic variables are used in Java to handle concurrency, but they serve different purposes and provide different guarantees.",
+      "points": [
+          "***Volatile***",
+          " - The `volatile` keyword ensures that reads and writes to a variable are directly from/to main memory, making it visible to all threads immediately. It guarantees visibility but **does not provide atomicity** for compound operations like increment.",  
+          "***Atomic Variables***",
+          " - Atomic variables (from `java.util.concurrent.atomic`, e.g., `AtomicInteger`) provide **atomic operations** like increment, compare-and-set, and add. They ensure both visibility and atomicity without using explicit synchronization."
+      ],
+      "code": "import java.util.concurrent.atomic.AtomicInteger;\n\npublic class VolatileVsAtomic {\n\n    static volatile int volatileCounter = 0;\n    static AtomicInteger atomicCounter = new AtomicInteger(0);\n\n    public static void main(String[] args) throws InterruptedException {\n        // Using volatile\n        Thread t1 = new Thread(() -> volatileCounter++);\n        Thread t2 = new Thread(() -> volatileCounter++);\n        t1.start(); t2.start(); t1.join(); t2.join();\n        System.out.println(\"Volatile Counter: \" + volatileCounter); // Might not be 2\n\n        // Using AtomicInteger\n        Thread t3 = new Thread(() -> atomicCounter.incrementAndGet());\n        Thread t4 = new Thread(() -> atomicCounter.incrementAndGet());\n        t3.start(); t4.start(); t3.join(); t4.join();\n        System.out.println(\"Atomic Counter: \" + atomicCounter.get()); // Always 2\n    }\n}"
+    }
   },
   {
     "id": 81,
@@ -1001,7 +1711,15 @@
     "answer": "@Deprecated",
     "type": "MCQ",
     "difficulty": "Easy",
-    "isObjective": true
+    "isObjective": true,
+    "explanation": {
+      "intro": "In Java, the `@Deprecated` annotation is used to indicate that a class, method, or field should no longer be used. It serves as a warning to developers that the element may be removed in future versions.",
+      "points": [
+        "Helps maintain backward compatibility while signaling that a feature is obsolete.",
+        "Can be used together with Javadoc `@deprecated` tag to provide more information."
+      ],
+      "code": "public class Example {\n    @Deprecated\n    public void oldMethod() {\n        System.out.println(\"This method is deprecated\");\n    }\n\n    public void newMethod() {\n        System.out.println(\"Use this method instead\");\n    }\n}"
+    }
   },
   {
     "id": 82,
@@ -1015,7 +1733,16 @@
     "answer": "Both 1 and 3",
     "type": "MCQ",
     "difficulty": "Medium",
-    "isObjective": true
+    "isObjective": true,
+    "explanation": {
+      "intro": "In Java 9 and later, you can create immutable maps either using the convenient `Map.of()` method or by wrapping a mutable map with `Collections.unmodifiableMap()`.",
+      "points": [
+        "`Map.of(k,v)` creates a small immutable map directly.",
+        "`Collections.unmodifiableMap()` wraps an existing map to make it read-only.",
+        "Immutable maps do not allow addition, removal, or modification of entries."
+      ],
+      "code": "import java.util.*;\n\npublic class ImmutableMapExample {\n    public static void main(String[] args) {\n        Map<String, Integer> map1 = Map.of(\"a\", 1, \"b\", 2);\n        Map<String, Integer> mutableMap = new HashMap<>();\n        mutableMap.put(\"x\", 10);\n        Map<String, Integer> map2 = Collections.unmodifiableMap(mutableMap);\n\n        System.out.println(map1);\n        System.out.println(map2);\n    }\n}"
+    }
   },
   {
     "id": 83,
@@ -1024,7 +1751,18 @@
     "answer": "module-info.java declares module name and exports/opens packages, specifies module dependencies (requires) enabling strong encapsulation and modular JDK usage in JPMS.",
     "type": "Interview",
     "difficulty": "Hard",
-    "isObjective": false
+    "isObjective": false,
+    "explanation": {
+      "intro": "Java 9 introduced the Java Platform Module System (JPMS) to modularize applications. The `module-info.java` file is the central descriptor for a module. The `module-info.java` file defines a module in Java 9 and later. It specifies which packages are exported to other modules and which modules are required. This helps in modularizing large applications and controlling access between modules.",
+      "points": [
+        "Declares a module using `module <module-name> { ... }`.",
+        "Specifies required modules using `requires` keyword.",
+        "Specifies packages to expose publicly using `exports` keyword.",
+        "Enhances encapsulation and improves maintainability.",
+        "Helps the JVM detect missing dependencies at compile and runtime."
+      ],
+      "code": "module com.example.app {\n    requires java.sql;\n    requires java.logging;\n    exports com.example.app.service;\n    exports com.example.app.model;\n}"
+    }
   },
   {
     "id": 84,
@@ -1038,7 +1776,16 @@
     "answer": "Integer.valueOf(primitive)",
     "type": "MCQ",
     "difficulty": "Easy",
-    "isObjective": true
+    "isObjective": true,
+    "explanation": {
+      "intro": "Autoboxing is the automatic conversion of primitive types to their corresponding wrapper classes in Java.",
+      "points": [
+        "Converts `int` to `Integer` automatically when needed.",
+        "`Integer.valueOf(int)` is preferred over `new Integer(int)` as it may cache values for better performance.",
+        "Helps in using primitives in collections and generic types which require objects."
+      ],
+      "code": "int num = 5;\nInteger boxedNum = num; // Autoboxing using Integer.valueOf internally\nInteger another = Integer.valueOf(num);"
+    }
   },
   {
     "id": 85,
@@ -1052,7 +1799,16 @@
     "answer": "O(1)",
     "type": "MCQ",
     "difficulty": "Medium",
-    "isObjective": true
+    "isObjective": true,
+    "explanation": {
+      "intro": "HashMap in Java provides fast access to elements based on keys using hashing.",
+      "points": [
+        "On average, both `get` and `put` operations take constant time, O(1), due to efficient hash-based indexing.",
+        "In rare cases of hash collisions, performance can degrade to O(n), but modern Java implementations use balanced trees for buckets, keeping average performance O(1).",
+        "Proper hashCode implementation is crucial for maintaining expected performance."
+      ],
+      "code": "Map<String, Integer> map = new HashMap<>();\nmap.put(\"one\", 1); // Average O(1)\nint value = map.get(\"one\"); // Average O(1)"
+    }
   },
   {
     "id": 86,
@@ -1061,7 +1817,17 @@
     "answer": "CompletableFuture provides a rich API for asynchronous computation, allowing chaining, combining, and handling results/errors without blocking, using callbacks and functional transformations.",
     "type": "Interview",
     "difficulty": "Medium",
-    "isObjective": false
+    "isObjective": false,
+    "explanation": {
+      "intro": "CompletableFuture is a class in Java 8+ that represents a future result of an asynchronous computation. It allows non-blocking, asynchronous execution of tasks, chaining multiple dependent tasks, and handling results or exceptions efficiently.",
+      "points": [
+        "Supports asynchronous execution without blocking the main thread.",
+        "Allows chaining of tasks using methods like `thenApply`, `thenAccept`, and `thenCompose`.",
+        "Supports combining multiple futures with methods like `allOf` and `anyOf`.",
+        "Provides robust exception handling with `exceptionally` and `handle` methods."
+      ],
+      "code": "CompletableFuture.supplyAsync(() -> {\n    // long running task\n    return 42;\n}).thenApply(result -> result * 2)\n  .thenAccept(System.out::println);"
+    }
   },
   {
     "id": 87,
@@ -1075,7 +1841,11 @@
     "answer": "implements",
     "type": "MCQ",
     "difficulty": "Easy",
-    "isObjective": true
+    "isObjective": true,
+    "explanation": {
+      "intro": "In Java, a class inherits from an interface using the `implements` keyword. Java 8 introduced default methods in interfaces, which allow classes implementing the interface to inherit method implementations directly without overriding them."
+    }
+
   },
   {
     "id": 88,
@@ -1084,7 +1854,10 @@
     "answer": "Split-brain occurs when cluster nodes lose communication and form partitions, leading to inconsistent state; handling requires quorum, coordination, or leader election strategies.",
     "type": "Interview",
     "difficulty": "Hard",
-    "isObjective": false
+    "isObjective": false,
+    "explanation": {
+      "intro": "In distributed systems or clusters, nodes communicate to maintain consistency. If a network failure splits the cluster, each partition may continue processing requests independently. Mechanisms like quorum-based decisions or cluster managers are used to avoid or resolve split-brain scenarios. Split-brain occurs in a cluster when network partitioning causes two or more parts of the cluster to operate independently, each thinking it is the only active cluster. This can lead to data inconsistency and conflicts."
+    }
   },
   {
     "id": 89,
@@ -1098,13 +1871,17 @@
     "answer": "Objects.equals(a,b)",
     "type": "MCQ",
     "difficulty": "Easy",
-    "isObjective": true
+    "isObjective": true,
+    "explanation": {
+      "intro": "Objects.equals(a, b) returns true if both a and b are null, or if a.equals(b) otherwise. This provides a null-safe way to compare two objects without risking a NullPointerException."
+    }
   },
   {
     "id": 90,
     "question": "What does 'boxing' and 'unboxing' refer to?",
     "options": [],
-    "answer": "Boxing converts primitives to wrapper objects; unboxing converts wrapper to primitive. Autoboxing/unboxing perform these conversions automatically.",
+    "answer": "Boxing refers to converting a primitive type into its corresponding wrapper class (e.g., int to Integer). Unboxing is converting a wrapper class back to its primitive type (e.g., Integer to int).",
+    "explanation": "In Java, boxing allows primitives to be treated as objects, which is useful in collections like List<Integer>. Unboxing automatically converts these wrapper objects back to primitives when needed for arithmetic or other operations.",
     "type": "Interview",
     "difficulty": "Easy",
     "isObjective": false
@@ -1121,7 +1898,10 @@
     "answer": "Use ForkJoinPool.commonPool() size system property or submit to custom ForkJoinPool",
     "type": "MCQ",
     "difficulty": "Hard",
-    "isObjective": true
+    "isObjective": true,
+    "explanation": {
+      "intro": "By default, parallelStream uses the common ForkJoinPool, whose parallelism level equals the number of available processors. You can limit parallelism by setting the system property `java.util.concurrent.ForkJoinPool.common.parallelism` or by executing the stream in a custom ForkJoinPool."
+    }
   },
   {
     "id": 92,
@@ -1130,7 +1910,10 @@
     "answer": "WeakHashMap uses weak references for keys; entries are removed when keys are no longer in ordinary use (garbage collected), useful for caches keyed by external objects.",
     "type": "Interview",
     "difficulty": "Medium",
-    "isObjective": false
+    "isObjective": false,
+    "explanation": {
+      "intro": "In a WeakHashMap, keys are stored as weak references. If a key is no longer referenced elsewhere, it can be garbage collected, and its entry will be automatically removed from the map. This is useful for caching scenarios where entries should not prevent key objects from being collected."
+    }
   },
   {
     "id": 93,
@@ -1144,7 +1927,10 @@
     "answer": "stream.toArray()",
     "type": "MCQ",
     "difficulty": "Medium",
-    "isObjective": true
+    "isObjective": true,
+    "explanation": {
+      "intro": "The `toArray()` method in the Stream API collects the elements of a Stream into an array. It can be used with or without a generator function, e.g., `Stream.of(1,2,3).toArray()` or `Stream.of(1,2,3).toArray(Integer[]::new)`."
+    }
   },
   {
     "id": 94,
@@ -1153,7 +1939,22 @@
     "answer": "Pros: flexibility, dynamic frameworks, dependency injection, testing tools. Cons: performance overhead, security risks, breaks encapsulation, brittle with refactoring.",
     "type": "Interview",
     "difficulty": "Medium",
-    "isObjective": false
+    "isObjective": false,
+    "explanation": {
+      "intro": "Reflection allows inspection and manipulation of classes, methods, fields, and constructors at runtime. It enables dynamic behavior, frameworks, and tools like dependency injection or serialization libraries to work without knowing classes at compile time.",
+      "pros": [
+        "Allows dynamic class loading and method invocation at runtime.",
+        "Enables frameworks and libraries to work generically (e.g., DI containers, ORMs).",
+        "Useful for debugging, testing, or building tools that inspect code."
+      ],
+      "cons": [
+        "Performance overhead compared to direct method calls.",
+        "Breaks encapsulation by accessing private fields/methods.",
+        "Can lead to runtime errors if used incorrectly (no compile-time checks).",
+        "Harder to maintain and debug."
+      ],
+      "code": "Class<?> cls = Class.forName(\"java.util.ArrayList\");\nMethod method = cls.getMethod(\"size\");\nObject obj = cls.getDeclaredConstructor().newInstance();\nSystem.out.println(method.invoke(obj));"
+    }
   },
   {
     "id": 95,
@@ -1167,7 +1968,10 @@
     "answer": "List",
     "type": "MCQ",
     "difficulty": "Easy",
-    "isObjective": true
+    "isObjective": true,
+    "explanation": {
+      "intro": "The `List` interface in Java represents an ordered collection (also known as a sequence). Lists allow duplicate elements and maintain the order in which elements are inserted. Common implementations include `ArrayList`, `LinkedList`, and `Vector`."
+    }
   },
   {
     "id": 96,
@@ -1181,7 +1985,11 @@
     "answer": "3",
     "type": "MCQ",
     "difficulty": "Easy",
-    "isObjective": true
+    "isObjective": true,
+    "explanation": {
+      "intro": "The `Math.round()` method rounds a floating-point value to the nearest long. For values exactly halfway between two integers (like 2.5), it rounds **up** to the nearest integer, so `Math.round(2.5)` returns `3`."
+    }
+
   },
   {
     "id": 97,
@@ -1195,7 +2003,10 @@
     "answer": "Files.lines(Paths.get(path))",
     "type": "MCQ",
     "difficulty": "Medium",
-    "isObjective": true
+    "isObjective": true,
+    "explanation": {
+      "intro": "In Java 8, `Files.lines(Paths.get(path))` provides a Stream of lines from a file, allowing efficient, lazy, and functional-style processing of file content. Example:\n\n```java\ntry (Stream<String> lines = Files.lines(Paths.get(\"file.txt\"))) {\n    lines.forEach(System.out::println);\n}\n```"
+    }
   },
   {
     "id": 98,
@@ -1204,6 +2015,20 @@
     "answer": "Escape analysis determines whether an object can be safely allocated on stack instead of heap by analyzing whether its reference escapes the method or thread; if not, JVM may optimize allocation and synchronization away.",
     "type": "Interview",
     "difficulty": "Hard",
+    "explanation": {
+      "intro": "Escape analysis is a technique used by the JVM to determine the scope of object references—whether an object can be accessed outside the method or thread where it is created. Based on this analysis, the JVM can optimize memory allocation, such as allocating objects on the stack instead of the heap, reducing garbage collection overhead. In the below code, `Point` may be allocated on the stack instead of the heap because it doesn’t escape the method.",
+      "points":[
+        "Escape analysis allows the JVM to perform optimizations like:",
+        "\n1. **Stack Allocation:** ",
+        "          If an object does not escape the method, it can be allocated on the stack.",
+        "\n2. **Synchronization Elimination:** ",
+        "          If an object is not shared between threads, locks can be removed.",
+        "\n3. **Scalar Replacement:** ",
+        "          Object fields can be replaced with individual variables."
+      
+      ],
+      "code": "\n\nExample:\n```java\npublic void compute() {\n    Point p = new Point(1, 2); // 'p' does not escape this method\n    System.out.println(p.x + p.y);\n}\n```\n"
+    },
     "isObjective": false
   },
   {
@@ -1218,8 +2043,12 @@
     "answer": "TreeSet",
     "type": "MCQ",
     "difficulty": "Medium",
-    "isObjective": true
-  },
+    "isObjective": true,
+    "explanation": {
+      "intro": "TreeSet is a sorted set implementation in Java that maintains elements in **natural ordering** (according to Comparable) or according to a **Comparator** provided at set creation. It does not allow duplicates and is part of the `java.util` package.\n\nExample:",
+      "code": "\n```java\nimport java.util.*;\n\nTreeSet<Integer> set = new TreeSet<>();\nset.add(5);\nset.add(2);\nset.add(8);\nSystem.out.println(set); // Output: [2, 5, 8]\n```\nYou can also provide a custom comparator:\n```java\nTreeSet<String> names = new TreeSet<>(Comparator.reverseOrder());\nnames.add(\"Alice\");\nnames.add(\"Bob\");\nSystem.out.println(names); // Output: [Bob, Alice]\n```"
+    }
+},
   {
     "id": 100,
     "question": "What are best practices to write thread-safe code in Java?",
@@ -1227,6 +2056,20 @@
     "answer": "Use immutable objects, prefer high-level concurrency utilities (java.util.concurrent), minimize shared mutable state, use proper synchronization, use concurrent collections, avoid deadlocks, and document thread-safety contracts.",
     "type": "Interview",
     "difficulty": "Hard",
+    "explanation": {
+      "intro": "To write thread-safe code in Java, follow these best practices:\n",
+      "points":[
+        "\n1. **Use immutable objects**: Immutable objects cannot be changed after creation, avoiding synchronization issues.",
+        "\n2. **Prefer high-level concurrency utilities**: Use classes from `java.util.concurrent` like `ConcurrentHashMap`, `CopyOnWriteArrayList`, `BlockingQueue`, and `ExecutorService`.",
+        "\n3. **Minimize synchronized blocks**: Synchronize only critical sections to reduce contention.",
+        "\n4. **Use volatile for shared variables**: Ensures visibility of changes across threads.",
+        "\n5. **Avoid shared mutable state**: Pass data via method parameters or local variables instead of shared fields.",
+        "\n6. **Use atomic classes**: Use `AtomicInteger`, `AtomicLong`, etc., for atomic operations without explicit synchronization.",
+        "\n7. **Prefer higher-level constructs over wait/notify**: Use `CountDownLatch`, `Semaphore`, `CyclicBarrier`, or `Lock` interfaces.",
+        "\n8. **Thread confinement**: Restrict object access to a single thread whenever possible.\n"
+      ],
+      "code": "\n```java\nimport java.util.concurrent.*;\n\nConcurrentHashMap<String, Integer> map = new ConcurrentHashMap<>();\nmap.put(\"A\", 1);\nmap.computeIfPresent(\"A\", (k,v) -> v + 1);\nSystem.out.println(map.get(\"A\")); // Thread-safe increment\n```"
+    },
     "isObjective": false
   }
 ]

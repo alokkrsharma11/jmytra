@@ -39,7 +39,7 @@ const ReactTutorial = () => {
 
   // Group questions by type
   const grouped = topics.reduce((acc, q) => {
-    const type = q.type || "General";
+    const type = q.type || "Advance Concepts";
     (acc[type] ||= []).push(q);
     return acc;
   }, {});
@@ -48,6 +48,7 @@ const ReactTutorial = () => {
 
   const handleChange = (_, newValue) => {
     setTabIndex(newValue);
+    setSidebarOpen(!sidebarOpen);
   };
 
   if (topics.length === 0) {
@@ -126,9 +127,11 @@ const ReactTutorial = () => {
           }}>
         {types.map((type, index) =>
           tabIndex === index && (
+            <>
+            <PageLayout title={`📘 ReactJS: ${type} Questions`}  sidebarOpen={{sidebarOpen}}/>
             <div className="container">
             <Box key={type} sx={{ mb: 4 }}>
-              <PageLayout title={`📘 ReactJS: ${type} Questions`} />
+              
               {grouped[type].map((topic, i) => (
                 <>
                 {topic.askedBy ? (
@@ -294,6 +297,7 @@ const ReactTutorial = () => {
               ))}
             </Box>
             </div>
+            </>
           )
         )}
       </Box>

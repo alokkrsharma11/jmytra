@@ -1,6 +1,7 @@
 [
   {
     "id": "database_(sql_&_mongodb)_1",
+    "type":"MCQ",
     "question": "Which SQL clause is used to filter rows?",
     "options": [
       "WHERE",
@@ -9,45 +10,46 @@
       "ORDER BY"
     ],
     "answer": "WHERE",
-    "type": "MCQ",
     "difficulty": "Easy",
     "isObjective": true,
     "explanation": {
-      "intro": "Explanation: Which SQL clause is used to filter rows?",
+      "intro": "The WHERE clause is used to filter records in SQL queries.",
       "points": [
-        "Correct answer: WHERE.",
-        "Key concept to remember related to the question."
+        "WHERE is applied before grouping and aggregation.",
+        "It restricts rows returned by the query based on a condition.",
+        "HAVING is used to filter groups, not individual rows."
       ]
     },
     "askedBy": [
-      "interview",
-      "practice"
-    ],
+      "quiz",
+      "interview"
+    ],  
     "technology": "Database (SQL & MongoDB)"
   },
   {
     "id": "database_(sql_&_mongodb)_2",
     "question": "Which normal form removes transitive dependency?",
     "options": [
-      "1NF",
-      "2NF",
-      "3NF",
-      "BCNF"
+      "First Normal Form (1NF)",
+      "Second Normal Form (2NF)",
+      "Third Normal Form (3NF)",
+      "Boyce-Codd Normal Form (BCNF)"
     ],
-    "answer": "3NF",
+    "answer": "Third Normal Form (3NF)",
     "type": "MCQ",
     "difficulty": "Medium",
     "isObjective": true,
     "explanation": {
-      "intro": "Explanation: Which normal form removes transitive dependency?",
+      "intro": "Third Normal Form (3NF) eliminates transitive dependencies in a database table.",
       "points": [
-        "Correct answer: 3NF.",
-        "Key concept to remember related to the question."
+        "A transitive dependency occurs when a non-prime attribute depends on another non-prime attribute rather than the primary key.",
+        "3NF ensures that every non-prime attribute is directly dependent on the primary key.",
+        "This reduces redundancy and helps maintain data integrity."
       ]
     },
     "askedBy": [
-      "interview",
-      "practice"
+      "quiz",
+      "interview"
     ],
     "technology": "Database (SQL & MongoDB)"
   },
@@ -65,17 +67,19 @@
     "difficulty": "Easy",
     "isObjective": true,
     "explanation": {
-      "intro": "Explanation: Which MongoDB command lists collections?",
+      "intro": "In MongoDB, you can list all collections in the current database using the `show collections` command.",
       "points": [
-        "Correct answer: show collections.",
-        "Key concept to remember related to the question."
+        "`show collections` lists all collection names in the currently selected database.",
+        "`db.collections()` is not a valid MongoDB shell command.",
+        "`listCollections()` is used with the `db.getCollectionInfos()` method in drivers, not directly in shell.",
+        "`db.show()` does not exist in MongoDB."
       ]
     },
     "askedBy": [
-      "interview",
-      "practice"
+      "quiz",
+      "interview"
     ],
-    "technology": "Database (SQL & MongoDB)"
+    "technology": "MongoDB"
   },
   {
     "id": "database_(sql_&_mongodb)_4",
@@ -91,17 +95,19 @@
     "difficulty": "Easy",
     "isObjective": true,
     "explanation": {
-      "intro": "Explanation: Which SQL statement is used to remove a table?",
+      "intro": "The SQL `DROP` statement is used to permanently remove a table from the database.",
       "points": [
-        "Correct answer: DROP.",
-        "Key concept to remember related to the question."
+        "`DROP TABLE table_name;` deletes the table and all its data and structure.",
+        "`DELETE` removes rows from a table but keeps the table structure.",
+        "`TRUNCATE` removes all rows but preserves the table structure.",
+        "`REMOVE` is not a valid SQL statement."
       ]
     },
     "askedBy": [
-      "interview",
-      "practice"
+      "quiz",
+      "interview"
     ],
-    "technology": "Database (SQL & MongoDB)"
+    "technology": "SQL"
   },
   {
     "id": "database_(sql_&_mongodb)_5",
@@ -117,230 +123,220 @@
     "difficulty": "Medium",
     "isObjective": true,
     "explanation": {
-      "intro": "Explanation: Which index type is used for text search in MongoDB?",
+      "intro": "MongoDB provides different index types for optimizing queries. The `Text` index is specifically designed for text search.",
       "points": [
-        "Correct answer: Text.",
-        "Key concept to remember related to the question."
+        "`Text` indexes allow efficient search on string content within documents.",
+        "`Hashed` indexes are used for sharding and equality matches.",
+        "`B-Tree` is a conceptual index structure; MongoDB uses B-Tree internally but it's not a user-defined index type.",
+        "`Geospatial` indexes are for location-based queries, like 2dsphere or 2d indexes."
       ]
     },
     "askedBy": [
-      "interview",
-      "practice"
+      "quiz",
+      "interview"
     ],
-    "technology": "Database (SQL & MongoDB)"
+    "technology": "MongoDB"
   },
   {
     "id": "database_(sql_&_mongodb)_6",
     "question": "Explain ACID properties in databases.",
     "options": [],
-    "answer": "Atomicity, Consistency, Isolation, Durability ensure reliable transactions; each property enforces correctness and recoverability.",
+    "answer": "ACID stands for Atomicity, Consistency, Isolation, Durability, which are properties that ensure reliable transaction processing in databases.",
     "type": "Interview",
     "difficulty": "Medium",
     "isObjective": false,
     "explanation": {
-      "intro": "Explanation: Explain ACID properties in databases.",
+      "intro": "ACID properties are fundamental principles in database systems to guarantee reliable transactions.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "Atomicity: Ensures that a transaction is all-or-nothing; either all operations succeed, or none do.",
+        "Consistency: Ensures that a transaction transforms the database from one valid state to another, maintaining integrity constraints.",
+        "Isolation: Ensures that concurrent transactions do not interfere with each other; intermediate states are invisible to other transactions.",
+        "Durability: Ensures that once a transaction is committed, its changes are permanent, even in case of system failures."
       ]
     },
     "askedBy": [
-      "interview"
+      "interview",
+      "quiz"
     ],
-    "technology": "Database (SQL & MongoDB)"
+    "technology": "Databases"
   },
   {
     "id": "database_(sql_&_mongodb)_7",
     "question": "Describe differences between SQL and NoSQL databases.",
     "options": [],
-    "answer": "SQL are relational, schema-based; NoSQL are flexible schema, often distributed, types include document, key-value, column-family.",
+    "answer": "SQL databases are relational, table-based, use structured schemas, and support ACID transactions. NoSQL databases are non-relational, document/key-value/graph/column-based, schema-less, and often prioritize scalability and flexibility over strict ACID compliance.",
     "type": "Interview",
     "difficulty": "Medium",
     "isObjective": false,
     "explanation": {
-      "intro": "Explanation: Describe differences between SQL and NoSQL databases.",
+      "intro": "SQL and NoSQL databases differ in structure, scalability, and use cases.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "Data Model: SQL uses tables with rows and columns, NoSQL uses documents, key-value pairs, graphs, or wide-column stores.",
+        "Schema: SQL has fixed schemas; NoSQL is schema-less or flexible.",
+        "Transactions: SQL supports ACID transactions; NoSQL often supports eventual consistency.",
+        "Scalability: SQL typically scales vertically; NoSQL scales horizontally.",
+        "Use Cases: SQL is suitable for structured data and complex queries; NoSQL is suitable for large-scale, unstructured, or semi-structured data."
       ]
     },
     "askedBy": [
-      "interview"
+      "interview",
+      "quiz"
     ],
-    "technology": "Database (SQL & MongoDB)"
+    "technology": "Databases"
   },
   {
     "id": "database_(sql_&_mongodb)_8",
     "question": "How does indexing improve query performance and its trade-offs?",
     "options": [],
-    "answer": "Indexes speed up reads but slow writes and consume storage; proper index selection is crucial.",
+    "answer": "Indexing improves query performance by allowing the database to quickly locate and access the required data without scanning the entire table. The trade-offs include additional storage space and slower write operations (INSERT, UPDATE, DELETE) because indexes need to be updated.",
     "type": "Interview",
     "difficulty": "Medium",
     "isObjective": false,
     "explanation": {
-      "intro": "Explanation: How does indexing improve query performance and its trade-offs?",
+      "intro": "Indexes are used to optimize data retrieval in databases.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "Indexes act like a table of contents, enabling faster searches on columns.",
+        "While SELECT queries become faster, INSERT, UPDATE, and DELETE operations may slow down due to index maintenance.",
+        "Indexes consume additional disk/memory space.",
+        "Choosing the right type of index (B-Tree, Hash, Full-text, etc.) depends on query patterns and database type."
       ]
     },
     "askedBy": [
-      "interview"
+      "interview",
+      "quiz"
     ],
-    "technology": "Database (SQL & MongoDB)"
+    "technology": "Databases"
   },
   {
     "id": "database_(sql_&_mongodb)_9",
     "question": "Which annotation/keyword is used for Queries?",
     "options": [
-      "@Queries",
-      "@B",
-      "@C",
-      "@D"
+      "@Query",
+      "@Select",
+      "@GetMapping",
+      "@RequestParam"
     ],
-    "answer": "@Queries",
+    "answer": "@Query",
     "type": "MCQ",
     "difficulty": "Easy",
     "isObjective": true,
     "explanation": {
-      "intro": "Explanation: Which annotation/keyword is used for Queries?",
+      "intro": "The @Query annotation in Spring Data JPA is used to define custom database queries.",
       "points": [
-        "Correct answer: @Queries.",
-        "Key concept to remember related to the question."
+        "You can write JPQL or native SQL queries using @Query.",
+        "It allows more control over the executed query compared to method name derivation.",
+        "Example: @Query(\"SELECT u FROM User u WHERE u.email = ?1\")"
       ]
     },
     "askedBy": [
       "interview",
-      "practice"
+      "quiz"
     ],
     "technology": "Database (SQL & MongoDB)"
   },
   {
     "id": "database_(sql_&_mongodb)_10",
     "question": "Explain how Queries works in Database (SQL & MongoDB).",
-    "options": [],
-    "answer": "Detailed explanation about Queries.",
+    "answer": "Queries are used to fetch, insert, update, or delete data in databases. In SQL, queries use structured syntax like SELECT, INSERT, UPDATE, DELETE, often with WHERE, JOIN, GROUP BY clauses. In MongoDB, queries use JSON-like documents to filter data using methods like find(), insertOne(), updateOne(), deleteOne(), and can include operators like $eq, $gt, $in.",
     "type": "Interview",
-    "difficulty": "Hard",
+    "difficulty": "Medium",
     "isObjective": false,
     "explanation": {
-      "intro": "Explanation: Explain how Queries works in Database (SQL & MongoDB).",
+      "intro": "Explanation: Queries allow interaction with databases to retrieve or manipulate data.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "SQL queries follow structured syntax and relational rules.",
+        "MongoDB queries are document-based and use JSON-like structures.",
+        "Both support filtering, sorting, aggregation, and joins (or lookups in MongoDB).",
+        "SQL is relational; MongoDB is NoSQL and schema-less."
       ]
     },
     "askedBy": [
       "interview"
     ],
-    "technology": "Database (SQL & MongoDB)"
+    "technology": "SQL & MongoDB"
   },
   {
     "id": "database_(sql_&_mongodb)_11",
-    "question": "Which command is used to Replication?",
+   "question": "Which command is used to enable Replication in MongoDB?",
     "options": [
-      "cmd Replication",
-      "cmd B",
-      "cmd C",
-      "cmd D"
+      "rs.initiate()",
+      "replicate.start()",
+      "db.replication()",
+      "startReplica()"
     ],
-    "answer": "cmd Replication",
+    "answer": "rs.initiate()",
     "type": "MCQ",
-    "difficulty": "Easy",
     "isObjective": true,
     "explanation": {
-      "intro": "Explanation: Which command is used to Replication?",
+      "intro": "Explanation: Replication in MongoDB allows data to be duplicated across multiple servers for high availability.",
       "points": [
-        "Correct answer: cmd Replication.",
-        "Key concept to remember related to the question."
-      ]
-    },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "Database (SQL & MongoDB)"
-  },
-  {
-    "id": "database_(sql_&_mongodb)_12",
-    "question": "Describe pros and cons of Replication.",
-    "options": [],
-    "answer": "Pros: ... Cons: ...",
-    "type": "Interview",
-    "difficulty": "Hard",
-    "isObjective": false,
-    "explanation": {
-      "intro": "Explanation: Describe pros and cons of Replication.",
-      "points": [
-        "Detailed explanation to highlight important aspects."
+        "The command rs.initiate() initializes a new replica set.",
+        "Other members can be added using rs.add().",
+        "It ensures automatic failover and redundancy."
       ]
     },
     "askedBy": [
       "interview"
     ],
-    "technology": "Database (SQL & MongoDB)"
+    "technology": "MongoDB"
   },
   {
-    "id": "database_(sql_&_mongodb)_13",
-    "question": "Which statement about Aggregation pipeline is correct?",
-    "options": [
-      "True for Aggregation pipeline",
-      "True for B",
-      "True for C",
-      "None"
-    ],
-    "answer": "True for Aggregation pipeline",
-    "type": "MCQ",
+    "id": "database_(sql_&_mongodb)_12",
+    "question": "Describe pros and cons of Replication in MongoDB.",
+    "options": [],
+    "answer": "Pros: High availability, automatic failover, data redundancy. Cons: Increased storage usage, potential write latency, more complex setup and maintenance.",
+    "type": "Interview",
     "difficulty": "Medium",
-    "isObjective": true,
+    "isObjective": false,
     "explanation": {
-      "intro": "Explanation: Which statement about Aggregation pipeline is correct?",
+      "intro": "Explanation: Replication in MongoDB duplicates data across multiple servers for reliability and availability.",
       "points": [
-        "Correct answer: True for Aggregation pipeline.",
-        "Key concept to remember related to the question."
+        "Pros: Ensures high availability of data, supports automatic failover, and provides redundancy for disaster recovery.",
+        "Cons: Requires additional storage, can introduce write latency due to replication lag, and increases operational complexity."
       ]
     },
     "askedBy": [
-      "interview",
-      "practice"
+      "interview"
     ],
-    "technology": "Database (SQL & MongoDB)"
+    "technology": "MongoDB"
   },
   {
     "id": "database_(sql_&_mongodb)_14",
     "question": "Describe pros and cons of Aggregation pipeline.",
     "options": [],
-    "answer": "Pros: ... Cons: ...",
+    "answer": "Pros: Efficient data processing, supports complex transformations, reduces client-side computation. Cons: Can be memory-intensive, may require indexing for optimal performance, complex pipelines can be harder to maintain.",
     "type": "Interview",
     "difficulty": "Medium",
     "isObjective": false,
     "explanation": {
-      "intro": "Explanation: Describe pros and cons of Aggregation pipeline.",
+      "intro": "Explanation: Aggregation pipeline in MongoDB allows data processing and transformation in stages.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "Pros:",
+        "1. Efficient processing on the server side.",
+        "2. Supports multiple stages for filtering, grouping, sorting, and projecting data.",
+        "3. Reduces the need for client-side computations.",
+        "Cons:",
+        "1. Can consume significant memory for large datasets.",
+        "2. Performance may depend on proper indexing.",
+        "3. Complex pipelines can be difficult to read and maintain."
       ]
     },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "Database (SQL & MongoDB)"
+    "technology": "MongoDB"
   },
   {
     "id": "database_(sql_&_mongodb)_15",
     "question": "Which annotation/keyword is used for Replication?",
     "options": [
+      "@EnableReplication",
       "@Replication",
-      "@B",
-      "@C",
-      "@D"
+      "replicaSet",
+      "db.replicate()"
     ],
-    "answer": "@Replication",
+    "answer": "replicaSet",
     "type": "MCQ",
     "difficulty": "Medium",
     "isObjective": true,
-    "explanation": {
-      "intro": "Explanation: Which annotation/keyword is used for Replication?",
-      "points": [
-        "Correct answer: @Replication.",
-        "Key concept to remember related to the question."
-      ]
-    },
+    "explanation": "In MongoDB, replication is configured using a replica set, which is a group of mongod instances that maintain the same data set, providing redundancy and high availability.",
     "askedBy": [
       "interview",
       "practice"
@@ -350,107 +346,97 @@
   {
     "id": "database_(sql_&_mongodb)_16",
     "question": "How would you design/implement Replication in a production system?",
-    "options": [],
-    "answer": "Design considerations and steps.",
     "type": "Interview",
     "difficulty": "Hard",
     "isObjective": false,
+    "answer": "By setting up a MongoDB replica set with a primary and multiple secondary nodes, configuring proper write concerns, and ensuring automatic failover and backups.",
     "explanation": {
-      "intro": "Explanation: How would you design/implement Replication in a production system?",
+      "intro": "Explanation: Implementing replication ensures high availability and data redundancy in production.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "Set up a replica set with at least 3 nodes (1 primary, 2 secondary) for fault tolerance.",
+        "Configure appropriate writeConcern and readPreference for consistency and performance.",
+        "Enable automatic failover so that a secondary becomes primary if the primary fails.",
+        "Monitor replication lag and performance metrics.",
+        "Ensure regular backups and maintenance of the replica set."
       ]
     },
+    "technology": "MongoDB",
     "askedBy": [
       "interview"
-    ],
-    "technology": "Database (SQL & MongoDB)"
+    ]
   },
   {
     "id": "database_(sql_&_mongodb)_17",
     "question": "What is the purpose of Aggregation pipeline in Database (SQL & MongoDB)?",
-    "options": [
-      "Option Aggregation pipeline",
-      "Option B",
-      "Option C",
-      "Option D"
-    ],
-    "answer": "Option Aggregation pipeline",
     "type": "MCQ",
-    "difficulty": "Hard",
+    "options": [
+      "To perform complex data transformations and computations",
+      "To create indexes",
+      "To replicate data across servers",
+      "To delete data in bulk"
+    ],
+    "answer": "To perform complex data transformations and computations",
     "isObjective": true,
     "explanation": {
-      "intro": "Explanation: What is the purpose of Aggregation pipeline in Database (SQL & MongoDB)?",
+      "intro": "Explanation: Aggregation pipelines allow combining multiple stages to process and transform data.",
       "points": [
-        "Correct answer: Option Aggregation pipeline.",
-        "Key concept to remember related to the question."
+        "In MongoDB, pipelines use stages like $match, $group, $sort, $project for complex queries.",
+        "In SQL, similar functionality is achieved using GROUP BY, JOINs, and subqueries.",
+        "Aggregation helps compute summaries, statistics, and restructure data efficiently."
       ]
     },
     "askedBy": [
       "interview",
       "practice"
-    ],
-    "technology": "Database (SQL & MongoDB)"
-  },
-  {
-    "id": "database_(sql_&_mongodb)_18",
-    "question": "Describe pros and cons of Aggregation pipeline.",
-    "options": [],
-    "answer": "Pros: ... Cons: ...",
-    "type": "Interview",
-    "difficulty": "Hard",
-    "isObjective": false,
-    "explanation": {
-      "intro": "Explanation: Describe pros and cons of Aggregation pipeline.",
-      "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
-    },
-    "askedBy": [
-      "interview"
     ],
     "technology": "Database (SQL & MongoDB)"
   },
   {
     "id": "database_(sql_&_mongodb)_19",
     "question": "Which statement about Sharding is correct?",
-    "options": [
-      "True for Sharding",
-      "True for B",
-      "True for C",
-      "None"
-    ],
-    "answer": "True for Sharding",
     "type": "MCQ",
-    "difficulty": "Medium",
+    "options": [
+      "Sharding is a technique to partition data across multiple servers for scalability",
+      "Sharding is used to backup databases",
+      "Sharding combines multiple databases into one",
+      "Sharding is a way to index data"
+    ],
+    "answer": "Sharding is a technique to partition data across multiple servers for scalability",
     "isObjective": true,
     "explanation": {
-      "intro": "Explanation: Which statement about Sharding is correct?",
+      "intro": "Explanation: Sharding is a horizontal partitioning method in databases.",
       "points": [
-        "Correct answer: True for Sharding.",
-        "Key concept to remember related to the question."
+        "It distributes data across multiple machines to improve performance and handle large datasets.",
+        "Each shard holds a subset of data, and queries are routed to the appropriate shard.",
+        "Common in NoSQL databases like MongoDB to achieve high scalability and availability."
       ]
     },
+    "technology": "Database (SQL & MongoDB)",
     "askedBy": [
       "interview",
       "practice"
-    ],
-    "technology": "Database (SQL & MongoDB)"
+    ]
   },
   {
     "id": "database_(sql_&_mongodb)_20",
     "question": "Describe pros and cons of Sharding.",
-    "options": [],
-    "answer": "Pros: ... Cons: ...",
     "type": "Interview",
     "difficulty": "Medium",
     "isObjective": false,
+    "answer": "Pros: Improves scalability and performance, allows horizontal scaling, reduces load on a single server. Cons: Increases complexity of queries, harder to maintain and backup, potential data imbalance across shards.",
     "explanation": {
-      "intro": "Explanation: Describe pros and cons of Sharding.",
+      "intro": "Explanation: Sharding distributes data across multiple servers to handle large datasets efficiently.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "Pros:",
+        "1. Horizontal scalability by adding more servers.",
+        "2. Improved query performance due to smaller dataset per shard.",
+        "3. Reduces risk of a single server bottleneck.",
+        "Cons:",
+        "1. Increased complexity in application logic and query routing.",
+        "2. Harder to maintain consistency and perform backups.",
+        "3. Data imbalance can occur if sharding key is not chosen properly."
       ]
-    },
+    },  
     "askedBy": [
       "interview"
     ],
@@ -459,23 +445,16 @@
   {
     "id": "database_(sql_&_mongodb)_21",
     "question": "Which statement about Indexing is correct?",
-    "options": [
-      "True for Indexing",
-      "True for B",
-      "True for C",
-      "None"
-    ],
-    "answer": "True for Indexing",
     "type": "MCQ",
-    "difficulty": "Hard",
+    "options": [
+      "Indexing improves query performance by reducing search time",
+      "Indexing slows down queries",
+      "Indexing removes duplicate data",
+      "Indexing automatically normalizes tables"
+    ],
+    "answer": "Indexing improves query performance by reducing search time",
     "isObjective": true,
-    "explanation": {
-      "intro": "Explanation: Which statement about Indexing is correct?",
-      "points": [
-        "Correct answer: True for Indexing.",
-        "Key concept to remember related to the question."
-      ]
-    },
+    "explanation": "Indexes provide a fast lookup mechanism for database queries by allowing the database engine to quickly locate rows without scanning the entire table, though they may slightly slow down write operations due to maintenance overhead.",
     "askedBy": [
       "interview",
       "practice"
@@ -485,15 +464,15 @@
   {
     "id": "database_(sql_&_mongodb)_22",
     "question": "Describe pros and cons of Indexing.",
-    "options": [],
-    "answer": "Pros: ... Cons: ...",
     "type": "Interview",
-    "difficulty": "Medium",
+    "options": [],
+    "answer": "Pros: Speeds up data retrieval, improves query performance, efficient for large datasets. Cons: Increases storage space, slows down write operations (INSERT/UPDATE/DELETE), requires maintenance.",
     "isObjective": false,
     "explanation": {
-      "intro": "Explanation: Describe pros and cons of Indexing.",
+      "intro": "Explanation: Indexing is a technique to improve database query performance.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "Pros: Helps in faster data retrieval and efficient query execution, especially on large tables.",
+        "Cons: Consumes additional storage space, slows down write operations because indexes need to be updated, and may require maintenance."
       ]
     },
     "askedBy": [
@@ -504,41 +483,40 @@
   {
     "id": "database_(sql_&_mongodb)_23",
     "question": "Which command is used to Normalization?",
-    "options": [
-      "cmd Normalization",
-      "cmd B",
-      "cmd C",
-      "cmd D"
-    ],
-    "answer": "cmd Normalization",
     "type": "MCQ",
-    "difficulty": "Hard",
+    "options": [
+      "There is no specific command; it's a database design process",
+      "NORMALIZE TABLE",
+      "ALTER TABLE NORMALIZE",
+      "DB.NORMALIZE()"
+    ],
+    "answer": "There is no specific command; it's a database design process",
     "isObjective": true,
     "explanation": {
-      "intro": "Explanation: Which command is used to Normalization?",
+      "intro": "Explanation: Normalization is a process in database design.",
       "points": [
-        "Correct answer: cmd Normalization.",
-        "Key concept to remember related to the question."
+        "Normalization is not a SQL command but a methodology used to organize database tables and relationships.",
+        "It involves designing tables to minimize redundancy and ensure data integrity, typically applying 1NF, 2NF, 3NF, etc."
       ]
     },
+    "technology": "Database (SQL)",
     "askedBy": [
       "interview",
       "practice"
-    ],
-    "technology": "Database (SQL & MongoDB)"
+    ]
   },
   {
     "id": "database_(sql_&_mongodb)_24",
     "question": "Explain how Normalization works in Database (SQL & MongoDB).",
-    "options": [],
-    "answer": "Detailed explanation about Normalization.",
     "type": "Interview",
-    "difficulty": "Medium",
+    "answer": "Normalization is the process of organizing data to minimize redundancy and dependency by dividing large tables into smaller, related tables. In SQL, this is done using normal forms (1NF, 2NF, 3NF, BCNF, etc.). In MongoDB, while normalization is less common due to its document-based nature, embedding and referencing documents are used to achieve similar goals.",
     "isObjective": false,
     "explanation": {
-      "intro": "Explanation: Explain how Normalization works in Database (SQL & MongoDB).",
+      "intro": "Explanation: Normalization ensures efficient, consistent, and reliable database design.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "In SQL, normalization applies rules called normal forms to structure tables and their relationships properly.",
+        "In MongoDB, normalization is implemented by breaking data into multiple collections (referencing) or embedding related documents to reduce duplication.",
+        "The goal is to improve data integrity, reduce redundancy, and simplify updates."
       ]
     },
     "askedBy": [
@@ -549,21 +527,16 @@
   {
     "id": "database_(sql_&_mongodb)_25",
     "question": "What is the purpose of ACID in Database (SQL & MongoDB)?",
-    "options": [
-      "Option ACID",
-      "Option B",
-      "Option C",
-      "Option D"
-    ],
-    "answer": "Option ACID",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "isObjective": true,
+    "type": "Interview",
+    "answer": "ACID ensures reliable transactions in a database by guaranteeing Atomicity, Consistency, Isolation, and Durability.",
+    "isObjective": false,
     "explanation": {
-      "intro": "Explanation: What is the purpose of ACID in Database (SQL & MongoDB)?",
+      "intro": "Explanation: ACID properties provide a foundation for trustworthy database operations.",
       "points": [
-        "Correct answer: Option ACID.",
-        "Key concept to remember related to the question."
+        "Atomicity ensures that a transaction is fully completed or fully rolled back.",
+        "Consistency guarantees that the database moves from one valid state to another.",
+        "Isolation ensures that concurrent transactions do not interfere with each other.",
+        "Durability guarantees that once a transaction is committed, it persists even in case of a system failure."
       ]
     },
     "askedBy": [
@@ -575,87 +548,53 @@
   {
     "id": "database_(sql_&_mongodb)_26",
     "question": "Explain how ACID works in Database (SQL & MongoDB).",
-    "options": [],
-    "answer": "Detailed explanation about ACID.",
+    "answer": "ACID is a set of properties that guarantee reliable transaction processing: Atomicity ensures all parts of a transaction succeed or fail together; Consistency ensures data remains valid before and after a transaction; Isolation ensures concurrent transactions do not interfere with each other; Durability guarantees that once a transaction is committed, it persists even in case of a system failure.",
     "type": "Interview",
-    "difficulty": "Hard",
+    "difficulty": "Medium",
     "isObjective": false,
     "explanation": {
-      "intro": "Explanation: Explain how ACID works in Database (SQL & MongoDB).",
+      "intro": "ACID properties are crucial for reliable database operations.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "Atomicity: Entire transaction succeeds or fails as a unit.",
+        "Consistency: Database remains in a valid state before and after transactions.",
+        "Isolation: Transactions do not affect each other during concurrent execution.",
+        "Durability: Committed transactions are permanently saved even after failures."
       ]
     },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "Database (SQL & MongoDB)"
+    "askedBy": ["interview"],
+    "technology": "SQL & MongoDB"
   },
   {
     "id": "database_(sql_&_mongodb)_27",
     "question": "What is the purpose of Replication in Database (SQL & MongoDB)?",
-    "options": [
-      "Option Replication",
-      "Option B",
-      "Option C",
-      "Option D"
-    ],
-    "answer": "Option Replication",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "isObjective": true,
-    "explanation": {
-      "intro": "Explanation: What is the purpose of Replication in Database (SQL & MongoDB)?",
-      "points": [
-        "Correct answer: Option Replication.",
-        "Key concept to remember related to the question."
-      ]
-    },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "Database (SQL & MongoDB)"
-  },
-  {
-    "id": "database_(sql_&_mongodb)_28",
-    "question": "How would you design/implement Replication in a production system?",
-    "options": [],
-    "answer": "Design considerations and steps.",
+    "answer": "Replication is used to duplicate data across multiple servers to ensure high availability, fault tolerance, and load balancing.",
     "type": "Interview",
     "difficulty": "Medium",
     "isObjective": false,
     "explanation": {
-      "intro": "Explanation: How would you design/implement Replication in a production system?",
+      "intro": "Replication helps in distributing data to improve reliability and performance.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "Ensures data is available even if one server fails (fault tolerance).",
+        "Improves read performance by distributing queries across replicas.",
+        "Supports disaster recovery by maintaining copies of data in different locations."
       ]
     },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "Database (SQL & MongoDB)"
+    "askedBy": ["interview"],
+    "technology": "SQL & MongoDB"
   },
   {
     "id": "database_(sql_&_mongodb)_29",
+    "type": "MCQ",
     "question": "What is the purpose of Stored procedures in Database (SQL & MongoDB)?",
     "options": [
-      "Option Stored procedures",
-      "Option B",
-      "Option C",
-      "Option D"
+      "To store large files in the database",
+      "To encapsulate SQL statements for reuse, modularity, and performance",
+      "To create indexes automatically",
+      "To replicate data across servers"
     ],
-    "answer": "Option Stored procedures",
-    "type": "MCQ",
-    "difficulty": "Easy",
+    "answer": "To encapsulate SQL statements for reuse, modularity, and performance",
     "isObjective": true,
-    "explanation": {
-      "intro": "Explanation: What is the purpose of Stored procedures in Database (SQL & MongoDB)?",
-      "points": [
-        "Correct answer: Option Stored procedures.",
-        "Key concept to remember related to the question."
-      ]
-    },
+    "explanation": "Stored procedures allow you to encapsulate one or more SQL statements for reuse, improve performance by reducing network traffic, and maintain modularity in database operations.",
     "askedBy": [
       "interview",
       "practice"
@@ -666,7 +605,7 @@
     "id": "database_(sql_&_mongodb)_30",
     "question": "Explain how Stored procedures works in Database (SQL & MongoDB).",
     "options": [],
-    "answer": "Detailed explanation about Stored procedures.",
+    "answer": "In SQL databases, a stored procedure is a set of precompiled SQL statements stored and executed on the database server. They allow encapsulation of business logic, reduce network overhead (since multiple queries are executed on the server side), and improve performance. Stored procedures can accept input parameters, return results, and manage transactions. In MongoDB, stored procedures are implemented using JavaScript functions stored in the `system.js` collection. These functions can be called within the database to encapsulate reusable logic, but this approach is rarely used in modern MongoDB applications since logic is typically handled at the application layer.",
     "type": "Interview",
     "difficulty": "Hard",
     "isObjective": false,
@@ -683,24 +622,16 @@
   },
   {
     "id": "database_(sql_&_mongodb)_31",
+    "type": "MCQ",
     "question": "What is the default behavior of Stored procedures?",
     "options": [
-      "Behavior Stored procedures",
-      "Behavior B",
-      "Behavior C",
-      "Behavior D"
+      "They are compiled and executed on the client side",
+      "They are precompiled and executed on the database server",
+      "They always return multiple result sets",
+      "They automatically normalize data"
     ],
-    "answer": "Behavior Stored procedures",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "isObjective": true,
-    "explanation": {
-      "intro": "Explanation: What is the default behavior of Stored procedures?",
-      "points": [
-        "Correct answer: Behavior Stored procedures.",
-        "Key concept to remember related to the question."
-      ]
-    },
+    "answer": "They are precompiled and executed on the database server",
+    "explanation": "The default behavior of stored procedures is that they are precompiled and stored on the database server. This reduces parsing and compilation overhead, improves performance, and allows consistent execution of logic within the database.",
     "askedBy": [
       "interview",
       "practice"
@@ -708,44 +639,18 @@
     "technology": "Database (SQL & MongoDB)"
   },
   {
-    "id": "database_(sql_&_mongodb)_32",
-    "question": "Explain how Stored procedures works in Database (SQL & MongoDB).",
-    "options": [],
-    "answer": "Detailed explanation about Stored procedures.",
-    "type": "Interview",
-    "difficulty": "Hard",
-    "isObjective": false,
-    "explanation": {
-      "intro": "Explanation: Explain how Stored procedures works in Database (SQL & MongoDB).",
-      "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
-    },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "Database (SQL & MongoDB)"
-  },
-  {
     "id": "database_(sql_&_mongodb)_33",
+    "type": "MCQ",
     "question": "Which annotation/keyword is used for ACID?",
     "options": [
-      "@ACID",
-      "@B",
-      "@C",
-      "@D"
+      "TRANSACTION",
+      "SAVEPOINT",
+      "ROLLBACK",
+      "COMMIT"
     ],
-    "answer": "@ACID",
-    "type": "MCQ",
-    "difficulty": "Easy",
+    "answer": "TRANSACTION",
+    "explanation": "ACID properties (Atomicity, Consistency, Isolation, Durability) are implemented using transactions. The `TRANSACTION` keyword is used to define a transactional scope in SQL, ensuring that operations follow ACID rules, while COMMIT, ROLLBACK, and SAVEPOINT are supporting commands inside a transaction.",
     "isObjective": true,
-    "explanation": {
-      "intro": "Explanation: Which annotation/keyword is used for ACID?",
-      "points": [
-        "Correct answer: @ACID.",
-        "Key concept to remember related to the question."
-      ]
-    },
     "askedBy": [
       "interview",
       "practice"
@@ -754,18 +659,24 @@
   },
   {
     "id": "database_(sql_&_mongodb)_34",
-    "question": "Describe pros and cons of ACID.",
-    "options": [],
-    "answer": "Pros: ... Cons: ...",
     "type": "Interview",
+    "question": "Describe pros and cons of ACID.",
+    "answer": [
+      "**Pros**",
+        "Ensures **data integrity** by guaranteeing reliable transactions.",
+        "Provides **consistency** across the database after every operation.",
+        "Prevents issues like dirty reads, lost updates, or partial transactions.",
+        "Guarantees **durability**, so committed data is never lost, even in crashes.",
+      "**Cons**",
+        "Can reduce **performance** due to strict isolation and consistency checks.",
+        "Not always necessary for systems requiring high scalability and availability (e.g., NoSQL).",
+        "In distributed systems, maintaining ACID can be **complex and resource-intensive**.",
+        "Strict ACID compliance may **limit flexibility** in handling large-scale real-time applications."
+    ],
+    "explanation": "ACID (Atomicity, Consistency, Isolation, Durability) provides strong guarantees for transactional databases, making them reliable for financial and critical systems. However, this reliability often comes at the cost of performance and scalability, which is why some systems adopt BASE (Basically Available, Soft state, Eventual consistency) instead.",
     "difficulty": "Medium",
     "isObjective": false,
-    "explanation": {
-      "intro": "Explanation: Describe pros and cons of ACID.",
-      "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
-    },
+    "options": [],
     "askedBy": [
       "interview"
     ],
@@ -775,22 +686,16 @@
     "id": "database_(sql_&_mongodb)_35",
     "question": "Which command is used to Transactions?",
     "options": [
-      "cmd Transactions",
-      "cmd B",
-      "cmd C",
-      "cmd D"
+      "BEGIN / START TRANSACTION",
+      "COMMIT",
+      "ROLLBACK",
+      "SAVEPOINT"
     ],
-    "answer": "cmd Transactions",
+    "answer": "BEGIN / START TRANSACTION",
+    "explanation": "In SQL, transactions are initiated with the `BEGIN` or `START TRANSACTION` command. After that, all subsequent operations are part of the transaction until explicitly ended with `COMMIT` (to save changes) or `ROLLBACK` (to undo). `SAVEPOINT` allows setting checkpoints within a transaction.",
     "type": "MCQ",
     "difficulty": "Easy",
     "isObjective": true,
-    "explanation": {
-      "intro": "Explanation: Which command is used to Transactions?",
-      "points": [
-        "Correct answer: cmd Transactions.",
-        "Key concept to remember related to the question."
-      ]
-    },
     "askedBy": [
       "interview",
       "practice"
@@ -800,810 +705,495 @@
   {
     "id": "database_(sql_&_mongodb)_36",
     "question": "Describe pros and cons of Transactions.",
+    "explanation": 
+    [
+    "**Pros**",
+      "Ensures **data integrity and consistency** by following ACID properties.",
+      "Allows **rollback on errors**, preventing partial or corrupted updates.",
+      "Supports **concurrent access control**, enabling multiple users to work safely.",
+      "Provides **atomicity**, so either all operations succeed or none do.",
+    "**Cons**",
+      "May introduce **performance overhead** due to locking and logging.",
+      "Long-running transactions can cause **blocking** or **deadlocks**.",
+      "Requires careful **management of isolation levels** to balance consistency and concurrency.",
+      "Not all NoSQL databases provide **full transaction support** (e.g., MongoDB added multi-document transactions only recently)."
+    ]
+    ,
+    "answer": "Transactions guarantee reliable execution of multiple operations as a single unit of work, ensuring ACID compliance. However, they can reduce performance and increase complexity in highly concurrent systems.",
     "options": [],
-    "answer": "Pros: ... Cons: ...",
     "type": "Interview",
     "difficulty": "Hard",
     "isObjective": false,
-    "explanation": {
-      "intro": "Explanation: Describe pros and cons of Transactions.",
-      "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
-    },
     "askedBy": [
       "interview"
-    ],
-    "technology": "Database (SQL & MongoDB)"
-  },
-  {
-    "id": "database_(sql_&_mongodb)_37",
-    "question": "Which statement about Aggregation pipeline is correct?",
-    "options": [
-      "True for Aggregation pipeline",
-      "True for B",
-      "True for C",
-      "None"
-    ],
-    "answer": "True for Aggregation pipeline",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "isObjective": true,
-    "explanation": {
-      "intro": "Explanation: Which statement about Aggregation pipeline is correct?",
-      "points": [
-        "Correct answer: True for Aggregation pipeline.",
-        "Key concept to remember related to the question."
-      ]
-    },
-    "askedBy": [
-      "interview",
-      "practice"
     ],
     "technology": "Database (SQL & MongoDB)"
   },
   {
     "id": "database_(sql_&_mongodb)_38",
-    "question": "Explain how Aggregation pipeline works in Database (SQL & MongoDB).",
-    "options": [],
-    "answer": "Detailed explanation about Aggregation pipeline.",
     "type": "Interview",
+    "question": "Explain how Aggregation pipeline works in Database (SQL & MongoDB).",
+    "answer": "In databases, an aggregation pipeline is a sequence of operations that processes data step by step to transform and aggregate it into meaningful results. In SQL, this is achieved using clauses like GROUP BY, HAVING, and aggregate functions (SUM, COUNT, AVG). In MongoDB, the aggregation pipeline uses stages like $match, $group, $sort, $project, and $lookup, where documents pass through each stage sequentially to produce transformed output.",
     "difficulty": "Medium",
     "isObjective": false,
     "explanation": {
-      "intro": "Explanation: Explain how Aggregation pipeline works in Database (SQL & MongoDB).",
+      "intro": "The aggregation pipeline processes data records and returns computed results. It allows filtering, grouping, and transforming data efficiently.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "In **SQL**, aggregation is performed using GROUP BY with aggregate functions such as COUNT(), SUM(), AVG(), MIN(), MAX().",
+        "In **MongoDB**, the aggregation framework provides a pipeline model where documents pass through multiple stages.",
+        "Key MongoDB stages: $match (filtering), $group (grouping), $project (reshaping documents), $sort (ordering), $lookup (joining collections).",
+        "Aggregation pipelines improve performance by processing data inside the database engine rather than the application layer."
       ]
     },
     "askedBy": [
-      "interview"
+      "interview",
+      "exam"
     ],
     "technology": "Database (SQL & MongoDB)"
   },
   {
     "id": "database_(sql_&_mongodb)_39",
+    "type": "MCQ",
     "question": "Which command is used to Queries?",
     "options": [
-      "cmd Queries",
-      "cmd B",
-      "cmd C",
-      "cmd D"
+      "SELECT (SQL)",
+      "find() (MongoDB)",
+      "INSERT",
+      "UPDATE"
     ],
-    "answer": "cmd Queries",
-    "type": "MCQ",
-    "difficulty": "Hard",
+    "answer": "SELECT (SQL) and find() (MongoDB)",
+    "difficulty": "Easy",
     "isObjective": true,
     "explanation": {
-      "intro": "Explanation: Which command is used to Queries?",
+      "intro": "Queries are used to retrieve data from a database.",
       "points": [
-        "Correct answer: cmd Queries.",
-        "Key concept to remember related to the question."
+        "In **SQL**, the `SELECT` statement is used to query and fetch rows from a table.",
+        "In **MongoDB**, the `find()` method is used to retrieve documents from a collection.",
+        "Other commands like INSERT or UPDATE are for modifying data, not querying."
       ]
     },
     "askedBy": [
-      "interview",
-      "practice"
+      "exam",
+      "interview"
     ],
     "technology": "Database (SQL & MongoDB)"
   },
   {
     "id": "database_(sql_&_mongodb)_40",
+    "type": "Interview",
     "question": "Describe pros and cons of Queries.",
     "options": [],
-    "answer": "Pros: ... Cons: ...",
-    "type": "Interview",
+    "answer": "Pros: Efficient data retrieval, filtering, sorting, aggregation, and flexibility in data analysis. Cons: Poorly written queries can cause performance issues, complex queries may be hard to optimize, and they may lead to high resource usage on large datasets.",
     "difficulty": "Medium",
     "isObjective": false,
     "explanation": {
-      "intro": "Explanation: Describe pros and cons of Queries.",
+      "intro": "Queries are fundamental to retrieving and manipulating data in databases (SQL & MongoDB).",
       "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
-    },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "Database (SQL & MongoDB)"
-  },
-  {
-    "id": "database_(sql_&_mongodb)_41",
-    "question": "Which statement about Aggregation pipeline is correct?",
-    "options": [
-      "True for Aggregation pipeline",
-      "True for B",
-      "True for C",
-      "None"
-    ],
-    "answer": "True for Aggregation pipeline",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "isObjective": true,
-    "explanation": {
-      "intro": "Explanation: Which statement about Aggregation pipeline is correct?",
-      "points": [
-        "Correct answer: True for Aggregation pipeline.",
-        "Key concept to remember related to the question."
+        "**Pros:**",
+        "- Provide efficient mechanisms to retrieve and filter data based on conditions.",
+        "- Allow aggregation, sorting, grouping, and joins for advanced data analysis.",
+        "- Flexible and customizable depending on business requirements.",
+        "- Can optimize application logic by offloading computations to the database.",
+        "",
+        "**Cons:**",
+        "- Poorly optimized queries can slow down performance significantly.",
+        "- Complex queries may be difficult to debug and maintain.",
+        "- Large joins or aggregations can consume high CPU/memory resources.",
+        "- Improper indexing can make queries inefficient."
       ]
     },
     "askedBy": [
       "interview",
-      "practice"
-    ],
-    "technology": "Database (SQL & MongoDB)"
-  },
-  {
-    "id": "database_(sql_&_mongodb)_42",
-    "question": "Describe pros and cons of Aggregation pipeline.",
-    "options": [],
-    "answer": "Pros: ... Cons: ...",
-    "type": "Interview",
-    "difficulty": "Medium",
-    "isObjective": false,
-    "explanation": {
-      "intro": "Explanation: Describe pros and cons of Aggregation pipeline.",
-      "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
-    },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "Database (SQL & MongoDB)"
-  },
-  {
-    "id": "database_(sql_&_mongodb)_43",
-    "question": "Which annotation/keyword is used for ACID?",
-    "options": [
-      "@ACID",
-      "@B",
-      "@C",
-      "@D"
-    ],
-    "answer": "@ACID",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "isObjective": true,
-    "explanation": {
-      "intro": "Explanation: Which annotation/keyword is used for ACID?",
-      "points": [
-        "Correct answer: @ACID.",
-        "Key concept to remember related to the question."
-      ]
-    },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "Database (SQL & MongoDB)"
-  },
-  {
-    "id": "database_(sql_&_mongodb)_44",
-    "question": "Explain how ACID works in Database (SQL & MongoDB).",
-    "options": [],
-    "answer": "Detailed explanation about ACID.",
-    "type": "Interview",
-    "difficulty": "Medium",
-    "isObjective": false,
-    "explanation": {
-      "intro": "Explanation: Explain how ACID works in Database (SQL & MongoDB).",
-      "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
-    },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "Database (SQL & MongoDB)"
-  },
-  {
-    "id": "database_(sql_&_mongodb)_45",
-    "question": "Which statement about Aggregation pipeline is correct?",
-    "options": [
-      "True for Aggregation pipeline",
-      "True for B",
-      "True for C",
-      "None"
-    ],
-    "answer": "True for Aggregation pipeline",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "isObjective": true,
-    "explanation": {
-      "intro": "Explanation: Which statement about Aggregation pipeline is correct?",
-      "points": [
-        "Correct answer: True for Aggregation pipeline.",
-        "Key concept to remember related to the question."
-      ]
-    },
-    "askedBy": [
-      "interview",
-      "practice"
+      "exam"
     ],
     "technology": "Database (SQL & MongoDB)"
   },
   {
     "id": "database_(sql_&_mongodb)_46",
-    "question": "Describe pros and cons of Aggregation pipeline.",
-    "options": [],
-    "answer": "Pros: ... Cons: ...",
-    "type": "Interview",
-    "difficulty": "Medium",
-    "isObjective": false,
-    "explanation": {
-      "intro": "Explanation: Describe pros and cons of Aggregation pipeline.",
-      "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
-    },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "Database (SQL & MongoDB)"
-  },
-  {
-    "id": "database_(sql_&_mongodb)_47",
-    "question": "Which annotation/keyword is used for Aggregation pipeline?",
-    "options": [
-      "@Aggregation pipeline",
-      "@B",
-      "@C",
-      "@D"
-    ],
-    "answer": "@Aggregation pipeline",
     "type": "MCQ",
+    "question": "Which statement about Aggregation pipeline is correct?",
+    "options": [
+      "It processes data documents through a sequence of stages like filtering, grouping, and transforming.",
+      "It is used only for creating indexes in MongoDB.",
+      "It is limited to handling single document operations only.",
+      "It cannot perform grouping or aggregation functions."
+    ],
+    "answer": "It processes data documents through a sequence of stages like filtering, grouping, and transforming.",
     "difficulty": "Easy",
     "isObjective": true,
     "explanation": {
-      "intro": "Explanation: Which annotation/keyword is used for Aggregation pipeline?",
+      "intro": "The Aggregation pipeline in MongoDB is a framework for data aggregation modeled on the concept of data processing pipelines.",
       "points": [
-        "Correct answer: @Aggregation pipeline.",
-        "Key concept to remember related to the question."
+        "It allows transforming and combining documents in multiple stages.",
+        "Common stages include `$match`, `$group`, `$sort`, `$project`, `$lookup`, etc.",
+        "It is designed for complex data transformations and analysis within the database.",
+        "Incorrect options: Indexing is not part of the aggregation pipeline, it is not limited to single document operations, and it explicitly supports grouping and aggregation functions."
       ]
     },
     "askedBy": [
       "interview",
-      "practice"
+      "exam"
     ],
-    "technology": "Database (SQL & MongoDB)"
+    "technology": "Database (MongoDB)"
   },
   {
-    "id": "database_(sql_&_mongodb)_48",
-    "question": "Explain how Aggregation pipeline works in Database (SQL & MongoDB).",
-    "options": [],
-    "answer": "Detailed explanation about Aggregation pipeline.",
-    "type": "Interview",
-    "difficulty": "Hard",
-    "isObjective": false,
-    "explanation": {
-      "intro": "Explanation: Explain how Aggregation pipeline works in Database (SQL & MongoDB).",
-      "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
-    },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "Database (SQL & MongoDB)"
-  },
-  {
-    "id": "database_(sql_&_mongodb)_49",
-    "question": "What is the default behavior of Transactions?",
-    "options": [
-      "Behavior Transactions",
-      "Behavior B",
-      "Behavior C",
-      "Behavior D"
-    ],
-    "answer": "Behavior Transactions",
+    "id": "database_(sql_&_mongodb)_47",
     "type": "MCQ",
+    "question": "Which annotation/keyword is used for Aggregation pipeline?",
+    "options": [
+      "@Aggregation",
+      "@Aggregate",
+      "@Pipeline",
+      "@Query"
+    ],
+    "answer": "@Aggregation",
     "difficulty": "Medium",
     "isObjective": true,
     "explanation": {
-      "intro": "Explanation: What is the default behavior of Transactions?",
+      "intro": "In Spring Data MongoDB, the `@Aggregation` annotation is used to define and execute aggregation pipeline operations.",
       "points": [
-        "Correct answer: Behavior Transactions.",
-        "Key concept to remember related to the question."
+        "`@Aggregation` allows developers to specify MongoDB aggregation stages directly within repository methods.",
+        "It simplifies running `$match`, `$group`, `$project`, and other pipeline stages without manually coding queries.",
+        "`@Query` is used for basic queries, not for pipelines.",
+        "`@Aggregate` and `@Pipeline` are not valid annotations in Spring Data MongoDB."
       ]
     },
     "askedBy": [
       "interview",
-      "practice"
+      "exam"
     ],
-    "technology": "Database (SQL & MongoDB)"
+    "technology": "Database (MongoDB)"
   },
   {
-    "id": "database_(sql_&_mongodb)_50",
-    "question": "Describe pros and cons of Transactions.",
-    "options": [],
-    "answer": "Pros: ... Cons: ...",
-    "type": "Interview",
-    "difficulty": "Hard",
-    "isObjective": false,
+    "id": "database_(sql_&_mongodb)_49",
+    "type": "MCQ",
+    "question": "What is the default behavior of Transactions?",
+    "options": [
+      "They are executed with Atomicity, Consistency, Isolation, and Durability (ACID).",
+      "They always run in parallel without isolation.",
+      "They auto-commit after each SQL/MongoDB operation.",
+      "They skip consistency checks for faster performance."
+    ],
+    "answer": "They are executed with Atomicity, Consistency, Isolation, and Durability (ACID).",
+    "difficulty": "Medium",
+    "isObjective": true,
     "explanation": {
-      "intro": "Explanation: Describe pros and cons of Transactions.",
+      "intro": "By default, database transactions ensure that all operations inside the transaction follow ACID properties.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "Atomicity: Ensures all operations succeed or none are applied.",
+        "Consistency: Ensures database remains in a valid state after transaction.",
+        "Isolation: Prevents concurrent transactions from interfering with each other.",
+        "Durability: Ensures committed data is persisted even after failures.",
+        "Some databases (like SQL) use auto-commit by default, but once a transaction block is started, ACID rules apply."
       ]
     },
     "askedBy": [
-      "interview"
+      "interview",
+      "exam",
+      "quiz"
     ],
     "technology": "Database (SQL & MongoDB)"
   },
   {
     "id": "database_(sql_&_mongodb)_51",
+    "type": "MCQ",
     "question": "What is the default behavior of Sharding?",
     "options": [
-      "Behavior Sharding",
-      "Behavior B",
-      "Behavior C",
-      "Behavior D"
+      "Data is automatically partitioned across multiple shards based on the shard key.",
+      "All data is stored on a single primary node until sharding is manually enabled.",
+      "Sharding always uses replication for fault tolerance by default.",
+      "Sharding merges all shards into a single database instance."
     ],
-    "answer": "Behavior Sharding",
-    "type": "MCQ",
-    "difficulty": "Hard",
+    "answer": "All data is stored on a single primary node until sharding is manually enabled.",
+    "difficulty": "Medium",
     "isObjective": true,
     "explanation": {
-      "intro": "Explanation: What is the default behavior of Sharding?",
+      "intro": "By default, databases like MongoDB do not enable sharding unless explicitly configured.",
       "points": [
-        "Correct answer: Behavior Sharding.",
-        "Key concept to remember related to the question."
+        "Sharding is not enabled automatically; it must be manually configured by the DBA or developer.",
+        "Without sharding, all data resides on a single primary node or replica set.",
+        "Once sharding is enabled, data is distributed across shards using a shard key.",
+        "Sharding improves scalability but requires explicit setup."
       ]
     },
     "askedBy": [
       "interview",
-      "practice"
+      "exam",
+      "quiz"
     ],
-    "technology": "Database (SQL & MongoDB)"
-  },
-  {
-    "id": "database_(sql_&_mongodb)_52",
-    "question": "Describe pros and cons of Sharding.",
-    "options": [],
-    "answer": "Pros: ... Cons: ...",
-    "type": "Interview",
-    "difficulty": "Medium",
-    "isObjective": false,
-    "explanation": {
-      "intro": "Explanation: Describe pros and cons of Sharding.",
-      "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
-    },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "Database (SQL & MongoDB)"
-  },
-  {
-    "id": "database_(sql_&_mongodb)_53",
-    "question": "What is the purpose of Stored procedures in Database (SQL & MongoDB)?",
-    "options": [
-      "Option Stored procedures",
-      "Option B",
-      "Option C",
-      "Option D"
-    ],
-    "answer": "Option Stored procedures",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "isObjective": true,
-    "explanation": {
-      "intro": "Explanation: What is the purpose of Stored procedures in Database (SQL & MongoDB)?",
-      "points": [
-        "Correct answer: Option Stored procedures.",
-        "Key concept to remember related to the question."
-      ]
-    },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "Database (SQL & MongoDB)"
-  },
-  {
-    "id": "database_(sql_&_mongodb)_54",
-    "question": "Explain how Stored procedures works in Database (SQL & MongoDB).",
-    "options": [],
-    "answer": "Detailed explanation about Stored procedures.",
-    "type": "Interview",
-    "difficulty": "Hard",
-    "isObjective": false,
-    "explanation": {
-      "intro": "Explanation: Explain how Stored procedures works in Database (SQL & MongoDB).",
-      "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
-    },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "Database (SQL & MongoDB)"
+    "technology": "Database (MongoDB & Distributed Systems)"
   },
   {
     "id": "database_(sql_&_mongodb)_55",
+    "type": "MCQ",
     "question": "What is the purpose of Sharding in Database (SQL & MongoDB)?",
     "options": [
-      "Option Sharding",
-      "Option B",
-      "Option C",
-      "Option D"
+      "To replicate data across multiple servers for fault tolerance",
+      "To partition and distribute data across multiple servers for scalability",
+      "To enforce ACID properties in distributed databases",
+      "To automatically index all fields for faster queries"
     ],
-    "answer": "Option Sharding",
-    "type": "MCQ",
+    "answer": "To partition and distribute data across multiple servers for scalability",
     "difficulty": "Medium",
     "isObjective": true,
     "explanation": {
-      "intro": "Explanation: What is the purpose of Sharding in Database (SQL & MongoDB)?",
+      "intro": "Sharding is a database architecture pattern used to handle very large datasets by distributing data across multiple servers.",
       "points": [
-        "Correct answer: Option Sharding.",
-        "Key concept to remember related to the question."
+        "Sharding divides data into smaller, more manageable chunks called shards.",
+        "Each shard holds a subset of the dataset and can be hosted on a separate server.",
+        "This improves scalability by allowing horizontal scaling of the database.",
+        "It reduces query load on a single server and increases overall performance.",
+        "However, sharding adds complexity in managing data distribution and consistency."
       ]
     },
     "askedBy": [
       "interview",
-      "practice"
-    ],
-    "technology": "Database (SQL & MongoDB)"
-  },
-  {
-    "id": "database_(sql_&_mongodb)_56",
-    "question": "Describe pros and cons of Sharding.",
-    "options": [],
-    "answer": "Pros: ... Cons: ...",
-    "type": "Interview",
-    "difficulty": "Medium",
-    "isObjective": false,
-    "explanation": {
-      "intro": "Explanation: Describe pros and cons of Sharding.",
-      "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
-    },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "Database (SQL & MongoDB)"
-  },
-  {
-    "id": "database_(sql_&_mongodb)_57",
-    "question": "What is the purpose of Stored procedures in Database (SQL & MongoDB)?",
-    "options": [
-      "Option Stored procedures",
-      "Option B",
-      "Option C",
-      "Option D"
-    ],
-    "answer": "Option Stored procedures",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "isObjective": true,
-    "explanation": {
-      "intro": "Explanation: What is the purpose of Stored procedures in Database (SQL & MongoDB)?",
-      "points": [
-        "Correct answer: Option Stored procedures.",
-        "Key concept to remember related to the question."
-      ]
-    },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "Database (SQL & MongoDB)"
-  },
-  {
-    "id": "database_(sql_&_mongodb)_58",
-    "question": "Explain how Stored procedures works in Database (SQL & MongoDB).",
-    "options": [],
-    "answer": "Detailed explanation about Stored procedures.",
-    "type": "Interview",
-    "difficulty": "Hard",
-    "isObjective": false,
-    "explanation": {
-      "intro": "Explanation: Explain how Stored procedures works in Database (SQL & MongoDB).",
-      "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
-    },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "Database (SQL & MongoDB)"
-  },
-  {
-    "id": "database_(sql_&_mongodb)_59",
-    "question": "Which annotation/keyword is used for Replication?",
-    "options": [
-      "@Replication",
-      "@B",
-      "@C",
-      "@D"
-    ],
-    "answer": "@Replication",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "isObjective": true,
-    "explanation": {
-      "intro": "Explanation: Which annotation/keyword is used for Replication?",
-      "points": [
-        "Correct answer: @Replication.",
-        "Key concept to remember related to the question."
-      ]
-    },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "Database (SQL & MongoDB)"
-  },
-  {
-    "id": "database_(sql_&_mongodb)_60",
-    "question": "Describe pros and cons of Replication.",
-    "options": [],
-    "answer": "Pros: ... Cons: ...",
-    "type": "Interview",
-    "difficulty": "Medium",
-    "isObjective": false,
-    "explanation": {
-      "intro": "Explanation: Describe pros and cons of Replication.",
-      "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
-    },
-    "askedBy": [
-      "interview"
+      "exam",
+      "quiz"
     ],
     "technology": "Database (SQL & MongoDB)"
   },
   {
     "id": "database_(sql_&_mongodb)_61",
+    "type": "MCQ",
     "question": "What is the default behavior of JOIN?",
     "options": [
-      "Behavior JOIN",
-      "Behavior B",
-      "Behavior C",
-      "Behavior D"
+      "INNER JOIN - returns only matching rows from both tables",
+      "LEFT JOIN - returns all rows from the left table",
+      "RIGHT JOIN - returns all rows from the right table",
+      "FULL JOIN - returns all rows when there is a match in either table"
     ],
-    "answer": "Behavior JOIN",
-    "type": "MCQ",
-    "difficulty": "Medium",
+    "answer": "INNER JOIN - returns only matching rows from both tables",
+    "difficulty": "Easy",
     "isObjective": true,
     "explanation": {
-      "intro": "Explanation: What is the default behavior of JOIN?",
+      "intro": "In SQL, when you use JOIN without specifying the type, the default behavior is INNER JOIN.",
       "points": [
-        "Correct answer: Behavior JOIN.",
-        "Key concept to remember related to the question."
+        "INNER JOIN returns rows where there is a match in both tables.",
+        "Rows without matches are excluded from the result set.",
+        "It is the most commonly used join in relational databases.",
+        "Explicitly writing INNER JOIN is preferred for clarity, though JOIN defaults to it."
       ]
     },
     "askedBy": [
       "interview",
-      "practice"
+      "exam",
+      "quiz"
     ],
-    "technology": "Database (SQL & MongoDB)"
+    "technology": "Database (SQL)"
   },
   {
     "id": "database_(sql_&_mongodb)_62",
+    "type": "Interview",
     "question": "Explain how JOIN works in Database (SQL & MongoDB).",
     "options": [],
-    "answer": "Detailed explanation about JOIN.",
-    "type": "Interview",
+    "answer": "In SQL, JOIN combines rows from two or more tables based on a related column, while in MongoDB, JOIN-like behavior is achieved using the `$lookup` stage in the aggregation pipeline.",
     "difficulty": "Medium",
     "isObjective": false,
     "explanation": {
-      "intro": "Explanation: Explain how JOIN works in Database (SQL & MongoDB).",
+      "intro": "JOIN operations allow combining data from multiple sources to form a single result set.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "In SQL, different types of JOINs exist: INNER JOIN (matches in both tables), LEFT JOIN (all rows from left + matches), RIGHT JOIN (all rows from right + matches), and FULL OUTER JOIN (all rows from both).",
+        "JOINs work by matching rows from one table with rows in another using a common key (like primary-foreign key).",
+        "In MongoDB, JOIN is not natively supported like SQL but is implemented through the `$lookup` operator in the aggregation pipeline.",
+        "The `$lookup` stage performs a left outer join to combine documents from two collections based on a specified field.",
+        "SQL JOINs are more direct and optimized, while MongoDB’s `$lookup` is powerful but may be less performant for very large datasets."
       ]
     },
     "askedBy": [
-      "interview"
+      "interview",
+      "exam",
+      "quiz"
     ],
     "technology": "Database (SQL & MongoDB)"
   },
   {
     "id": "database_(sql_&_mongodb)_63",
+    "type": "MCQ",
     "question": "Which annotation/keyword is used for Stored procedures?",
     "options": [
-      "@Stored procedures",
-      "@B",
-      "@C",
-      "@D"
+      "@Procedure (Spring Data JPA)",
+      "CALL (SQL)",
+      "@Query",
+      "EXECUTE (MongoDB)"
     ],
-    "answer": "@Stored procedures",
-    "type": "MCQ",
-    "difficulty": "Hard",
+    "answer": "@Procedure (Spring Data JPA) and CALL (SQL)",
+    "difficulty": "Easy",
     "isObjective": true,
     "explanation": {
-      "intro": "Explanation: Which annotation/keyword is used for Stored procedures?",
+      "intro": "Stored procedures are predefined SQL code that can be executed by calling them directly.",
       "points": [
-        "Correct answer: @Stored procedures.",
-        "Key concept to remember related to the question."
+        "In SQL, the `CALL` or `EXEC` statement is used to invoke stored procedures.",
+        "In Spring Data JPA, the `@Procedure` annotation is used to map and call stored procedures from the database.",
+        "MongoDB does not use stored procedures in the same way; instead, it uses JavaScript functions for server-side logic."
       ]
     },
     "askedBy": [
       "interview",
-      "practice"
+      "exam",
+      "quiz"
     ],
-    "technology": "Database (SQL & MongoDB)"
+    "technology": "Database (SQL & Spring Data JPA)"
   },
   {
     "id": "database_(sql_&_mongodb)_64",
+    "type": "Interview",
     "question": "Describe pros and cons of Stored procedures.",
     "options": [],
-    "answer": "Pros: ... Cons: ...",
-    "type": "Interview",
-    "difficulty": "Hard",
+    "answer": "Pros: Encapsulation of business logic, improved performance by reducing network calls, enhanced security with controlled access, and reusability across applications. Cons: Harder to debug and maintain, may lead to vendor lock-in, version control challenges, and can become complex with large logic.",
+    "difficulty": "Medium",
     "isObjective": false,
     "explanation": {
-      "intro": "Explanation: Describe pros and cons of Stored procedures.",
+      "intro": "Stored procedures are precompiled SQL code that can be executed on the database server, offering performance and security benefits but also bringing challenges.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "**Pros:**",
+        "- Encapsulates business logic inside the database, improving performance by reducing multiple network round trips.",
+        "- Provides better security since access can be restricted to procedures rather than tables directly.",
+        "- Promotes reusability as the same procedure can be called by multiple applications.",
+        "**Cons:**",
+        "- Debugging and testing stored procedures is more difficult compared to application-level code.",
+        "- Can lead to vendor lock-in since procedure syntax differs between SQL databases.",
+        "- Managing version control and deployment for stored procedures can be tricky.",
+        "- Overuse can push too much business logic into the database, making systems harder to maintain."
       ]
     },
     "askedBy": [
-      "interview"
+      "interview",
+      "exam"
     ],
     "technology": "Database (SQL & MongoDB)"
   },
   {
     "id": "database_(sql_&_mongodb)_65",
+    "type": "MCQ",
     "question": "Which statement about Queries is correct?",
     "options": [
-      "True for Queries",
-      "True for B",
-      "True for C",
-      "None"
+      "Queries are used to define database schema.",
+      "Queries are used to insert, retrieve, update, and delete data from a database.",
+      "Queries only work in SQL but not in NoSQL databases.",
+      "Queries can only retrieve data but cannot modify it."
     ],
-    "answer": "True for Queries",
-    "type": "MCQ",
+    "answer": "Queries are used to insert, retrieve, update, and delete data from a database.",
     "difficulty": "Easy",
     "isObjective": true,
     "explanation": {
-      "intro": "Explanation: Which statement about Queries is correct?",
+      "intro": "Queries are commands or requests to interact with a database for data manipulation or retrieval.",
       "points": [
-        "Correct answer: True for Queries.",
-        "Key concept to remember related to the question."
+        "Queries allow CRUD operations: Create, Read, Update, Delete.",
+        "In SQL, queries use statements like SELECT, INSERT, UPDATE, DELETE.",
+        "In MongoDB, queries use methods like find(), insertOne(), updateOne(), deleteOne().",
+        "Queries work in both SQL and NoSQL databases, though syntax differs."
       ]
     },
     "askedBy": [
       "interview",
-      "practice"
-    ],
-    "technology": "Database (SQL & MongoDB)"
-  },
-  {
-    "id": "database_(sql_&_mongodb)_66",
-    "question": "Explain how Queries works in Database (SQL & MongoDB).",
-    "options": [],
-    "answer": "Detailed explanation about Queries.",
-    "type": "Interview",
-    "difficulty": "Hard",
-    "isObjective": false,
-    "explanation": {
-      "intro": "Explanation: Explain how Queries works in Database (SQL & MongoDB).",
-      "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
-    },
-    "askedBy": [
-      "interview"
+      "exam"
     ],
     "technology": "Database (SQL & MongoDB)"
   },
   {
     "id": "database_(sql_&_mongodb)_67",
+    "type": "MCQ",
     "question": "What is the purpose of Indexing in Database (SQL & MongoDB)?",
     "options": [
-      "Option Indexing",
-      "Option B",
-      "Option C",
-      "Option D"
+      "To store large files in the database",
+      "To improve query performance by providing faster data access",
+      "To create backup copies of data",
+      "To enforce foreign key constraints"
     ],
-    "answer": "Option Indexing",
-    "type": "MCQ",
-    "difficulty": "Hard",
+    "answer": "To improve query performance by providing faster data access",
+    "difficulty": "Medium",
     "isObjective": true,
     "explanation": {
-      "intro": "Explanation: What is the purpose of Indexing in Database (SQL & MongoDB)?",
+      "intro": "Indexing is a database optimization technique to speed up data retrieval.",
       "points": [
-        "Correct answer: Option Indexing.",
-        "Key concept to remember related to the question."
+        "Indexes allow the database engine to find data without scanning the entire table or collection.",
+        "In SQL, indexes can be created using CREATE INDEX.",
+        "In MongoDB, indexes can be created using createIndex().",
+        "While indexes improve read performance, they can slightly slow down write operations and consume additional storage."
       ]
     },
     "askedBy": [
       "interview",
-      "practice"
+      "exam"
     ],
     "technology": "Database (SQL & MongoDB)"
   },
   {
     "id": "database_(sql_&_mongodb)_68",
-    "question": "Explain how Indexing works in Database (SQL & MongoDB).",
-    "options": [],
-    "answer": "Detailed explanation about Indexing.",
     "type": "Interview",
-    "difficulty": "Hard",
+    "question": "Explain how Indexing works in Database (SQL & MongoDB).",
+    "answer": "Indexing creates a data structure (like B-Tree, Hash, or other structures) that allows the database to quickly locate and access the required rows or documents without scanning the entire dataset.",
     "isObjective": false,
+    "difficulty": "Medium",
     "explanation": {
-      "intro": "Explanation: Explain how Indexing works in Database (SQL & MongoDB).",
+      "intro": "Indexing improves query performance by allowing the database to access data efficiently.",
       "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
-    },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "Database (SQL & MongoDB)"
-  },
-  {
-    "id": "database_(sql_&_mongodb)_69",
-    "question": "What is the default behavior of Indexing?",
-    "options": [
-      "Behavior Indexing",
-      "Behavior B",
-      "Behavior C",
-      "Behavior D"
-    ],
-    "answer": "Behavior Indexing",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "isObjective": true,
-    "explanation": {
-      "intro": "Explanation: What is the default behavior of Indexing?",
-      "points": [
-        "Correct answer: Behavior Indexing.",
-        "Key concept to remember related to the question."
+        "In SQL, indexes can be created on one or more columns using CREATE INDEX.",
+        "The database uses the index to quickly locate rows that satisfy query conditions.",
+        "In MongoDB, indexes can be created using createIndex() on fields of a collection.",
+        "Indexes can be single-field, compound, or text, depending on query requirements.",
+        "While indexes speed up reads, they incur overhead for write operations and storage."
       ]
     },
     "askedBy": [
       "interview",
-      "practice"
+      "exam"
     ],
+    "options":[],
     "technology": "Database (SQL & MongoDB)"
   },
   {
-    "id": "database_(sql_&_mongodb)_70",
-    "question": "Describe pros and cons of Indexing.",
-    "options": [],
-    "answer": "Pros: ... Cons: ...",
-    "type": "Interview",
-    "difficulty": "Medium",
-    "isObjective": false,
+    "id": "database_(sql_&_mongodb)_69",
+    "type": "MCQ",
+    "question": "What is the default behavior of Indexing?",
+    "options": [
+      "All columns are automatically indexed",
+      "No index is created unless explicitly defined",
+      "Primary key columns are automatically indexed",
+      "Indexes are created for every query executed"
+    ],
+    "answer": "Primary key columns are automatically indexed",
+    "isObjective": true,
+    "difficulty": "Easy",
     "explanation": {
-      "intro": "Explanation: Describe pros and cons of Indexing.",
+      "intro": "By default, databases create indexes on primary key columns to ensure fast lookup and uniqueness enforcement.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "In SQL, a primary key automatically generates a unique index.",
+        "In MongoDB, the _id field is automatically indexed.",
+        "Other columns require explicit index creation to improve query performance."
       ]
     },
     "askedBy": [
-      "interview"
+      "interview",
+      "exam"
     ],
     "technology": "Database (SQL & MongoDB)"
   },
   {
     "id": "database_(sql_&_mongodb)_71",
+    "type": "MCQ",
     "question": "Which annotation/keyword is used for Transactions?",
     "options": [
-      "@Transactions",
-      "@B",
-      "@C",
-      "@D"
+      "@Transactional",
+      "@Transaction",
+      "@Tx",
+      "@Commit"
     ],
-    "answer": "@Transactions",
-    "type": "MCQ",
-    "difficulty": "Hard",
+    "answer": "@Transactional",
     "isObjective": true,
+    "difficulty": "Easy",
     "explanation": {
-      "intro": "Explanation: Which annotation/keyword is used for Transactions?",
+      "intro": "In Spring and JPA, the @Transactional annotation is used to manage transactions declaratively.",
       "points": [
-        "Correct answer: @Transactions.",
-        "Key concept to remember related to the question."
+        "It ensures that a series of operations are executed within a transactional context.",
+        "Automatic rollback occurs if any exception is thrown during the transaction.",
+        "It can be applied at method or class level to manage transactions globally."
       ]
     },
     "askedBy": [
       "interview",
-      "practice"
+      "exam"
     ],
     "technology": "Database (SQL & MongoDB)"
   },
@@ -1611,649 +1201,342 @@
     "id": "database_(sql_&_mongodb)_72",
     "question": "Explain how Transactions works in Database (SQL & MongoDB).",
     "options": [],
-    "answer": "Detailed explanation about Transactions.",
     "type": "Interview",
-    "difficulty": "Medium",
+    "answer": "Transactions in databases are sequences of operations performed as a single logical unit of work. They follow the ACID properties—Atomicity, Consistency, Isolation, Durability—to ensure data integrity. In SQL databases, transactions are supported using commands like BEGIN, COMMIT, and ROLLBACK. MongoDB supports multi-document transactions starting from version 4.0, allowing multiple operations across collections to be executed atomically.",
     "isObjective": false,
     "explanation": {
-      "intro": "Explanation: Explain how Transactions works in Database (SQL & MongoDB).",
+      "intro": "Transactions ensure that either all operations succeed or none are applied, preserving data integrity.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "Atomicity ensures all operations in a transaction succeed or fail as a unit.",
+        "Consistency ensures the database remains in a valid state before and after a transaction.",
+        "Isolation ensures transactions do not interfere with each other.",
+        "Durability guarantees that once a transaction is committed, changes are permanent even if the system crashes."
       ]
     },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "Database (SQL & MongoDB)"
-  },
-  {
-    "id": "database_(sql_&_mongodb)_73",
-    "question": "What is the default behavior of Transactions?",
-    "options": [
-      "Behavior Transactions",
-      "Behavior B",
-      "Behavior C",
-      "Behavior D"
-    ],
-    "answer": "Behavior Transactions",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "isObjective": true,
-    "explanation": {
-      "intro": "Explanation: What is the default behavior of Transactions?",
-      "points": [
-        "Correct answer: Behavior Transactions.",
-        "Key concept to remember related to the question."
-      ]
-    },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "Database (SQL & MongoDB)"
-  },
-  {
-    "id": "database_(sql_&_mongodb)_74",
-    "question": "Describe pros and cons of Transactions.",
-    "options": [],
-    "answer": "Pros: ... Cons: ...",
-    "type": "Interview",
-    "difficulty": "Hard",
-    "isObjective": false,
-    "explanation": {
-      "intro": "Explanation: Describe pros and cons of Transactions.",
-      "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
-    },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "Database (SQL & MongoDB)"
+    "askedBy": ["interview", "exam"],
+    "technology": "SQL & MongoDB"
   },
   {
     "id": "database_(sql_&_mongodb)_75",
+    "type": "MCQ",
     "question": "Which command is used to Sharding?",
     "options": [
-      "cmd Sharding",
-      "cmd B",
-      "cmd C",
-      "cmd D"
+      "sh.enableSharding()",
+      "db.shardCollection()",
+      "sh.addShard()",
+      "All of the above"
     ],
-    "answer": "cmd Sharding",
-    "type": "MCQ",
-    "difficulty": "Easy",
+    "answer": "All of the above",
     "isObjective": true,
     "explanation": {
-      "intro": "Explanation: Which command is used to Sharding?",
+      "intro": "Sharding in MongoDB is used to distribute data across multiple servers for horizontal scaling.",
       "points": [
-        "Correct answer: cmd Sharding.",
-        "Key concept to remember related to the question."
+        "sh.enableSharding('databaseName') enables sharding for a database.",
+        "db.shardCollection('collectionName', {key: 1}) shards a specific collection.",
+        "sh.addShard('host:port') adds a new shard to the cluster."
       ]
     },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "Database (SQL & MongoDB)"
+    "askedBy": ["interview", "exam"],
+    "technology": "MongoDB"
   },
   {
-    "id": "database_(sql_&_mongodb)_76",
-    "question": "Describe pros and cons of Sharding.",
-    "options": [],
-    "answer": "Pros: ... Cons: ...",
-    "type": "Interview",
-    "difficulty": "Hard",
-    "isObjective": false,
+    "id": "76",
+    "type": "MCQ",
+    "question": "Which annotation/keyword is used for JOIN?",
+    "options": [
+      "@JoinColumn",
+      "@OneToMany",
+      "@ManyToOne",
+      "@JoinTable"
+    ],
+    "answer": "@JoinColumn",
+    "isObjective": true,
     "explanation": {
-      "intro": "Explanation: Describe pros and cons of Sharding.",
+      "intro": "In JPA, JOIN operations are defined using specific annotations to manage table relationships.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "@JoinColumn is used to specify the foreign key column for an entity association.",
+        "@OneToMany and @ManyToOne define the type of relationship between entities.",
+        "@JoinTable is used for many-to-many relationships to specify the join table."
       ]
     },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "Database (SQL & MongoDB)"
+    "askedBy": ["interview", "exam"],
+    "technology": "Spring Data JPA / Hibernate"
   },
   {
     "id": "database_(sql_&_mongodb)_77",
-    "question": "Which annotation/keyword is used for JOIN?",
-    "options": [
-      "@JOIN",
-      "@B",
-      "@C",
-      "@D"
-    ],
-    "answer": "@JOIN",
     "type": "MCQ",
-    "difficulty": "Hard",
+    "question": "Which SQL keyword is used for JOIN?",
+    "options": [
+      "INNER JOIN",
+      "OUTER JOIN",
+      "LEFT JOIN",
+      "RIGHT JOIN"
+    ],
+    "answer": "INNER JOIN",
     "isObjective": true,
     "explanation": {
-      "intro": "Explanation: Which annotation/keyword is used for JOIN?",
+      "intro": "In SQL, JOIN operations are used to combine rows from two or more tables based on a related column.",
       "points": [
-        "Correct answer: @JOIN.",
-        "Key concept to remember related to the question."
+        "INNER JOIN returns only the rows that have matching values in both tables.",
+        "LEFT JOIN returns all rows from the left table and matched rows from the right table.",
+        "RIGHT JOIN returns all rows from the right table and matched rows from the left table.",
+        "FULL OUTER JOIN returns all rows when there is a match in either table."
       ]
     },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "Database (SQL & MongoDB)"
+    "askedBy": ["interview", "exam"],
+    "technology": "SQL / Database"
   },
   {
     "id": "database_(sql_&_mongodb)_78",
     "question": "How would you design/implement JOIN in a production system?",
     "options": [],
-    "answer": "Design considerations and steps.",
     "type": "Interview",
-    "difficulty": "Medium",
+    "answer": "In a production system, JOINs are implemented carefully to combine data from multiple tables efficiently. Use INNER JOINs for mandatory relationships, LEFT/RIGHT JOINs when optional data is needed, and optimize with proper indexing on join columns to improve performance. Consider denormalization or caching for complex or frequently accessed joins.",
     "isObjective": false,
     "explanation": {
-      "intro": "Explanation: How would you design/implement JOIN in a production system?",
+      "intro": "JOINs are essential for relational database operations, but they must be optimized for performance in production environments.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "Always index the columns used in JOIN conditions to reduce query time.",
+        "Minimize the number of JOINs in a single query to avoid performance bottlenecks.",
+        "Use database-specific features like query hints or materialized views if necessary.",
+        "Consider denormalization or caching results for frequently used complex joins."
       ]
     },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "Database (SQL & MongoDB)"
+    "askedBy": ["interview", "exam"],
+    "technology": "SQL / Database"
   },
   {
     "id": "database_(sql_&_mongodb)_79",
+    "type": "MCQ",
     "question": "What is the default behavior of Replication?",
     "options": [
-      "Behavior Replication",
-      "Behavior B",
-      "Behavior C",
-      "Behavior D"
+      "Master-Slave replication",
+      "Master-Master replication",
+      "Sharding replication",
+      "No replication"
     ],
-    "answer": "Behavior Replication",
-    "type": "MCQ",
-    "difficulty": "Easy",
+    "answer": "Master-Slave replication",
     "isObjective": true,
     "explanation": {
-      "intro": "Explanation: What is the default behavior of Replication?",
+      "intro": "Replication in databases is used to maintain copies of data across multiple servers.",
       "points": [
-        "Correct answer: Behavior Replication.",
-        "Key concept to remember related to the question."
+        "By default, most databases use Master-Slave replication where the master handles writes and slaves handle reads.",
+        "This setup provides redundancy and improves read scalability.",
+        "Automatic failover may be configured to promote a slave to master if needed."
       ]
     },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "Database (SQL & MongoDB)"
+    "askedBy": ["interview", "exam"],
+    "technology": "SQL / MongoDB"
   },
   {
     "id": "database_(sql_&_mongodb)_80",
     "question": "Explain how Replication works in Database (SQL & MongoDB).",
     "options": [],
-    "answer": "Detailed explanation about Replication.",
     "type": "Interview",
-    "difficulty": "Medium",
+    "answer": "Replication involves creating copies of the database on multiple servers to ensure data redundancy and high availability. In SQL databases, this often involves Master-Slave or Master-Master setups. In MongoDB, replication is achieved through replica sets, where one primary node handles writes and multiple secondary nodes replicate the data.",
     "isObjective": false,
     "explanation": {
-      "intro": "Explanation: Explain how Replication works in Database (SQL & MongoDB).",
+      "intro": "Replication ensures that data is not lost and can be served even if one node fails.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "In SQL, replication can be synchronous or asynchronous, affecting consistency and performance.",
+        "In MongoDB, replica sets provide automatic failover and data redundancy.",
+        "Replication improves read scalability by allowing read operations from secondary nodes."
       ]
     },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "Database (SQL & MongoDB)"
+    "askedBy": ["interview", "exam"],
+    "technology": "SQL / MongoDB"
   },
   {
     "id": "database_(sql_&_mongodb)_81",
+    "type": "MCQ",
     "question": "What is the default behavior of Normalization?",
     "options": [
-      "Behavior Normalization",
-      "Behavior B",
-      "Behavior C",
-      "Behavior D"
+      "Removes duplicate rows only",
+      "Organizes data to reduce redundancy and dependency",
+      "Automatically indexes tables",
+      "Converts all data to uppercase"
     ],
-    "answer": "Behavior Normalization",
-    "type": "MCQ",
-    "difficulty": "Easy",
+    "answer": "Organizes data to reduce redundancy and dependency",
     "isObjective": true,
     "explanation": {
-      "intro": "Explanation: What is the default behavior of Normalization?",
+      "intro": "Normalization is a database design technique used to minimize redundancy and dependency.",
       "points": [
-        "Correct answer: Behavior Normalization.",
-        "Key concept to remember related to the question."
+        "It organizes tables into normal forms (1NF, 2NF, 3NF, etc.).",
+        "Ensures that each table contains data related to a single topic.",
+        "Helps maintain data integrity and reduces anomalies during insert, update, and delete operations."
       ]
     },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "Database (SQL & MongoDB)"
+    "askedBy": ["exam", "interview"],
+    "technology": "SQL / MongoDB"
   },
   {
     "id": "database_(sql_&_mongodb)_82",
+    "type": "Interview",
     "question": "Describe pros and cons of Normalization.",
     "options": [],
-    "answer": "Pros: ... Cons: ...",
-    "type": "Interview",
-    "difficulty": "Hard",
+    "answer": "Normalization reduces redundancy and improves data integrity, but may complicate queries and affect performance in read-heavy applications.",
     "isObjective": false,
     "explanation": {
-      "intro": "Explanation: Describe pros and cons of Normalization.",
+      "intro": "Normalization is a database design technique to reduce redundancy and improve data integrity. Here are its advantages and disadvantages:",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "Pros:",
+        "1. Reduces data redundancy and duplication.",
+        "2. Ensures data integrity and consistency.",
+        "3. Simplifies maintenance and updates.",
+        "4. Avoids anomalies during insert, update, and delete operations.",
+        "Cons:",
+        "1. Can lead to complex queries due to multiple table joins.",
+        "2. Might reduce performance in read-heavy applications.",
+        "3. More effort required during database design."
       ]
     },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "Database (SQL & MongoDB)"
-  },
-  {
-    "id": "database_(sql_&_mongodb)_83",
-    "question": "What is the default behavior of Replication?",
-    "options": [
-      "Behavior Replication",
-      "Behavior B",
-      "Behavior C",
-      "Behavior D"
-    ],
-    "answer": "Behavior Replication",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "isObjective": true,
-    "explanation": {
-      "intro": "Explanation: What is the default behavior of Replication?",
-      "points": [
-        "Correct answer: Behavior Replication.",
-        "Key concept to remember related to the question."
-      ]
-    },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "Database (SQL & MongoDB)"
-  },
-  {
-    "id": "database_(sql_&_mongodb)_84",
-    "question": "Explain how Replication works in Database (SQL & MongoDB).",
-    "options": [],
-    "answer": "Detailed explanation about Replication.",
-    "type": "Interview",
-    "difficulty": "Medium",
-    "isObjective": false,
-    "explanation": {
-      "intro": "Explanation: Explain how Replication works in Database (SQL & MongoDB).",
-      "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
-    },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "Database (SQL & MongoDB)"
-  },
-  {
-    "id": "database_(sql_&_mongodb)_85",
-    "question": "Which statement about Indexing is correct?",
-    "options": [
-      "True for Indexing",
-      "True for B",
-      "True for C",
-      "None"
-    ],
-    "answer": "True for Indexing",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "isObjective": true,
-    "explanation": {
-      "intro": "Explanation: Which statement about Indexing is correct?",
-      "points": [
-        "Correct answer: True for Indexing.",
-        "Key concept to remember related to the question."
-      ]
-    },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "Database (SQL & MongoDB)"
-  },
-  {
-    "id": "database_(sql_&_mongodb)_86",
-    "question": "Explain how Indexing works in Database (SQL & MongoDB).",
-    "options": [],
-    "answer": "Detailed explanation about Indexing.",
-    "type": "Interview",
-    "difficulty": "Hard",
-    "isObjective": false,
-    "explanation": {
-      "intro": "Explanation: Explain how Indexing works in Database (SQL & MongoDB).",
-      "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
-    },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "Database (SQL & MongoDB)"
+    "askedBy": ["interview"],
+    "technology": "SQL / MongoDB"
   },
   {
     "id": "database_(sql_&_mongodb)_87",
+    "type": "MCQ",
     "question": "What is the purpose of Queries in Database (SQL & MongoDB)?",
     "options": [
-      "Option Queries",
-      "Option B",
-      "Option C",
-      "Option D"
+      "To create a new database",
+      "To retrieve, insert, update, or delete data",
+      "To configure database settings",
+      "To perform database backups"
     ],
-    "answer": "Option Queries",
-    "type": "MCQ",
-    "difficulty": "Hard",
+    "answer": "To retrieve, insert, update, or delete data",
     "isObjective": true,
     "explanation": {
-      "intro": "Explanation: What is the purpose of Queries in Database (SQL & MongoDB)?",
+      "intro": "Queries are used to interact with the database by performing operations on the data.",
       "points": [
-        "Correct answer: Option Queries.",
-        "Key concept to remember related to the question."
+        "They allow retrieving data using SELECT statements in SQL or find() in MongoDB.",
+        "They allow inserting new records (INSERT in SQL, insertOne()/insertMany() in MongoDB).",
+        "They allow updating existing records (UPDATE in SQL, updateOne()/updateMany() in MongoDB).",
+        "They allow deleting records (DELETE in SQL, deleteOne()/deleteMany() in MongoDB)."
       ]
     },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "Database (SQL & MongoDB)"
-  },
-  {
-    "id": "database_(sql_&_mongodb)_88",
-    "question": "Describe pros and cons of Queries.",
-    "options": [],
-    "answer": "Pros: ... Cons: ...",
-    "type": "Interview",
-    "difficulty": "Hard",
-    "isObjective": false,
-    "explanation": {
-      "intro": "Explanation: Describe pros and cons of Queries.",
-      "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
-    },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "Database (SQL & MongoDB)"
+    "askedBy": ["interview"],
+    "technology": "SQL / MongoDB"
   },
   {
     "id": "database_(sql_&_mongodb)_89",
+    "type": "MCQ",
     "question": "Which statement about Replication is correct?",
     "options": [
-      "True for Replication",
-      "True for B",
-      "True for C",
-      "None"
+      "Replication duplicates data across multiple servers for redundancy and high availability",
+      "Replication deletes data from the primary server after copying",
+      "Replication only works for SQL databases",
+      "Replication automatically normalizes the data"
     ],
-    "answer": "True for Replication",
-    "type": "MCQ",
-    "difficulty": "Hard",
+    "answer": "Replication duplicates data across multiple servers for redundancy and high availability",
     "isObjective": true,
     "explanation": {
-      "intro": "Explanation: Which statement about Replication is correct?",
+      "intro": "Replication ensures that data is copied to multiple database nodes to improve reliability and fault tolerance.",
       "points": [
-        "Correct answer: True for Replication.",
-        "Key concept to remember related to the question."
+        "It increases data availability and resilience against server failures.",
+        "It can be synchronous or asynchronous depending on the setup.",
+        "It is supported in both SQL and NoSQL databases like MongoDB."
       ]
     },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "Database (SQL & MongoDB)"
-  },
-  {
-    "id": "database_(sql_&_mongodb)_90",
-    "question": "Explain how Replication works in Database (SQL & MongoDB).",
-    "options": [],
-    "answer": "Detailed explanation about Replication.",
-    "type": "Interview",
-    "difficulty": "Medium",
-    "isObjective": false,
-    "explanation": {
-      "intro": "Explanation: Explain how Replication works in Database (SQL & MongoDB).",
-      "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
-    },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "Database (SQL & MongoDB)"
-  },
-  {
-    "id": "database_(sql_&_mongodb)_91",
-    "question": "Which annotation/keyword is used for ACID?",
-    "options": [
-      "@ACID",
-      "@B",
-      "@C",
-      "@D"
-    ],
-    "answer": "@ACID",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "isObjective": true,
-    "explanation": {
-      "intro": "Explanation: Which annotation/keyword is used for ACID?",
-      "points": [
-        "Correct answer: @ACID.",
-        "Key concept to remember related to the question."
-      ]
-    },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "Database (SQL & MongoDB)"
-  },
-  {
-    "id": "database_(sql_&_mongodb)_92",
-    "question": "Explain how ACID works in Database (SQL & MongoDB).",
-    "options": [],
-    "answer": "Detailed explanation about ACID.",
-    "type": "Interview",
-    "difficulty": "Medium",
-    "isObjective": false,
-    "explanation": {
-      "intro": "Explanation: Explain how ACID works in Database (SQL & MongoDB).",
-      "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
-    },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "Database (SQL & MongoDB)"
-  },
-  {
-    "id": "database_(sql_&_mongodb)_93",
-    "question": "Which annotation/keyword is used for Aggregation pipeline?",
-    "options": [
-      "@Aggregation pipeline",
-      "@B",
-      "@C",
-      "@D"
-    ],
-    "answer": "@Aggregation pipeline",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "isObjective": true,
-    "explanation": {
-      "intro": "Explanation: Which annotation/keyword is used for Aggregation pipeline?",
-      "points": [
-        "Correct answer: @Aggregation pipeline.",
-        "Key concept to remember related to the question."
-      ]
-    },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "Database (SQL & MongoDB)"
+    "askedBy": ["interview"],
+    "technology": "SQL / MongoDB"
   },
   {
     "id": "database_(sql_&_mongodb)_94",
     "question": "How would you design/implement Aggregation pipeline in a production system?",
     "options": [],
-    "answer": "Design considerations and steps.",
-    "type": "Interview",
-    "difficulty": "Hard",
+    "answer": "Designing an Aggregation pipeline involves structuring stages like $match, $group, $sort, $project, and $lookup efficiently to process and transform data while minimizing resource usage.",
     "isObjective": false,
     "explanation": {
-      "intro": "Explanation: How would you design/implement Aggregation pipeline in a production system?",
+      "intro": "Aggregation pipelines allow complex data transformations and analysis in databases like MongoDB and SQL.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "Use indexes and $match early in the pipeline to filter data efficiently.",
+        "Keep pipeline stages minimal and avoid unnecessary transformations.",
+        "Leverage $group and $project to aggregate and reshape data as needed.",
+        "Test the pipeline with realistic data volumes to ensure performance and scalability.",
+        "In production, consider using sharding or partitioning for large datasets."
       ]
     },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "Database (SQL & MongoDB)"
+    "askedBy": ["interview"],
+    "technology": "SQL / MongoDB"
   },
   {
     "id": "database_(sql_&_mongodb)_95",
     "question": "Which annotation/keyword is used for Sharding?",
-    "options": [
-      "@Sharding",
-      "@B",
-      "@C",
-      "@D"
-    ],
-    "answer": "@Sharding",
-    "type": "MCQ",
-    "difficulty": "Medium",
+    "options": ["@ShardKey", "@Sharded", "@Partition", "@Cluster"],
+    "answer": "@ShardKey",
+    "type":"MCQ",
     "isObjective": true,
     "explanation": {
-      "intro": "Explanation: Which annotation/keyword is used for Sharding?",
+      "intro": "In MongoDB, sharding is used to distribute data across multiple servers to improve performance and scalability.",
       "points": [
-        "Correct answer: @Sharding.",
-        "Key concept to remember related to the question."
+        "@ShardKey is used to specify the key on which the collection will be sharded.",
+        "Proper choice of shard key ensures even data distribution and optimal query performance.",
+        "Other annotations like @Sharded or @Partition are not standard in MongoDB or Spring Data MongoDB."
       ]
     },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "Database (SQL & MongoDB)"
+    "askedBy": ["interview"],
+    "technology": "MongoDB"
   },
   {
     "id": "database_(sql_&_mongodb)_96",
     "question": "Explain how Sharding works in Database (SQL & MongoDB).",
     "options": [],
-    "answer": "Detailed explanation about Sharding.",
-    "type": "Interview",
-    "difficulty": "Hard",
+    "answer": "Sharding is a database architecture pattern that distributes data across multiple machines to improve scalability and performance. In MongoDB, sharding divides a collection into chunks based on a shard key, distributing these chunks across different shards (servers). In SQL databases, horizontal partitioning is used to split tables across multiple databases or servers.",
     "isObjective": false,
-    "explanation": {
-      "intro": "Explanation: Explain how Sharding works in Database (SQL & MongoDB).",
-      "points": [
-        "Detailed explanation to highlight important aspects."
-      ]
-    },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "Database (SQL & MongoDB)"
-  },
-  {
-    "id": "database_(sql_&_mongodb)_97",
-    "question": "Which annotation/keyword is used for ACID?",
-    "options": [
-      "@ACID",
-      "@B",
-      "@C",
-      "@D"
-    ],
-    "answer": "@ACID",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "isObjective": true,
-    "explanation": {
-      "intro": "Explanation: Which annotation/keyword is used for ACID?",
-      "points": [
-        "Correct answer: @ACID.",
-        "Key concept to remember related to the question."
-      ]
-    },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "Database (SQL & MongoDB)"
-  },
-  {
-    "id": "database_(sql_&_mongodb)_98",
-    "question": "Describe pros and cons of ACID.",
-    "options": [],
-    "answer": "Pros: ... Cons: ...",
-    "type": "Interview",
     "difficulty": "Hard",
-    "isObjective": false,
     "explanation": {
-      "intro": "Explanation: Describe pros and cons of ACID.",
+      "intro": "Sharding helps handle large datasets and high throughput by distributing data and queries.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "Data is partitioned based on a shard key (MongoDB) or partitioning strategy (SQL).",
+        "Each shard handles a subset of the data, reducing load on a single server.",
+        "Query routing ensures that requests are sent to the correct shard.",
+        "Challenges include maintaining consistency, balancing shards, and handling re-sharding operations."
       ]
     },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "Database (SQL & MongoDB)"
+    "askedBy": ["interview"],
+    "technology": "SQL & MongoDB"
   },
   {
     "id": "database_(sql_&_mongodb)_99",
-    "question": "Which annotation/keyword is used for Indexing?",
-    "options": [
-      "@Indexing",
-      "@B",
-      "@C",
-      "@D"
-    ],
-    "answer": "@Indexing",
-    "type": "MCQ",
+    "question": "Which annotation/keyword is used for Indexing in MongoDB?",
     "difficulty": "Hard",
+    "type": "MCQ",
+    "options": [
+      "@Index",
+      "@Indexed",
+      "CREATE INDEX",
+      "INDEX"
+    ],
+    "answer": "@Indexed",
     "isObjective": true,
     "explanation": {
-      "intro": "Explanation: Which annotation/keyword is used for Indexing?",
+      "intro": "Indexing is used to improve query performance in databases by creating indexes on specific fields.",
       "points": [
-        "Correct answer: @Indexing.",
-        "Key concept to remember related to the question."
+        "In MongoDB with Spring Data, the @Indexed annotation is used on a field to create an index.",
+        "In SQL, indexes can be created using the CREATE INDEX command, but in ORM frameworks, annotations like @Indexed are used."
       ]
     },
-    "askedBy": [
-      "interview",
-      "practice"
-    ],
-    "technology": "Database (SQL & MongoDB)"
+    "askedBy": ["interview"],
+    "technology": "MongoDB"
   },
   {
     "id": "database_(sql_&_mongodb)_100",
     "question": "How would you design/implement Indexing in a production system?",
     "options": [],
-    "answer": "Design considerations and steps.",
-    "type": "Interview",
     "difficulty": "Medium",
+    "answer": "In a production system, indexing should be carefully planned based on query patterns. Use indexes on frequently queried fields and consider compound indexes for multi-field searches. Monitor index usage to avoid unnecessary indexes that can slow down write operations. Regularly rebuild or optimize indexes as data grows.",
     "isObjective": false,
     "explanation": {
-      "intro": "Explanation: How would you design/implement Indexing in a production system?",
+      "intro": "Indexing improves query performance but has trade-offs. Proper design ensures optimal performance without degrading writes.",
       "points": [
-        "Detailed explanation to highlight important aspects."
+        "Analyze query patterns to identify fields needing indexes.",
+        "Use unique indexes where applicable for data integrity.",
+        "Avoid over-indexing as each index adds overhead to insert/update operations.",
+        "Consider partial or sparse indexes to optimize storage and performance.",
+        "Monitor index usage with database profiling tools and adjust as needed."
       ]
     },
-    "askedBy": [
-      "interview"
-    ],
-    "technology": "Database (SQL & MongoDB)"
+    "askedBy": ["interview"],
+    "technology": "SQL & MongoDB"
   }
 ]

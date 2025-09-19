@@ -1,11 +1,18 @@
 import React from 'react'
 
-const PageLayout = ({title, data}) => {
+const PageLayout = ({title, data, sidebarOpen}) => {
 
   return (
     <>
       <div>
-        <h1 className='h1'>{title}</h1>
+        {sidebarOpen === undefined ? (
+          <h1 className='h1'>{title}</h1>
+        ): (sidebarOpen ? (
+          <h1 className='h1' style={{ marginLeft: '12%'}}>{title}</h1>  
+        ): (
+          <h1 className='h1' style={{ marginLeft: '12%'}}>{title}</h1>
+        ))} 
+        
       </div>
       <table style={{width:'100%'}}>
         <thead>

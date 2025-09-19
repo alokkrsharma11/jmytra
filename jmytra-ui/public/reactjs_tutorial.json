@@ -74,7 +74,7 @@
           "description": "Applies blending effects between background layers."
         }
       ],
-      "type": "Learning ReactJS"
+      "type": "Advance Concepts"
     },
     {
       "title": "Closures in JavaScript",
@@ -82,7 +82,7 @@
       "code": "function outer() { let x=10; return function inner(){ return x; } }",
       "useCases": ["Data privacy", "Function factories", "Event handlers"],
       "keyPoints": ["Lexical scoping", "State persistence"],
-      "type": "Learning ReactJS"
+      "type": "Advance Concepts"
     },
     {
       "title": "let, const, var in JavaScript",
@@ -106,7 +106,7 @@
           "reassignment": "Not allowed (except object/array mutations)"
         }
       ],
-      "type": "Learning ReactJS"
+      "type": "Advance Concepts"
     },
     {
       "title": "React Basics",
@@ -120,7 +120,7 @@
         "Declarative UI",
         "Rich ecosystem & tools"
       ],
-      "type": "Learning ReactJS"
+      "type": "Advance Concepts"
     },
     {
       "title": "React Lifecycle Methods",
@@ -132,19 +132,19 @@
       "functionalEquivalent": {
         "useEffect": "Combines componentDidMount, componentDidUpdate, componentWillUnmount"
       },
-      "type": "Learning ReactJS"
+      "type": "Advance Concepts"
     },
     {
       "title": "JavaScript Iterations",
       "loops": ["for", "while", "do...while", "for...of", "for...in"],
       "arrayMethods": ["forEach", "map", "filter", "reduce", "every", "some", "find", "findIndex"],
-      "type": "Learning ReactJS"
+      "type": "Advance Concepts"
     },
     {
       "title": "Object-Oriented JavaScript",
       "concepts": ["Objects", "Classes", "Inheritance", "Encapsulation", "Polymorphism"],
       "exampleClass": "class Car { constructor(make, model){ this.make=make; this.model=model;} start(){console.log('Engine on')}}",
-      "type": "Learning ReactJS"
+      "type": "Advance Concepts"
     }
 
   ]

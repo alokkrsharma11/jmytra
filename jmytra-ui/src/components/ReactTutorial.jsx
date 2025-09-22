@@ -5,6 +5,7 @@ import { Tabs, Tab, Box, IconButton } from "@mui/material";
 import { ChevronRight, ChevronLeft } from "@mui/icons-material";
 import './../App.css'
 import QuizContent from "./QuizContent";
+import CodeBlock from "./CodeBlock";
 
 const ReactTutorial = () => {
   const [topics, setTopics] = useState([]);
@@ -230,7 +231,9 @@ const ReactTutorial = () => {
                     </ul>
                 </div>
                 )}
-
+              {topic.code && (
+                <CodeBlock language={topic.language || 'javascript'} code={topic.code} />
+              )}
                 {/* Render OOP concepts */}
                 {topic.concepts && (
                 <div>

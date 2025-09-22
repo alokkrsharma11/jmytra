@@ -29,12 +29,45 @@ const SpringTutorial = () => {
   }, []);
 
   // Merge both when either changes
-  useEffect(() => {
+  /*useEffect(() => {
     if (quizA.length > 0 || quizB.length > 0) {
       setQuestions([...quizA, ...quizB]);
     }
-  }, [quizA, quizB]);
+  }, [quizA, quizB]);*/
+  useEffect(() => {
+    const loadMarkdownForQuestions = async (qs) => {
+      return Promise.all(
+        qs.map(async (q) => {
+          if (q.explanation?.diagram) {
+            try {
+              const res = await fetch(q.explanation.diagram);
+              const md = await res.text();
+              return { 
+                ...q, 
+                explanation: { 
+                  ...q.explanation, 
+                  diagramMarkdown: md   // store it alongside the diagram
+                } 
+              };
+            } catch (err) {
+              console.error("Error loading markdown:", err);
+            }
+          }
+          return q;
+        })
+      );
+    };
 
+    const mergeAndLoad = async () => {
+      const merged = [...quizA, ...quizB];
+      const withMarkdown = await loadMarkdownForQuestions(merged);
+      setQuestions(withMarkdown);
+    };
+
+    if (quizA.length > 0 || quizB.length > 0) {
+      mergeAndLoad();
+    }
+  }, [quizA, quizB]);
   // Group questions by type
   const grouped = questions.reduce((acc, q) => {
     const type = q.type || "Advance Concepts";

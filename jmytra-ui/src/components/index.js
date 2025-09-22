@@ -7,4 +7,5 @@ export { default as SpringTutorial } from "./SpringTutorial";
 export { default as About } from "./About";
 export { default as Support } from "./Support";
 export { default as Home } from "./Home";
-export { default as MermaidWrapper} from "./MermaidWrapper";
+export { default as MermaidWrapper } from "./MermaidWrapper";
+export { default as MarkdownRenderer } from "./MarkdownRenderer";

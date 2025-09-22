@@ -656,7 +656,7 @@
         "Keywords like `volatile`, `synchronized`, and `final` play important roles in enforcing memory visibility and ordering."
       ],
       "code": "class SharedData {\n    private volatile boolean flag = false;\n\n    public void writer() {\n        flag = true; // write visible to other threads\n    }\n\n    public void reader() {\n        if (flag) {\n            System.out.println(\"Flag is true\");\n        }\n    }\n}\n\n// Without 'volatile', another thread may not see updated value immediately.",
-      "diagram": "graph TD;\n    MainMemory[Main Memory] -->|Read/Write| Thread1Cache[Thread 1 Working Memory]\n    MainMemory[Main Memory] -->|Read/Write| Thread2Cache[Thread 2 Working Memory]\n    Thread1Cache --> Thread1[Thread 1]\n    Thread2Cache --> Thread2[Thread 2]\n    note1[Volatile/Synchronized ensures visibility between caches]:::note\n\n    classDef note fill:#f9f,stroke:#333,stroke-width:1px;"
+      "diagram": "/diagrams/java_memory_modal.md"
     },
     "askedBy": "Interview",
     "difficulty": "Hard",
@@ -822,7 +822,7 @@
         "Not thread-safe; use `ConcurrentHashMap` for thread-safe operations."
       ],
       "code": "import java.util.*;\n\npublic class HashMapExample {\n    public static void main(String[] args) {\n        HashMap<Integer, String> map = new HashMap<>();\n        map.put(1, \"Apple\");\n        map.put(2, \"Banana\");\n        map.put(3, \"Cherry\");\n\n        System.out.println(map.get(2)); // Output: Banana\n    }\n}",
-      "diagram": "graph TD;\n\n   HashMap\n     |\n     +-- Bucket[0] --> (Key1=Apple)\n     +-- Bucket[1] --> (Key2=Banana) --> (Key12=Orange)  // Collision handled via LinkedList/Tree\n     +-- Bucket[2] --> (Key3=Cherry)\n     +-- Bucket[3] --> null\n\nEach key's hashCode() decides the bucket index. If multiple keys hash to the same bucket, they are chained in a LinkedList or Tree."
+      "diagram": "/diagrams/hashmap_working.md"
     }
   },
   {
@@ -959,7 +959,7 @@
         "Introduced later, HashMap is part of Java 1.2 Collections Framework, while Hashtable is legacy (pre-1.2).",
         "Iteration order is not guaranteed in both, but HashMap usually performs better in single-threaded scenarios."
       ],
-      "diagram": "```mermaid\nflowchart TD\n    A[Key Input] --> B[Hash Function]\n    B --> C[Calculate Index]\n    C --> D[HashMap: Allows null key, not synchronized]\n    C --> E[Hashtable: No null key, synchronized]\n```",
+      "diagram": "/diagrams/hashtable_vs_hashmap.md",
       "code": "import java.util.*;\n\npublic class MapDemo {\n    public static void main(String[] args) {\n        HashMap<Integer, String> hashMap = new HashMap<>();\n        hashMap.put(1, \"Alice\");\n        hashMap.put(null, \"NullKey\"); // Allowed\n\n        Hashtable<Integer, String> hashtable = new Hashtable<>();\n        hashtable.put(1, \"Bob\");\n        // hashtable.put(null, \"NullKey\"); // Throws NullPointerException\n\n        System.out.println(\"HashMap: \" + hashMap);\n        System.out.println(\"Hashtable: \" + hashtable);\n    }\n}"
     },
     "differences": [
@@ -1035,7 +1035,7 @@
         "5. Excessive synchronization can lead to performance issues or deadlocks if not used carefully."
       ],
       "code": "class Counter {\n    private int count = 0;\n\n    // synchronized method\n    public synchronized void increment() {\n        count++;\n    }\n\n    public int getCount() {\n        return count;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) throws InterruptedException {\n        Counter counter = new Counter();\n\n        Runnable task = () -> {\n            for (int i = 0; i < 1000; i++) {\n                counter.increment();\n            }\n        };\n\n        Thread t1 = new Thread(task);\n        Thread t2 = new Thread(task);\n\n        t1.start();\n        t2.start();\n\n        t1.join();\n        t2.join();\n\n        System.out.println(counter.getCount()); // Always 2000\n    }\n}",
-      "diagram": "```mermaid\nflowchart TD\n    A[Thread 1 wants to enter synchronized method] -->|Acquires Lock| B[Thread 1 executes method]\n    C[Thread 2 wants to enter synchronized method] -->|Waits for lock| B\n    B -->|Releases Lock| D[Thread 2 acquires lock and executes method]\n```"
+      "diagram": "/diagrams/sync_thread_safety.md"
     },
     "type":"Advance Concepts",
     "difficulty": "Medium",
@@ -1186,7 +1186,7 @@
         "If Thread A writes to a variable and Thread B reads it, a happens-before relationship guarantees Thread B sees the value written by Thread A.",
         "Common examples include: synchronization blocks, volatile variables, and thread start/join operations."
       ],
-      "diagram": "graph LR\nA[Thread A writes variable X] -->|happens-before| B[Thread B reads variable X]"
+      "diagram": "/diagrams/happens_before.md"
     },
     "isObjective": false
   },
@@ -1232,7 +1232,7 @@
         "Stack memory is thread-private; each thread has its own stack.",
         "Helps in method execution and return handling."
       ],
-      "diagram": "mermaid\nflowchart TD\n    Thread --> Stack[Method Stack]\n    Stack --> Frame1[Frame for Method A]\n    Stack --> Frame2[Frame for Method B]\n    Frame1 --> LocalVarsA[Local Variables]\n    Frame1 --> OperandStackA[Operand Stack]\n    Frame2 --> LocalVarsB[Local Variables]\n    Frame2 --> OperandStackB[Operand Stack]"
+      "diagram": "/diagrams/jvm_memory_stack.md"
     },
     "isObjective": true
   },
@@ -1251,7 +1251,7 @@
         "Java **does not perform tail call optimization**, so deep tail recursion may still lead to `StackOverflowError`."
       ],
       "code": "```java\n// Example of tail recursion in Java\npublic class TailRecursion {\n    static int factorial(int n, int result) {\n        if (n == 0) return result;\n        return factorial(n - 1, n * result); // tail recursive call\n    }\n\n    public static void main(String[] args) {\n        System.out.println(factorial(5, 1)); // Output: 120\n    }\n}\n```",
-      "diagram": "mermaid\nflowchart TD\n    Start[Start: factorial(n=5, result=1)] --> Call1[factorial(4, 5*1)]\n    Call1 --> Call2[factorial(3, 4*5)]\n    Call2 --> Call3[factorial(2, 3*20)]\n    Call3 --> Call4[factorial(1, 2*60)]\n    Call4 --> Call5[factorial(0, 120)]\n    Call5 --> End[Return 120]"
+      "diagram": "/diagrams/recursive_factorial.md"
     },
     "isObjective": false
   },
@@ -1274,7 +1274,7 @@
         "Examples include `NullPointerException`, `ArrayIndexOutOfBoundsException`, `ArithmeticException`.",
         "Checked exceptions, in contrast, must extend `Exception` (but not `RuntimeException`) and be declared or handled."
       ],
-      "diagram": "mermaid\nclassDiagram\n    Throwable <|-- Exception\n    Throwable <|-- Error\n    Exception <|-- RuntimeException\n    RuntimeException <|-- NullPointerException\n    RuntimeException <|-- ArithmeticException"
+      "diagram": "/diagrams/exception_hierarchy.md"
     },
     "isObjective": true
   },
@@ -1363,7 +1363,7 @@
         "4. Slower access compared to stack.",
         "5. Dynamic memory allocation; size can grow as needed."
       ],
-      "diagram": "mermaid\nflowchart LR\n    A[Stack Memory] --> B[Local variables & Method calls]\n    C[Heap Memory] --> D[Objects & Instances]\n    B -. Thread-specific .-> E[Each thread has its own stack]\n    D -. Shared across threads .-> F[Accessible by all threads]"
+      "diagram": "/diagrams/stack_vs_heap.md"
     },
     "difficulty": "Medium",
     "isObjective": false
@@ -1492,7 +1492,7 @@
         "3. **Monitoring GC logs**: Identify memory growth patterns.",
         "4. **Unit tests with memory assertions**: Detect unintentional retention."
       ],
-      "diagram": "graph LR\nA[Application Objects] --> B{Garbage Collector}\nB --> C[Heap Memory]\nD[Leaked Objects] -.-> C\nnote right of D: Objects still referenced and not collected"
+      "diagram": "/diagrams/garbage_collector.md"
     },
     "isObjective": false
   },

@@ -175,7 +175,7 @@
         "**Example**: With `spring-boot-starter-data-jpa` in the classpath, Spring Boot configures a `DataSource`, `EntityManagerFactory`, and `TransactionManager` automatically."
       ],
       "code": "import org.springframework.boot.SpringApplication;\nimport org.springframework.boot.autoconfigure.SpringBootApplication;\n\n@SpringBootApplication  // includes @EnableAutoConfiguration\npublic class MyApp {\n    public static void main(String[] args) {\n        SpringApplication.run(MyApp.class, args);\n    }\n}\n",
-      "diagram": "```mermaid\ngraph TD;\n    A[Start Application] --> B[@SpringBootApplication]\n    B --> C[EnableAutoConfiguration]\n    C --> D[SpringFactoriesLoader loads META-INF/spring.factories]\n    D --> E[Check @Conditional annotations]\n    E --> F[Auto-configure beans if conditions met]\n    F --> G[Developer beans override defaults]\n```"
+      "diagram": "/diagrams/spring_boot_auto_config.md"
     },
     "askedBy": [
       "interview"
@@ -202,7 +202,7 @@
         "**NESTED**: Creates a nested transaction using savepoints (dependent on database support)."
       ],
       "code": "import org.springframework.transaction.annotation.Propagation;\nimport org.springframework.transaction.annotation.Transactional;\n\npublic class PaymentService {\n\n    @Transactional(propagation = Propagation.REQUIRED)\n    public void processPayment() {\n        // joins existing or creates new transaction\n    }\n\n    @Transactional(propagation = Propagation.REQUIRES_NEW)\n    public void logTransaction() {\n        // always starts a new transaction\n    }\n}\n",
-      "diagram": "```mermaid\ngraph TD;\n    A[Caller Method] -->|Calls Service Method| B[Transaction Exists?]\n    B -->|Yes + REQUIRED| C[Join Existing Transaction]\n    B -->|No + REQUIRED| D[Create New Transaction]\n    B -->|REQUIRES_NEW| E[Always New Transaction]\n    B -->|SUPPORTS| F[Join If Exists, Else Non-Transactional]\n    B -->|NOT_SUPPORTED| G[Suspend Existing, Run Without Tx]\n    B -->|MANDATORY| H[Throws Exception if No Tx]\n    B -->|NEVER| I[Throws Exception if Tx Exists]\n    B -->|NESTED| J[Savepoint / Nested Transaction]\n```"
+      "diagram": "/diagrams/spring_txn_propagation.md"
     },
     "askedBy": [
       "interview"

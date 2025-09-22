@@ -3,6 +3,7 @@ import CodeBlock from "./CodeBlock";
 import { useState } from 'react';
 import QuizOptions from './QuizOptions';
 import MermaidWrapper from './MermaidWrapper';
+import MarkdownRenderer from './MarkdownRenderer'; 
 
 const QuizContent = ({ question }) => {
   const [selected, setSelected] = useState(null);
@@ -93,9 +94,12 @@ const QuizContent = ({ question }) => {
               {question.explanation.code && (
                 <CodeBlock language="java" code={question.explanation.code} />
               )}
-              {question.explanation.diagram && (
+              {/* ✅ Diagram handling */}
+              {question.explanation.diagramMarkdown ? (
+                <MarkdownRenderer content={question.explanation.diagramMarkdown} />
+              ) : question.explanation.diagram ? (
                 <MermaidWrapper chart={question.explanation.diagram} />
-              )}
+              ) : null}
             </div>
           )}
         </div>

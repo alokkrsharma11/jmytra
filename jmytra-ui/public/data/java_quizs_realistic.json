@@ -687,7 +687,7 @@
       ],
       "language": "java", 
       "code": "class SharedData {\n    private volatile boolean flag = false;\n\n    public void writer() {\n        flag = true; // write visible to other threads\n    }\n\n    public void reader() {\n        if (flag) {\n            System.out.println(\"Flag is true\");\n        }\n    }\n}\n\n// Without 'volatile', another thread may not see updated value immediately.",
-      "diagram": "/diagrams/java_memory_modal.md"
+      "diagram": "/diagram/java/java_memory_modal.md"
     },
     "askedBy": "Interview",
     "difficulty": "Hard",
@@ -860,7 +860,7 @@
       ],
       "language": "java", 
       "code": "import java.util.*;\n\npublic class HashMapExample {\n    public static void main(String[] args) {\n        HashMap<Integer, String> map = new HashMap<>();\n        map.put(1, \"Apple\");\n        map.put(2, \"Banana\");\n        map.put(3, \"Cherry\");\n\n        System.out.println(map.get(2)); // Output: Banana\n    }\n}",
-      "diagram": "/diagrams/hashmap_working.md"
+      "diagram": "/diagram/java/hashmap_working.md"
     }
   },
   {
@@ -1002,7 +1002,7 @@
         "Introduced later, HashMap is part of Java 1.2 Collections Framework, while Hashtable is legacy (pre-1.2).",
         "Iteration order is not guaranteed in both, but HashMap usually performs better in single-threaded scenarios."
       ],
-      "diagram": "/diagrams/hashtable_vs_hashmap.md",
+      "diagram": "/diagram/java/hashtable_vs_hashmap.md",
       "language": "java", 
       "code": "import java.util.*;\n\npublic class MapDemo {\n    public static void main(String[] args) {\n        HashMap<Integer, String> hashMap = new HashMap<>();\n        hashMap.put(1, \"Alice\");\n        hashMap.put(null, \"NullKey\"); // Allowed\n\n        Hashtable<Integer, String> hashtable = new Hashtable<>();\n        hashtable.put(1, \"Bob\");\n        // hashtable.put(null, \"NullKey\"); // Throws NullPointerException\n\n        System.out.println(\"HashMap: \" + hashMap);\n        System.out.println(\"Hashtable: \" + hashtable);\n    }\n}"
     },
@@ -1080,7 +1080,7 @@
       ],
       "language": "java", 
       "code": "class Counter {\n    private int count = 0;\n\n    // synchronized method\n    public synchronized void increment() {\n        count++;\n    }\n\n    public int getCount() {\n        return count;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) throws InterruptedException {\n        Counter counter = new Counter();\n\n        Runnable task = () -> {\n            for (int i = 0; i < 1000; i++) {\n                counter.increment();\n            }\n        };\n\n        Thread t1 = new Thread(task);\n        Thread t2 = new Thread(task);\n\n        t1.start();\n        t2.start();\n\n        t1.join();\n        t2.join();\n\n        System.out.println(counter.getCount()); // Always 2000\n    }\n}",
-      "diagram": "/diagrams/sync_thread_safety.md"
+      "diagram": "/diagram/java/sync_thread_safety.md"
     },
     "type":"Advance Concepts",
     "difficulty": "Medium",
@@ -1237,7 +1237,7 @@
         "If Thread A writes to a variable and Thread B reads it, a happens-before relationship guarantees Thread B sees the value written by Thread A.",
         "Common examples include: synchronization blocks, volatile variables, and thread start/join operations."
       ],
-      "diagram": "/diagrams/happens_before.md"
+      "diagram": "/diagram/java/happens_before.md"
     },
     "isObjective": false
   },
@@ -1284,7 +1284,7 @@
         "Stack memory is thread-private; each thread has its own stack.",
         "Helps in method execution and return handling."
       ],
-      "diagram": "/diagrams/jvm_memory_stack.md"
+      "diagram": "/diagram/java/jvm_memory_stack.md"
     },
     "isObjective": true
   },
@@ -1304,7 +1304,7 @@
       ],
       "language": "java", 
       "code": "```java\n// Example of tail recursion in Java\npublic class TailRecursion {\n    static int factorial(int n, int result) {\n        if (n == 0) return result;\n        return factorial(n - 1, n * result); // tail recursive call\n    }\n\n    public static void main(String[] args) {\n        System.out.println(factorial(5, 1)); // Output: 120\n    }\n}\n```",
-      "diagram": "/diagrams/recursive_factorial.md"
+      "diagram": "/diagram/java/recursive_factorial.md"
     },
     "isObjective": false
   },
@@ -1327,7 +1327,7 @@
         "Examples include `NullPointerException`, `ArrayIndexOutOfBoundsException`, `ArithmeticException`.",
         "Checked exceptions, in contrast, must extend `Exception` (but not `RuntimeException`) and be declared or handled."
       ],
-      "diagram": "/diagrams/exception_hierarchy.md"
+      "diagram": "/diagram/java/exception_hierarchy.md"
     },
     "isObjective": true
   },
@@ -1419,7 +1419,7 @@
         "4. Slower access compared to stack.",
         "5. Dynamic memory allocation; size can grow as needed."
       ],
-      "diagram": "/diagrams/stack_vs_heap.md"
+      "diagram": "/diagram/java/stack_vs_heap.md"
     },
     "difficulty": "Medium",
     "isObjective": false
@@ -1553,7 +1553,7 @@
         "3. **Monitoring GC logs**: Identify memory growth patterns.",
         "4. **Unit tests with memory assertions**: Detect unintentional retention."
       ],
-      "diagram": "/diagrams/garbage_collector.md"
+      "diagram": "/diagram/java/garbage_collector.md"
     },
     "isObjective": false
   },
@@ -2153,5 +2153,791 @@
       "code": "\n```java\nimport java.util.concurrent.*;\n\nConcurrentHashMap<String, Integer> map = new ConcurrentHashMap<>();\nmap.put(\"A\", 1);\nmap.computeIfPresent(\"A\", (k,v) -> v + 1);\nSystem.out.println(map.get(\"A\")); // Thread-safe increment\n```"
     },
     "isObjective": false
+  },
+  {
+    "id": 101,
+    "question": "What new features did Java 8 introduce?",
+    "isObjective": 0,
+    "type": "Interview",
+    "options": [],
+    "answer": "Java 8 introduced Lambda Expressions, Method References, Functional Interfaces, Default Methods, Stream API, a new Date and Time API, Nashorn JavaScript engine.",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "intro": "The Java 8 version has:",
+      "points": [
+        "An improved, immutable JodaTime-inspired Date and time API",
+        "A new language construct called Lambda Expressions that treats actions as objects",
+        "Method References, enabling Lambda Expressions by referring to methods directly",
+        "Default methods, adding implementations in interfaces besides abstract methods",
+        "Nashorn, a high-performance Java-based engine to execute JavaScript code",
+        "Stream API, a special iterator class for processing collections in a functional manner"
+      ]
+    }
+  },
+  {
+    "id": 102,
+    "question": "Why was a new version of Java needed in the first place?",
+    "isObjective": 0,
+    "type": "Interview",
+    "options": [],
+    "answer": "To leverage modern multi-core hardware efficiently and introduce functional programming features.",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "points": [
+        "Dramatic changes in hardware created the need for Java to use multi-core CPUs efficiently",
+        "Enable developers to use new functional programming features"
+      ]
+    }
+  },
+  {
+    "id": 103,
+    "question": "So, what actual advantages does Java 8 bring?",
+    "isObjective": 0,
+    "type": "Interview",
+    "options": [],
+    "answer": "Java 8 improves code readability, reusability, testability, concurrency, scalability, and performance.",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "points": [
+        "Code is more concise and readable",
+        "Code is more reusable",
+        "Code is more testable and maintainable",
+        "Highly concurrent and scalable",
+        "Parallel and database-like operations possible",
+        "Better application performance",
+        "Improved developer productivity"
+      ]
+    }
+  },
+  {
+    "id": 104,
+    "question": "What is a Lambda Expression, and why use them?",
+    "isObjective": 0,
+    "type": "Interview",
+    "options": [],
+    "answer": "A Lambda Expression is a function that can be referenced as an object. It reduces boilerplate and provides a clean way to implement functional interfaces.",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "intro": "Lambda Expressions allow writing anonymous methods in a concise way.",
+      "code": "List<String> names = Arrays.asList(\"Alok\", \"Manish\");\nnames.forEach(name -> System.out.println(name));"
+    }
+  },
+  {
+    "id": 105,
+    "question": "What is a functional interface?",
+    "isObjective": 0,
+    "type": "Advance Concepts",
+    "options": [],
+    "answer": "A functional interface is an interface with exactly one abstract method.",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "intro": "A functional interface may also contain default and static methods.",
+      "points": [
+        "It has exactly one abstract method.",
+        "Can contain any number of default or static methods.",
+        "Used as the target for lambda expressions and method references in Java 8+."
+      ],
+      "code": "interface MyFuncInterface {\n    void execute(); // single abstract method\n    default void log() {\n        System.out.println(\"Logging\");\n    }\n}\n\nMyFuncInterface obj = () -> System.out.println(\"Executing\");\nobj.execute();"
+  }
+  },
+  {
+    "id": 106,
+    "question": "How are functional interfaces and Lambda Expressions related?",
+    "isObjective": 0,
+    "type": "Interview",
+    "options": [],
+    "answer": "Lambda expressions can be used only with functional interfaces since they implement the interface's single abstract method.",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "intro": "Functional interfaces act as a target for lambda expressions.",
+      "points": [
+        "A lambda expression provides the implementation of the single abstract method of a functional interface.",
+        "They allow concise representation of instances of functional interfaces.",
+        "Functional interfaces with default and static methods can still be used with lambdas, as only the abstract method is implemented."
+      ],
+      "code": "interface MyFuncInterface {\n    void execute();\n}\n\nMyFuncInterface obj = () -> System.out.println(\"Executing via Lambda\");\nobj.execute();"
+    }
+  },
+  {
+    "id": 107,
+    "isObjective": 0,
+    "type": "Interview",
+    "options": [],
+    "answer": "Yes, developers can create custom functional interfaces using @FunctionalInterface annotation.",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "intro": "Example: Runnable, Callable, or user-defined single-method interfaces.",
+      "points": [
+        "Custom functional interfaces allow developers to define single abstract methods tailored to specific use cases.",
+        "The @FunctionalInterface annotation ensures the interface has only one abstract method, providing compile-time safety.",
+        "Lambda expressions can implement these user-defined functional interfaces, simplifying code."
+      ],
+      "code": "import java.util.*;\n\n@FunctionalInterface\ninterface MyFunction {\n    void apply(String message);\n}\n\npublic class Demo {\n    public static void main(String[] args) {\n        MyFunction func = msg -> System.out.println(\"Message: \" + msg);\n        func.apply(\"Hello World\");\n    }\n}"
+    }
+  },
+  {
+    "id": 108,
+    "isObjective": 0,
+    "type": "Interview",
+    "options": [],
+    "answer": "A method reference is a shorthand syntax for calling a method by referring to it without invoking it directly.",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "intro": "Method references provide a concise way to refer to methods using `::` without executing them immediately.",
+      "points": [
+        "Method references improve code readability and reduce boilerplate.",
+        "They can refer to static methods, instance methods, or constructors.",
+        "Used often with functional interfaces and lambda expressions."
+      ],
+      "code": "import java.util.*;\n\npublic class Demo {\n    public static void main(String[] args) {\n        List<String> names = Arrays.asList(\"Alice\", \"Bob\", \"Charlie\");\n        // Method reference to print each name\n        names.forEach(System.out::println);\n    }\n}"
+    }
+  },
+  {
+    "id": 109,
+    "question": "What is Optional, and what is it best used for?",
+    "isObjective": 0,
+    "type": "Interview",
+    "options": [],
+    "answer": "Optional is a container class that represents optional values, mainly used to avoid null checks and NullPointerExceptions.",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "intro": "Optional was introduced in Java 8 as a way to handle values that may or may not be present, reducing the risk of NullPointerExceptions.",
+      "points": [
+        "Represents a value that might be present or absent.",
+        "Helps in writing cleaner code by avoiding explicit null checks.",
+        "Supports functional-style operations like map, filter, and ifPresent."
+      ],
+      "code": "import java.util.*;\n\npublic class OptionalDemo {\n    public static void main(String[] args) {\n        Optional<String> name = Optional.ofNullable(getName());\n        name.ifPresent(System.out::println); // prints only if value is present\n    }\n\n    static String getName() {\n        return null; // could be any value\n    }\n}"
+    }
+  },
+  {
+    "id": 110,
+    "isObjective": 0,
+    "type": "Interview",
+    "options": [],
+    "answer": "Type inference is when the compiler determines argument or return types automatically from context.",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "intro": "Type inference allows Java to automatically deduce types for variables, method arguments, or return types, reducing verbosity.",
+      "points": [
+        "Introduced in Java 7 with the diamond operator `<>` for generics.",
+        "Reduces boilerplate code and improves readability.",
+        "Helps when using generics or lambda expressions."
+      ],
+      "code": "List<String> list = new ArrayList<>(); // compiler infers ArrayList<String>\nvar number = 10; // Java 10+ infers 'int'"
+    }
+  },
+  {
+    "id": 111,
+    "question": "What are default methods in interfaces?",
+    "isObjective": 0,
+    "type": "Interview",
+    "options": [],
+    "answer": "Default methods allow adding method implementations in interfaces without breaking existing classes.",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "code": "interface MyInterface { default void show() { System.out.println(\"Hello\"); } }"
+    }
+  },
+  {
+    "id": 112,
+    "question": "What is the Stream API in Java 8?",
+    "isObjective": 0,
+    "type": "Interview",
+    "options": [],
+    "answer": "Stream API provides a functional approach to process collections of objects efficiently with operations like map, filter, reduce.",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "code": "List<Integer> nums = Arrays.asList(1,2,3);\nnums.stream().filter(n -> n%2==0).forEach(System.out::println);"
+    }
+  },
+  {
+    "id": 113,
+    "question": "Difference between intermediate and terminal operations in Stream API?",
+    "isObjective": 0,
+    "type": "Interview",
+    "options": [],
+    "answer": "Intermediate operations return a new Stream (lazy), while terminal operations produce a result or side-effect.",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "intro": "Streams in Java 8 support two types of operations: intermediate and terminal.",
+      "points": [
+        "Intermediate operations: lazy, return a Stream, can be chained (e.g., filter, map, sorted).",
+        "Terminal operations: trigger the processing, produce result or side-effect (e.g., collect, forEach, count)."
+      ],
+      "code": "List<String> names = Arrays.asList(\"Alice\", \"Bob\", \"Charlie\");\nList<String> filtered = names.stream()\n                             .filter(n -> n.startsWith(\"A\")) // intermediate\n                             .collect(Collectors.toList()); // terminal",
+      "diagram": "/diagram/java/intermediate_vs_terminal_ops.md"
+    }
+  },
+  {
+    "id": 114,
+    "question": "What are Collectors in Stream API?",
+    "isObjective": 0,
+    "type": "Interview",
+    "options": [],
+    "answer": "Collectors are utilities that accumulate elements into collections, strings, or summarization results.",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "intro": "Collectors are used in the terminal operation `collect()` to aggregate stream elements.",
+      "points": [
+        "They can collect elements into a List, Set, Map, or String.",
+        "They can also perform summarization, averaging, counting, or joining elements.",
+        "Common methods: `Collectors.toList()`, `Collectors.toSet()`, `Collectors.joining()`, `Collectors.groupingBy()`."
+      ],
+      "code": "List<String> names = Arrays.asList(\"Alice\", \"Bob\", \"Charlie\");\nList<String> nameList = names.stream()\n                             .collect(Collectors.toList());",
+      "diagram": "/diagram/java/collectors_in_stream.md"
+    }
+  },
+  {
+    "id": 115,
+    "question": "What are the main changes in the Date and Time API (java.time)?",
+    "isObjective": 0,
+    "type": "Interview",
+    "options": [],
+    "answer": "Java 8 introduced a new immutable Date-Time API in java.time, inspired by Joda-Time, with classes like LocalDate, LocalTime, LocalDateTime, ZonedDateTime.",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "intro": "The new Date-Time API fixes issues with java.util.Date and Calendar, providing immutability, thread-safety, and better API design.",
+      "points": [
+        "Immutable classes like LocalDate, LocalTime, LocalDateTime, and ZonedDateTime.",
+        "Fluent API with method chaining for operations like plusDays, minusHours.",
+        "Time-zone support via ZoneId and ZonedDateTime.",
+        "Parsing and formatting using DateTimeFormatter.",
+        "Interoperability with legacy Date and Calendar classes via conversion methods."
+      ],
+      "code": "LocalDate today = LocalDate.now();\nLocalDate nextWeek = today.plusWeeks(1);\nDateTimeFormatter formatter = DateTimeFormatter.ofPattern(\"dd-MM-yyyy\");\nString formatted = today.format(formatter);",
+      "diagram": "/diagram/java/java_date_time.md"
+    }
+  },
+  {
+    "id": 116,
+    "question": "What is Nashorn in Java 8?",
+    "isObjective": 0,
+    "type": "Interview",
+    "options": [],
+    "answer": "Nashorn is a JavaScript engine introduced in Java 8 to execute JS code on the JVM.",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "intro": "Nashorn replaced the older Rhino engine and provides better performance and integration with Java.",
+      "points": [
+        "Allows embedding JavaScript code within Java applications.",
+        "Enables calling Java methods from JavaScript and vice versa.",
+        "Improves performance compared to Rhino.",
+        "Compliant with ECMAScript 5.1 standard."
+      ],
+      "code": "import javax.script.*;\n\nScriptEngine engine = new ScriptEngineManager().getEngineByName(\"nashorn\");\nengine.eval(\"print('Hello from Nashorn');\");",
+      "diagram": "/diagram/java/nashorn_diagram.md"
+    }
+  },
+  {
+    "id": 117,
+    "question": "What is the difference between Predicate, Function, and Consumer in Java 8?",
+    "isObjective": 0,
+    "type": "Interview",
+    "options": [],
+    "answer": "Predicate: returns boolean, Function: takes input and returns output, Consumer: takes input and returns nothing.",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "intro": "These are functional interfaces introduced in Java 8 for lambda expressions.",
+      "points": [
+        "Predicate<T>: tests a condition, returns boolean.",
+        "Function<T,R>: takes input T, returns output R.",
+        "Consumer<T>: takes input T, performs an action, returns void."
+      ],
+      "code": "Predicate<Integer> isEven = x -> x % 2 == 0;\nFunction<Integer, String> intToString = x -> String.valueOf(x);\nConsumer<String> print = s -> System.out.println(s);",
+      "diagram": "/diagram/java/predicate_function_consumer.md"
+    }
+  },
+  {
+    "id": 118,
+    "question": "What is the difference between map() and flatMap()?",
+    "isObjective": 0,
+    "type": "Interview",
+    "options": [],
+    "answer": "map() transforms elements, flatMap() flattens nested structures after transformation.",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "intro": "Both are Stream API operations in Java 8 for transforming data.",
+      "points": [
+        "map(): applies a function to each element, returning a Stream of the same structure.",
+        "flatMap(): applies a function that returns streams and flattens the resulting nested streams into a single Stream."
+      ],
+      "code": "List<List<Integer>> lists = Arrays.asList(Arrays.asList(1,2), Arrays.asList(3,4));\n\n// map\nlists.stream().map(l -> l.stream().map(x -> x * 2)).forEach(System.out::println);\n\n// flatMap\nlists.stream().flatMap(l -> l.stream().map(x -> x * 2)).forEach(System.out::println);",
+      "diagram": "/diagram/java/map_flatmap.md"
+    }
+  },
+  {
+    "id": 119,
+    "question": "Explain the concept of parallel streams in Java 8.",
+    "isObjective": 0,
+    "type": "Interview",
+    "options": [],
+    "answer": "Parallel streams divide tasks into multiple threads internally using ForkJoinPool, improving performance for large datasets.",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "intro": "Parallel streams allow processing of collections concurrently to utilize multi-core architectures.",
+      "points": [
+        "Use `.parallelStream()` on collections to enable parallel execution.",
+        "Internally uses `ForkJoinPool` for thread management.",
+        "Best for large datasets; overhead may make it slower for small datasets.",
+        "Reduces code complexity compared to manual multithreading."
+      ],
+      "code": "List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6);\nint sum = list.parallelStream().mapToInt(Integer::intValue).sum();",
+      "diagram": "/diagram/java/parallel_stream.md"
+    }
+  },
+  {
+    "id": 120,
+    "question": "What is CompletableFuture in Java 8?",
+    "isObjective": 0,
+    "type": "Interview",
+    "options": [],
+    "answer": "CompletableFuture is an implementation of Future with additional features to compose, chain, and combine asynchronous tasks.",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "intro": "CompletableFuture allows non-blocking asynchronous programming and better composition of tasks.",
+      "points": [
+        "Supports chaining tasks using `.thenApply()`, `.thenAccept()`, `.thenCombine()`, etc.",
+        "Allows handling exceptions with `.exceptionally()` or `.handle()`.",
+        "Runs tasks asynchronously using `ForkJoinPool` or custom executor.",
+        "Improves readability over nested callbacks and manual threading."
+      ],
+      "code": "CompletableFuture.supplyAsync(() -> 2 + 3)\n    .thenApply(result -> result * 2)\n    .thenAccept(System.out::println);",
+      "diagram": "/diagram/java/completable_future.md"
+    }
+  },
+  {
+    "id": 121,
+    "question": "What is the difference between forEach() and forEachOrdered() in streams?",
+    "isObjective": 0,
+    "type": "Interview",
+    "options": [],
+    "answer": "forEach() does not guarantee order in parallel streams, while forEachOrdered() preserves encounter order.",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "intro": "Both are terminal operations on streams, but order behavior differs in parallel streams.",
+      "points": [
+        "forEach(): Executes each element in the stream, order may vary in parallel execution.",
+        "forEachOrdered(): Ensures the order of elements as in the source stream, even in parallel execution."
+      ],
+      "code": "List<Integer> list = Arrays.asList(1,2,3,4);\nlist.parallelStream().forEach(System.out::println); // Order not guaranteed\nlist.parallelStream().forEachOrdered(System.out::println); // Order preserved",
+      "diagram": "/diagram/java/foreach_vs_foreachordered.md"
+    }
+  },
+  {
+    "id": 122,
+    "question": "Explain the difference between findFirst() and findAny().",
+    "isObjective": 0,
+    "type": "Interview",
+    "options": [],
+    "answer": "findFirst() returns the first element in encounter order, findAny() returns any element (faster in parallel streams).",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "intro": "Both are terminal operations in Stream API that return Optional values.",
+      "points": [
+        "findFirst(): Always returns the first element according to the stream's encounter order.",
+        "findAny(): Can return any element, useful for parallel streams as it may optimize performance."
+      ],
+      "code": "List<String> list = Arrays.asList(\"a\", \"b\", \"c\", \"d\");\nOptional<String> first = list.stream().findFirst();\nOptional<String> any = list.parallelStream().findAny();",
+      "diagram": "/diagram/java/findfirst_vs_findany.md"
+    }
+  },
+  {
+    "id": 123,
+    "question": "What is Spliterator in Java 8?",
+    "isObjective": 0,
+    "type": "Interview",
+    "options": [],
+    "answer": "Spliterator is a special iterator for parallel processing, allowing splitting of data structures for concurrent traversal.",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "intro": "Spliterator is introduced in Java 8 to enable efficient parallel processing of collections and streams.",
+      "points": [
+        "Allows splitting a data structure into multiple parts for parallel processing.",
+        "Supports both sequential and parallel traversal.",
+        "Provides characteristics like ORDERED, DISTINCT, SORTED, SIZED, SUBSIZED."
+      ],
+      "code": "List<String> list = Arrays.asList(\"a\", \"b\", \"c\", \"d\");\nSpliterator<String> split = list.spliterator();\nsplit.tryAdvance(System.out::println);\nSpliterator<String> split2 = split.trySplit();",
+      "diagram": "/diagram/java/spliterator.md"
+    }
+  },
+  {
+    "id": 124,
+    "question": "What are primitive type functional interfaces?",
+    "isObjective": 0,
+    "type": "Interview",
+    "options": [],
+    "answer": "They are specialized versions of functional interfaces for primitive types to avoid boxing, e.g., IntPredicate, IntFunction.",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "intro": "Java provides primitive-specific functional interfaces to improve performance by avoiding unnecessary boxing and unboxing.",
+      "points": [
+        "IntPredicate, LongPredicate, DoublePredicate: boolean-valued functions for primitives.",
+        "IntFunction, LongFunction, DoubleFunction: functions returning any type but accepting a primitive.",
+        "To avoid overhead of boxing primitive values into wrapper classes."
+      ],
+      "code": "IntPredicate isEven = x -> x % 2 == 0;\nSystem.out.println(isEven.test(10)); // true\n\nIntFunction<String> intToString = x -> \"Number: \" + x;\nSystem.out.println(intToString.apply(5)); // Number: 5"
+    }
+  },
+  {
+    "id": 125,
+    "question": "Explain the difference between reduce() and collect().",
+    "isObjective": 0,
+    "type": "Interview",
+    "options": [],
+    "answer": "reduce() aggregates elements into a single result, collect() is a mutable reduction that accumulates into a container like List, Set, or Map.",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "intro": "Both are terminal operations in Stream API, but their use-cases differ.",
+      "points": [
+        "reduce(): combines elements to produce a single value (immutable reduction).",
+        "collect(): accumulates elements into a mutable container (e.g., List, Set, Map).",
+        "reduce() is more functional, collect() is more flexible for collecting results."
+      ],
+      "code": "List<Integer> numbers = Arrays.asList(1, 2, 3, 4);\n\n// Using reduce to sum\nint sum = numbers.stream().reduce(0, (a, b) -> a + b);\nSystem.out.println(sum); // 10\n\n// Using collect to accumulate into List\nList<Integer> squared = numbers.stream()\n                                .map(x -> x * x)\n                                .collect(Collectors.toList());\nSystem.out.println(squared); // [1, 4, 9, 16]",
+      "diagram": "/diagram/java/reduce_vs_collect.md"
+    }
+  },
+  {
+    "id": 126,
+    "question": "What is the purpose of the @FunctionalInterface annotation?",
+    "isObjective": 0,
+    "type": "Interview",
+    "options": [],
+    "answer": "It ensures that the interface has only one abstract method, preventing accidental addition of multiple abstract methods.",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "intro": "This annotation is used to enforce the contract of a functional interface. If a second abstract method is added, the compiler will throw an error.",
+      "code": "```java\n@FunctionalInterface\ninterface MyFunctionalInterface {\n    void perform();\n}\n```"
+    }
+  },
+  {
+    "id": 127,
+    "question": "What is the use of peek() in Stream API?",
+    "isObjective": 0,
+    "type": "Interview",
+    "options": [],
+    "answer": "peek() is an intermediate operation used mainly for debugging, allowing inspection of stream elements without consuming them.",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "intro": "peek() allows performing an action on each element as it passes through the stream pipeline without modifying the elements.",
+      "code": "```java\nList<Integer> numbers = Arrays.asList(1, 2, 3, 4);\nnumbers.stream()\n       .filter(n -> n % 2 == 0)\n       .peek(System.out::println) // debug\n       .collect(Collectors.toList());\n```"
+    }
+  },
+  {
+    "id": 128,
+    "question": "Difference between Iterator and Spliterator?",
+    "isObjective": 0,
+    "type": "Interview",
+    "options": [],
+    "answer": "Iterator supports sequential traversal, Spliterator supports parallel traversal and splitting.",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "intro": "Iterator is the traditional way to traverse collections sequentially. Spliterator is introduced in Java 8 to allow parallel processing and bulk operations.",
+      "points": [
+        "Iterator: sequential access, cannot split.",
+        "Spliterator: can split data, supports parallel processing, bulk operations."
+      ],
+      "code": "```java\nList<Integer> list = Arrays.asList(1,2,3,4,5);\nSpliterator<Integer> spliterator = list.spliterator();\nspliterator.forEachRemaining(System.out::println);\n```"
+    }
+  },
+  {
+    "id": 129,
+    "question": "What is the difference between map() and filter() in streams?",
+    "isObjective": 0,
+    "type": "Interview",
+    "options": [],
+    "answer": "map() transforms elements, filter() removes elements based on a condition.",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "intro": "In Stream API, map() and filter() are intermediate operations used for processing data.",
+      "points": [
+        "map(): applies a function to each element and returns a new stream of transformed elements.",
+        "filter(): applies a predicate to each element and returns a new stream containing only elements that match the condition."
+      ],
+      "code": "```java\nList<String> names = Arrays.asList(\"Alice\", \"Bob\", \"Charlie\");\nList<String> upperNames = names.stream().map(String::toUpperCase).collect(Collectors.toList());\nList<String> filteredNames = names.stream().filter(name -> name.startsWith(\"A\")).collect(Collectors.toList());\n```"
+    }
+  },
+  {
+    "id": 130,
+    "question": "Explain Optional.orElse() vs Optional.orElseGet().",
+    "isObjective": 0,
+    "type": "Interview",
+    "options": [],
+    "answer": "orElse() always evaluates the argument, orElseGet() evaluates the supplier only if the Optional is empty (lazy).",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "intro": "Optional provides methods to handle null values more gracefully.",
+      "points": [
+        "orElse(value): Returns the value if Optional is empty, but the argument is evaluated eagerly.",
+        "orElseGet(Supplier): Returns the value from supplier if Optional is empty; supplier is evaluated lazily."
+      ],
+      "code": "```java\nOptional<String> opt = Optional.ofNullable(null);\nString result1 = opt.orElse(getDefault()); // getDefault() called regardless of Optional being empty\nString result2 = opt.orElseGet(() -> getDefault()); // getDefault() called only if Optional is empty\n\npublic static String getDefault() {\n    System.out.println(\"Computing default\");\n    return \"Default\";\n}\n```"
+    }
+  },
+  {
+    "id": 131,
+    "question": "What is the difference between Optional.ifPresent() and isPresent()?",
+    "isObjective": 0,
+    "type": "Interview",
+    "options": [],
+    "answer": "isPresent() checks if a value exists, ifPresent() executes a block of code only if a value exists.",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "intro": "Optional provides methods to handle values that may or may not be present.",
+      "points": [
+        "isPresent(): Returns true if a value exists, false otherwise. You can use it to conditionally retrieve the value.",
+        "ifPresent(Consumer): Executes the provided lambda expression only if the value is present, avoiding explicit null checks."
+      ],
+      "code": "```java\nOptional<String> opt = Optional.ofNullable(\"Hello\");\n\n// Using isPresent\nif (opt.isPresent()) {\n    System.out.println(opt.get());\n}\n\n// Using ifPresent\nopt.ifPresent(value -> System.out.println(value));\n```"
+    }
+  },
+  {
+    "id": 132,
+    "question": "What are the limitations of Java 8 streams?",
+    "isObjective": 0,
+    "type": "Interview",
+    "options": [],
+    "answer": "Streams cannot be reused once consumed, debugging is harder, and performance may degrade for small datasets.",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "intro": "While streams simplify data processing, they have certain limitations.",
+      "points": [
+        "Streams are single-use: Once a terminal operation is invoked, the stream cannot be reused.",
+        "Debugging complexity: Intermediate operations are lazy, making it harder to trace values.",
+        "Performance: For small collections, traditional loops can outperform streams.",
+        "Checked exceptions: Streams do not natively handle checked exceptions in lambdas."
+      ],
+      "code": "```java\nList<String> list = Arrays.asList(\"a\", \"b\", \"c\");\nStream<String> stream = list.stream();\nstream.forEach(System.out::println);\n// stream.forEach(System.out::println); // Throws IllegalStateException\n```"
+    }
+  },
+  {
+    "id": 133,
+    "question": "What is the difference between Stream.of() and Arrays.stream()?",
+    "isObjective": 0,
+    "type": "Interview",
+    "options": [],
+    "answer": "Stream.of() creates a stream from given values, Arrays.stream() creates a stream from an array.",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "intro": "Both methods are used to create streams but differ in input types.",
+      "points": [
+        "Stream.of(): Can take individual values or an array, e.g., Stream.of(1,2,3).",
+        "Arrays.stream(): Specifically converts an existing array to a stream, e.g., Arrays.stream(new int[]{1,2,3}).",
+        "Arrays.stream() also provides options to specify a range of indices."
+      ],
+      "example": "```java\nStream<Integer> s1 = Stream.of(1, 2, 3);\nint[] arr = {1, 2, 3};\nIntStream s2 = Arrays.stream(arr);\n```"
+    }
+  },
+  {
+    "id": 134,
+    "question": "Why is String Immutable? What is String Pool? How to create a String which is not stored in String Pool? What is REST Web Service? Life Cycle of a thread? If Rest is Stateless How do you maintain Sessions?",
+    "isObjective": 0,
+    "type": "Advance Concepts",
+    "options": [],
+    "answer": "Strings are immutable to ensure security, caching, and thread-safety. The String pool allows reuse of String literals. A String not in the pool can be created with new String(). REST is a stateless architecture style for web services. Thread lifecycle includes New, Runnable, Running, Waiting, Timed Waiting, and Terminated. REST sessions can be maintained using cookies, tokens, or session IDs.",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "points": [
+        "Immutability ensures security, thread safety, and caching",
+        "String Pool reuses literal Strings for memory efficiency",
+        "Use `new String(\"abc\")` to avoid storing in String Pool",
+        "REST is an architectural style for distributed systems",
+        "Thread lifecycle: New → Runnable → Running → Waiting/Timed Waiting → Terminated",
+        "Sessions in REST can be managed via cookies, tokens, or session IDs"
+      ]
+    }
+  },
+  {
+    "id": 135,
+    "question": "What are the main OOPS concepts in Java and explain one by one?",
+    "isObjective": 0,
+    "type": "Advance Concepts",
+    "options": [],
+    "answer": "The four main OOPS concepts are Inheritance, Polymorphism, Encapsulation, and Abstraction.",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "points": [
+        "Inheritance: allows a class to inherit properties and methods from another class",
+        "Polymorphism: enables objects to take multiple forms and behaviors",
+        "Encapsulation: hides implementation details, exposes only required information",
+        "Abstraction: defines abstract classes/interfaces implemented by concrete classes"
+      ]
+    }
+  },
+  {
+    "id": 136,
+    "question": "What are the differences between abstract class and interface, and throw and throws, and why we use throws? Why String is Immutable?",
+    "isObjective": 0,
+    "type": "Advance Concepts",
+    "options": [],
+    "answer": "Abstract classes can contain both abstract and concrete methods, while interfaces are fully abstract (before Java 8). throw is used to explicitly throw an exception, while throws declares exceptions a method can throw. String is immutable for security, performance, and memory management reasons.",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "points": [
+        "Interface supports multiple inheritance, abstract class does not",
+        "Interface variables are public static final by default",
+        "Abstract classes can have constructors, interfaces cannot",
+        "throw → explicitly throw exception, throws → declares possible exceptions",
+        "Immutability ensures security, performance, and enables String Pool"
+      ]
+    }
+  },
+  {
+    "id": 137,
+    "question": "What is JDK, JVM, JRE?",
+    "isObjective": 0,
+    "type": "Advance Concepts",
+    "options": [],
+    "answer": "JDK is the Java Development Kit, JRE is the Java Runtime Environment, and JVM is the Java Virtual Machine.",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "points": [
+        "JDK = JRE + development tools like javac and java",
+        "JRE = JVM + libraries for running Java apps",
+        "JVM = executes Java bytecode"
+      ],
+      "metadata": "/metadata/jvm_jre_jdk.md",
+      "diagram": "/diagram/java/jvm_jre_jdk.md"
+    }
+  },
+  {
+    "id": 138,
+    "question": "What is the use of private variables even though they are accessible via getters and setters from some other class?",
+    "isObjective": 0,
+    "type": "Advance Concepts",
+    "options": [],
+    "answer": "Private variables enforce encapsulation. Getters/setters provide controlled access and validation.",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "points": [
+        "Encapsulation prevents direct external access",
+        "Getters/setters allow validation and controlled modification",
+        "Supports maintainability and data integrity"
+      ]
+    }
+  },
+  {
+    "id": 139,
+    "question": "Where did you implement ExecutorService in your project?",
+    "isObjective": 0,
+    "type": "Advance Concepts",
+    "options": [],
+    "answer": "ExecutorService was used in backend to manage threads, improve performance, and handle parallel processing.",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "points": [
+        "Used ExecutorService to execute multiple tasks concurrently",
+        "Improved performance and responsiveness",
+        "Handled thread pool management"
+      ]
+    }
+  },
+  {
+    "id": 140,
+    "question": "What is ClassLoader? How do you call a service from another service? How to inject array from Application.properties file?",
+    "isObjective": 0,
+    "type": "Advance Concepts",
+    "options": [],
+    "answer": "A ClassLoader loads Java classes into JVM memory. Services can be called via HTTP API calls. Arrays can be injected using @Value annotation in Spring Boot.",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "points": [
+        "ClassLoader dynamically loads classes at runtime",
+        "Service-to-service calls typically use HTTP requests or APIs",
+        "In Spring Boot: @Value(\"${my.array}\") private String[] myArray;"
+      ]
+    }
+  },
+  {
+    "id": 141,
+    "question": "What is a daemon thread? How does it help in multithreading?",
+    "isObjective": 0,
+    "type": "Advance Concepts",
+    "options": [],
+    "answer": "Daemon threads are background service threads with low priority, terminated when all user threads finish.",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "points": [
+        "Used for background tasks like GC, logging",
+        "Created with setDaemon(true)",
+        "Not suitable for tasks requiring data consistency"
+      ]
+    }
+  },
+  {
+    "id": 142,
+    "question": "What is the difference between HashMap and HashTable?",
+    "isObjective": 0,
+    "type": "Advance Concepts",
+    "options": [],
+    "answer": "HashMap is non-synchronized and allows nulls, HashTable is synchronized and doesn’t allow null keys/values.",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "points": [
+        "HashMap: not thread-safe, faster, allows one null key and multiple null values",
+        "HashTable: thread-safe, slower, no null key/value allowed"
+      ]
+    }
+  },
+  {
+    "id": 143,
+    "question": "What is Exception and what is Exception Handling in Java?",
+    "isObjective": 0,
+    "type": "Advance Concepts",
+    "options": [],
+    "answer": "An Exception is an event that disrupts normal program flow. Exception Handling manages these using try-catch-finally blocks.",
+    "askedBy": [],
+    "technology": "Java",
+    "explanation": {
+      "points": [
+        "Exception = subclass of Throwable",
+        "Handled with try-catch",
+        "finally block always executes",
+        "Helps avoid abnormal termination"
+      ]
+    }
   }
 ]

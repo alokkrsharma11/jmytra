@@ -6,69 +6,59 @@ import PageLayout from "./PageLayout";
 import "./../App.css";
 
 const JavaTutorial = () => {
-  const [quizA, setQuizA] = useState([]);
-  const [quizB, setQuizB] = useState([]);
   const [questions, setQuestions] = useState([]);
   const [tabIndex, setTabIndex] = useState(0);
   const [sidebarOpen, setSidebarOpen] = useState(false); // control sidebar
 
-  // Load first quiz
+  // Load quizs
   useEffect(() => {
-    fetch("./data/java_quizs_realistic.json")
-      .then((res) => res.json())
-      .then((val) => setQuizA(val))
-      .catch((err) => console.error("Error loading JSON:", err));
-      
-  }, []);
+    const loadAllQuizzes = async () => {
+      try {
+        // Fetch all questions
+        const res = await fetch("./data/java_quizs_realistic.json");
+        const data = await res.json();
 
-  // Load second quiz
-  useEffect(() => {
-    fetch("/java_quizs.json")
-      .then((res) => res.json())
-      .then((val) => setQuizB(val))
-      .catch((err) => console.error("Error loading JSON:", err));
-  }, []);
+        // Map through all questions
+        const questionsWithDiagrams = await Promise.all(
+          data.map(async (q) => {
+            if (q.explanation?.diagram) {
+              try {
+                const mdRes = await fetch(q.explanation.diagram);
+                if (!mdRes.ok) throw new Error("Failed to fetch diagram");
+                const contentType = res.headers.get("content-type");
+                if (!mdRes.ok || !contentType?.includes("text/markdown")) {
+                  console.warn(`Skipping diagram fetch for ${q.question}: ${res.headers.values} returned ${contentType}`);
+                  return q;
+                }
 
-  // Merge both when either changes
-  /*useEffect(() => {
-    if (quizA.length > 0 || quizB.length > 0) {
-      setQuestions([...quizA, ...quizB]);
-    }
-  }, [quizA, quizB]);*/
-  useEffect(() => {
-    const loadMarkdownForQuestions = async (qs) => {
-      return Promise.all(
-        qs.map(async (q) => {
-          if (q.explanation?.diagram) {
-            try {
-              const res = await fetch(q.explanation.diagram);
-              const md = await res.text();
-              return { 
-                ...q, 
-                explanation: { 
-                  ...q.explanation, 
-                  diagramMarkdown: md   // store it alongside the diagram
-                } 
-              };
-            } catch (err) {
-              console.error("Error loading markdown:", err);
+                const diagramMarkdown = await mdRes.text();
+                return {
+                  ...q,
+                  explanation: {
+                    ...q.explanation,
+                    diagramMarkdown,
+                  },
+                };
+              } catch (err) {
+                console.error(
+                  `Error loading markdown for question "${q.question}":`,
+                  err
+                );
+                return q;
+              }
             }
-          }
-          return q;
-        })
-      );
+            return q;
+          })
+        );
+
+        setQuestions(questionsWithDiagrams);
+      } catch (err) {
+        console.error("Error loading JSON:", err);
+      }
     };
 
-    const mergeAndLoad = async () => {
-      const merged = [...quizA, ...quizB];
-      const withMarkdown = await loadMarkdownForQuestions(merged);
-      setQuestions(withMarkdown);
-    };
-
-    if (quizA.length > 0 || quizB.length > 0) {
-      mergeAndLoad();
-    }
-  }, [quizA, quizB]);
+    loadAllQuizzes();
+  }, []);
 
   // Group questions by type
   const grouped = questions.reduce((acc, q) => {

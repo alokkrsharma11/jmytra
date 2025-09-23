@@ -24,7 +24,7 @@ const ReactTutorial = () => {
 
   // Load second quiz
   useEffect(() => {
-    fetch("/reactjs_tutorial.json")
+    fetch("./data/reactjs_tutorial.json")
       .then((res) => res.json())
       .then((val) => setQuizB(val))
       .catch((err) => console.error("Error loading JSON:", err));

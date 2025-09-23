@@ -6,8 +6,6 @@ import PageLayout from "./PageLayout";
 import './../App.css'
 
 const DbTutorial = () => {
-  const [quizA, setQuizA] = useState([]);
-  const [quizB, setQuizB] = useState([]);
   const [questions, setQuestions] = useState([]);
   const [tabIndex, setTabIndex] = useState(0);
   const [sidebarOpen, setSidebarOpen] = useState(false); // control sidebar
@@ -16,24 +14,9 @@ const DbTutorial = () => {
   useEffect(() => {
     fetch("./data/databases_realistic_100.json")
       .then((res) => res.json())
-      .then((val) => setQuizA(val))
+      .then((val) => setQuestions(val))
       .catch((err) => console.error("Error loading JSON:", err));
   }, []);
-
-  // Load second quiz
-  useEffect(() => {
-    fetch("/db_quizs.json")
-      .then((res) => res.json())
-      .then((val) => setQuizB(val))
-      .catch((err) => console.error("Error loading JSON:", err));
-  }, []);
-
-  // Merge both when either changes
-  useEffect(() => {
-    if (quizA.length > 0 || quizB.length > 0) {
-      setQuestions([...quizA, ...quizB]);
-    }
-  }, [quizA, quizB]);
 
   // Group questions by type
   const grouped = questions.reduce((acc, q) => {

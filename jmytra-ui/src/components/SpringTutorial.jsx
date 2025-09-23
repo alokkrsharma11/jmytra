@@ -6,68 +6,55 @@ import { ChevronRight, ChevronLeft } from "@mui/icons-material";
 import './../App.css'
 
 const SpringTutorial = () => {
-  const [quizA, setQuizA] = useState([]);
-  const [quizB, setQuizB] = useState([]);
   const [questions, setQuestions] = useState([]);
   const [tabIndex, setTabIndex] = useState(0);
   const [sidebarOpen, setSidebarOpen] = useState(false); // control sidebar
 
-  // Load first quiz
+  // Load quizs
   useEffect(() => {
-    fetch("./data/spring_realistic_100.json")
-      .then((res) => res.json())
-      .then((val) => setQuizA(val))
-      .catch((err) => console.error("Error loading JSON:", err));
-  }, []);
+    const loadAllQuizzes = async () => {
+      try {
+        // Fetch all questions
+        const res = await fetch("./data/spring_realistic_100.json");
+        const data = await res.json();
 
-  // Load second quiz
-  useEffect(() => {
-    fetch("/spring_quizs.json")
-      .then((res) => res.json())
-      .then((val) => setQuizB(val))
-      .catch((err) => console.error("Error loading JSON:", err));
-  }, []);
-
-  // Merge both when either changes
-  /*useEffect(() => {
-    if (quizA.length > 0 || quizB.length > 0) {
-      setQuestions([...quizA, ...quizB]);
-    }
-  }, [quizA, quizB]);*/
-  useEffect(() => {
-    const loadMarkdownForQuestions = async (qs) => {
-      return Promise.all(
-        qs.map(async (q) => {
-          if (q.explanation?.diagram) {
-            try {
-              const res = await fetch(q.explanation.diagram);
-              const md = await res.text();
-              return { 
-                ...q, 
-                explanation: { 
-                  ...q.explanation, 
-                  diagramMarkdown: md   // store it alongside the diagram
-                } 
-              };
-            } catch (err) {
-              console.error("Error loading markdown:", err);
+        // Map through all questions
+        const questionsWithDiagrams = await Promise.all(
+          data.map(async (q) => {
+            if (q.explanation?.diagram) {
+              try {
+                const mdRes = await fetch(q.explanation.diagram);
+                if (!mdRes.ok) throw new Error("Failed to fetch diagram");
+                const diagramMarkdown = await mdRes.text();
+                return {
+                  ...q,
+                  explanation: {
+                    ...q.explanation,
+                    diagramMarkdown,
+                  },
+                };
+              } catch (err) {
+                console.error(
+                  `Error loading markdown for question "${q.question}":`,
+                  err
+                );
+                return q;
+              }
             }
-          }
-          return q;
-        })
-      );
+            return q;
+          })
+        );
+
+        setQuestions(questionsWithDiagrams);
+      } catch (err) {
+        console.error("Error loading JSON:", err);
+      }
     };
 
-    const mergeAndLoad = async () => {
-      const merged = [...quizA, ...quizB];
-      const withMarkdown = await loadMarkdownForQuestions(merged);
-      setQuestions(withMarkdown);
-    };
+    loadAllQuizzes();
+  }, []);
 
-    if (quizA.length > 0 || quizB.length > 0) {
-      mergeAndLoad();
-    }
-  }, [quizA, quizB]);
+
   // Group questions by type
   const grouped = questions.reduce((acc, q) => {
     const type = q.type || "Advance Concepts";

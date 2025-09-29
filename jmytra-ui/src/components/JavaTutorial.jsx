@@ -1,12 +1,13 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Tabs, Tab, Box, IconButton } from "@mui/material";
 import { ChevronRight, ChevronLeft } from "@mui/icons-material";
 import QuizContent from "./QuizContent";
 import PageLayout from "./PageLayout";
 import "./../App.css";
 
-const JavaTutorial = () => {
+const JavaTutorial = ({ language = "java" }) => {
   const [questions, setQuestions] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [tabIndex, setTabIndex] = useState(0);
   const [sidebarOpen, setSidebarOpen] = useState(false); // control sidebar
 
@@ -14,22 +15,33 @@ const JavaTutorial = () => {
   useEffect(() => {
     const loadAllQuizzes = async () => {
       try {
-        // Fetch all questions
-        const res = await fetch("./data/java_quizs_realistic.json");
+        const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+        const CONTEXT_PATH = process.env.REACT_APP_API_CONTEXT_PATH;
+        const apiUrl = `${API_BASE_URL}${CONTEXT_PATH}/quizzes/${language}`;
+        const res = await fetch(apiUrl);
+
+        if (!res.ok) throw new Error("Network response was not ok");
         const data = await res.json();
 
-        // Map through all questions
+        // Fetch diagram markdowns if present
         const questionsWithDiagrams = await Promise.all(
           data.map(async (q) => {
             if (q.explanation?.diagram) {
               try {
-                const mdRes = await fetch(q.explanation.diagram);
+                console.log(q.explanation.diagram);
+                //const mdRes = await fetch(q.explanation.diagram);
+                const mdRes = await fetch(`${API_BASE_URL}${CONTEXT_PATH}${q.explanation.diagram}`); // your DiagramController
+    
                 if (!mdRes.ok) throw new Error("Failed to fetch diagram");
-                const contentType = res.headers.get("content-type");
-                if (!mdRes.ok || !contentType?.includes("text/markdown")) {
-                  console.warn(`Skipping diagram fetch for ${q.question}: ${res.headers.values} returned ${contentType}`);
-                  return q;
-                }
+
+                //const contentType = mdRes.headers.get("content-type");
+
+                // if (!contentType?.includes("text/markdown")) {
+                //   console.warn(
+                //     `Skipping diagram fetch for "${q.question}": content type ${contentType}`
+                //   );
+                //   return q;
+                // }
 
                 const diagramMarkdown = await mdRes.text();
                 return {
@@ -53,12 +65,14 @@ const JavaTutorial = () => {
 
         setQuestions(questionsWithDiagrams);
       } catch (err) {
-        console.error("Error loading JSON:", err);
+        console.error("Error loading quizzes:", err);
+      } finally {
+        setLoading(false);
       }
     };
 
     loadAllQuizzes();
-  }, []);
+  }, [language]);
 
   // Group questions by type
   const grouped = questions.reduce((acc, q) => {
@@ -73,7 +87,8 @@ const JavaTutorial = () => {
     setTabIndex(newValue);
     setSidebarOpen(!sidebarOpen);
   };
-
+  
+  if (loading) return <p className="container">Loading...</p>;
   return (
     <Box sx={{ display: "flex", minHeight: "100vh", bgcolor: "grey.900", color: "white" }}>
       {/* Toggle Button */}
@@ -144,6 +159,7 @@ const JavaTutorial = () => {
             transition: "margin-left 0.3s ease",   // smooth shifting
             marginLeft: sidebarOpen ? "0px" : "-220px", // shift by sidebar width
           }}>
+            
         {types.map(
           (type, index) =>
             tabIndex === index && (

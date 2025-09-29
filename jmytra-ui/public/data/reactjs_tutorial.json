@@ -125,9 +125,9 @@
     {
       "title": "React Lifecycle Methods",
       "phases": {
-        "Mounting": ["constructor()", "getDerivedStateFromProps()", "render()", "componentDidMount()"],
-        "Updating": ["getDerivedStateFromProps()", "shouldComponentUpdate()", "render()", "getSnapshotBeforeUpdate()", "componentDidUpdate()"],
-        "Unmounting": ["componentWillUnmount()"]
+        "mounting": ["constructor()", "getDerivedStateFromProps()", "render()", "componentDidMount()"],
+        "updating": ["getDerivedStateFromProps()", "shouldComponentUpdate()", "render()", "getSnapshotBeforeUpdate()", "componentDidUpdate()"],
+        "unmounting": ["componentWillUnmount()"]
       },
       "functionalEquivalent": {
         "useEffect": "Combines componentDidMount, componentDidUpdate, componentWillUnmount"
@@ -136,14 +136,14 @@
     },
     {
       "title": "JavaScript Iterations",
-      "loops": ["for", "while", "do...while", "for...of", "for...in"],
-      "arrayMethods": ["forEach", "map", "filter", "reduce", "every", "some", "find", "findIndex"],
+      "concepts": ["for", "while", "do...while", "for...of", "for...in"],
+      "useCases": ["forEach", "map", "filter", "reduce", "every", "some", "find", "findIndex"],
       "type": "Advance Concepts"
     },
     {
       "title": "Object-Oriented JavaScript",
       "concepts": ["Objects", "Classes", "Inheritance", "Encapsulation", "Polymorphism"],
-      "exampleClass": "class Car { constructor(make, model){ this.make=make; this.model=model;} start(){console.log('Engine on')}}",
+      "code": "class Car { constructor(make, model){ this.make=make; this.model=model;} start(){console.log('Engine on')}}",
       "type": "Advance Concepts"
     }
 

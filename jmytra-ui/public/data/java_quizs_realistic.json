@@ -12,7 +12,7 @@
     "type": "MCQ",
     "difficulty": "Easy",
     "isObjective": true,
-    "askedBy": "Exam",
+    "askedBy": ["Exam"],
     "explanation": {
       "intro": "JVM stands for Java Virtual Machine. It is the engine that executes Java bytecode, providing platform independence for Java applications."
     }
@@ -345,7 +345,7 @@
     "difficulty": "Easy",
     "isObjective": true,
     "explanation":{
-      "explanation": "The `Runnable` interface in Java is a functional interface with a single abstract method: `run()`. Any class that implements `Runnable` must provide an implementation for the `run()` method. This method contains the code that constitutes the new thread's task. The `start()` method, however, belongs to the `Thread` class and is responsible for invoking the `run()` method indirectly.",
+      "intro": "The `Runnable` interface in Java is a functional interface with a single abstract method: `run()`. Any class that implements `Runnable` must provide an implementation for the `run()` method. This method contains the code that constitutes the new thread's task. The `start()` method, however, belongs to the `Thread` class and is responsible for invoking the `run()` method indirectly.",
       "language": "java", 
       "code": "class MyRunnable implements Runnable {\n    public void run() {\n        System.out.println(\"Thread is running...\");\n    }\n\n    public static void main(String[] args) {\n        Thread t = new Thread(new MyRunnable());\n        t.start();\n    }\n}"
     }
@@ -588,7 +588,7 @@
       "language": "java", 
       "code": "class OverloadExample {\n    void show(int a) { System.out.println(\"Integer: \" + a); }\n    void show(String b) { System.out.println(\"String: \" + b); }\n}\n\nclass Parent {\n    void display() { System.out.println(\"Parent\"); }\n}\n\nclass Child extends Parent {\n    @Override\n    void display() { System.out.println(\"Child\"); }\n}\n\npublic class Demo {\n    public static void main(String[] args) {\n        OverloadExample obj = new OverloadExample();\n        obj.show(10); // Overloading\n        obj.show(\"Hello\");\n\n        Parent p = new Child();\n        p.display(); // Overriding\n    }\n}"
     },
-    "askedBy": "Interview",
+    "askedBy": ["Interview"],
     "difficulty": "Medium",
     "type": "MCQ",
     "isObjective": false
@@ -614,7 +614,7 @@
       "language": "java", 
       "code": "public class Demo {\n    public static void main(String[] args) throws ClassNotFoundException {\n        Class<?> clazz = Class.forName(\"java.util.ArrayList\");\n        System.out.println(\"Class loaded by: \" + clazz.getClassLoader());\n    }\n}"
     },
-    "askedBy": "Certification",
+    "askedBy": ["Certification"],
     "difficulty": "Easy",
     "type": "MCQ",
     "isObjective": true
@@ -640,7 +640,7 @@
       "language": "java", 
       "code": "import java.io.*;\n\nclass Student implements Serializable {\n    int id;\n    String name;\n    public Student(int id, String name) {\n        this.id = id;\n        this.name = name;\n    }\n}\n\npublic class SerializeDemo {\n    public static void main(String[] args) {\n        try {\n            Student s1 = new Student(101, \"John\");\n            FileOutputStream fos = new FileOutputStream(\"student.ser\");\n            ObjectOutputStream oos = new ObjectOutputStream(fos);\n            oos.writeObject(s1);\n            oos.close();\n            fos.close();\n            System.out.println(\"Object has been serialized\");\n        } catch (Exception e) {\n            e.printStackTrace();\n        }\n    }\n}"
     },
-    "askedBy": "Interview",
+    "askedBy": ["Interview"],
     "difficulty": "Medium",
     "type": "MCQ",
     "isObjective": true
@@ -666,7 +666,7 @@
       "language": "java", 
       "code": "import java.io.*;\n\nclass User implements Serializable {\n    String username;\n    transient String password; // will not be serialized\n\n    User(String username, String password) {\n        this.username = username;\n        this.password = password;\n    }\n}\n\npublic class TransientDemo {\n    public static void main(String[] args) throws Exception {\n        User user = new User(\"John\", \"secret123\");\n        \n        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(\"user.ser\"));\n        oos.writeObject(user);\n        oos.close();\n\n        ObjectInputStream ois = new ObjectInputStream(new FileInputStream(\"user.ser\"));\n        User deserialized = (User) ois.readObject();\n        ois.close();\n\n        System.out.println(\"Username: \" + deserialized.username);\n        System.out.println(\"Password: \" + deserialized.password); // will be null\n    }\n}"
     },
-    "askedBy": "Interview",
+    "askedBy": ["Interview"],
     "difficulty": "Medium",
     "type": "MCQ",
     "isObjective": true
@@ -689,7 +689,7 @@
       "code": "class SharedData {\n    private volatile boolean flag = false;\n\n    public void writer() {\n        flag = true; // write visible to other threads\n    }\n\n    public void reader() {\n        if (flag) {\n            System.out.println(\"Flag is true\");\n        }\n    }\n}\n\n// Without 'volatile', another thread may not see updated value immediately.",
       "diagram": "/diagram/java/java_memory_modal.md"
     },
-    "askedBy": "Interview",
+    "askedBy": ["Interview"],
     "difficulty": "Hard",
     "type": "Advance Concepts",
     "isObjective": false
@@ -704,7 +704,7 @@
       "Both same"
     ],
     "answer": "StringBuilder is faster and unsynchronized",
-    "askedBy": "Interview",
+    "askedBy": ["Interview"],
     "difficulty": "Medium",
     "type": "MCQ",
     "isObjective": true,
@@ -729,7 +729,7 @@
       "check"
     ],
     "answer": "instanceof",
-    "askedBy": "Exam",
+    "askedBy": ["Exam"],
     "difficulty": "Easy",
     "type": "MCQ",
     "isObjective": true,
@@ -749,7 +749,7 @@
     "question": "What is reflection in Java?",
     "options": [],
     "answer": "Reflection allows inspection and modification of classes, methods, fields, and constructors at runtime. It enables dynamic invocation, loading classes by name, and is widely used in frameworks such as dependency injection (DI) containers and ORMs.",
-    "askedBy": "Interview",
+    "askedBy": ["Interview"],
     "difficulty": "Medium",
     "type": "Interview",
     "isObjective": false,
@@ -775,7 +775,7 @@
       "new ArrayList<>()"
     ],
     "answer": "List.of(...)",
-    "askedBy": "Interview",
+    "askedBy": ["Interview"],
     "difficulty": "Easy",
     "type": "MCQ",
     "isObjective": true,
@@ -796,7 +796,7 @@
     "question": "What is the significance of serialVersionUID?",
     "options": [],
     "answer": "serialVersionUID is used during deserialization to verify that sender and receiver of a serialized object have compatible classes. Mismatched IDs cause InvalidClassException.",
-    "askedBy": "Interview",
+    "askedBy": ["Interview"],
     "difficulty": "Medium",
     "type": "Advance Concepts",
     "isObjective": false,
@@ -822,7 +822,7 @@
       "try"
     ],
     "answer": "catch",
-    "askedBy": "Exam",
+    "askedBy": ["Exam"],
     "difficulty": "Easy",
     "type": "MCQ",
     "isObjective": true,
@@ -843,7 +843,7 @@
     "question": "Explain how HashMap works in Java.",
     "options": [],
     "answer": "HashMap in Java stores key-value pairs using a hashing mechanism. It uses the `hashCode()` of the key to determine the bucket location and `equals()` to resolve collisions. If multiple keys map to the same bucket (collision), entries are stored in a linked list or tree (since Java 8). HashMap allows one null key and multiple null values, and it is not synchronized.",
-    "askedBy": "Interview",
+    "askedBy": ["Interview"],
     "difficulty": "Medium",
     "type": "Advance Concepts",
     "isObjective": false,
@@ -873,7 +873,7 @@
       "ConcurrentSkipListSet"
     ],
     "answer": "LinkedHashSet",
-    "askedBy": "Exam",
+    "askedBy": ["Exam"],
     "difficulty": "Easy",
     "type": "MCQ",
     "isObjective": true,
@@ -899,7 +899,7 @@
       "bc"
     ],
     "answer": "b",
-    "askedBy": "Exam",
+    "askedBy": ["Exam"],
     "difficulty": "Easy",
     "type": "MCQ",
     "isObjective": true,
@@ -920,7 +920,7 @@
     "question": "What is the difference between == for primitives and objects?",
     "options": [],
     "answer": "For primitives, '==' compares actual values. For objects, '==' compares references (memory addresses), not content. To compare object content, use .equals().",
-    "askedBy": "Interview",
+    "askedBy": ["Interview"],
     "difficulty": "Medium",
     "type": "Interview",
     "isObjective": false,
@@ -945,7 +945,7 @@
       "Deque"
     ],
     "answer": "Vector",
-    "askedBy": "Exam",
+    "askedBy": ["Exam"],
     "difficulty": "Easy",
     "type": "MCQ",
     "isObjective": true,
@@ -970,7 +970,7 @@
       "Marks method as temporary"
     ],
     "answer": "Prevents serialization of field",
-    "askedBy": "Certification",
+    "askedBy": ["Certification"],
     "difficulty": "Medium",
     "type": "MCQ",
     "isObjective": true,
@@ -990,7 +990,7 @@
     "question": "Explain difference between HashMap and Hashtable.",
     "options": [],
     "answer": "HashMap is non-synchronized, allows one null key and multiple null values, while Hashtable is synchronized, thread-safe, and does not allow null keys or values.",
-    "askedBy": "Interview",
+    "askedBy": ["Interview"],
     "difficulty": "Medium",
     "type": "Interview",
     "isObjective": false,
@@ -1039,7 +1039,7 @@
       "java.framework"
     ],
     "answer": "java.util",
-    "askedBy": "Interview",
+    "askedBy": ["Interview"],
     "difficulty": "Easy",
     "type": "MCQ",
     "isObjective": true,
@@ -1959,7 +1959,9 @@
     "question": "What does 'boxing' and 'unboxing' refer to?",
     "options": [],
     "answer": "Boxing refers to converting a primitive type into its corresponding wrapper class (e.g., int to Integer). Unboxing is converting a wrapper class back to its primitive type (e.g., Integer to int).",
-    "explanation": "In Java, boxing allows primitives to be treated as objects, which is useful in collections like List<Integer>. Unboxing automatically converts these wrapper objects back to primitives when needed for arithmetic or other operations.",
+    "explanation": {
+      "intro": "In Java, boxing allows primitives to be treated as objects, which is useful in collections like List<Integer>. Unboxing automatically converts these wrapper objects back to primitives when needed for arithmetic or other operations."
+    },
     "type": "Interview",
     "difficulty": "Easy",
     "isObjective": false

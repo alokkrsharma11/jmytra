@@ -356,7 +356,15 @@
     "type": "MCQ",
     "difficulty": "Medium",
     "isObjective": true,
-    "explanation": "In MongoDB, replication is configured using a replica set, which is a group of mongod instances that maintain the same data set, providing redundancy and high availability.",
+    "explanation": {
+      "intro": "Replication in MongoDB ensures data redundancy and high availability by maintaining copies of data across multiple servers.",
+      "points": [
+        "Replication is configured using a **replica set**, which is a group of `mongod` instances.",
+        "A replica set consists of a **primary** node and one or more **secondary** nodes.",
+        "The primary node receives all write operations, while secondaries replicate the data asynchronously.",
+        "If the primary fails, an automatic election promotes one of the secondaries to primary, ensuring fault tolerance."
+      ]
+    },
     "askedBy": [
       "interview",
       "practice"
@@ -497,7 +505,15 @@
     ],
     "answer": "Indexing improves query performance by reducing search time",
     "isObjective": true,
-    "explanation": "Indexes provide a fast lookup mechanism for database queries by allowing the database engine to quickly locate rows without scanning the entire table, though they may slightly slow down write operations due to maintenance overhead.",
+    "explanation": {
+      "intro": "Indexing is a technique used in databases to improve the speed of data retrieval operations, allowing queries to run much faster.",
+      "points": [
+        "An index is a data structure (commonly a B-tree) that stores key values along with pointers to the corresponding table rows.",
+        "Without an index, the database must perform a **full table scan**, which is slower for large datasets.",
+        "Indexes significantly **reduce search time** by quickly locating the rows matching the query condition.",
+        "However, while indexes speed up reads, they can add overhead to **insert, update, and delete operations** because the index must also be maintained."
+      ]
+    },
     "askedBy": [
       "interview",
       "practice"
@@ -656,7 +672,15 @@
     ],
     "answer": "To encapsulate SQL statements for reuse, modularity, and performance",
     "isObjective": true,
-    "explanation": "Stored procedures allow you to encapsulate one or more SQL statements for reuse, improve performance by reducing network traffic, and maintain modularity in database operations.",
+    "explanation": {
+      "intro": "Stored procedures are precompiled sets of SQL statements that are stored in the database and executed as needed. They enhance reusability, performance, and security.",
+      "points": [
+        "They allow developers to encapsulate frequently used logic inside the database, reducing code duplication.",
+        "Because they are precompiled, stored procedures often provide **better performance** compared to executing individual SQL queries repeatedly.",
+        "They improve **security** by restricting direct access to tables and allowing controlled execution of operations.",
+        "Stored procedures support **modularity and maintainability**, making database applications easier to manage and extend."
+      ]
+    },
     "askedBy": [
       "interview",
       "practice"
@@ -693,7 +717,15 @@
       "They automatically normalize data"
     ],
     "answer": "They are precompiled and executed on the database server",
-    "explanation": "The default behavior of stored procedures is that they are precompiled and stored on the database server. This reduces parsing and compilation overhead, improves performance, and allows consistent execution of logic within the database.",
+    "explanation": {
+      "intro": "Stored procedures are designed to run directly within the database engine, allowing optimized and efficient execution of database operations.",
+      "points": [
+        "Stored procedures are **precompiled** by the database, so execution is faster compared to ad-hoc SQL queries.",
+        "They are executed on the **database server**, reducing the amount of data sent over the network.",
+        "This server-side execution improves performance, especially for complex business logic or large data manipulations.",
+        "By centralizing logic in the database, stored procedures also enhance **security and consistency** across applications."
+      ]
+    },
     "askedBy": [
       "interview",
       "practice"
@@ -729,7 +761,16 @@
       "COMMIT"
     ],
     "answer": "TRANSACTION",
-    "explanation": "ACID properties (Atomicity, Consistency, Isolation, Durability) are implemented using transactions. The `TRANSACTION` keyword is used to define a transactional scope in SQL, ensuring that operations follow ACID rules, while COMMIT, ROLLBACK, and SAVEPOINT are supporting commands inside a transaction.",
+    "explanation": {
+      "intro": "ACID properties (Atomicity, Consistency, Isolation, Durability) are fundamental principles in databases that ensure reliable transactions. The `TRANSACTION` keyword or annotation is commonly associated with enforcing ACID compliance.",
+      "points": [
+        "A **transaction** is a sequence of operations performed as a single logical unit of work.",
+        "The `TRANSACTION` keyword ensures **Atomicity**, meaning all operations either succeed together or fail together.",
+        "It also enforces **Consistency**, ensuring the database remains in a valid state before and after the transaction.",
+        "Through **Isolation**, transactions do not interfere with each other even when executed concurrently.",
+        "Finally, **Durability** guarantees that once a transaction is committed, the changes are permanently saved, even in case of failures."
+      ]
+    },
     "isObjective": true,
     "askedBy": [
       "interview",
@@ -741,19 +782,22 @@
     "id": "34",
     "type": "Interview",
     "question": "Describe pros and cons of ACID.",
-    "answer": [
-      "**Pros**",
-        "Ensures **data integrity** by guaranteeing reliable transactions.",
-        "Provides **consistency** across the database after every operation.",
-        "Prevents issues like dirty reads, lost updates, or partial transactions.",
-        "Guarantees **durability**, so committed data is never lost, even in crashes.",
-      "**Cons**",
-        "Can reduce **performance** due to strict isolation and consistency checks.",
-        "Not always necessary for systems requiring high scalability and availability (e.g., NoSQL).",
-        "In distributed systems, maintaining ACID can be **complex and resource-intensive**.",
-        "Strict ACID compliance may **limit flexibility** in handling large-scale real-time applications."
-    ],
-    "explanation": "ACID (Atomicity, Consistency, Isolation, Durability) provides strong guarantees for transactional databases, making them reliable for financial and critical systems. However, this reliability often comes at the cost of performance and scalability, which is why some systems adopt BASE (Basically Available, Soft state, Eventual consistency) instead.",
+    "answer": "ACID ensures reliable transactions with strong guarantees, but it comes with performance and scalability trade-offs.",
+    "explanation": {
+      "intro": "ACID (Atomicity, Consistency, Isolation, Durability) properties provide strong guarantees for transactional systems. While they ensure correctness and reliability of database operations, they also introduce challenges in terms of performance and scalability.",
+      "points": [
+        "**Pros**:",
+        "✔ Ensures **data integrity** by guaranteeing reliable transactions.",
+        "✔ Provides **consistency** across the database after every operation.",
+        "✔ Prevents issues like dirty reads, lost updates, or partial transactions.",
+        "✔ Guarantees **durability**, so committed data is never lost, even in crashes.",
+        "**Cons**:",
+        "✘ Can reduce **performance** due to strict isolation and consistency checks.",
+        "✘ Not always necessary for systems requiring high scalability and availability (e.g., NoSQL).",
+        "✘ In distributed systems, maintaining ACID can be **complex and resource-intensive**.",
+        "✘ Strict ACID compliance may **limit flexibility** in handling large-scale real-time applications."
+      ]
+    },
     "difficulty": "Medium",
     "isObjective": false,
     "options": [],
@@ -772,7 +816,25 @@
       "SAVEPOINT"
     ],
     "answer": "BEGIN / START TRANSACTION",
-    "explanation": "In SQL, transactions are initiated with the `BEGIN` or `START TRANSACTION` command. After that, all subsequent operations are part of the transaction until explicitly ended with `COMMIT` (to save changes) or `ROLLBACK` (to undo). `SAVEPOINT` allows setting checkpoints within a transaction.",
+    "explanation": {
+      "intro": "In SQL, a transaction is a sequence of one or more operations executed as a single unit of work. Transactions ensure that the database remains consistent even in case of failures, errors, or concurrent access. The command to initiate a transaction marks the beginning of this controlled sequence of operations.",
+      "points": [
+          "command: BEGIN / START TRANSACTION",
+          "       purpose: Starts a new transaction, grouping subsequent SQL operations together until a COMMIT or ROLLBACK is executed."
+        ,
+          "command: COMMIT",
+          "       purpose: Ends the transaction and saves all changes permanently to the database."
+        ,
+        
+          "command: ROLLBACK",
+          "       purpose: Ends the transaction and undoes all changes made during the transaction."
+        ,
+        
+          "command: SAVEPOINT",
+          "       purpose: Creates a checkpoint within a transaction, allowing partial rollback to that point without affecting the entire transaction."
+        
+      ]
+    },
     "type": "MCQ",
     "difficulty": "Easy",
     "isObjective": true,
@@ -785,19 +847,20 @@
   {
     "id": "36",
     "question": "Describe pros and cons of Transactions.",
-    "explanation": 
-    [
-    "**Pros**",
-      "Ensures **data integrity and consistency** by following ACID properties.",
-      "Allows **rollback on errors**, preventing partial or corrupted updates.",
-      "Supports **concurrent access control**, enabling multiple users to work safely.",
-      "Provides **atomicity**, so either all operations succeed or none do.",
-    "**Cons**",
-      "May introduce **performance overhead** due to locking and logging.",
-      "Long-running transactions can cause **blocking** or **deadlocks**.",
-      "Requires careful **management of isolation levels** to balance consistency and concurrency.",
-      "Not all NoSQL databases provide **full transaction support** (e.g., MongoDB added multi-document transactions only recently)."
-    ]
+    "explanation": {
+      "points": [
+      "**Pros**",
+        "Ensures **data integrity and consistency** by following ACID properties.",
+        "Allows **rollback on errors**, preventing partial or corrupted updates.",
+        "Supports **concurrent access control**, enabling multiple users to work safely.",
+        "Provides **atomicity**, so either all operations succeed or none do.",
+      "**Cons**",
+        "May introduce **performance overhead** due to locking and logging.",
+        "Long-running transactions can cause **blocking** or **deadlocks**.",
+        "Requires careful **management of isolation levels** to balance consistency and concurrency.",
+        "Not all NoSQL databases provide **full transaction support** (e.g., MongoDB added multi-document transactions only recently)."
+      ]
+    }
     ,
     "answer": "Transactions guarantee reliable execution of multiple operations as a single unit of work, ensuring ACID compliance. However, they can reduce performance and increase complexity in highly concurrent systems.",
     "options": [],

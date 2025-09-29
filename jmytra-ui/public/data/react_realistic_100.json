@@ -1136,7 +1136,8 @@
     ],
     "answer": "new Promise()",
     "explanation": {
-      "points": "In JavaScript, a Promise is created using the `new Promise()` constructor, which takes an executor function with `resolve` and `reject` as parameters."
+      "points": 
+        ["In JavaScript, a Promise is created using the `new Promise()` constructor, which takes an executor function with `resolve` and `reject` as parameters."]
     },
     "askedBy": [
       "interview",
@@ -1158,7 +1159,8 @@
     ],
     "answer": "They bubble up the DOM hierarchy by default",
     "explanation": {
-      "points": "In JavaScript, event handlers follow the event bubbling model by default, meaning the event is first handled at the target element and then propagates upward through the DOM tree unless stopped with `event.stopPropagation()`."
+      "points": 
+        ["In JavaScript, event handlers follow the event bubbling model by default, meaning the event is first handled at the target element and then propagates upward through the DOM tree unless stopped with `event.stopPropagation()`."]
     },
     "askedBy": [
       "interview",

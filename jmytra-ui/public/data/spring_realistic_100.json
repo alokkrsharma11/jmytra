@@ -177,7 +177,7 @@
       ],
       "language": "java",
       "code": "import org.springframework.boot.SpringApplication;\nimport org.springframework.boot.autoconfigure.SpringBootApplication;\n\n@SpringBootApplication  // includes @EnableAutoConfiguration\npublic class MyApp {\n    public static void main(String[] args) {\n        SpringApplication.run(MyApp.class, args);\n    }\n}\n",
-      "diagram": "/diagrams/spring/spring_boot_auto_config.md"
+      "diagram": "/diagram/spring/spring_boot_auto_config.md"
     },
     "askedBy": [
       "interview"
@@ -205,7 +205,7 @@
       ],
       "language": "java",
       "code": "import org.springframework.transaction.annotation.Propagation;\nimport org.springframework.transaction.annotation.Transactional;\n\npublic class PaymentService {\n\n    @Transactional(propagation = Propagation.REQUIRED)\n    public void processPayment() {\n        // joins existing or creates new transaction\n    }\n\n    @Transactional(propagation = Propagation.REQUIRES_NEW)\n    public void logTransaction() {\n        // always starts a new transaction\n    }\n}\n",
-      "diagram": "/diagrams/spring/spring_txn_propagation.md"
+      "diagram": "/diagram/spring/spring_txn_propagation.md"
     },
     "askedBy": [
       "interview"
@@ -2233,7 +2233,7 @@
         "Has specialized modules like Spring MVC, Spring Boot, Spring Security, etc."
       ],
       "code": "import org.springframework.stereotype.Component;\n\n@Component\nclass Engine {}\n\n@Component\nclass Car {\n    private final Engine engine;\n\n    public Car(Engine engine) { // Constructor Injection\n        this.engine = engine;\n    }\n}",
-      "diagram": "/diagrams/spring/spring_framework_intro.md"
+      "diagram": "/diagram/spring/spring_framework_intro.md"
     }
   },
   {
@@ -2252,7 +2252,7 @@
         "Makes applications loosely coupled."
       ],
       "code": "import org.springframework.stereotype.Component;\nimport org.springframework.beans.factory.annotation.Autowired;\n\n@Component\nclass Engine {}\n\n@Component\nclass Car {\n    private final Engine engine;\n\n    @Autowired\n    public Car(Engine engine) { // Constructor Injection\n        this.engine = engine;\n    }\n}",
-      "diagram": "/diagrams/spring/dependency_injection.md"
+      "diagram": "/diagram/spring/dependency_injection.md"
     }
   },
   {
@@ -2270,7 +2270,7 @@
         "@ComponentScan – enables scanning for components, configurations, and services."
       ],
       "code": "import org.springframework.boot.SpringApplication;\nimport org.springframework.boot.autoconfigure.SpringBootApplication;\n\n@SpringBootApplication\npublic class MyApp {\n    public static void main(String[] args) {\n        SpringApplication.run(MyApp.class, args);\n    }\n}",
-      "diagram": "/diagrams/spring/spring_boot_application.md"
+      "diagram": "/diagram/spring/spring_boot_application.md"
     }
   },
   {
@@ -2290,7 +2290,7 @@
         "Session: A new instance per HTTP session (web-aware)."
       ],
       "code": "@Component\npublic class MyService {\n    // By default, this bean will be singleton\n}",
-      "diagram": "/diagrams/spring/spring_bean_scope.md"
+      "diagram": "/diagram/spring/spring_bean_scope.md"
     }
   },
   {
@@ -2309,7 +2309,7 @@
         "Specialized annotations like `@GetMapping`, `@PostMapping`, etc., were introduced in Spring 4.3 as shortcuts for `@RequestMapping` with predefined HTTP methods."
       ],
       "code": "@RestController\npublic class MyController {\n\n    @RequestMapping(value = \"/hello\", method = RequestMethod.GET)\n    public String sayHello() {\n        return \"Hello, Spring MVC!\";\n    }\n}",
-      "diagram": "/diagrams/spring/request_mapping.md"
+      "diagram": "/diagram/spring/request_mapping.md"
     }
   },
   {
@@ -2333,7 +2333,7 @@
         "`@Repository` is also a specialization of `@Component`, typically applied to DAO (Data Access Object) classes. It also provides automatic translation of database-related exceptions into Spring's DataAccessException."
       ],
       "code": "@Component\npublic class UtilityBean {}\n\n@Service\npublic class PaymentService {}\n\n@Repository\npublic class UserRepository {}",
-      "diagram": "/diagrams/spring/component_service_repository.md"
+      "diagram": "/diagram/spring/component_service_repository.md"
     }
   },
   {
@@ -2353,7 +2353,7 @@
         "`@Configuration` is used to mark a class as a source of bean definitions."
       ],
       "code": "import org.springframework.beans.factory.annotation.Autowired;\nimport org.springframework.stereotype.Component;\n\n@Component\nclass Engine {}\n\n@Component\nclass Car {\n    private final Engine engine;\n\n    @Autowired  // automatic injection of Engine bean\n    public Car(Engine engine) {\n        this.engine = engine;\n    }\n}",
-      "diagram": "/diagrams/spring/autowired_injection.md"
+      "diagram": "/diagram/spring/autowired_injection.md"
     }
   },
   {
@@ -2373,7 +2373,7 @@
         "This accelerates development by providing ready-to-use features with minimal setup."
       ],
       "code": "dependencies {\n    implementation 'org.springframework.boot:spring-boot-starter-web'\n    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'\n    testImplementation 'org.springframework.boot:spring-boot-starter-test'\n}",
-      "diagram": "/diagrams/spring/spring_boot_starter.md"
+      "diagram": "/diagram/spring/spring_boot_starter.md"
     }
   },
   {
@@ -2394,7 +2394,7 @@
         "This approach provides type-safety and is preferred over XML-based configuration."
       ],
       "code": "import org.springframework.context.annotation.Bean;\nimport org.springframework.context.annotation.Configuration;\n\n@Configuration\npublic class AppConfig {\n\n    @Bean\n    public MyService myService() {\n        return new MyServiceImpl();\n    }\n}",
-      "diagram": "/diagrams/spring/spring_bean_definition.md"
+      "diagram": "/diagram/spring/spring_bean_definition.md"
     }
   },
   {
@@ -2419,7 +2419,7 @@
         "Eliminates the need to annotate each method with @ResponseBody individually."
       ],
       "code": "import org.springframework.web.bind.annotation.GetMapping;\nimport org.springframework.web.bind.annotation.RestController;\n\n@RestController\npublic class UserController {\n\n    @GetMapping(\"/users\")\n    public List<User> getAllUsers() {\n        return userService.findAll();\n    }\n}",
-      "diagram": "/diagrams/spring/restcontroller_flow.md"
+      "diagram": "/diagram/spring/restcontroller_flow.md"
     }
   },
   {
@@ -2444,7 +2444,7 @@
         "Supports query derivation from method names and custom JPQL/SQL queries."
       ],
       "code": "import org.springframework.data.jpa.repository.JpaRepository;\nimport org.springframework.stereotype.Repository;\n\n@Repository\npublic interface UserRepository extends JpaRepository<User, Long> {\n    List<User> findByLastName(String lastName);\n}",
-      "diagram": "/diagrams/spring/spring_data_jpa_flow.md"
+      "diagram": "/diagram/spring/spring_data_jpa_flow.md"
     }
   },
   {
@@ -2464,7 +2464,7 @@
         "Helps in Java-based configuration instead of XML."
       ],
       "code": "import org.springframework.context.annotation.Bean;\nimport org.springframework.context.annotation.Configuration;\n\n@Configuration\npublic class AppConfig {\n\n    @Bean\n    public MyService myService() {\n        return new MyServiceImpl();\n    }\n}",
-      "diagram": "/diagrams/spring/spring_configuration_flow.md"
+      "diagram": "/diagram/spring/spring_configuration_flow.md"
     }
   },
   {
@@ -2489,7 +2489,7 @@
         "Supports environment-specific configurations using profiles (e.g., application-dev.properties)."
       ],
       "code": "spring.datasource.url=jdbc:mysql://localhost:3306/mydb\nspring.datasource.username=root\nspring.datasource.password=root\nserver.port=8081\nlogging.level.org.springframework=DEBUG",
-      "diagram": "/diagrams/spring/spring_application_properties_flow.md"
+      "diagram": "/diagram/spring/spring_application_properties_flow.md"
     }
   },
   {
@@ -2509,7 +2509,7 @@
         "Both annotations are needed to fully enable scheduled tasks."
       ],
       "code": "@Configuration\n@EnableScheduling\npublic class AppConfig {}\n\n@Component\npublic class ScheduledTasks {\n    @Scheduled(fixedRate = 5000)\n    public void reportCurrentTime() {\n        System.out.println(\"Current time: \" + LocalDateTime.now());\n    }\n}",
-      "diagram": "/diagrams/spring/spring_scheduling_flow.md"
+      "diagram": "/diagram/spring/spring_scheduling_flow.md"
     }
   },
   {
@@ -2529,7 +2529,7 @@
         "Supports propagation, isolation, and rollback rules."
       ],
       "code": "@Service\npublic class UserService {\n\n    @Transactional\n    public void createUser(User user) {\n        userRepository.save(user);\n        // additional operations\n    }\n}",
-      "diagram": "/diagrams/spring/spring_transaction_flow.md"
+      "diagram": "/diagram/spring/spring_transaction_flow.md"
     }
   },
   {
@@ -2549,7 +2549,7 @@
         "Common use-cases: logging, transactions, security checks."
       ],
       "code": "@Aspect\n@Component\npublic class LoggingAspect {\n\n    @Before(\"execution(* com.example.service.*.*(..))\")\n    public void logBefore(JoinPoint joinPoint) {\n        System.out.println(\"Before method: \" + joinPoint.getSignature().getName());\n    }\n}",
-      "diagram": "/diagrams/spring/spring_aop_flow.md"
+      "diagram": "/diagram/spring/spring_aop_flow.md"
     }
   },
   {
@@ -2574,7 +2574,7 @@
         "Supports Spring Expression Language (SpEL) for dynamic expressions."
       ],
       "code": "@Component\npublic class AppConfig {\n    @Value(\"${app.name}\")\n    private String appName;\n\n    public void printAppName() {\n        System.out.println(\"Application Name: \" + appName);\n    }\n}",
-      "diagram": "/diagrams/spring/spring_value_injection.md"
+      "diagram": "/diagram/spring/spring_value_injection.md"
     }
   },
   {
@@ -2599,7 +2599,7 @@
         "Helps in auditing, metrics, and application tracing."
       ],
       "code": "dependencies {\n    implementation 'org.springframework.boot:spring-boot-starter-actuator'\n}\n\n# Example: Enable endpoints in application.properties\nmanagement.endpoints.web.exposure.include=health,info,metrics",
-      "diagram": "/diagrams/spring/spring_boot_actuator.md"
+      "diagram": "/diagram/spring/spring_boot_actuator.md"
     }
   },
   {
@@ -2619,7 +2619,7 @@
         "Embedded servers simplify deployment by packaging the server with the application."
       ],
       "code": "# Example: Exclude Tomcat and use Jetty\ndependencies {\n    implementation 'org.springframework.boot:spring-boot-starter-web'\n    implementation 'org.springframework.boot:spring-boot-starter-jetty'\n    // Exclude Tomcat\n    implementation('org.springframework.boot:spring-boot-starter-web') {\n        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-tomcat'\n    }\n}",
-      "diagram": "/diagrams/spring/spring_boot_embedded_server.md"
+      "diagram": "/diagram/spring/spring_boot_embedded_server.md"
     }
   },
   {
@@ -2644,7 +2644,7 @@
         "Use @RestController for REST APIs and @Controller when serving HTML views or JSP pages."
       ],
       "code": "// Example usage\n@Controller\npublic class MyController {\n    @GetMapping(\"/home\")\n    public String homePage() {\n        return \"home\"; // returns view named 'home'\n    }\n}\n\n@RestController\npublic class MyRestController {\n    @GetMapping(\"/api/data\")\n    public MyData getData() {\n        return new MyData(\"example\"); // returns JSON\n    }\n}",
-      "diagram": "/diagrams/spring/controller_vs_restcontroller.md"
+      "diagram": "/diagram/spring/controller_vs_restcontroller.md"
     }
   },
   {
@@ -2670,7 +2670,7 @@
         "Lightweight and promotes testable, maintainable code."
       ],
       "code": "// Example: Defining a bean in Spring\n@Component\npublic class MyService {\n    public void perform() {\n        System.out.println(\"Service executing\");\n    }\n}\n\n@Autowired\nprivate MyService myService;",
-      "diagram": "/diagrams/spring/spring_framework_overview.md"
+      "diagram": "/diagram/spring/spring_framework_overview.md"
     }
   },
   {
@@ -2690,7 +2690,7 @@
         "Scans for Spring components in the package and sub-packages."
       ],
       "code": "// Example:\n@SpringBootApplication\npublic class MyApp {\n    public static void main(String[] args) {\n        SpringApplication.run(MyApp.class, args);\n    }\n}",
-      "diagram": "/diagrams/spring/springboot_application.md"
+      "diagram": "/diagram/spring/springboot_application.md"
     }
   },
   {
@@ -2710,7 +2710,7 @@
         "Other scopes like 'request' and 'session' apply in web-aware Spring contexts."
       ],
       "code": "// Example:\n@Component\npublic class MyService {\n    // This bean is singleton by default\n}",
-      "diagram": "/diagrams/spring/spring_bean_scope.md"
+      "diagram": "/diagram/spring/spring_bean_scope.md"
     }
   },
   {
@@ -2730,7 +2730,7 @@
         "It helps reduce manual bean wiring and promotes loose coupling."
       ],
       "code": "// Example:\n@Component\npublic class MyService {\n    @Autowired\n    private MyRepository repository;\n}",
-      "diagram": "/diagrams/spring/spring_autowired.md"
+      "diagram": "/diagram/spring/spring_autowired.md"
     }
   },
   {
@@ -2750,7 +2750,7 @@
         "Examples include spring-boot-starter-web, spring-boot-starter-data-jpa, spring-boot-starter-security."
       ],
       "code": "// Example in Maven pom.xml\n<dependency>\n    <groupId>org.springframework.boot</groupId>\n    <artifactId>spring-boot-starter-web</artifactId>\n</dependency>",
-      "diagram": "/diagrams/spring/spring_boot_starter1.md"
+      "diagram": "/diagram/spring/spring_boot_starter1.md"
     }
   },
   {
@@ -2770,7 +2770,7 @@
         "Helps in Java-based configuration instead of XML configuration."
       ],
       "code": "import org.springframework.context.annotation.Bean;\nimport org.springframework.context.annotation.Configuration;\n\n@Configuration\npublic class AppConfig {\n    @Bean\n    public MyService myService() {\n        return new MyService();\n    }\n}",
-      "diagram": "/diagrams/spring/spring_configuration.md"
+      "diagram": "/diagram/spring/spring_configuration.md"
     }
   },
   {
@@ -2795,7 +2795,7 @@
         "Integrates with external monitoring systems like Prometheus and Grafana."
       ],
       "code": "dependencies {\n    implementation 'org.springframework.boot:spring-boot-starter-actuator'\n}\n\n# Example usage in application.properties\nmanagement.endpoints.web.exposure.include=health,info,metrics",
-      "diagram": "/diagrams/spring/spring_boot_actuator.md"
+      "diagram": "/diagram/spring/spring_boot_actuator.md"
     }
   },
   {
@@ -2815,7 +2815,7 @@
         "Reduces manual configuration and avoids version conflicts."
       ],
       "code": "# Example: Adding Web Starter in build.gradle\nimplementation 'org.springframework.boot:spring-boot-starter-web'\n\n# Auto-configures DispatcherServlet, REST controllers, JSON converters, etc.",
-      "diagram": "/diagrams/spring/spring_boot_dependency_management.md"
+      "diagram": "/diagram/spring/spring_boot_dependency_management.md"
     }
   },
   {
@@ -2835,7 +2835,7 @@
         "Reduces boilerplate code and simplifies object management."
       ],
       "code": "// Example: Constructor Injection in Spring\n@Component\nclass Engine {}\n\n@Component\nclass Car {\n    private final Engine engine;\n\n    @Autowired\n    public Car(Engine engine) {\n        this.engine = engine;\n    }\n}",
-      "diagram": "/diagrams/spring/dependency_injection.md"
+      "diagram": "/diagram/spring/dependency_injection.md"
     }
   },
   {
@@ -2855,7 +2855,7 @@
         "Use `@Profile` annotation to mark beans for specific profiles."
       ],
       "code": "// Example: Defining a bean for 'dev' profile\n@Configuration\n@Profile(\"dev\")\nclass DevDataSourceConfig {\n    @Bean\n    public DataSource dataSource() {\n        return new HikariDataSource();\n    }\n}",
-      "diagram": "/diagrams/spring/spring_profiles.md"
+      "diagram": "/diagram/spring/spring_profiles.md"
     }
   },
   {
@@ -2876,7 +2876,7 @@
         "Reduces boilerplate XML or Java configuration."
       ],
       "code": "// application.properties example\nspring.datasource.url=jdbc:mysql://localhost:3306/mydb\nspring.datasource.username=root\nspring.datasource.password=secret\nspring.jpa.hibernate.ddl-auto=update\n\n// No explicit DataSource bean required; Spring Boot creates it automatically",
-      "diagram": "/diagrams/spring/spring_boot_database.md"
+      "diagram": "/diagram/spring/spring_boot_database.md"
     }
   },
   {
@@ -2896,7 +2896,7 @@
         "@Repository: Specialization of @Component for persistence layer; enables exception translation from database exceptions to Spring DataAccessException."
       ],
       "code": "```java\n@Component\npublic class MyComponent {}\n\n@Service\npublic class MyService {}\n\n@Repository\npublic class MyRepository {}\n```",
-      "diagram": "/diagrams/spring/spring_component_hierarchy.md"
+      "diagram": "/diagram/spring/spring_component_hierarchy.md"
     }
   },
   {
@@ -2917,7 +2917,7 @@
         "REST controllers and easy JSON serialization make exposing endpoints straightforward."
       ],
       "code": "```java\n@SpringBootApplication\npublic class UserServiceApplication {\n    public static void main(String[] args) {\n        SpringApplication.run(UserServiceApplication.class, args);\n    }\n}\n\n@RestController\n@RequestMapping(\"/users\")\npublic class UserController {\n    @GetMapping\n    public List<User> getAllUsers() {\n        return userService.findAll();\n    }\n}\n```",
-      "diagram": "/diagrams/spring/springboot_microservices.md"
+      "diagram": "/diagram/spring/springboot_microservices.md"
     }
   },
   {
@@ -2939,7 +2939,7 @@
         "Security Headers: Prevent clickjacking and other web attacks."
       ],
       "code": "```java\n@Configuration\n@EnableWebSecurity\npublic class SecurityConfig extends WebSecurityConfigurerAdapter {\n\n    @Override\n    protected void configure(HttpSecurity http) throws Exception {\n        http\n            .authorizeRequests()\n                .antMatchers(\"/public/**\").permitAll()\n                .anyRequest().authenticated()\n            .and()\n            .formLogin()\n            .and()\n            .csrf();\n    }\n}\n```",
-      "diagram": "/diagrams/spring/spring_security_flow.md"
+      "diagram": "/diagram/spring/spring_security_flow.md"
     }
   },
   {
@@ -2961,7 +2961,7 @@
         "Opinionated Defaults: Provides default configurations that follow best practices, speeding up development."
       ],
       "code": "```java\n@SpringBootApplication\npublic class MyApplication {\n    public static void main(String[] args) {\n        SpringApplication.run(MyApplication.class, args);\n    }\n}\n```",
-      "diagram": "/diagrams/spring/spring_boot_advantages.md"
+      "diagram": "/diagram/spring/spring_boot_advantages.md"
   }
   },
   {
@@ -2983,7 +2983,7 @@
         "Implement role-based access control for fine-grained security."
       ],
       "code": "```java\n@Configuration\n@EnableWebSecurity\npublic class SecurityConfig extends WebSecurityConfigurerAdapter {\n    @Override\n    protected void configure(HttpSecurity http) throws Exception {\n        http\n          .csrf().disable()\n          .authorizeRequests()\n          .antMatchers(\"/public/**\").permitAll()\n          .anyRequest().authenticated()\n          .and()\n          .httpBasic();\n    }\n}\n```",
-      "diagram": "/diagrams/spring/spring_security_rest_api.md"
+      "diagram": "/diagram/spring/spring_security_rest_api.md"
     }
   }
 ]

@@ -4,56 +4,18 @@ import QuizContent from "./QuizContent";
 import PageLayout from "./PageLayout";
 import { ChevronRight, ChevronLeft } from "@mui/icons-material";
 import './../App.css'
+import loadAllQuizzes from "../utils/quizLoader";
 
-const SpringTutorial = () => {
+const SpringTutorial = ({ language = "spring" }) => {
   const [questions, setQuestions] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [tabIndex, setTabIndex] = useState(0);
   const [sidebarOpen, setSidebarOpen] = useState(false); // control sidebar
 
   // Load quizs
   useEffect(() => {
-    const loadAllQuizzes = async () => {
-      try {
-        // Fetch all questions
-        const res = await fetch("./data/spring_realistic_100.json");
-        const data = await res.json();
-
-        // Map through all questions
-        const questionsWithDiagrams = await Promise.all(
-          data.map(async (q) => {
-            if (q.explanation?.diagram) {
-              try {
-                const mdRes = await fetch(q.explanation.diagram);
-                if (!mdRes.ok) throw new Error("Failed to fetch diagram");
-                const diagramMarkdown = await mdRes.text();
-                return {
-                  ...q,
-                  explanation: {
-                    ...q.explanation,
-                    diagramMarkdown,
-                  },
-                };
-              } catch (err) {
-                console.error(
-                  `Error loading markdown for question "${q.question}":`,
-                  err
-                );
-                return q;
-              }
-            }
-            return q;
-          })
-        );
-
-        setQuestions(questionsWithDiagrams);
-      } catch (err) {
-        console.error("Error loading JSON:", err);
-      }
-    };
-
-    loadAllQuizzes();
-  }, []);
-
+    loadAllQuizzes(language, setLoading, setQuestions);
+  }, [language]);
 
   // Group questions by type
   const grouped = questions.reduce((acc, q) => {
@@ -68,6 +30,8 @@ const SpringTutorial = () => {
     setTabIndex(newValue);
     setSidebarOpen(!sidebarOpen);
   };
+
+  if (loading) return <p className="container">Loading...</p>;
 
   return (
     <Box sx={{ display: "flex", minHeight: "100vh", bgcolor: "grey.900", color: "white" }}>

@@ -4,19 +4,18 @@ import { ChevronRight, ChevronLeft } from "@mui/icons-material";
 import QuizContent from "./QuizContent";
 import PageLayout from "./PageLayout";
 import './../App.css'
+import loadAllQuizzes from "../utils/quizLoader";
 
-const DbTutorial = () => {
+const DbTutorial = ({language='db'}) => {
   const [questions, setQuestions] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [tabIndex, setTabIndex] = useState(0);
   const [sidebarOpen, setSidebarOpen] = useState(false); // control sidebar
 
-  // Load first quiz
+  // Load quizs
   useEffect(() => {
-    fetch("./data/databases_realistic_100.json")
-      .then((res) => res.json())
-      .then((val) => setQuestions(val))
-      .catch((err) => console.error("Error loading JSON:", err));
-  }, []);
+    loadAllQuizzes(language, setLoading, setQuestions);
+  }, [language]);
 
   // Group questions by type
   const grouped = questions.reduce((acc, q) => {
@@ -32,6 +31,8 @@ const DbTutorial = () => {
     setSidebarOpen(!sidebarOpen);
   };
 
+  if (loading) return <p className="container">Loading...</p>;
+  
   return (
     <Box sx={{ display: "flex", minHeight: "100vh", bgcolor: "grey.900", color: "white" }}>
       {/* Toggle Button */}

@@ -145,7 +145,10 @@
         "Keys in lists help React identify which items have changed, been added, or removed."
       ]
     },
-    "askedBy": ["interview", "quiz"],
+    "askedBy": [
+      "interview",
+      "quiz"
+    ],
     "technology": "React"
   },
   {
@@ -165,7 +168,10 @@
         "Use key props properly in lists to help React optimize updates during reconciliation."
       ]
     },
-    "askedBy": ["interview", "quiz"],
+    "askedBy": [
+      "interview",
+      "quiz"
+    ],
     "technology": "React"
   },
   {
@@ -190,7 +196,10 @@
         "Errors can be caught using try/catch blocks inside async functions."
       ]
     },
-    "askedBy": ["interview", "quiz"],
+    "askedBy": [
+      "interview",
+      "quiz"
+    ],
     "technology": "JavaScript / Async-Await"
   },
   {
@@ -210,7 +219,10 @@
         "Using Async/Await makes the code easier to read and maintain compared to chaining multiple `.then()` calls on Promises."
       ]
     },
-    "askedBy": ["interview", "quiz"],
+    "askedBy": [
+      "interview",
+      "quiz"
+    ],
     "technology": "JavaScript / ReactJS"
   },
   {
@@ -234,7 +246,10 @@
         "It helps in managing global state or passing down theme, language, or other shared data across components."
       ]
     },
-    "askedBy": ["interview", "quiz"],
+    "askedBy": [
+      "interview",
+      "quiz"
+    ],
     "technology": "ReactJS"
   },
   {
@@ -254,7 +269,10 @@
         "Context updates trigger re-renders only for components that consume the changed context values, not the entire tree."
       ]
     },
-    "askedBy": ["interview", "quiz"],
+    "askedBy": [
+      "interview",
+      "quiz"
+    ],
     "technology": "ReactJS / JavaScript"
   },
   {
@@ -279,7 +297,10 @@
         "Updating values in the dependency array triggers the effect, similar to `componentDidUpdate`."
       ]
     },
-    "askedBy": ["interview", "quiz"],
+    "askedBy": [
+      "interview",
+      "quiz"
+    ],
     "technology": "ReactJS"
   },
   {
@@ -299,7 +320,10 @@
         "Returning a cleanup function in `useEffect` replicates `componentWillUnmount` for cleanup tasks like unsubscribing from events or clearing timers."
       ]
     },
-    "askedBy": ["interview", "quiz"],
+    "askedBy": [
+      "interview",
+      "quiz"
+    ],
     "technology": "ReactJS / JavaScript"
   },
   {
@@ -319,7 +343,10 @@
         "Keys in lists help React efficiently identify elements that have changed during reconciliation."
       ]
     },
-    "askedBy": ["interview", "quiz"],
+    "askedBy": [
+      "interview",
+      "quiz"
+    ],
     "technology": "ReactJS / JavaScript"
   },
   {
@@ -344,7 +371,10 @@
         "This approach improves rendering performance and provides a more predictable UI update process."
       ]
     },
-    "askedBy": ["interview", "quiz"],
+    "askedBy": [
+      "interview",
+      "quiz"
+    ],
     "technology": "ReactJS / JavaScript"
   },
   {
@@ -365,7 +395,10 @@
         "Keys in lists help React identify which elements have changed, been added, or removed during reconciliation."
       ]
     },
-    "askedBy": ["interview", "quiz"],
+    "askedBy": [
+      "interview",
+      "quiz"
+    ],
     "technology": "ReactJS / JavaScript"
   },
   {
@@ -390,7 +423,10 @@
         "Although it looks like HTML, JSX is just syntactic sugar for JavaScript function calls."
       ]
     },
-    "askedBy": ["interview", "quiz"],
+    "askedBy": [
+      "interview",
+      "quiz"
+    ],
     "technology": "ReactJS / JavaScript"
   },
   {
@@ -408,7 +444,9 @@
         "Cons: Requires a build step (Babel), may be confusing for beginners unfamiliar with HTML/JS integration, and errors may appear in compiled JS rather than original JSX."
       ]
     },
-    "askedBy": ["interview"],
+    "askedBy": [
+      "interview"
+    ],
     "technology": "ReactJS & JavaScript"
   },
   {
@@ -434,7 +472,10 @@
         "Hooks enable functional components to handle logic that previously required class components."
       ]
     },
-    "askedBy": ["interview", "quiz"],
+    "askedBy": [
+      "interview",
+      "quiz"
+    ],
     "technology": "ReactJS / JavaScript"
   },
   {
@@ -455,7 +496,9 @@
         "Ensure testing of hooks using React Testing Library or Jest to maintain reliability."
       ]
     },
-    "askedBy": ["interview"],
+    "askedBy": [
+      "interview"
+    ],
     "technology": "ReactJS / JavaScript"
   },
   {
@@ -480,7 +523,10 @@
         "Using event handlers properly ensures predictable user interaction and state updates."
       ]
     },
-    "askedBy": ["interview", "quiz"],
+    "askedBy": [
+      "interview",
+      "quiz"
+    ],
     "technology": "ReactJS / JavaScript"
   },
   {
@@ -502,7 +548,9 @@
         "Ensure thorough testing of event handlers to validate user interactions and state updates."
       ]
     },
-    "askedBy": ["interview"],
+    "askedBy": [
+      "interview"
+    ],
     "technology": "ReactJS / JavaScript"
   },
   {
@@ -526,7 +574,10 @@
         "Properly designed handlers help maintain predictable and responsive UI behavior."
       ]
     },
-    "askedBy": ["interview", "quiz"],
+    "askedBy": [
+      "interview",
+      "quiz"
+    ],
     "technology": "ReactJS / JavaScript"
   },
   {
@@ -544,7 +595,9 @@
         "Cons: Inline handlers may cause extra re-renders, large functions reduce readability, and improper binding can cause bugs."
       ]
     },
-    "askedBy": ["interview"],
+    "askedBy": [
+      "interview"
+    ],
     "technology": "ReactJS / JavaScript"
   },
   {
@@ -568,7 +621,10 @@
         "In JavaScript, any function can create a closure if it references variables from an outer scope."
       ]
     },
-    "askedBy": ["interview", "quiz"],
+    "askedBy": [
+      "interview",
+      "quiz"
+    ],
     "technology": "JavaScript / ReactJS"
   },
   {
@@ -587,7 +643,9 @@
         "Closures can be used for creating higher-order functions and callbacks with persistent state."
       ]
     },
-    "askedBy": ["interview"],
+    "askedBy": [
+      "interview"
+    ],
     "technology": "ReactJS / JavaScript"
   },
   {
@@ -611,7 +669,10 @@
         "In React, closures are often used in hooks, event handlers, and functional components to capture props or state."
       ]
     },
-    "askedBy": ["interview", "quiz"],
+    "askedBy": [
+      "interview",
+      "quiz"
+    ],
     "technology": "JavaScript / ReactJS"
   },
   {
@@ -629,7 +690,9 @@
         "Cons: Potential memory leaks if references are kept unnecessarily, can increase code complexity, and may lead to unexpected behavior if outer scope variables change unexpectedly."
       ]
     },
-    "askedBy": ["interview"],
+    "askedBy": [
+      "interview"
+    ],
     "technology": "ReactJS / JavaScript"
   },
   {
@@ -654,7 +717,10 @@
         "Error handling is done via try/catch inside async functions."
       ]
     },
-    "askedBy": ["interview", "quiz"],
+    "askedBy": [
+      "interview",
+      "quiz"
+    ],
     "technology": "JavaScript / ReactJS"
   },
   {
@@ -674,7 +740,9 @@
         "In React, use Async/Await inside useEffect or custom hooks for API calls and state updates."
       ]
     },
-    "askedBy": ["interview"],
+    "askedBy": [
+      "interview"
+    ],
     "technology": "JavaScript / ReactJS"
   },
   {
@@ -699,7 +767,10 @@
         "In React, promises are used for API calls, fetching data, and handling asynchronous side-effects."
       ]
     },
-    "askedBy": ["interview", "quiz"],
+    "askedBy": [
+      "interview",
+      "quiz"
+    ],
     "technology": "JavaScript / ReactJS"
   },
   {
@@ -719,7 +790,9 @@
         "In React, promises are commonly used in data fetching, API calls, and async state updates."
       ]
     },
-    "askedBy": ["interview"],
+    "askedBy": [
+      "interview"
+    ],
     "technology": "JavaScript / ReactJS"
   },
   {
@@ -744,7 +817,10 @@
         "They do not block the main thread and help manage asynchronous tasks cleanly."
       ]
     },
-    "askedBy": ["interview", "quiz"],
+    "askedBy": [
+      "interview",
+      "quiz"
+    ],
     "technology": "JavaScript / ReactJS"
   },
   {
@@ -762,7 +838,9 @@
         "Cons: Large promise chains can be hard to maintain, improper handling can lead to unhandled rejections, and chaining does not automatically handle all errors."
       ]
     },
-    "askedBy": ["interview"],
+    "askedBy": [
+      "interview"
+    ],
     "technology": "JavaScript / ReactJS"
   },
   {
@@ -787,7 +865,10 @@
         "JSX supports attributes, children, and conditional rendering in a clean syntax."
       ]
     },
-    "askedBy": ["interview", "quiz"],
+    "askedBy": [
+      "interview",
+      "quiz"
+    ],
     "technology": "ReactJS / JavaScript"
   },
   {
@@ -812,7 +893,10 @@
         "It reduces the complexity of passing props through multiple nested components."
       ]
     },
-    "askedBy": ["interview", "quiz"],
+    "askedBy": [
+      "interview",
+      "quiz"
+    ],
     "technology": "ReactJS / JavaScript"
   },
   {
@@ -831,13 +915,16 @@
     "explanation": {
       "intro": "Closures are a fundamental concept in JavaScript and play a key role in React for state and event handling.",
       "points": [
-        "They are created whenever a function is defined inside another function and gains access to the outer function’s variables.",
+        "They are created whenever a function is defined inside another function and gains access to the outer function\u2019s variables.",
         "Closures are commonly used in callbacks, event handlers, and functional components in React.",
         "They help maintain state across function executions.",
         "Misuse of closures may cause memory leaks if references are not handled properly."
       ]
     },
-    "askedBy": ["interview", "quiz"],
+    "askedBy": [
+      "interview",
+      "quiz"
+    ],
     "technology": "ReactJS / JavaScript"
   },
   {
@@ -861,7 +948,10 @@
         "Functional components use hooks like useEffect and useLayoutEffect instead of traditional lifecycle methods."
       ]
     },
-    "askedBy": ["quiz", "interview"],
+    "askedBy": [
+      "quiz",
+      "interview"
+    ],
     "technology": "ReactJS & JavaScript"
   },
   {
@@ -871,7 +961,7 @@
     "difficulty": "Medium",
     "isObjective": false,
     "options": [],
-    "answer": "The purpose of the Component lifecycle in ReactJS is to provide developers with a way to control and manage the different stages of a component’s existence—from its creation (mounting), updates (re-rendering), to its removal (unmounting). This allows efficient resource management, data fetching, DOM manipulation, and cleanup operations.",
+    "answer": "The purpose of the Component lifecycle in ReactJS is to provide developers with a way to control and manage the different stages of a component\u2019s existence\u2014from its creation (mounting), updates (re-rendering), to its removal (unmounting). This allows efficient resource management, data fetching, DOM manipulation, and cleanup operations.",
     "explanation": {
       "intro": "React components go through different phases during their lifetime. The lifecycle methods/hooks help developers hook into these phases for better control.",
       "points": [
@@ -881,7 +971,10 @@
         "In functional components, lifecycle is managed using React Hooks such as useEffect and useLayoutEffect."
       ]
     },
-    "askedBy": ["interview", "quiz"],
+    "askedBy": [
+      "interview",
+      "quiz"
+    ],
     "technology": "ReactJS & JavaScript"
   },
   {
@@ -892,7 +985,7 @@
     "isObjective": false,
     "answer": "In a production system, Component lifecycle should be designed with proper use of hooks (for functional components) or lifecycle methods (for class components) to handle initialization, updates, and cleanup efficiently.",
     "explanation": {
-      "intro": "React’s Component lifecycle helps manage different phases: mounting, updating, and unmounting.",
+      "intro": "React\u2019s Component lifecycle helps manage different phases: mounting, updating, and unmounting.",
       "points": [
         "Use `useEffect` for data fetching, subscriptions, and DOM manipulations in functional components.",
         "Provide cleanup functions inside `useEffect` (like unsubscribing WebSocket connections, clearing intervals) to avoid memory leaks.",
@@ -902,7 +995,10 @@
         "Always handle errors and cancellations (like aborting fetch requests) to make lifecycle handling production-ready."
       ]
     },
-    "askedBy": ["interview", "system design"],
+    "askedBy": [
+      "interview",
+      "system design"
+    ],
     "technology": "ReactJS & JavaScript"
   },
   {
@@ -919,15 +1015,18 @@
     ],
     "answer": "Functional components can also use lifecycle behavior via Hooks like useEffect.",
     "explanation": {
-      "intro": "React’s Component lifecycle is structured into mounting, updating, and unmounting phases.",
+      "intro": "React\u2019s Component lifecycle is structured into mounting, updating, and unmounting phases.",
       "points": [
         "Class components use lifecycle methods such as componentDidMount, componentDidUpdate, and componentWillUnmount.",
         "Functional components achieve lifecycle behavior using Hooks like useEffect.",
         "Cleanup functions inside useEffect handle unmounting and resource cleanup.",
-        "Lifecycle is deterministic and follows React’s rendering phases."
+        "Lifecycle is deterministic and follows React\u2019s rendering phases."
       ]
     },
-    "askedBy": ["quiz", "interview"],
+    "askedBy": [
+      "quiz",
+      "interview"
+    ],
     "technology": "ReactJS & JavaScript"
   },
   {
@@ -951,7 +1050,10 @@
         "- Overuse or incorrect use of useEffect can cause performance issues."
       ]
     },
-    "askedBy": ["interview", "quiz"],
+    "askedBy": [
+      "interview",
+      "quiz"
+    ],
     "technology": "ReactJS & JavaScript"
   },
   {
@@ -975,7 +1077,10 @@
         "- Debugging context value updates can be less straightforward."
       ]
     },
-    "askedBy": ["interview", "quiz"],
+    "askedBy": [
+      "interview",
+      "quiz"
+    ],
     "technology": "ReactJS & JavaScript"
   },
   {
@@ -1000,7 +1105,10 @@
         "This ensures predictability and easier debugging."
       ]
     },
-    "askedBy": ["interview", "quiz"],
+    "askedBy": [
+      "interview",
+      "quiz"
+    ],
     "technology": "ReactJS & JavaScript"
   },
   {
@@ -1026,7 +1134,10 @@
         "- Middleware setup can add extra complexity."
       ]
     },
-    "askedBy": ["interview", "quiz"],
+    "askedBy": [
+      "interview",
+      "quiz"
+    ],
     "technology": "ReactJS & JavaScript"
   },
   {
@@ -1050,7 +1161,10 @@
         "Common hooks: useState, useEffect, useContext, useReducer, useMemo, and custom hooks."
       ]
     },
-    "askedBy": ["interview", "quiz"],
+    "askedBy": [
+      "interview",
+      "quiz"
+    ],
     "technology": "ReactJS & JavaScript"
   },
   {
@@ -1071,7 +1185,10 @@
         "Rules of Hooks: only call hooks at the top level of your component and only call them from React functions."
       ]
     },
-    "askedBy": ["interview", "quiz"],
+    "askedBy": [
+      "interview",
+      "quiz"
+    ],
     "technology": "ReactJS & JavaScript"
   },
   {
@@ -1100,7 +1217,7 @@
     "options": [],
     "answer": "Design JSX for production by using a robust build pipeline (Babel/TypeScript + bundler), organizing components for reusability, enforcing linting/formatting and type checks, optimizing rendering (memoization, code-splitting, SSR/CSR choices), ensuring accessibility and security, and validating via tests and CI/CD.",
     "explanation": {
-      "intro": "JSX is the UI markup for React. In production you should treat it as maintainable, testable, and performant code — not just template text.",
+      "intro": "JSX is the UI markup for React. In production you should treat it as maintainable, testable, and performant code \u2014 not just template text.",
       "points": [
         "Build pipeline & toolchain: Use Babel or TypeScript to transpile JSX, configure a bundler (Webpack/Vite/Rollup) for tree-shaking, code-splitting, and production optimizations (minify, sourcemaps).",
         "Project structure & components: Organize components into clear folders (atoms, molecules, organisms or feature-based). Create small, testable, reusable components and prefer composition over inheritance.",
@@ -1136,8 +1253,9 @@
     ],
     "answer": "new Promise()",
     "explanation": {
-      "points": 
-        ["In JavaScript, a Promise is created using the `new Promise()` constructor, which takes an executor function with `resolve` and `reject` as parameters."]
+      "points": [
+        "In JavaScript, a Promise is created using the `new Promise()` constructor, which takes an executor function with `resolve` and `reject` as parameters."
+      ]
     },
     "askedBy": [
       "interview",
@@ -1159,8 +1277,9 @@
     ],
     "answer": "They bubble up the DOM hierarchy by default",
     "explanation": {
-      "points": 
-        ["In JavaScript, event handlers follow the event bubbling model by default, meaning the event is first handled at the target element and then propagates upward through the DOM tree unless stopped with `event.stopPropagation()`."]
+      "points": [
+        "In JavaScript, event handlers follow the event bubbling model by default, meaning the event is first handled at the target element and then propagates upward through the DOM tree unless stopped with `event.stopPropagation()`."
+      ]
     },
     "askedBy": [
       "interview",
@@ -1185,7 +1304,9 @@
         "React automatically binds `this` context for class components when using arrow functions, avoiding manual binding."
       ]
     },
-    "askedBy": ["interview"],
+    "askedBy": [
+      "interview"
+    ],
     "technology": "ReactJS & JavaScript"
   },
   {
@@ -1258,12 +1379,12 @@
     "explanation": {
       "intro": "React Hooks were introduced to simplify state and side-effect management in functional components, replacing many use cases of class components.",
       "points": [
-        "✅ Pros:",
+        "\u2705 Pros:",
         "- Enable using state and lifecycle features in functional components.",
         "- Promote code reusability with custom hooks.",
         "- Reduce boilerplate compared to class components.",
         "- Improve readability and testing since logic is more modular.",
-        "⚠️ Cons:",
+        "\u26a0\ufe0f Cons:",
         "- Dependency arrays in useEffect/useCallback can be confusing and error-prone.",
         "- Can cause unnecessary re-renders if not used carefully.",
         "- Overuse of custom hooks may lead to fragmented or less maintainable code.",
@@ -1275,7 +1396,6 @@
     ],
     "technology": "ReactJS / JavaScript"
   },
-
   {
     "id": "70",
     "question": "What is the primary purpose of Async/Await in ReactJS & JavaScript?",
@@ -1381,7 +1501,7 @@
         "Efficient list rendering: For long lists use virtualization (react-window/react-virtualized) to render only visible items, drastically reducing DOM nodes.",
         "Choose the right rendering strategy: Use SSR/SSG (Next.js, Remix) for better first-contentful-paint and SEO when needed; use client-side rendering for highly interactive apps. Optimize hydration to avoid blocking the main thread.",
         "Code-splitting & lazy loading: Split bundles and lazy-load non-critical components (React.lazy + Suspense) to reduce initial render work and improve Time-to-Interactive.",
-        "Profile and measure: Use React DevTools Profiler, Lighthouse, and RUM to find hot spots — optimize expensive renders rather than guessing.",
+        "Profile and measure: Use React DevTools Profiler, Lighthouse, and RUM to find hot spots \u2014 optimize expensive renders rather than guessing.",
         "DOM-friendly operations: Move heavy calculations off the main thread (web workers) and avoid synchronous DOM reads after writes which cause layout thrashing.",
         "Accessibility & correctness: Ensure updates preserve focus and accessibility attributes; manage ARIA and focus restoration during dynamic updates.",
         "Testing & regression: Add performance/regression tests to detect accidental re-rendering or bundle size regressions; include snapshot and integration tests for critical UI flows.",
@@ -1413,7 +1533,7 @@
       "points": [
         "Context provides a way to pass data through the component tree without manually passing props at every level.",
         "By default, all components that use `useContext` or `<Context.Consumer>` will re-render when the provided value changes.",
-        "Context does not optimize re-renders by itself — memoization and state structuring may be needed.",
+        "Context does not optimize re-renders by itself \u2014 memoization and state structuring may be needed.",
         "It is mainly used for global or shared state like themes, authentication, or localization."
       ]
     },
@@ -1435,7 +1555,7 @@
       "intro": "Redux works by enforcing a unidirectional data flow and centralizing state management.",
       "points": [
         "The entire application state is stored in a single store as a JavaScript object.",
-        "State can only be updated by dispatching actions — plain objects describing what happened.",
+        "State can only be updated by dispatching actions \u2014 plain objects describing what happened.",
         "Reducers are pure functions that take the current state and an action, and return a new state.",
         "The store notifies all subscribed components whenever the state changes.",
         "React components connect to the store using `react-redux` (`useSelector` and `useDispatch`) to read state and dispatch actions.",
@@ -1494,7 +1614,7 @@
       "points": [
         "Hooks can only be used inside functional components or other custom hooks.",
         "They enable the use of state (`useState`), side effects (`useEffect`), and other React features in functional components.",
-        "Hooks must follow the Rules of Hooks — only call them at the top level and not inside loops, conditions, or nested functions.",
+        "Hooks must follow the Rules of Hooks \u2014 only call them at the top level and not inside loops, conditions, or nested functions.",
         "They do not work inside class components."
       ]
     },
@@ -1631,7 +1751,7 @@
     "explanation": {
       "intro": "Closures are a core JavaScript concept frequently leveraged in React.",
       "points": [
-        "Closures allow inner functions to remember and access variables from their outer function’s scope, even after the outer function has executed.",
+        "Closures allow inner functions to remember and access variables from their outer function\u2019s scope, even after the outer function has executed.",
         "They are often used in React for event handlers, hooks, and encapsulating state logic.",
         "They help in data privacy by restricting direct access to variables but allowing controlled manipulation."
       ]
@@ -1670,27 +1790,239 @@
     "technology": "ReactJS & JavaScript"
   },
   {
-  "id": 99,
-  "question": "What is the purpose of Async/Await in ReactJS & JavaScript?",
-  "type": "Interview",
-  "difficulty": "Medium",
-  "isObjective": false,
-  "options": [],
-  "answer": "The purpose of async/await is to simplify asynchronous programming by allowing developers to write asynchronous code that looks and behaves like synchronous code. It improves readability, reduces callback nesting, and makes error handling easier.",
-  "explanation": {
-    "intro": "Async/Await is a syntactic feature built on top of Promises in JavaScript.",
-    "points": [
-      "Async functions always return a Promise, making them inherently asynchronous.",
-      "Await pauses the execution of the function until the Promise is resolved or rejected.",
-      "It eliminates the need for complex Promise chains (`.then().catch()`) and makes code cleaner.",
-      "Error handling can be done using try/catch, which is more intuitive compared to chained `.catch()` methods.",
-      "In React, async/await is commonly used for fetching data in hooks like useEffect or in event handlers."
-    ]
+    "id": 99,
+    "question": "What is the purpose of Async/Await in ReactJS & JavaScript?",
+    "type": "Interview",
+    "difficulty": "Medium",
+    "isObjective": false,
+    "options": [],
+    "answer": "The purpose of async/await is to simplify asynchronous programming by allowing developers to write asynchronous code that looks and behaves like synchronous code. It improves readability, reduces callback nesting, and makes error handling easier.",
+    "explanation": {
+      "intro": "Async/Await is a syntactic feature built on top of Promises in JavaScript.",
+      "points": [
+        "Async functions always return a Promise, making them inherently asynchronous.",
+        "Await pauses the execution of the function until the Promise is resolved or rejected.",
+        "It eliminates the need for complex Promise chains (`.then().catch()`) and makes code cleaner.",
+        "Error handling can be done using try/catch, which is more intuitive compared to chained `.catch()` methods.",
+        "In React, async/await is commonly used for fetching data in hooks like useEffect or in event handlers."
+      ]
+    },
+    "askedBy": [
+      "interview",
+      "technical test"
+    ],
+    "technology": "ReactJS / JavaScript"
   },
-  "askedBy": [
-    "interview",
-    "technical test"
-  ],
-  "technology": "ReactJS / JavaScript"
-}
+  {
+    "title": "CSS Background Properties",
+    "item": [
+      {
+        "name": "Solid Color Background",
+        "example": "background-color: #ff5733;",
+        "description": "Sets a solid color as the background of an element."
+      },
+      {
+        "name": "Background Image",
+        "example": "background-image: url('image.jpg');",
+        "description": "Sets an image as the background of an element."
+      },
+      {
+        "name": "Gradient Backgrounds",
+        "subitems": [
+          {
+            "type": "Linear Gradient",
+            "example": "background-image: linear-gradient(to right, red, yellow);",
+            "description": "Transitions between two or more colors in a straight line."
+          },
+          {
+            "type": "Radial Gradient",
+            "example": "background-image: radial-gradient(circle, red, yellow, green);",
+            "description": "Transitions colors outward from a central point like a circle."
+          }
+        ]
+      },
+      {
+        "name": "Multiple Backgrounds",
+        "example": "background-image: url('image1.jpg'), url('image2.png'), linear-gradient(to bottom, red, blue);",
+        "description": "Allows stacking multiple background images and gradients."
+      },
+      {
+        "name": "Background Position",
+        "example": "background-position: center top;",
+        "description": "Sets background alignment relative to the element."
+      },
+      {
+        "name": "Background Size",
+        "example": "background-size: cover;",
+        "options": [
+          "cover",
+          "contain",
+          "specific dimensions (e.g., 100px 200px)"
+        ],
+        "description": "Controls how the background image is scaled."
+      },
+      {
+        "name": "Background Repeat",
+        "example": "background-repeat: no-repeat;",
+        "options": [
+          "repeat",
+          "repeat-x",
+          "repeat-y",
+          "no-repeat"
+        ],
+        "description": "Controls if and how the background repeats."
+      },
+      {
+        "name": "Background Attachment",
+        "example": "background-attachment: fixed;",
+        "options": [
+          "scroll",
+          "fixed"
+        ],
+        "description": "Determines whether the background scrolls with the page."
+      },
+      {
+        "name": "Background Clip",
+        "example": "background-clip: padding-box;",
+        "options": [
+          "border-box",
+          "padding-box",
+          "content-box"
+        ],
+        "description": "Defines how far the background extends within the element."
+      },
+      {
+        "name": "Background Origin",
+        "example": "background-origin: content-box;",
+        "options": [
+          "border-box",
+          "padding-box",
+          "content-box"
+        ],
+        "description": "Defines where the background starts positioning from."
+      },
+      {
+        "name": "Background Blend Mode",
+        "example": "background-blend-mode: multiply;",
+        "options": [
+          "multiply",
+          "screen",
+          "overlay"
+        ],
+        "description": "Applies blending effects between background layers."
+      }
+    ],
+    "type": "Advance Concepts"
+  },
+  {
+    "title": "Closures in JavaScript",
+    "definition": "Closures allow inner functions to access variables from their outer function even after the outer function has executed.",
+    "code": "function outer() { let x=10; return function inner(){ return x; } }",
+    "useCases": [
+      "Data privacy",
+      "Function factories",
+      "Event handlers"
+    ],
+    "keyPoints": [
+      "Lexical scoping",
+      "State persistence"
+    ],
+    "type": "Advance Concepts"
+  },
+  {
+    "title": "let, const, var in JavaScript",
+    "differences": [
+      {
+        "keyword": "var",
+        "scope": "Function or global",
+        "hoisting": "Hoisted, initialized as undefined",
+        "reassignment": "Allowed"
+      },
+      {
+        "keyword": "let",
+        "scope": "Block",
+        "hoisting": "Hoisted but not accessible before initialization",
+        "reassignment": "Allowed"
+      },
+      {
+        "keyword": "const",
+        "scope": "Block",
+        "hoisting": "Hoisted but not accessible before initialization",
+        "reassignment": "Not allowed (except object/array mutations)"
+      }
+    ],
+    "type": "Advance Concepts"
+  },
+  {
+    "title": "React Basics",
+    "features": [
+      "Component-based architecture",
+      "JSX syntax",
+      "Virtual DOM",
+      "One-way data binding",
+      "State & Props",
+      "React Hooks",
+      "Declarative UI",
+      "Rich ecosystem & tools"
+    ],
+    "type": "Advance Concepts"
+  },
+  {
+    "title": "React Lifecycle Methods",
+    "phases": {
+      "mounting": [
+        "constructor()",
+        "getDerivedStateFromProps()",
+        "render()",
+        "componentDidMount()"
+      ],
+      "updating": [
+        "getDerivedStateFromProps()",
+        "shouldComponentUpdate()",
+        "render()",
+        "getSnapshotBeforeUpdate()",
+        "componentDidUpdate()"
+      ],
+      "unmounting": [
+        "componentWillUnmount()"
+      ]
+    },
+    "functionalEquivalent": {
+      "useEffect": "Combines componentDidMount, componentDidUpdate, componentWillUnmount"
+    },
+    "type": "Advance Concepts"
+  },
+  {
+    "title": "JavaScript Iterations",
+    "concepts": [
+      "for",
+      "while",
+      "do...while",
+      "for...of",
+      "for...in"
+    ],
+    "useCases": [
+      "forEach",
+      "map",
+      "filter",
+      "reduce",
+      "every",
+      "some",
+      "find",
+      "findIndex"
+    ],
+    "type": "Advance Concepts"
+  },
+  {
+    "title": "Object-Oriented JavaScript",
+    "concepts": [
+      "Objects",
+      "Classes",
+      "Inheritance",
+      "Encapsulation",
+      "Polymorphism"
+    ],
+    "code": "class Car { constructor(make, model){ this.make=make; this.model=model;} start(){console.log('Engine on')}}",
+    "type": "Advance Concepts"
+  }
 ]

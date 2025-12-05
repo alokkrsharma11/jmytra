@@ -65,7 +65,7 @@ const QuizContent = ({ question }) => {
                 </ul>
               )}
               {question.explanation.code && (
-                <CodeBlock language="java" code={question.explanation.code} />
+                <CodeBlock language={question.explanation.language || 'javascript'} code={question.explanation.code} />
               )}
             </div>
           )}
@@ -92,7 +92,7 @@ const QuizContent = ({ question }) => {
                 </ul>
               )}
               {question.explanation.code && (
-                <CodeBlock language="java" code={question.explanation.code} />
+                <CodeBlock language={question.explanation.language || 'javascript'} code={question.explanation.code} />
               )}
               {/* ✅ Diagram handling */}
               {question.explanation.diagramMarkdown ? (

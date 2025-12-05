@@ -4,36 +4,18 @@ import { ChevronRight, ChevronLeft } from "@mui/icons-material";
 import QuizContent from "./QuizContent";
 import PageLayout from "./PageLayout";
 import './../App.css'
+import loadAllQuizzes from "../utils/quizLoader";
 
-const DbTutorial = () => {
-  const [quizA, setQuizA] = useState([]);
-  const [quizB, setQuizB] = useState([]);
+const DbTutorial = ({language='db'}) => {
   const [questions, setQuestions] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [tabIndex, setTabIndex] = useState(0);
   const [sidebarOpen, setSidebarOpen] = useState(false); // control sidebar
 
-  // Load first quiz
+  // Load quizs
   useEffect(() => {
-    fetch("./data/databases_realistic_100.json")
-      .then((res) => res.json())
-      .then((val) => setQuizA(val))
-      .catch((err) => console.error("Error loading JSON:", err));
-  }, []);
-
-  // Load second quiz
-  useEffect(() => {
-    fetch("/db_quizs.json")
-      .then((res) => res.json())
-      .then((val) => setQuizB(val))
-      .catch((err) => console.error("Error loading JSON:", err));
-  }, []);
-
-  // Merge both when either changes
-  useEffect(() => {
-    if (quizA.length > 0 || quizB.length > 0) {
-      setQuestions([...quizA, ...quizB]);
-    }
-  }, [quizA, quizB]);
+    loadAllQuizzes(language, setLoading, setQuestions);
+  }, [language]);
 
   // Group questions by type
   const grouped = questions.reduce((acc, q) => {
@@ -48,6 +30,8 @@ const DbTutorial = () => {
     setTabIndex(newValue);
     setSidebarOpen(!sidebarOpen);
   };
+
+  if (loading) return <div className="p-6 text-white">Loading questions...</div>;
 
   return (
     <Box sx={{ display: "flex", minHeight: "100vh", bgcolor: "grey.900", color: "white" }}>

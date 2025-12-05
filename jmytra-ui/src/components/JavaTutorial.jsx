@@ -1,74 +1,21 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Tabs, Tab, Box, IconButton } from "@mui/material";
 import { ChevronRight, ChevronLeft } from "@mui/icons-material";
 import QuizContent from "./QuizContent";
 import PageLayout from "./PageLayout";
 import "./../App.css";
+import loadAllQuizzes from "../utils/quizLoader";
 
-const JavaTutorial = () => {
-  const [quizA, setQuizA] = useState([]);
-  const [quizB, setQuizB] = useState([]);
+const JavaTutorial = ({ language = "java" }) => {
   const [questions, setQuestions] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [tabIndex, setTabIndex] = useState(0);
   const [sidebarOpen, setSidebarOpen] = useState(false); // control sidebar
 
-  // Load first quiz
+  // Load quizs
   useEffect(() => {
-    fetch("./data/java_quizs_realistic.json")
-      .then((res) => res.json())
-      .then((val) => setQuizA(val))
-      .catch((err) => console.error("Error loading JSON:", err));
-      
-  }, []);
-
-  // Load second quiz
-  useEffect(() => {
-    fetch("/java_quizs.json")
-      .then((res) => res.json())
-      .then((val) => setQuizB(val))
-      .catch((err) => console.error("Error loading JSON:", err));
-  }, []);
-
-  // Merge both when either changes
-  /*useEffect(() => {
-    if (quizA.length > 0 || quizB.length > 0) {
-      setQuestions([...quizA, ...quizB]);
-    }
-  }, [quizA, quizB]);*/
-  useEffect(() => {
-    const loadMarkdownForQuestions = async (qs) => {
-      return Promise.all(
-        qs.map(async (q) => {
-          if (q.explanation?.diagram) {
-            try {
-              const res = await fetch(q.explanation.diagram);
-              const md = await res.text();
-              return { 
-                ...q, 
-                explanation: { 
-                  ...q.explanation, 
-                  diagramMarkdown: md   // store it alongside the diagram
-                } 
-              };
-            } catch (err) {
-              console.error("Error loading markdown:", err);
-            }
-          }
-          return q;
-        })
-      );
-    };
-
-    const mergeAndLoad = async () => {
-      const merged = [...quizA, ...quizB];
-      const withMarkdown = await loadMarkdownForQuestions(merged);
-      setQuestions(withMarkdown);
-    };
-
-    if (quizA.length > 0 || quizB.length > 0) {
-      mergeAndLoad();
-    }
-  }, [quizA, quizB]);
+    loadAllQuizzes(language, setLoading, setQuestions);
+  }, [language]);
 
   // Group questions by type
   const grouped = questions.reduce((acc, q) => {
@@ -83,7 +30,8 @@ const JavaTutorial = () => {
     setTabIndex(newValue);
     setSidebarOpen(!sidebarOpen);
   };
-
+  
+  if (loading) return <div className="p-6 text-white">Loading questions...</div>;
   return (
     <Box sx={{ display: "flex", minHeight: "100vh", bgcolor: "grey.900", color: "white" }}>
       {/* Toggle Button */}
@@ -154,6 +102,7 @@ const JavaTutorial = () => {
             transition: "margin-left 0.3s ease",   // smooth shifting
             marginLeft: sidebarOpen ? "0px" : "-220px", // shift by sidebar width
           }}>
+            
         {types.map(
           (type, index) =>
             tabIndex === index && (

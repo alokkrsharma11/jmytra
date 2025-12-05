@@ -1,6 +1,6 @@
 [
   {
-    "id": "spring_boot_1",
+    "id": "1",
     "question": "Which annotation denotes a Spring Boot application?",
     "options": [
       "@Configuration",
@@ -26,7 +26,7 @@
     "technology": "Spring Boot"
   },
   {
-    "id": "spring_boot_2",
+    "id": "2",
     "question": "Default embedded server in Spring Boot is?",
     "options": [
       "Tomcat",
@@ -52,7 +52,7 @@
     "technology": "Spring Boot"
   },
   {
-    "id": "spring_boot_3",
+    "id": "3",
     "question": "Which annotation is used to inject a bean by type?",
     "options": [
       "@Inject",
@@ -78,7 +78,7 @@
     "technology": "Spring Boot"
   },
   {
-    "id": "spring_boot_4",
+    "id": "4",
     "question": "What does @RestController combine?",
     "options": [
       "@Controller + @ResponseBody",
@@ -104,7 +104,7 @@
     "technology": "Spring Boot"
   },
   {
-    "id": "spring_boot_5",
+    "id": "5",
     "question": "Which property file is used by Spring Boot by default?",
     "options": [
       "application.yml",
@@ -130,7 +130,7 @@
     "technology": "Spring Boot"
   },
   {
-    "id": "spring_boot_6",
+    "id": "6",
     "question": "Explain Spring Dependency Injection and its benefits.",
     "options": [],
     "answer": "DI injects dependencies rather than creating them; benefits include loose coupling, easier testing, and separation of concerns.",
@@ -150,7 +150,8 @@
           "\n         - **Improved maintainability**: Changing a dependency does not require modifying dependent classes.",
           "\n         - **Better modularization**: Promotes cleaner and reusable code."
       ],
-      "code":"\n\n### Example:\n```java\n@Component\nclass Engine {}\n\n@Component\nclass Car {\n    private final Engine engine;\n\n    @Autowired\n    public Car(Engine engine) { // Constructor Injection\n        this.engine = engine;\n    }\n}\n```\nHere, Spring automatically injects an `Engine` object into the `Car` object."
+      "language": "java",
+      "code": "import org.springframework.stereotype.Component;\nimport org.springframework.beans.factory.annotation.Autowired;\n\n@Component\nclass Engine {}\n\n@Component\nclass Car {\n    private final Engine engine;\n\n    @Autowired\n    public Car(Engine engine) { // Constructor Injection\n        this.engine = engine;\n    }\n}\n\n// Here, Spring automatically injects an `Engine` object into the `Car` object."
     },
     "askedBy": [
       "interview"
@@ -158,7 +159,7 @@
     "technology": "Spring Boot"
   },
   {
-    "id": "spring_boot_7",
+    "id": "7",
     "question": "How does Spring Boot auto-configuration work?",
     "options": [],
     "answer": "Auto-configuration uses classpath and beans to apply sensible defaults; can be customized or disabled; @EnableAutoConfiguration triggers it.",
@@ -174,8 +175,9 @@
         "**Customization**: Developers can override defaults using `application.properties` or by defining beans manually.",
         "**Example**: With `spring-boot-starter-data-jpa` in the classpath, Spring Boot configures a `DataSource`, `EntityManagerFactory`, and `TransactionManager` automatically."
       ],
+      "language": "java",
       "code": "import org.springframework.boot.SpringApplication;\nimport org.springframework.boot.autoconfigure.SpringBootApplication;\n\n@SpringBootApplication  // includes @EnableAutoConfiguration\npublic class MyApp {\n    public static void main(String[] args) {\n        SpringApplication.run(MyApp.class, args);\n    }\n}\n",
-      "diagram": "/diagrams/spring_boot_auto_config.md"
+      "diagram": "/diagram/spring/spring_boot_auto_config.md"
     },
     "askedBy": [
       "interview"
@@ -183,7 +185,7 @@
     "technology": "Spring Boot"
   },
   {
-    "id": "spring_boot_8",
+    "id": "8",
     "question": "Describe transaction propagation behaviors in Spring.",
     "options": [],
     "answer": "Propagation settings like REQUIRED, REQUIRES_NEW, SUPPORTS affect transactional boundary joining or creation; important for nested calls.",
@@ -201,8 +203,9 @@
         "**NEVER**: Must not run within a transaction, throws exception if one exists.",
         "**NESTED**: Creates a nested transaction using savepoints (dependent on database support)."
       ],
+      "language": "java",
       "code": "import org.springframework.transaction.annotation.Propagation;\nimport org.springframework.transaction.annotation.Transactional;\n\npublic class PaymentService {\n\n    @Transactional(propagation = Propagation.REQUIRED)\n    public void processPayment() {\n        // joins existing or creates new transaction\n    }\n\n    @Transactional(propagation = Propagation.REQUIRES_NEW)\n    public void logTransaction() {\n        // always starts a new transaction\n    }\n}\n",
-      "diagram": "/diagrams/spring_txn_propagation.md"
+      "diagram": "/diagram/spring/spring_txn_propagation.md"
     },
     "askedBy": [
       "interview"
@@ -210,7 +213,7 @@
     "technology": "Spring Boot"
   },
   {
-    "id": "spring_boot_9",
+    "id": "9",
     "question": "Which statement about Spring Boot Actuator is correct?",
     "options": [
       "It is used only for logging purposes in a Spring Boot application.",
@@ -237,7 +240,7 @@
     "technology": "Spring Boot"
   },
   {
-    "id": "spring_boot_11",
+    "id": "10",
     "question": "Which annotation/keyword is used for Auto-configuration in Spring Boot?",
     "options": [
       "@EnableAutoConfiguration",
@@ -264,7 +267,7 @@
     "technology": "Spring Boot"
   },
   {
-    "id": "spring_boot_12",
+    "id": "11",
     "question": "Describe the pros and cons of Auto-configuration in Spring Boot.",
     "options": [],
     "answer": "Spring Boot Auto-configuration simplifies application setup by configuring beans automatically based on classpath and dependencies, but it may also add hidden complexity and unnecessary components if not managed properly.",
@@ -294,7 +297,7 @@
     "technology": "Spring Boot"
   },
   {
-    "id": "spring_boot_13",
+    "id": "12",
     "question": "Which statement about Controllers is correct?",
     "options": [
       "Controllers in Spring Boot are annotated with @Controller or @RestController and handle incoming web requests.",
@@ -322,7 +325,7 @@
     "technology": "Spring Boot"
   },
   {
-    "id": "spring_boot_14",
+    "id": "13",
     "question": "How would you design/implement Controllers in a production system?",
     "options": [],
     "answer": "In a production system, Controllers should be lightweight, focus only on handling HTTP requests, delegate business logic to Service classes, and follow best practices such as proper request/response mapping, exception handling, validation, and security integration.",
@@ -367,7 +370,7 @@
     "technology": "Spring Boot"
   },
   {
-    "id": "spring_boot_15",
+    "id": "14",
     "question": "Which annotation/keyword is used for enabling Actuator in Spring Boot?",
     "options": [
       "No specific annotation is required; adding the dependency enables Actuator automatically.",
@@ -395,7 +398,7 @@
     "technology": "Spring Boot"
   },
   {
-    "id": "spring_boot_16",
+    "id": "15",
     "question": "Describe the pros and cons of using Spring Boot Actuator.",
     "options": [],
     "answer": "Spring Boot Actuator provides production-ready features like health checks, metrics, and monitoring, making applications easier to manage, but it can introduce security risks and overhead if not configured properly.",
@@ -426,7 +429,7 @@
     "technology": "Spring Boot"
   },
   {
-    "id": "spring_boot_17",
+    "id": "16",
     "question": "Which command is used to enable Spring Boot Actuator?",
     "options": [
       "No specific command; adding the dependency spring-boot-starter-actuator enables it automatically.",
@@ -454,7 +457,7 @@
     "technology": "Spring Boot"
   },
   {
-    "id": "spring_boot_19",
+    "id": "17",
     "question": "What is the default behavior of Data JPA?",
     "options": [
       "It only provides manual query execution through JPQL.",
@@ -484,7 +487,7 @@
     "technology": "Spring Data JPA"
   },
   {
-    "id": "spring_boot_20",
+    "id": "18",
     "question": "Describe pros and cons of Data JPA.",
     "options": [],
     "answer": "Spring Data JPA reduces boilerplate code, provides derived queries, CRUD support, and transaction management, but it also introduces abstraction overhead, performance pitfalls, and limited flexibility for complex queries.",
@@ -519,7 +522,7 @@
     "technology": "Spring Data JPA"
   },
   {
-    "id": "spring_boot_22",
+    "id": "19",
     "question": "Describe pros and cons of Controllers.",
     "options": [],
     "answer": "Controllers in Spring simplify request handling, enforce separation of concerns, and support REST APIs, but they can become bloated, tightly coupled, and harder to test if not designed properly.",
@@ -551,7 +554,7 @@
     "technology": "Spring Boot"
   },
   {
-    "id": "spring_boot_23",
+    "id": "20",
     "question": "Which annotation is used to define Controllers in Spring?",
     "options": [
       "@Service",
@@ -579,7 +582,7 @@
     "technology": "Spring Boot"
   },
   {
-    "id": "spring_boot_24",
+    "id": "21",
     "question": "Explain how Controllers work in Spring Boot.",
     "options": [],
     "answer": "In Spring Boot, Controllers handle incoming HTTP requests, delegate business logic to services, and return responses as views or JSON/XML objects.",
@@ -604,7 +607,7 @@
     "technology": "Spring Boot"
   },
   {
-    "id": "spring_boot_25",
+    "id": "22",
     "question": "Which annotation/keyword is used for Transactions?",
     "options": [
       "@Service",
@@ -633,7 +636,7 @@
     "technology": "Spring Framework"
   },
   {
-    "id": "spring_boot_26",
+    "id": "23",
     "question": "How would you design/implement Transactions in a production system?",
     "options": [],
     "answer": "Design transactions declaratively using @Transactional at the service layer, keep transactions short, choose appropriate propagation and isolation, handle retries and idempotency for failures, and adopt distributed transaction patterns (sagas or compensating actions) when crossing service boundaries.",
@@ -699,7 +702,7 @@
     "technology": "Spring Framework / Databases"
   },
   {
-    "id": "spring_boot_27",
+    "id": "24",
     "question": "What is the purpose of Profiles in Spring Boot?",
     "options": [
       "To manage different logging levels for various environments",
@@ -728,7 +731,7 @@
     "technology": "Spring Boot"
   },
   {
-    "id": "spring_boot_28",
+    "id": "25",
     "question": "Describe pros and cons of Profiles in Spring Boot.",
     "options": [],
     "answer": "Spring Boot Profiles allow separation of configurations for different environments, improving maintainability and flexibility, but can add complexity if overused or mismanaged.",
@@ -758,7 +761,7 @@
     "technology": "Spring Boot"
   },
   {
-    "id": "spring_boot_29",
+    "id": "26",
     "question": "What is the default behavior of AOP in Spring?",
     "options": [
       "Spring AOP applies aspects only to methods in beans managed by the Spring container.",
@@ -787,7 +790,7 @@
     "technology": "Spring AOP"
   },
   {
-    "id": "spring_boot_30",
+    "id": "27",
     "question": "How would you design/implement AOP in a production system?",
     "options": [],
     "answer": "Design AOP in production by defining cross-cutting concerns such as logging, security, or transactions as aspects, using pointcuts to target Spring-managed beans, keeping aspects focused and maintainable, and monitoring performance impacts.",
@@ -844,7 +847,7 @@
     "technology": "Spring AOP"
   },
   {
-    "id": "spring_boot_31",
+    "id": "28",
     "question": "Which statement about Bean lifecycle is correct?",
     "options": [
       "Spring Beans are instantiated, populated, initialized, and eventually destroyed by the Spring container.",
@@ -874,7 +877,7 @@
     "technology": "Spring Framework"
   },
   {
-    "id": "spring_boot_32",
+    "id": "29",
     "question": "Explain how Bean lifecycle works in Spring Boot.",
     "options": [],
     "answer": "In Spring Boot, the Spring container manages the entire lifecycle of beans—from instantiation, dependency injection, initialization, usage, to destruction—allowing developers to plug in custom logic at initialization or destruction points.",
@@ -906,7 +909,7 @@
     "technology": "Spring Boot"
   },
   {
-    "id": "spring_boot_33",
+    "id": "30",
     "question": "Which statement about Controllers is correct?",
     "options": [
       "Controllers in Spring handle HTTP requests and return responses.",
@@ -935,7 +938,7 @@
     "technology": "Spring Boot"
   },
   {
-    "id": "spring_boot_34",
+    "id": "31",
     "question": "Explain how Controllers works in Spring Boot.",
     "options": [],
     "answer": "Controllers in Spring Boot handle incoming HTTP requests, delegate business logic to services, and return responses as views or JSON/XML objects.",
@@ -960,7 +963,7 @@
     "technology": "Spring Boot"
   },
   {
-    "id": "spring_boot_35",
+    "id": "32",
     "question": "What is the default behavior of Dependency Injection in Spring?",
     "options": [
       "Spring performs constructor-based injection only.",
@@ -989,7 +992,7 @@
     "technology": "Spring Framework"
   },
   {
-    "id": "spring_boot_36",
+    "id": "33",
     "question": "Explain how Dependency Injection works in Spring Boot.",
     "options": [],
     "answer": "In Spring Boot, the Spring container automatically manages the creation and injection of dependencies into Spring-managed beans using constructor, setter, or field injection, promoting loose coupling and easier testing.",
@@ -1013,7 +1016,7 @@
     "technology": "Spring Boot"
   },
   {
-    "id": "spring_boot_37",
+    "id": "34",
     "question": "Which statement about Bean lifecycle is correct?",
     "options": [
       "Spring Beans are instantiated, dependencies injected, initialized, and eventually destroyed by the Spring container.",
@@ -1043,7 +1046,7 @@
     "technology": "Spring Framework"
   },
   {
-    "id": "spring_boot_38",
+    "id": "35",
     "question": "How would you design/implement Bean lifecycle in a production system?",
     "options": [],
     "answer": "In production, manage the Spring Bean lifecycle by using appropriate scopes, leveraging initialization and destruction callbacks, minimizing resource usage, and ensuring proper dependency injection and cleanup for singleton and prototype beans.",
@@ -1071,7 +1074,7 @@
     "technology": "Spring Framework"
   },
   {
-    "id": "spring_boot_39",
+    "id": "36",
     "question": "What is the purpose of Security in Spring Boot?",
     "options": [
       "To manage database transactions automatically",
@@ -1100,7 +1103,7 @@
     "technology": "Spring Boot Security"
   },
   {
-    "id": "spring_boot_40",
+    "id": "37",
     "question": "Describe pros and cons of Security in Spring Boot.",
     "options": [],
     "answer": "Spring Boot Security provides robust authentication and authorization mechanisms and protects applications from common security threats, but it can add complexity, require careful configuration, and may introduce performance overhead if misconfigured.",
@@ -1131,7 +1134,7 @@
     "technology": "Spring Boot Security"
   },
   {
-    "id": "spring_boot_41",
+    "id": "38",
     "question": "What is the purpose of Bean lifecycle in Spring Boot?",
     "options": [
       "To manage the creation, initialization, and destruction of beans automatically by the Spring container",
@@ -1160,7 +1163,7 @@
     "technology": "Spring Boot"
   },
   {
-    "id": "spring_boot_42",
+    "id": "39",
     "question": "Explain how Bean lifecycle works in Spring Boot.",
     "options": [],
     "answer": "In Spring Boot, the Spring container manages the lifecycle of beans from instantiation, dependency injection, initialization, usage, to destruction, allowing custom logic at initialization and destruction points.",
@@ -1192,7 +1195,7 @@
     "technology": "Spring Boot"
   },
   {
-    "id": "spring_boot_43",
+    "id": "40",
     "question": "Which command/annotation is used to enable Dependency Injection in Spring?",
     "options": [
       "@Autowired",
@@ -1221,7 +1224,7 @@
     "technology": "Spring Framework"
   },
   {
-    "id": "spring_boot_44",
+    "id": "41",
     "question": "Explain how Dependency Injection works in Spring Boot.",
     "options": [],
     "answer": "In Spring Boot, Dependency Injection (DI) allows the Spring container to automatically provide required dependencies to beans using annotations like @Autowired, constructor, or setter injection, promoting loose coupling and easier testing.",
@@ -1245,7 +1248,7 @@
     "technology": "Spring Boot"
   },
   {
-    "id": "spring_boot_45",
+    "id": "42",
     "question": "Which statement about Bean lifecycle is correct?",
     "options": [
       "Spring Beans are instantiated, dependencies injected, initialized, and eventually destroyed by the Spring container.",
@@ -1275,7 +1278,7 @@
     "technology": "Spring Boot"
   },
   {
-    "id": "spring_boot_46",
+    "id": "43",
     "question": "How would you design/implement Bean lifecycle in a production system?",
     "options": [],
     "answer": "In a production system, manage the Spring Bean lifecycle by using appropriate scopes, leveraging initialization and destruction callbacks, minimizing resource usage, and ensuring proper dependency injection and cleanup for singleton and prototype beans.",
@@ -1303,7 +1306,7 @@
     "technology": "Spring Boot"
   },
   {
-    "id": "spring_boot_47",
+    "id": "44",
     "question": "Which statement about AOP is correct?",
     "options": [
       "Spring AOP applies aspects only to methods in beans managed by the Spring container.",
@@ -1332,7 +1335,7 @@
     "technology": "Spring AOP"
   },
   {
-    "id": "spring_boot_48",
+    "id": "45",
     "question": "Describe pros and cons of AOP.",
     "options": [],
     "answer": "AOP in Spring allows modularizing cross-cutting concerns like logging, security, and transactions, improving maintainability, but it can add complexity, obscure control flow, and impact performance if overused.",
@@ -1363,7 +1366,7 @@
     "technology": "Spring AOP"
   },
   {
-    "id": "spring_boot_49",
+    "id": "46",
     "question": "What is the default behavior of Security in Spring Boot?",
     "options": [
       "All endpoints are publicly accessible without authentication",
@@ -1392,7 +1395,7 @@
     "technology": "Spring Boot Security"
   },
   {
-    "id": "spring_boot_50",
+    "id": "47",
     "question": "Describe pros and cons of Security.",
     "options": [],
     "answer": "Spring Boot Security provides robust authentication, authorization, and protection against common threats, but it can add configuration complexity, may impact performance, and requires careful maintenance to avoid vulnerabilities.",
@@ -1423,7 +1426,7 @@
     "technology": "Spring Boot Security"
   },
   {
-    "id": "spring_boot_51",
+    "id": "48",
     "question": "Which annotation/keyword is used for Data JPA?",
     "options": [
       "@Entity",
@@ -1451,7 +1454,7 @@
     "technology": "Spring Data JPA"
   },
   {
-    "id": "spring_boot_52",
+    "id": "49",
     "question": "Explain how Data JPA works in Spring Boot.",
     "options": [],
     "answer": "Spring Data JPA in Spring Boot simplifies database access by providing repositories that handle CRUD operations, query methods, and transactions, using JPA entities and the Spring container for dependency injection and transaction management.",
@@ -1476,7 +1479,7 @@
     "technology": "Spring Boot / Spring Data JPA"
   },
   {
-    "id": "spring_boot_54",
+    "id": "50",
     "question": "Describe pros and cons of Actuator.",
     "options": [],
     "answer": "Spring Boot Actuator provides built-in endpoints for monitoring and managing applications, offering valuable insights, but enabling too many endpoints can expose sensitive information and add performance overhead.",
@@ -1506,7 +1509,7 @@
     "technology": "Spring Boot Actuator"
   },
   {
-    "id": "spring_boot_55",
+    "id": "51",
     "question": "What is the purpose of Security in Spring Boot?",
     "options": [
       "To manage HTTP requests and responses",
@@ -1535,7 +1538,7 @@
     "technology": "Spring Boot Security"
   },
   {
-    "id": "spring_boot_56",
+    "id": "52",
     "question": "Explain how Security works in Spring Boot.",
     "options": [],
     "answer": "Spring Boot Security works by intercepting HTTP requests using a security filter chain, authenticating users, authorizing access based on roles/permissions, and protecting applications from common security threats like CSRF and XSS.",
@@ -1560,7 +1563,7 @@
     "technology": "Spring Boot Security"
   },
   {
-    "id": "spring_boot_57",
+    "id": "53",
     "question": "What is the purpose of Dependency Injection in Spring Boot?",
     "options": [
       "To manually create and manage all bean dependencies",
@@ -1588,7 +1591,7 @@
     "technology": "Spring Boot"
   },
   {
-    "id": "spring_boot_58",
+    "id": "54",
     "question": "How would you design/implement Dependency Injection in a production system?",
     "options": [],
     "answer": "In a production system, implement Dependency Injection by defining beans with proper scopes, using constructor injection for immutability, leveraging Spring Boot auto-configuration, managing complex dependencies with @Qualifier, and ensuring testability and maintainability.",
@@ -1615,7 +1618,7 @@
     "technology": "Spring Boot"
   },
   {
-    "id": "spring_boot_61",
+    "id": "55",
     "question": "What is the purpose of Actuator in Spring Boot?",
     "options": [],
     "answer": "Spring Boot Actuator provides production-ready features to monitor and manage applications, such as health checks, metrics, and environment information.",
@@ -1639,7 +1642,7 @@
     "technology": "Spring Boot Actuator"
   },
   {
-    "id": "spring_boot_62",
+    "id": "56",
     "question": "Explain how Actuator works in Spring Boot.",
     "options": [],
     "answer": "Spring Boot Actuator works by exposing built-in endpoints for application monitoring and management, providing metrics, health checks, environment info, and operational insights via HTTP, JMX, or custom endpoints.",
@@ -1664,7 +1667,7 @@
     "technology": "Spring Boot Actuator"
   },
   {
-    "id": "spring_boot_63",
+    "id": "57",
     "question": "What is the default behavior of Profiles in Spring Boot?",
     "options": [
       "All profiles are active by default",
@@ -1692,7 +1695,7 @@
     "technology": "Spring Boot"
   },
   {
-    "id": "spring_boot_64",
+    "id": "58",
     "question": "How would you design/implement Profiles in a production system?",
     "options": [],
     "answer": "In a production system, implement Spring Boot Profiles by creating separate configuration files for each environment, activating the appropriate profile at runtime via environment variables or command-line arguments, and using profiles to manage environment-specific beans, properties, and resources.",
@@ -1717,7 +1720,7 @@
     "technology": "Spring Boot"
   },
   {
-    "id": "spring_boot_65",
+    "id": "59",
     "question": "What is the default behavior of Controllers in Spring Boot?",
     "options": [
       "Controllers handle HTTP requests and return views or responses by default",
@@ -1746,7 +1749,7 @@
     "technology": "Spring Boot MVC"
   },
   {
-    "id": "spring_boot_67",
+    "id": "60",
     "question": "What is the default behavior of Actuator in Spring Boot?",
     "options": [
       "All endpoints are disabled by default",
@@ -1774,7 +1777,7 @@
     "technology": "Spring Boot Actuator"
   },
   {
-    "id": "spring_boot_68",
+    "id": "61",
     "question": "How would you design/implement Actuator in a production system?",
     "options": [],
     "answer": "In a production system, implement Spring Boot Actuator by enabling only necessary endpoints, securing them with Spring Security, integrating with monitoring tools like Prometheus or Grafana, and configuring proper logging and metrics collection.",
@@ -1801,7 +1804,7 @@
     "technology": "Spring Boot Actuator"
   },
   {
-    "id": "spring_boot_69",
+    "id": "62",
     "question": "Which command is used to Controllers in Spring Boot?",
     "options": [
       "@Controller",
@@ -1829,7 +1832,7 @@
     "technology": "Spring Boot MVC"
   },
   {
-    "id": "spring_boot_71",
+    "id": "63",
     "question": "Which statement about Data JPA is correct?",
     "options": [
       "Spring Data JPA provides boilerplate-free CRUD operations via repository interfaces",
@@ -1857,7 +1860,7 @@
     "technology": "Spring Data JPA"
   },
   {
-    "id": "spring_boot_72",
+    "id": "64",
     "question": "How would you design/implement Data JPA in a production system?",
     "options": [],
     "answer": "In a production system, implement Data JPA by defining JPA entities with proper relationships, using repository interfaces for CRUD operations, managing transactions with @Transactional, optimizing queries with indexing, and integrating with connection pools and caching for performance.",
@@ -1884,7 +1887,7 @@
     "technology": "Spring Data JPA"
   },
   {
-    "id": "spring_boot_73",
+    "id": "65",
     "question": "Which statement about Security is correct?",
     "options": [
       "Spring Security automatically encrypts all data in the database",
@@ -1912,7 +1915,7 @@
     "technology": "Spring Boot Security"
   },
   {
-    "id": "spring_boot_74",
+    "id": "66",
     "question": "How would you design/implement Security in a production system?",
     "options": [],
     "answer": "In a production system, implement Security by enforcing authentication and authorization, securing endpoints with roles/permissions, integrating with OAuth2/JWT or LDAP, applying HTTPS, enabling CSRF/XSS protection, and continuously monitoring and updating security policies.",
@@ -1939,7 +1942,7 @@
     "technology": "Spring Boot Security"
   },
   {
-    "id": "spring_boot_77",
+    "id": "67",
     "question": "Which statement about Transactions is correct?",
     "options": [
       "Transactions ensure data consistency and integrity by grouping multiple operations as a single unit of work",
@@ -1967,7 +1970,7 @@
     "technology": "Spring Boot / Transactions"
   },
   {
-    "id": "spring_boot_78",
+    "id": "68",
     "question": "Explain how Transactions works in Spring Boot.",
     "options": [],
     "answer": "Transactions in Spring Boot work by wrapping a set of operations within a transaction boundary using @Transactional. If all operations succeed, the transaction is committed; if any operation fails, it is rolled back to maintain data consistency.",
@@ -1992,7 +1995,7 @@
     "technology": "Spring Boot / Transactions"
   },
   {
-    "id": "spring_boot_79",
+    "id": "69",
     "question": "What is the default behavior of Security in Spring Boot?",
     "options": [
       "All endpoints are publicly accessible by default",
@@ -2020,7 +2023,7 @@
     "technology": "Spring Boot Security"
   },
   {
-    "id": "spring_boot_81",
+    "id": "70",
     "question": "Which command/annotation is used to implement AOP in Spring Boot?",
     "options": [
       "@Aspect",
@@ -2048,7 +2051,7 @@
     "technology": "Spring Boot AOP"
   },
   {
-    "id": "spring_boot_82",
+    "id": "71",
     "question": "Explain how AOP works in Spring Boot.",
     "options": [],
     "answer": "Spring Boot AOP works by defining aspects with @Aspect, which contain advice methods that are applied to specific join points (method executions, etc.) using pointcut expressions, allowing cross-cutting concerns like logging or transactions to be implemented separately from business logic.",
@@ -2073,7 +2076,7 @@
     "technology": "Spring Boot AOP"
   },
   {
-    "id": "spring_boot_83",
+    "id": "72",
     "question": "Which command/annotation is used to define or activate Profiles in Spring Boot?",
     "options": [
       "@Profile",
@@ -2101,7 +2104,7 @@
     "technology": "Spring Boot Profiles"
   },
   {
-    "id": "spring_boot_86",
+    "id": "73",
     "question": "Describe pros and cons of Dependency Injection.",
     "options": [],
     "answer": "Dependency Injection promotes loose coupling and easier testing but can increase complexity if overused and may require additional configuration.",
@@ -2130,7 +2133,7 @@
     "technology": "Spring Boot / Dependency Injection"
   },
   {
-    "id": "spring_boot_87",
+    "id": "74",
     "question": "Which command/annotation is used to manage Bean Lifecycle in Spring Boot?",
     "options": [
       "@PostConstruct / @PreDestroy",
@@ -2158,7 +2161,7 @@
     "technology": "Spring Boot / Bean Lifecycle"
   },
   {
-    "id": "spring_boot_95",
+    "id": "75",
     "question": "What is the purpose of Transactions in Spring Boot?",
     "options": [
       "To ensure a group of operations succeed or fail as a single unit, maintaining data consistency",
@@ -2186,7 +2189,7 @@
     "technology": "Spring Boot / Transactions"
   },
   {
-    "id": "spring_boot_98",
+    "id": "76",
     "question": "Which annotation/keyword is used for Auto-configuration in Spring Boot?",
     "options": [
       "@EnableAutoConfiguration",
@@ -2212,5 +2215,775 @@
       "quiz"
     ],
     "technology": "Spring Boot / Auto-configuration"
+  },
+  {
+    "id": "77",
+    "question": "What is Spring Framework?",
+    "options": ["A JavaScript library", "A Java framework for enterprise applications", "A database", "A testing tool"],
+    "answer": "A Java framework for enterprise applications",
+    "isObjective": true,
+    "type": "Advance Concepts",
+    "explanation": {
+      "intro": "The Spring Framework is an open-source Java framework used to build enterprise-level applications. It provides comprehensive infrastructure support for developing Java applications.",
+      "points": [
+        "Provides dependency injection (DI) and inversion of control (IoC).",
+        "Simplifies enterprise application development.",
+        "Supports transaction management, AOP (Aspect-Oriented Programming).",
+        "Integrates easily with Hibernate, JPA, JMS, and other technologies.",
+        "Has specialized modules like Spring MVC, Spring Boot, Spring Security, etc."
+      ],
+      "code": "import org.springframework.stereotype.Component;\n\n@Component\nclass Engine {}\n\n@Component\nclass Car {\n    private final Engine engine;\n\n    public Car(Engine engine) { // Constructor Injection\n        this.engine = engine;\n    }\n}",
+      "diagram": "/diagram/spring/spring_framework_intro.md"
+    }
+  },
+  {
+    "id": "78",
+    "question": "What is Dependency Injection in Spring?",
+    "options": ["Manual object creation", "A way to reduce dependencies", "A design pattern that allows Spring to manage object creation", "A database operation"],
+    "answer": "A design pattern that allows Spring to manage object creation",
+    "isObjective": true,
+    "type": "Advance Concepts",
+    "explanation": {
+      "intro": "Dependency Injection (DI) is a design pattern in Spring where the framework is responsible for creating and managing the lifecycle of objects (beans) and injecting them where needed. It removes the need for manual object creation and improves testability and maintainability.",
+      "points": [
+        "Decouples object creation from business logic.",
+        "Improves code reusability and testability.",
+        "Supports constructor injection, setter injection, and field injection.",
+        "Makes applications loosely coupled."
+      ],
+      "code": "import org.springframework.stereotype.Component;\nimport org.springframework.beans.factory.annotation.Autowired;\n\n@Component\nclass Engine {}\n\n@Component\nclass Car {\n    private final Engine engine;\n\n    @Autowired\n    public Car(Engine engine) { // Constructor Injection\n        this.engine = engine;\n    }\n}",
+      "diagram": "/diagram/spring/dependency_injection.md"
+    }
+  },
+  {
+    "id": "79",
+    "question": "Which annotation is used to define a Spring Boot application?",
+    "options": ["@Configuration", "@Component", "@SpringBootApplication", "@Service"],
+    "answer": "@SpringBootApplication",
+    "isObjective": true,
+    "type": "Advance Concepts",
+    "explanation": {
+      "intro": "@SpringBootApplication is a convenience annotation that marks the main class of a Spring Boot application. It bundles three key annotations together.",
+      "points": [
+        "@Configuration – marks the class as a source of bean definitions.",
+        "@EnableAutoConfiguration – enables Spring Boot’s auto-configuration mechanism.",
+        "@ComponentScan – enables scanning for components, configurations, and services."
+      ],
+      "code": "import org.springframework.boot.SpringApplication;\nimport org.springframework.boot.autoconfigure.SpringBootApplication;\n\n@SpringBootApplication\npublic class MyApp {\n    public static void main(String[] args) {\n        SpringApplication.run(MyApp.class, args);\n    }\n}",
+      "diagram": "/diagram/spring/spring_boot_application.md"
+    }
+  },
+  {
+    "id": "80",
+    "question": "What is the default scope of a Spring bean?",
+    "options": ["prototype", "singleton", "request", "session"],
+    "answer": "singleton",
+    "isObjective": true,
+    "type": "MCQ",
+    "askedBy": [],
+    "explanation": {
+      "intro": "In Spring, the default scope of a bean is **singleton**, meaning that only one instance of the bean is created per Spring container.",
+      "points": [
+        "Singleton: One shared instance of the bean in the container (default).",
+        "Prototype: A new instance each time the bean is requested.",
+        "Request: A new instance per HTTP request (web-aware).",
+        "Session: A new instance per HTTP session (web-aware)."
+      ],
+      "code": "@Component\npublic class MyService {\n    // By default, this bean will be singleton\n}",
+      "diagram": "/diagram/spring/spring_bean_scope.md"
+    }
+  },
+  {
+    "id": "81",
+    "question": "Which annotation is used for mapping HTTP requests to handler methods in Spring MVC?",
+    "options": ["@Component", "@RequestMapping", "@Autowired", "@RestController"],
+    "answer": "@RequestMapping",
+    "isObjective": true,
+    "type": "MCQ",
+    "askedBy": [],
+    "explanation": {
+      "intro": "In Spring MVC, the `@RequestMapping` annotation is used to map HTTP requests to specific handler methods or controller classes.",
+      "points": [
+        "`@RequestMapping` can be applied at the **class level** and/or the **method level**.",
+        "It supports different HTTP methods such as GET, POST, PUT, DELETE by using `method` attribute.",
+        "Specialized annotations like `@GetMapping`, `@PostMapping`, etc., were introduced in Spring 4.3 as shortcuts for `@RequestMapping` with predefined HTTP methods."
+      ],
+      "code": "@RestController\npublic class MyController {\n\n    @RequestMapping(value = \"/hello\", method = RequestMethod.GET)\n    public String sayHello() {\n        return \"Hello, Spring MVC!\";\n    }\n}",
+      "diagram": "/diagram/spring/request_mapping.md"
+    }
+  },
+  {
+    "id": "82",
+    "question": "What is the difference between @Component, @Service, and @Repository?",
+    "options": [
+      "They are exactly the same",
+      "They are specializations of @Component with different semantic uses",
+      "They are unrelated",
+      "Only @Component works in Spring Boot"
+    ],
+    "answer": "They are specializations of @Component with different semantic uses",
+    "isObjective": true,
+    "type": "MCQ",
+    "askedBy": [],
+    "explanation": {
+      "intro": "In Spring, `@Component`, `@Service`, and `@Repository` are all stereotype annotations used for marking classes as Spring-managed beans. They serve different semantic purposes.",
+      "points": [
+        "`@Component` is a generic stereotype for any Spring-managed bean.",
+        "`@Service` is a specialization of `@Component`, used to indicate that a class contains business logic.",
+        "`@Repository` is also a specialization of `@Component`, typically applied to DAO (Data Access Object) classes. It also provides automatic translation of database-related exceptions into Spring's DataAccessException."
+      ],
+      "code": "@Component\npublic class UtilityBean {}\n\n@Service\npublic class PaymentService {}\n\n@Repository\npublic class UserRepository {}",
+      "diagram": "/diagram/spring/component_service_repository.md"
+    }
+  },
+  {
+    "id": "83",
+    "question": "Which annotation is used for automatic dependency injection?",
+    "options": ["@Bean", "@Autowired", "@Inject", "@Configuration"],
+    "answer": "@Autowired",
+    "isObjective": true,
+    "type": "MCQ",
+    "askedBy": [],
+    "explanation": {
+      "intro": "In Spring, automatic dependency injection allows the framework to resolve and inject collaborating beans into a class without manual instantiation.",
+      "points": [
+        "`@Autowired` is the most commonly used annotation for automatic dependency injection in Spring.",
+        "`@Inject` (from JSR-330) can also be used, but `@Autowired` is Spring-specific and provides additional options like `required=false`.",
+        "`@Bean` defines a bean in a configuration class, not used for injection directly.",
+        "`@Configuration` is used to mark a class as a source of bean definitions."
+      ],
+      "code": "import org.springframework.beans.factory.annotation.Autowired;\nimport org.springframework.stereotype.Component;\n\n@Component\nclass Engine {}\n\n@Component\nclass Car {\n    private final Engine engine;\n\n    @Autowired  // automatic injection of Engine bean\n    public Car(Engine engine) {\n        this.engine = engine;\n    }\n}",
+      "diagram": "/diagram/spring/autowired_injection.md"
+    }
+  },
+  {
+    "id": "84",
+    "question": "What is Spring Boot Starter?",
+    "options": ["A test framework", "A collection of dependencies for rapid development", "A logging tool", "An IDE plugin"],
+    "answer": "A collection of dependencies for rapid development",
+    "isObjective": true,
+    "type": "MCQ",
+    "askedBy": [],
+    "explanation": {
+      "intro": "Spring Boot Starters are pre-configured dependency descriptors that simplify project setup and development.",
+      "points": [
+        "Starters reduce the need to manually define dependencies for common functionality.",
+        "Each starter is a Maven or Gradle dependency with a curated set of libraries (e.g., web, JPA, security).",
+        "For example, `spring-boot-starter-web` includes Spring MVC, Jackson, and Tomcat by default.",
+        "This accelerates development by providing ready-to-use features with minimal setup."
+      ],
+      "code": "dependencies {\n    implementation 'org.springframework.boot:spring-boot-starter-web'\n    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'\n    testImplementation 'org.springframework.boot:spring-boot-starter-test'\n}",
+      "diagram": "/diagram/spring/spring_boot_starter.md"
+    }
+  },
+  {
+    "id": "85",
+    "question": "How do you define a bean in Java configuration?",
+    "options": ["Using @Bean inside a @Configuration class", "Using @Service", "Using @Entity", "Using @Value"],
+    "answer": "Using @Bean inside a @Configuration class",
+    "isObjective": true,
+    "type": "MCQ",
+    "askedBy": [],
+    "technology": "Spring",
+    "explanation": {
+      "intro": "In Spring, beans can be defined using annotations or XML, but with Java-based configuration, the @Bean annotation is used inside a @Configuration class.",
+      "points": [
+        "A class annotated with `@Configuration` indicates that it contains Spring bean definitions.",
+        "`@Bean` methods inside such classes return objects managed by the Spring container.",
+        "These beans can then be injected into other components using `@Autowired`.",
+        "This approach provides type-safety and is preferred over XML-based configuration."
+      ],
+      "code": "import org.springframework.context.annotation.Bean;\nimport org.springframework.context.annotation.Configuration;\n\n@Configuration\npublic class AppConfig {\n\n    @Bean\n    public MyService myService() {\n        return new MyServiceImpl();\n    }\n}",
+      "diagram": "/diagram/spring/spring_bean_definition.md"
+    }
+  },
+  {
+    "id": "86",
+    "question": "What does @RestController do?",
+    "options": [
+      "Marks a class as a database repository",
+      "Marks a class as a RESTful controller returning JSON/XML",
+      "Marks a class as a configuration class",
+      "Marks a bean as prototype"
+    ],
+    "answer": "Marks a class as a RESTful controller returning JSON/XML",
+    "isObjective": true,
+    "type": "MCQ",
+    "askedBy": [],
+    "technology": "Spring",
+    "explanation": {
+      "intro": "@RestController is a specialized annotation in Spring MVC that combines @Controller and @ResponseBody.",
+      "points": [
+        "It marks a class as a controller where every method returns a domain object instead of a view.",
+        "Responses are automatically serialized to JSON or XML based on content negotiation.",
+        "Eliminates the need to annotate each method with @ResponseBody individually."
+      ],
+      "code": "import org.springframework.web.bind.annotation.GetMapping;\nimport org.springframework.web.bind.annotation.RestController;\n\n@RestController\npublic class UserController {\n\n    @GetMapping(\"/users\")\n    public List<User> getAllUsers() {\n        return userService.findAll();\n    }\n}",
+      "diagram": "/diagram/spring/restcontroller_flow.md"
+    }
+  },
+  {
+    "id": "87",
+    "question": "What is Spring Data JPA?",
+    "options": [
+      "A tool for database migrations",
+      "A persistence framework simplifying data access with JPA",
+      "A JDBC wrapper",
+      "A NoSQL framework"
+    ],
+    "answer": "A persistence framework simplifying data access with JPA",
+    "isObjective": true,
+    "type": "MCQ",
+    "askedBy": [],
+    "technology": "Spring",
+    "explanation": {
+      "intro": "Spring Data JPA is a part of the Spring Data project that simplifies working with JPA-based data access layers.",
+      "points": [
+        "Reduces boilerplate code required for DAO/repository implementations.",
+        "Provides repository interfaces with built-in CRUD operations.",
+        "Supports query derivation from method names and custom JPQL/SQL queries."
+      ],
+      "code": "import org.springframework.data.jpa.repository.JpaRepository;\nimport org.springframework.stereotype.Repository;\n\n@Repository\npublic interface UserRepository extends JpaRepository<User, Long> {\n    List<User> findByLastName(String lastName);\n}",
+      "diagram": "/diagram/spring/spring_data_jpa_flow.md"
+    }
+  },
+  {
+    "id": "88",
+    "question": "Which annotation is used to mark a class as a configuration class in Spring?",
+    "options": ["@Configuration", "@Component", "@RestController", "@Bean"],
+    "answer": "@Configuration",
+    "isObjective": true,
+    "type": "MCQ",
+    "askedBy": [],
+    "technology": "Spring",
+    "explanation": {
+      "intro": "The @Configuration annotation indicates that the class declares one or more @Bean methods and may be processed by the Spring container to generate bean definitions and service requests.",
+      "points": [
+        "@Configuration classes can contain multiple @Bean methods.",
+        "Beans defined in @Configuration classes are managed by the Spring container.",
+        "Helps in Java-based configuration instead of XML."
+      ],
+      "code": "import org.springframework.context.annotation.Bean;\nimport org.springframework.context.annotation.Configuration;\n\n@Configuration\npublic class AppConfig {\n\n    @Bean\n    public MyService myService() {\n        return new MyServiceImpl();\n    }\n}",
+      "diagram": "/diagram/spring/spring_configuration_flow.md"
+    }
+  },
+  {
+    "id": "89",
+    "question": "What is the purpose of application.properties in Spring Boot?",
+    "options": [
+      "To store SQL queries",
+      "To configure application settings",
+      "To define HTML templates",
+      "To compile code"
+    ],
+    "answer": "To configure application settings",
+    "isObjective": true,
+    "type": "MCQ",
+    "askedBy": [],
+    "technology": "Spring Boot",
+    "explanation": {
+      "intro": "The application.properties (or application.yml) file is used to externalize configuration in a Spring Boot application.",
+      "points": [
+        "It allows you to define database URLs, usernames, and passwords.",
+        "You can configure server ports, logging levels, and other application-specific settings.",
+        "Supports environment-specific configurations using profiles (e.g., application-dev.properties)."
+      ],
+      "code": "spring.datasource.url=jdbc:mysql://localhost:3306/mydb\nspring.datasource.username=root\nspring.datasource.password=root\nserver.port=8081\nlogging.level.org.springframework=DEBUG",
+      "diagram": "/diagram/spring/spring_application_properties_flow.md"
+    }
+  },
+  {
+    "id": "90",
+    "question": "How do you enable scheduling in Spring?",
+    "options": ["@Scheduled", "@EnableScheduling", "Both", "None"],
+    "answer": "Both",
+    "isObjective": true,
+    "type": "MCQ",
+    "askedBy": [],
+    "technology": "Spring Boot",
+    "explanation": {
+      "intro": "Scheduling in Spring allows methods to run at fixed intervals or cron expressions.",
+      "points": [
+        "@EnableScheduling is placed on a @Configuration class to enable scheduling support.",
+        "@Scheduled is used on methods to define the schedule (fixedRate, fixedDelay, cron).",
+        "Both annotations are needed to fully enable scheduled tasks."
+      ],
+      "code": "@Configuration\n@EnableScheduling\npublic class AppConfig {}\n\n@Component\npublic class ScheduledTasks {\n    @Scheduled(fixedRate = 5000)\n    public void reportCurrentTime() {\n        System.out.println(\"Current time: \" + LocalDateTime.now());\n    }\n}",
+      "diagram": "/diagram/spring/spring_scheduling_flow.md"
+    }
+  },
+  {
+    "id": "91",
+    "question": "Which annotation is used to create a transactional method in Spring?",
+    "options": ["@Transactional", "@Autowired", "@Service", "@Bean"],
+    "answer": "@Transactional",
+    "isObjective": true,
+    "type": "MCQ",
+    "askedBy": [],
+    "technology": "Spring",
+    "explanation": {
+      "intro": "@Transactional is used to define the scope of a database transaction in Spring.",
+      "points": [
+        "Can be applied on methods or classes.",
+        "Ensures that a series of operations either complete successfully or roll back on failure.",
+        "Supports propagation, isolation, and rollback rules."
+      ],
+      "code": "@Service\npublic class UserService {\n\n    @Transactional\n    public void createUser(User user) {\n        userRepository.save(user);\n        // additional operations\n    }\n}",
+      "diagram": "/diagram/spring/spring_transaction_flow.md"
+    }
+  },
+  {
+    "id": "92",
+    "question": "What is Spring AOP?",
+    "options": ["Application Oriented Programming", "Aspect Oriented Programming", "Advanced Object Processing", "None"],
+    "answer": "Aspect Oriented Programming",
+    "isObjective": true,
+    "type": "MCQ",
+    "askedBy": [],
+    "technology": "Spring",
+    "explanation": {
+      "intro": "Spring AOP (Aspect-Oriented Programming) allows separation of cross-cutting concerns like logging, transactions, and security from business logic.",
+      "points": [
+        "Enables modularization of concerns that affect multiple classes.",
+        "Works using proxies to weave aspects before, after, or around method executions.",
+        "Common use-cases: logging, transactions, security checks."
+      ],
+      "code": "@Aspect\n@Component\npublic class LoggingAspect {\n\n    @Before(\"execution(* com.example.service.*.*(..))\")\n    public void logBefore(JoinPoint joinPoint) {\n        System.out.println(\"Before method: \" + joinPoint.getSignature().getName());\n    }\n}",
+      "diagram": "/diagram/spring/spring_aop_flow.md"
+    }
+  },
+  {
+    "id": "93",
+    "question": "What is the use of @Value annotation in Spring?",
+    "options": [
+      "To define entity fields",
+      "To inject values from properties files",
+      "To mark beans as primary",
+      "To map REST endpoints"
+    ],
+    "answer": "To inject values from properties files",
+    "isObjective": true,
+    "type": "MCQ",
+    "askedBy": [],
+    "technology": "Spring",
+    "explanation": {
+      "intro": "@Value is used in Spring to inject values into fields, method parameters, or constructor arguments from property files, system properties, or expressions.",
+      "points": [
+        "Injects configuration values from application.properties or application.yml.",
+        "Can also inject default values if the property is missing.",
+        "Supports Spring Expression Language (SpEL) for dynamic expressions."
+      ],
+      "code": "@Component\npublic class AppConfig {\n    @Value(\"${app.name}\")\n    private String appName;\n\n    public void printAppName() {\n        System.out.println(\"Application Name: \" + appName);\n    }\n}",
+      "diagram": "/diagram/spring/spring_value_injection.md"
+    }
+  },
+  {
+    "id": "94",
+    "question": "What is Spring Boot Actuator?",
+    "options": [
+      "A monitoring and management tool for Spring Boot applications",
+      "A logging library",
+      "A deployment tool",
+      "A security module"
+    ],
+    "answer": "A monitoring and management tool for Spring Boot applications",
+    "isObjective": true,
+    "type": "MCQ",
+    "askedBy": [],
+    "technology": "Spring Boot",
+    "explanation": {
+      "intro": "Spring Boot Actuator provides production-ready features to help monitor and manage your application.",
+      "points": [
+        "Exposes endpoints to check application health, metrics, and environment properties.",
+        "Supports custom endpoints and integrates with monitoring tools like Prometheus and Grafana.",
+        "Helps in auditing, metrics, and application tracing."
+      ],
+      "code": "dependencies {\n    implementation 'org.springframework.boot:spring-boot-starter-actuator'\n}\n\n# Example: Enable endpoints in application.properties\nmanagement.endpoints.web.exposure.include=health,info,metrics",
+      "diagram": "/diagram/spring/spring_boot_actuator.md"
+    }
+  },
+  {
+    "id": "95",
+    "question": "Which embedded server is the default in Spring Boot?",
+    "options": ["Tomcat", "Jetty", "Undertow", "WebLogic"],
+    "answer": "Tomcat",
+    "isObjective": true,
+    "type": "MCQ",
+    "askedBy": [],
+    "technology": "Spring Boot",
+    "explanation": {
+      "intro": "Spring Boot comes with an embedded server to run web applications without external deployment.",
+      "points": [
+        "Tomcat is the default embedded servlet container.",
+        "Other options like Jetty and Undertow can be used by excluding Tomcat and adding respective dependencies.",
+        "Embedded servers simplify deployment by packaging the server with the application."
+      ],
+      "code": "# Example: Exclude Tomcat and use Jetty\ndependencies {\n    implementation 'org.springframework.boot:spring-boot-starter-web'\n    implementation 'org.springframework.boot:spring-boot-starter-jetty'\n    // Exclude Tomcat\n    implementation('org.springframework.boot:spring-boot-starter-web') {\n        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-tomcat'\n    }\n}",
+      "diagram": "/diagram/spring/spring_boot_embedded_server.md"
+    }
+  },
+  {
+    "id": "96",
+    "question": "What is the difference between @Controller and @RestController?",
+    "options": [
+      "@Controller returns views, @RestController returns JSON/XML",
+      "They are exactly the same",
+      "@Controller is only for database access",
+      "@RestController can only be used with WebFlux"
+    ],
+    "answer": "@Controller returns views, @RestController returns JSON/XML",
+    "isObjective": true,
+    "type": "MCQ",
+    "askedBy": [],
+    "technology": "Spring Boot",
+    "explanation": {
+      "intro": "Spring MVC provides two main annotations for defining controllers in web applications.",
+      "points": [
+        "@Controller is used to define a standard MVC controller which returns view names resolved by a view resolver.",
+        "@RestController is a specialization of @Controller that combines @Controller and @ResponseBody, returning JSON or XML directly.",
+        "Use @RestController for REST APIs and @Controller when serving HTML views or JSP pages."
+      ],
+      "code": "// Example usage\n@Controller\npublic class MyController {\n    @GetMapping(\"/home\")\n    public String homePage() {\n        return \"home\"; // returns view named 'home'\n    }\n}\n\n@RestController\npublic class MyRestController {\n    @GetMapping(\"/api/data\")\n    public MyData getData() {\n        return new MyData(\"example\"); // returns JSON\n    }\n}",
+      "diagram": "/diagram/spring/controller_vs_restcontroller.md"
+    }
+  },
+  {
+    "id": "97",
+    "question": "What is Spring Framework?",
+    "options": [
+      "A JavaScript library",
+      "A Java framework for enterprise applications",
+      "A database",
+      "A testing tool"
+    ],
+    "answer": "A Java framework for enterprise applications",
+    "isObjective": true,
+    "type": "MCQ",
+    "askedBy": [],
+    "technology": "Spring",
+    "explanation": {
+      "intro": "Spring Framework is a comprehensive programming and configuration model for modern Java-based enterprise applications.",
+      "points": [
+        "Provides dependency injection (DI) to manage object creation and dependencies.",
+        "Supports aspect-oriented programming (AOP) to separate cross-cutting concerns.",
+        "Offers modules for data access, transaction management, web MVC, security, and more.",
+        "Lightweight and promotes testable, maintainable code."
+      ],
+      "code": "// Example: Defining a bean in Spring\n@Component\npublic class MyService {\n    public void perform() {\n        System.out.println(\"Service executing\");\n    }\n}\n\n@Autowired\nprivate MyService myService;",
+      "diagram": "/diagram/spring/spring_framework_overview.md"
+    }
+  },
+  {
+    "id": "98",
+    "question": "Which annotation is used to define a Spring Boot application?",
+    "options": ["@Configuration", "@Component", "@SpringBootApplication", "@Service"],
+    "answer": "@SpringBootApplication",
+    "isObjective": true,
+    "type": "MCQ",
+    "askedBy": [],
+    "technology": "Spring Boot",
+    "explanation": {
+      "intro": "@SpringBootApplication is a convenience annotation that combines @Configuration, @EnableAutoConfiguration, and @ComponentScan.",
+      "points": [
+        "Marks the main class of a Spring Boot application.",
+        "Enables auto-configuration of Spring context based on dependencies.",
+        "Scans for Spring components in the package and sub-packages."
+      ],
+      "code": "// Example:\n@SpringBootApplication\npublic class MyApp {\n    public static void main(String[] args) {\n        SpringApplication.run(MyApp.class, args);\n    }\n}",
+      "diagram": "/diagram/spring/springboot_application.md"
+    }
+  },
+  {
+    "id": "99",
+    "question": "What is the default scope of a Spring bean?",
+    "options": ["prototype", "singleton", "request", "session"],
+    "answer": "singleton",
+    "isObjective": true,
+    "type": "MCQ",
+    "askedBy": [],
+    "technology": "Spring",
+    "explanation": {
+      "intro": "In Spring, beans are singleton by default, meaning only one instance is created per Spring container.",
+      "points": [
+        "Singleton beans are created once and shared across the application context.",
+        "Prototype beans are created every time they are requested.",
+        "Other scopes like 'request' and 'session' apply in web-aware Spring contexts."
+      ],
+      "code": "// Example:\n@Component\npublic class MyService {\n    // This bean is singleton by default\n}",
+      "diagram": "/diagram/spring/spring_bean_scope.md"
+    }
+  },
+  {
+    "id": "100",
+    "question": "Which annotation is used for automatic dependency injection in Spring?",
+    "options": ["@Bean", "@Autowired", "@Inject", "@Configuration"],
+    "answer": "@Autowired",
+    "isObjective": true,
+    "type": "MCQ",
+    "askedBy": [],
+    "technology": "Spring",
+    "explanation": {
+      "intro": "@Autowired is used by Spring to automatically wire beans by type.",
+      "points": [
+        "It can be applied on fields, constructors, or setter methods.",
+        "Spring resolves the dependency automatically from the application context.",
+        "It helps reduce manual bean wiring and promotes loose coupling."
+      ],
+      "code": "// Example:\n@Component\npublic class MyService {\n    @Autowired\n    private MyRepository repository;\n}",
+      "diagram": "/diagram/spring/spring_autowired.md"
+    }
+  },
+  {
+    "id": "101",
+    "question": "What is Spring Boot Starter?",
+    "options": ["A test framework", "A collection of dependencies for rapid development", "A logging tool", "An IDE plugin"],
+    "answer": "A collection of dependencies for rapid development",
+    "isObjective": true,
+    "type": "MCQ",
+    "askedBy": [],
+    "technology": "Spring Boot",
+    "explanation": {
+      "intro": "Spring Boot Starters are pre-defined dependency descriptors that simplify Maven or Gradle configuration.",
+      "points": [
+        "They aggregate common libraries for specific tasks (e.g., web, data, security).",
+        "They help start a project quickly without manually adding individual dependencies.",
+        "Examples include spring-boot-starter-web, spring-boot-starter-data-jpa, spring-boot-starter-security."
+      ],
+      "code": "// Example in Maven pom.xml\n<dependency>\n    <groupId>org.springframework.boot</groupId>\n    <artifactId>spring-boot-starter-web</artifactId>\n</dependency>",
+      "diagram": "/diagram/spring/spring_boot_starter1.md"
+    }
+  },
+  {
+    "id": "102",
+    "question": "Which annotation is used to mark a class as a configuration class?",
+    "options": ["@Configuration", "@Component", "@RestController", "@Bean"],
+    "answer": "@Configuration",
+    "isObjective": true,
+    "type": "MCQ",
+    "askedBy": [],
+    "technology": "Spring",
+    "explanation": {
+      "intro": "The @Configuration annotation indicates that the class contains Spring bean definitions.",
+      "points": [
+        "It is processed by the Spring container to generate bean definitions and service requests.",
+        "Used in combination with @Bean methods to define beans programmatically.",
+        "Helps in Java-based configuration instead of XML configuration."
+      ],
+      "code": "import org.springframework.context.annotation.Bean;\nimport org.springframework.context.annotation.Configuration;\n\n@Configuration\npublic class AppConfig {\n    @Bean\n    public MyService myService() {\n        return new MyService();\n    }\n}",
+      "diagram": "/diagram/spring/spring_configuration.md"
+    }
+  },
+  {
+    "id": "103",
+    "question": "What is Spring Boot Actuator?",
+    "options": [
+      "A monitoring and management tool for Spring Boot applications",
+      "A logging library",
+      "A deployment tool",
+      "A security module"
+    ],
+    "answer": "A monitoring and management tool for Spring Boot applications",
+    "isObjective": true,
+    "type": "MCQ",
+    "askedBy": [],
+    "technology": "Spring Boot",
+    "explanation": {
+      "intro": "Spring Boot Actuator provides production-ready features to monitor and manage Spring Boot applications.",
+      "points": [
+        "Exposes endpoints like /actuator/health, /actuator/metrics, /actuator/env.",
+        "Helps in application monitoring, metrics collection, and environment inspection.",
+        "Integrates with external monitoring systems like Prometheus and Grafana."
+      ],
+      "code": "dependencies {\n    implementation 'org.springframework.boot:spring-boot-starter-actuator'\n}\n\n# Example usage in application.properties\nmanagement.endpoints.web.exposure.include=health,info,metrics",
+      "diagram": "/diagram/spring/spring_boot_actuator.md"
+    }
+  },
+  {
+    "id": "108",
+    "type": "Interview",
+    "technology": "Spring Boot",
+    "question": "How does Spring Boot simplify dependency management?",
+    "answer": "It uses starters (predefined dependency sets) and auto-configuration to reduce boilerplate setup.",
+    "isObjective": false,
+    "options": [],
+    "askedBy": [],
+    "explanation": {
+      "intro": "Spring Boot provides starters and auto-configuration to simplify project setup and dependency management.",
+      "points": [
+        "Starters are pre-packaged dependency sets like spring-boot-starter-web, spring-boot-starter-data-jpa.",
+        "Auto-configuration automatically sets up beans and configurations based on the classpath.",
+        "Reduces manual configuration and avoids version conflicts."
+      ],
+      "code": "# Example: Adding Web Starter in build.gradle\nimplementation 'org.springframework.boot:spring-boot-starter-web'\n\n# Auto-configures DispatcherServlet, REST controllers, JSON converters, etc.",
+      "diagram": "/diagram/spring/spring_boot_dependency_management.md"
+    }
+  },
+  {
+    "id": "109",
+    "type": "Interview",
+    "technology": "Spring",
+    "question": "What is Dependency Injection and why is it important in Spring?",
+    "answer": "Dependency Injection is a design pattern where dependencies are injected by the container rather than created manually. It promotes loose coupling and testability.",
+    "isObjective": false,
+    "options": [],
+    "askedBy": [],
+    "explanation": {
+      "intro": "Dependency Injection (DI) allows Spring to manage object creation and wiring, reducing tight coupling.",
+      "points": [
+        "Promotes loose coupling between classes.",
+        "Improves code testability by allowing mock injections.",
+        "Reduces boilerplate code and simplifies object management."
+      ],
+      "code": "// Example: Constructor Injection in Spring\n@Component\nclass Engine {}\n\n@Component\nclass Car {\n    private final Engine engine;\n\n    @Autowired\n    public Car(Engine engine) {\n        this.engine = engine;\n    }\n}",
+      "diagram": "/diagram/spring/dependency_injection.md"
+    }
+  },
+  {
+    "id": "110",
+    "type": "Interview",
+    "technology": "Spring",
+    "question": "What are Spring Profiles used for?",
+    "answer": "Profiles allow you to define different configurations for different environments (e.g., dev, test, prod).",
+    "isObjective": false,
+    "options": [],
+    "askedBy": [],
+    "explanation": {
+      "intro": "Spring Profiles help manage environment-specific configurations in a clean and organized way.",
+      "points": [
+        "Enable switching between environments without changing code.",
+        "Activate a profile via `application.properties` or programmatically.",
+        "Use `@Profile` annotation to mark beans for specific profiles."
+      ],
+      "code": "// Example: Defining a bean for 'dev' profile\n@Configuration\n@Profile(\"dev\")\nclass DevDataSourceConfig {\n    @Bean\n    public DataSource dataSource() {\n        return new HikariDataSource();\n    }\n}",
+      "diagram": "/diagram/spring/spring_profiles.md"
+    }
+  },
+  {
+    "id": "111",
+    "type": "Interview",
+    "technology": "Spring Boot",
+    "question": "How does Spring Boot handle database configuration?",
+    "answer": "Spring Boot auto-configures DataSource and JPA repositories if required properties are provided in application.properties.",
+    "isObjective": false,
+    "options": [],
+    "askedBy": [],
+    "explanation": {
+      "intro": "Spring Boot simplifies database setup by auto-configuring beans and repositories based on dependencies and properties.",
+      "points": [
+        "Detects database driver from classpath.",
+        "Auto-configures `DataSource` bean if `spring.datasource.*` properties are set.",
+        "Automatically sets up JPA repositories if Spring Data JPA is on classpath.",
+        "Reduces boilerplate XML or Java configuration."
+      ],
+      "code": "// application.properties example\nspring.datasource.url=jdbc:mysql://localhost:3306/mydb\nspring.datasource.username=root\nspring.datasource.password=secret\nspring.jpa.hibernate.ddl-auto=update\n\n// No explicit DataSource bean required; Spring Boot creates it automatically",
+      "diagram": "/diagram/spring/spring_boot_database.md"
+    }
+  },
+  {
+    "id": "112",
+    "type": "Interview",
+    "technology": "Spring",
+    "question": "What is the difference between @Component, @Service, and @Repository?",
+    "answer": "@Component is a generic stereotype, @Service is for service layer beans, and @Repository is for persistence layer beans (with additional exception translation).",
+    "isObjective": false,
+    "options": [],
+    "askedBy": [],
+    "explanation": {
+      "intro": "Spring provides several stereotype annotations to define beans semantically, making code more readable and maintainable.",
+      "points": [
+        "@Component: Generic annotation to register any bean in Spring context.",
+        "@Service: Specialization of @Component for service layer logic.",
+        "@Repository: Specialization of @Component for persistence layer; enables exception translation from database exceptions to Spring DataAccessException."
+      ],
+      "code": "```java\n@Component\npublic class MyComponent {}\n\n@Service\npublic class MyService {}\n\n@Repository\npublic class MyRepository {}\n```",
+      "diagram": "/diagram/spring/spring_component_hierarchy.md"
+    }
+  },
+  {
+    "id": "113",
+    "type": "Interview",
+    "technology": "Spring Boot",
+    "question": "How does Spring Boot enable microservices development?",
+    "answer": "Spring Boot provides embedded servers, auto-configuration, easy integration with Spring Cloud, and REST support, making microservices easier to build and deploy.",
+    "isObjective": false,
+    "options": [],
+    "askedBy": [],
+    "explanation": {
+      "intro": "Spring Boot simplifies microservices development by reducing boilerplate and providing built-in infrastructure support.",
+      "points": [
+        "Embedded servers (Tomcat/Jetty/Undertow) remove the need for external server setup.",
+        "Auto-configuration detects dependencies and configures beans automatically.",
+        "Integration with Spring Cloud provides features like service discovery, config management, and circuit breakers.",
+        "REST controllers and easy JSON serialization make exposing endpoints straightforward."
+      ],
+      "code": "```java\n@SpringBootApplication\npublic class UserServiceApplication {\n    public static void main(String[] args) {\n        SpringApplication.run(UserServiceApplication.class, args);\n    }\n}\n\n@RestController\n@RequestMapping(\"/users\")\npublic class UserController {\n    @GetMapping\n    public List<User> getAllUsers() {\n        return userService.findAll();\n    }\n}\n```",
+      "diagram": "/diagram/spring/springboot_microservices.md"
+    }
+  },
+  {
+    "id": "114",
+    "type": "Interview",
+    "technology": "Spring",
+    "question": "What is the role of Spring Security?",
+    "answer": "Spring Security provides authentication, authorization, and protection against common attacks like CSRF, session fixation, and clickjacking.",
+    "isObjective": false,
+    "options": [],
+    "askedBy": [],
+    "explanation": {
+      "intro": "Spring Security is a framework that secures Java applications by managing user access and protecting resources.",
+      "points": [
+        "Authentication: Verify identity of users (login).",
+        "Authorization: Control access to resources based on roles or permissions.",
+        "CSRF Protection: Prevent cross-site request forgery attacks.",
+        "Session Management: Protect against session fixation and hijacking.",
+        "Security Headers: Prevent clickjacking and other web attacks."
+      ],
+      "code": "```java\n@Configuration\n@EnableWebSecurity\npublic class SecurityConfig extends WebSecurityConfigurerAdapter {\n\n    @Override\n    protected void configure(HttpSecurity http) throws Exception {\n        http\n            .authorizeRequests()\n                .antMatchers(\"/public/**\").permitAll()\n                .anyRequest().authenticated()\n            .and()\n            .formLogin()\n            .and()\n            .csrf();\n    }\n}\n```",
+      "diagram": "/diagram/spring/spring_security_flow.md"
+    }
+  },
+  {
+    "id": "115",
+    "type": "Interview",
+    "technology": "Spring Boot",
+    "question": "What are some advantages of using Spring Boot over traditional Spring?",
+    "answer": "Auto-configuration, embedded servers, production-ready features (Actuator), reduced XML configuration, and opinionated defaults.",
+    "isObjective": false,
+    "options": [],
+    "askedBy": [],
+    "explanation": {
+      "intro": "Spring Boot simplifies Spring application development by providing sensible defaults and reducing boilerplate.",
+      "points": [
+        "Auto-Configuration: Automatically configures beans based on dependencies.",
+        "Embedded Servers: Comes with Tomcat, Jetty, or Undertow, so no need for external deployment.",
+        "Production-Ready Features: Actuator provides metrics, health checks, and monitoring.",
+        "Reduced XML Configuration: Prefer Java-based configuration over verbose XML.",
+        "Opinionated Defaults: Provides default configurations that follow best practices, speeding up development."
+      ],
+      "code": "```java\n@SpringBootApplication\npublic class MyApplication {\n    public static void main(String[] args) {\n        SpringApplication.run(MyApplication.class, args);\n    }\n}\n```",
+      "diagram": "/diagram/spring/spring_boot_advantages.md"
+  }
+  },
+  {
+    "id": "116",
+    "type": "Interview",
+    "technology": "Spring Boot",
+    "question": "How would you secure a REST API in Spring Boot?",
+    "answer": "By using Spring Security with JWT, OAuth2, or Basic Authentication depending on requirements.",
+    "isObjective": false,
+    "options": [],
+    "askedBy": [],
+    "explanation": {
+      "intro": "Spring Boot applications can be secured using Spring Security which provides authentication and authorization mechanisms.",
+      "points": [
+        "Use Spring Security dependency in the project.",
+        "Configure authentication methods: Basic Auth, JWT, OAuth2.",
+        "Protect endpoints using annotations like @PreAuthorize or HttpSecurity configuration.",
+        "Enable HTTPS to secure data in transit.",
+        "Implement role-based access control for fine-grained security."
+      ],
+      "code": "```java\n@Configuration\n@EnableWebSecurity\npublic class SecurityConfig extends WebSecurityConfigurerAdapter {\n    @Override\n    protected void configure(HttpSecurity http) throws Exception {\n        http\n          .csrf().disable()\n          .authorizeRequests()\n          .antMatchers(\"/public/**\").permitAll()\n          .anyRequest().authenticated()\n          .and()\n          .httpBasic();\n    }\n}\n```",
+      "diagram": "/diagram/spring/spring_security_rest_api.md"
+    }
   }
 ]

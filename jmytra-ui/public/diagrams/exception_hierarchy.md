@@ -1,1 +1,0 @@
-mermaid\nclassDiagram\n    Throwable <|-- Exception\n    Throwable <|-- Error\n    Exception <|-- RuntimeException\n    RuntimeException <|-- NullPointerException\n    RuntimeException <|-- ArithmeticException

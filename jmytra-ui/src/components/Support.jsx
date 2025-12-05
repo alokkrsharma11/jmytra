@@ -27,7 +27,7 @@ const Support = () => {
               Reach out to us directly for personalized help and guidance.
             </p>
             <a
-              href="mailto:support@jmytra.com"
+              href="mailto:jmytra4u@gmail.com"
               className="inline-block bg-yellow-400 text-indigo-900 font-semibold px-4 py-2 rounded-lg shadow hover:bg-yellow-300 transition"
             >
               Contact Us
@@ -44,7 +44,7 @@ const Support = () => {
               Connect with fellow learners on our Discord and grow together.
             </p>
             <a
-              href="https://discord.gg/your-link"
+              href="https://github.com/alokkrsharma11/jmytra/wiki"
               className="inline-block bg-green-400 text-indigo-900 font-semibold px-4 py-2 rounded-lg shadow hover:bg-green-300 transition"
             >
               Join Now
@@ -61,7 +61,7 @@ const Support = () => {
               Help us improve by contributing tutorials, fixes, or feedback.
             </p>
             <a
-              href="/contribute"
+              href="https://github.com/alokkrsharma11/jmytra"
               className="inline-block bg-pink-400 text-indigo-900 font-semibold px-4 py-2 rounded-lg shadow hover:bg-pink-300 transition"
             >
               Get Involved

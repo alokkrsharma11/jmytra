@@ -8,7 +8,7 @@ const About = () => {
     <section className="container bg-gray-50 py-16 px-6 md:px-20">
       <div className="max-w-5xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-          About Us
+          About Jmytra4u
         </h2>
         <p className="text-lg text-gray-600 leading-relaxed mb-8 mt-5">
           Welcome to <span className="font-semibold text-indigo-600" style={{marginLeft:0}}>Jmytra4u</span> —
@@ -64,13 +64,13 @@ const About = () => {
             {/* Quick Contact */}
             <div className="mt-16">
               <a
-                href="mailto:alok@example.com"
+                href="mailto:jmytra4u@gmail.com"
                 className="btn btn-outline-primary me-3"
               >
                 📧 Email Me
               </a>
               <a
-                href="https://www.linkedin.com/in/alok-sharma"
+                href="https://www.linkedin.com/in/alokkrsharma11/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-primary me-3"
@@ -78,20 +78,12 @@ const About = () => {
                 🔗 Connect on LinkedIn
               </a>
               <a
-                href="/tutorials"
+                href="https://www.alokkrsharma.in"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-outline-primary me-3"
               >
-                Explore Tutorials
-              </a>
-              <a
-                href="/contact"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-outline-primary me-3"
-                >
-                Contact Us
+                Explore About Me
               </a>
             </div>
             

@@ -36,7 +36,7 @@ const ReactTutorial = ({ language = "react" }) => {
     setSidebarOpen(!sidebarOpen); // optional: open sidebar when tab changes
   };
 
-  if (loading) return <div className="p-6 text-white">Loading questions...</div>;
+  if (loading) return <div className="p-6 text-center">Loading...</div>;
 
   return (
     <Box sx={{ display: "flex", minHeight: "100vh", bgcolor: "grey.900", color: "white" }}>

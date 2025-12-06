@@ -1,8 +1,9 @@
 const loadAllQuizzes = async (language, setLoading, setQuestions) => {
       try {
         const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
-        const CONTEXT_PATH = process.env.REACT_APP_API_CONTEXT_PATH;
-        const apiUrl = `${API_BASE_URL}${CONTEXT_PATH}/quizzes/${language}`;
+        //const CONTEXT_PATH = process.env.REACT_APP_API_CONTEXT_PATH;
+        //const apiUrl = `${API_BASE_URL}${CONTEXT_PATH}/quizzes/${language}`;
+        const apiUrl = `${API_BASE_URL}/quizzes/${language}`;
         const res = await fetch(apiUrl);
 
         if (!res.ok) throw new Error("Network response was not ok");
@@ -15,7 +16,8 @@ const loadAllQuizzes = async (language, setLoading, setQuestions) => {
               try {
                 console.log(q.explanation.diagram);
                 //const mdRes = await fetch(q.explanation.diagram);
-                const mdRes = await fetch(`${API_BASE_URL}${CONTEXT_PATH}${q.explanation.diagram}`); // your DiagramController
+                //const mdRes = await fetch(`${API_BASE_URL}${CONTEXT_PATH}${q.explanation.diagram}`); // your DiagramController
+                const mdRes = await fetch(`${API_BASE_URL}${q.explanation.diagram}`); // your DiagramController
     
                 if (!mdRes.ok) throw new Error("Failed to fetch diagram");
 

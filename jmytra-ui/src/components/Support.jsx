@@ -1,8 +1,13 @@
 // Support.jsx
-import React from "react";
+import React, { useEffect } from "react";
 import { FaEnvelope, FaDiscord, FaHeart } from "react-icons/fa";
+import { updatePageSEO, pageSEOData } from '../utils/seoHelper';
 
 const Support = () => {
+  useEffect(() => {
+    // Update page SEO on mount
+    updatePageSEO(pageSEOData.support);
+  }, []);
   return (
     <section className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 py-16 px-6 md:px-20 text-white">
       <div className="container max-w-5xl mx-auto text-center mb-6 p-4 border rounded-lg shadow-sm bg-white text-black">

@@ -5,6 +5,7 @@ import PageLayout from "./PageLayout";
 import { ChevronRight, ChevronLeft } from "@mui/icons-material";
 import './../App.css'
 import loadAllQuizzes from "../utils/quizLoader";
+import { updatePageSEO, pageSEOData } from "../utils/seoHelper";
 
 const SpringTutorial = ({ language = "spring" }) => {
   const [questions, setQuestions] = useState([]);
@@ -16,6 +17,8 @@ const SpringTutorial = ({ language = "spring" }) => {
   // Load quizs
   useEffect(() => {
     loadAllQuizzes(language, setLoading, setQuestions);
+    // Update page SEO on mount
+    updatePageSEO(pageSEOData.spring);
   }, [language]);
 
   // Listen to global search dispatched from topbar
@@ -49,7 +52,7 @@ const SpringTutorial = ({ language = "spring" }) => {
         onClick={() => setSidebarOpen(!sidebarOpen)}
         sx={{
           position: "absolute",
-          top: "14rem",
+          top: "6rem",
           left: sidebarOpen ? 220 : 0,
           zIndex: 1200,
           bgcolor: "#bbab97ff",

@@ -1,9 +1,14 @@
 // About.jsx
-import React from "react";
+import React, { useEffect } from "react";
 import './../App.css';
 import img from './../images/pic.png';
+import { updatePageSEO, pageSEOData } from '../utils/seoHelper';
 
 const About = () => {
+  useEffect(() => {
+    // Update page SEO on mount
+    updatePageSEO(pageSEOData.about);
+  }, []);
   return (
     <section className="container bg-gray-50 py-16 px-6 md:px-20">
       <div className="max-w-5xl mx-auto text-center">

@@ -7,6 +7,7 @@ import "./../App.css";
 import QuizContent from "./QuizContent";
 import CodeBlock from "./CodeBlock";
 import loadAllQuizzes from "../utils/quizLoader";
+import { updatePageSEO, pageSEOData } from "../utils/seoHelper";
 
 const ReactTutorial = ({ language = "react" }) => {
   const [questions, setQuestions] = useState([]);
@@ -18,6 +19,8 @@ const ReactTutorial = ({ language = "react" }) => {
   // Load quizzes
   useEffect(() => {
     loadAllQuizzes(language, setLoading, setQuestions);
+    // Update page SEO on mount
+    updatePageSEO(pageSEOData.react);
   }, [language]);
 
   // Listen to global search dispatched from topbar
@@ -55,7 +58,7 @@ const ReactTutorial = ({ language = "react" }) => {
         onClick={() => setSidebarOpen(!sidebarOpen)}
         sx={{
           position: "fixed",
-          top: "14rem",
+          top: "6rem",
           left: sidebarOpen ? 220 : 0,
           zIndex: 1300,
           bgcolor: "#bbab97ff",

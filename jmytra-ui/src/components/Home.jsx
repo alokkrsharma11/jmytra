@@ -3,6 +3,7 @@ import PageLayout from './PageLayout'
 import './../App.css'
 import './styles.css'
 import bgimg from './../images/java_img.png';
+import { updatePageSEO, pageSEOData } from '../utils/seoHelper';
 
 
 const Home = () => {
@@ -20,6 +21,8 @@ const Home = () => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % slogans.length);
     }, 3000); // change every 3 seconds
+    // Update page SEO on mount
+    updatePageSEO(pageSEOData.home);
     return () => clearInterval(interval);
   }, [slogans.length]);
 

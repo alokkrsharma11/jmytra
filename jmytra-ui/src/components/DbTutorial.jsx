@@ -5,6 +5,7 @@ import QuizContent from "./QuizContent";
 import PageLayout from "./PageLayout";
 import './../App.css'
 import loadAllQuizzes from "../utils/quizLoader";
+import { updatePageSEO, pageSEOData } from "../utils/seoHelper";
 
 const DbTutorial = ({language='db'}) => {
   const [questions, setQuestions] = useState([]);
@@ -16,6 +17,8 @@ const DbTutorial = ({language='db'}) => {
   // Load quizs
   useEffect(() => {
     loadAllQuizzes(language, setLoading, setQuestions);
+    // Update page SEO on mount
+    updatePageSEO(pageSEOData.database);
   }, [language]);
 
   // Listen to global search dispatched from topbar
@@ -50,7 +53,7 @@ const DbTutorial = ({language='db'}) => {
         onClick={() => setSidebarOpen(!sidebarOpen)}
         sx={{
           position: "absolute",
-          top: "14rem",
+          top: "6rem",
           left: sidebarOpen ? 220 : 0,
           zIndex: 1200,
           bgcolor: "#bbab97ff",

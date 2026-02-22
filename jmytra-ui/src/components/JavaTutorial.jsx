@@ -5,6 +5,7 @@ import QuizContent from "./QuizContent";
 import PageLayout from "./PageLayout";
 import "./../App.css";
 import loadAllQuizzes from "../utils/quizLoader";
+import { updatePageSEO, pageSEOData } from "../utils/seoHelper";
 
 const JavaTutorial = ({ language = "java" }) => {
   const [questions, setQuestions] = useState([]);
@@ -16,6 +17,8 @@ const JavaTutorial = ({ language = "java" }) => {
   // Load quizs
   useEffect(() => {
     loadAllQuizzes(language, setLoading, setQuestions);
+    // Update page SEO on mount
+    updatePageSEO(pageSEOData.java);
   }, [language]);
 
   // Listen to global search dispatched from topbar

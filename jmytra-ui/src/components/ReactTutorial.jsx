@@ -13,11 +13,21 @@ const ReactTutorial = ({ language = "react" }) => {
   const [loading, setLoading] = useState(true);
   const [tabIndex, setTabIndex] = useState(0);
   const [sidebarOpen, setSidebarOpen] = useState(false); // control sidebar
+  const [searchTerm, setSearchTerm] = useState("");
 
   // Load quizzes
   useEffect(() => {
     loadAllQuizzes(language, setLoading, setQuestions);
   }, [language]);
+
+  // Listen to global search dispatched from topbar
+  useEffect(() => {
+    const handler = (e) => {
+      setSearchTerm(e?.detail?.value || "");
+    };
+    window.addEventListener("global-search", handler);
+    return () => window.removeEventListener("global-search", handler);
+  }, []);
 
   // Group questions by type
   const grouped = questions.reduce((acc, q) => {
@@ -114,7 +124,10 @@ const ReactTutorial = ({ language = "react" }) => {
         <PageLayout title={`📘 ReactJS: ${activeType || "Topics" } Questions`} sidebarOpen={sidebarOpen} />
         <div className="container">
           <Box sx={{ mb: 4 }}>
-            {topics.map((topic, i) => {
+            {(() => {
+              const q = searchTerm.trim().toLowerCase();
+              const filtered = q ? topics.filter(t => JSON.stringify(t).toLowerCase().includes(q)) : topics;
+              return filtered.map((topic, i) => {
               const topicKey = topic.id ?? `${activeType}-${i}`;
               return (
                 <React.Fragment key={topicKey}>
@@ -127,10 +140,7 @@ const ReactTutorial = ({ language = "react" }) => {
                         {topic.question || topic.title}
                       </h2>
 
-                      {/* Items */
-                      //console.log(topic.title)
-                      console.log(topic.item)
-                      }
+                      {/* Items */}
                       {Array.isArray(topic.item) && topic.item.length > 0 && (
                         <ul className="list-disc ml-6">
                           {topic.item.map((item, j) => {
@@ -306,9 +316,11 @@ const ReactTutorial = ({ language = "react" }) => {
                   )}
                 </React.Fragment>
               );
-            })}
+            });
+            })()}
           </Box>
-        </div>
+          </div>
+        
       </Box>
     </Box>
   );

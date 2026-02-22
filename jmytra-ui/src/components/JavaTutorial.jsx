@@ -11,11 +11,21 @@ const JavaTutorial = ({ language = "java" }) => {
   const [loading, setLoading] = useState(true);
   const [tabIndex, setTabIndex] = useState(0);
   const [sidebarOpen, setSidebarOpen] = useState(false); // control sidebar
+  const [searchTerm, setSearchTerm] = useState("");
 
   // Load quizs
   useEffect(() => {
     loadAllQuizzes(language, setLoading, setQuestions);
   }, [language]);
+
+  // Listen to global search dispatched from topbar
+  useEffect(() => {
+    const handler = (e) => {
+      setSearchTerm(e?.detail?.value || "");
+    };
+    window.addEventListener("global-search", handler);
+    return () => window.removeEventListener("global-search", handler);
+  }, []);
 
   // Group questions by type
   const grouped = questions.reduce((acc, q) => {
@@ -39,7 +49,7 @@ const JavaTutorial = ({ language = "java" }) => {
         onClick={() => setSidebarOpen(!sidebarOpen)}
         sx={{
           position: "absolute",
-          top: "14rem",
+          top: "6rem",
           left: sidebarOpen ? 220 : 0,
           zIndex: 1200,
           bgcolor: "#bbab97ff",
@@ -96,8 +106,8 @@ const JavaTutorial = ({ language = "java" }) => {
 
       {/* Main content */}
       <Box  sx={{
-            flex: 1,
-            p: 4,
+        flex: 1,
+        p: 2,
             overflowY: "auto",
             transition: "margin-left 0.3s ease",   // smooth shifting
             marginLeft: sidebarOpen ? "0px" : "-220px", // shift by sidebar width
@@ -107,15 +117,21 @@ const JavaTutorial = ({ language = "java" }) => {
           (type, index) =>
             tabIndex === index && (
               <div>
-              <PageLayout key={index} title={`📘 Java Programming Language: ${type} Questions`} sidebarOpen={{sidebarOpen}}/>
-              <div className="container">
-              <Box key={type} sx={{ mb: 4 }}>
-                
-                {grouped[type].map((question, i) => (
-                  <QuizContent key={i} question={question} />
-                ))}
-              </Box>
-              </div>
+                <PageLayout key={index} title={`📘 Java Programming Language: ${type} Questions`} sidebarOpen={{sidebarOpen}}/>
+                <div className="container">
+                  <Box key={type} sx={{ mb: 4 }}>
+                    {(() => {
+                      const items = grouped[type] || [];
+                      const q = searchTerm.trim().toLowerCase();
+                      const filtered = q ? items.filter(it => JSON.stringify(it).toLowerCase().includes(q)) : items;
+                      return filtered.length > 0 ? (
+                        filtered.map((question, i) => <QuizContent key={i} question={question} />)
+                      ) : (
+                        <div style={{ padding: 12, color: '#666' }}>No results found for "{searchTerm}"</div>
+                      );
+                    })()}
+                  </Box>
+                </div>
               </div>
             )
         )}

@@ -1,5 +1,5 @@
 
-export { default as Navbar } from "./Navbar";
+export { default as NavbarWithTopMenu } from "./NavbarWithTopMenu";
 export { default as JavaTutorial } from "./JavaTutorial";
 export { default as ReactTutorial } from "./ReactTutorial";
 export { default as DbTutorial } from "./DbTutorial";

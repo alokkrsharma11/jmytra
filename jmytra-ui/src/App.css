@@ -1,5 +1,8 @@
 .App {
-  background-color: #eeeeee
+  background-color: #eeeeee;
+  height: 100vh; /* fit to viewport height */
+  overflow: hidden; /* prevent scrollbars */
+  padding-bottom: 80px; /* space for fixed footer */
 }
 
 .App-logo {
@@ -18,10 +21,19 @@
 }
 
 .App-header {
-  min-height: 50vh;
+  padding: 36px 24px; /* breathing room below navbar */
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: stretch;
+  justify-content: flex-start;
+  /*max-width: 1100px;*/
+  margin: 0 auto;
+}
+
+/* Main content container used to control page width and spacing */
+.page-content {
+  /*max-width: 1100px;*/
+  margin: 0 auto;
+  padding: 12px;
 }
 
 .App-link {

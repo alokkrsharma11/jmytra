@@ -1,13 +1,13 @@
-import logo from './images/img_1.png';
 import './Header.css';
 
-const Header = ({title, subtitle}) => {
-
+const Header = ({ title, subtitle }) => {
   return (
     <>
+      <div style={{ paddingRight: '0.5rem' }}>
+        {/*
+          Table header commented out per request. If you need to restore it,
+          remove the comment markers below.
 
-      <div style={{paddingRight: '1rem', maxHeight: '8rem',
-      zIndex: 1000,}}>
           <table style={{width:'100%'}}>
             <thead>
             <tr  style={{width:'100%'}}>
@@ -23,9 +23,10 @@ const Header = ({title, subtitle}) => {
             </tr>
             </thead>
           </table>
+        */}
       </div>
     </>
   );
-}
+};
 
 export default Header;

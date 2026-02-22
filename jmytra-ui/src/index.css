@@ -5,6 +5,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden; /* prevent scrollbars */
+}
+
+/* Make the app background consistent and full-height so footer overlays correctly */
+html, body, #root {
+  min-height: 100%;
+  background-color: #eeeeee; /* app-wide grey */
 }
 
 code {

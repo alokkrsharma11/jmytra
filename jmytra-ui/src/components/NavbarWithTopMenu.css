@@ -1,0 +1,211 @@
+/* TOP BAR */
+.topbar {
+  display: flex;
+  align-items: center;
+  background: #111;
+  padding: 6px 18px;
+  color: #fff;
+  position: relative;
+  gap: 12px;
+  --logo-color: #ffffff; /* ensure logo is visible on dark header */
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  display: block;
+}
+
+/* SVG logo styling and color control */
+.logo-svg {
+  width: 4.2rem;
+  height: 2.4rem;
+  display: block;
+  color: var(--logo-color, #2f6aa6);
+}
+
+/* Target common SVG child elements to override fills and strokes */
+.logo-svg path,
+.logo-svg circle,
+.logo-svg rect,
+.logo-svg polygon,
+.logo-svg g {
+  fill: currentColor !important;
+  stroke: currentColor !important;
+}
+
+/* DESKTOP MENU */
+.desktop-menu {
+  display: flex;
+  list-style: none;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+  flex: 1; /* center area */
+  justify-content: center;
+}
+
+.menu-item {
+  position: relative;
+}
+
+.menu-item a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.menu-item a:hover {
+  opacity: 0.8;
+}
+
+.caret {
+  margin-left: 4px;
+}
+
+/* DESKTOP DROPDOWN */
+.dropdown {
+  display: none;
+  position: absolute;
+  background: #222;
+  top: 40px;
+  left: 0;
+  padding: 10px 0;
+  min-width: 180px;
+  list-style: none;
+  border-radius: 4px;
+  z-index: 999;
+}
+
+.menu-item:hover .dropdown {
+  display: block;
+}
+
+.dropdown li {
+  padding: 10px 20px;
+}
+
+.dropdown li a {
+  color: #fff;
+  display: block;
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none; /* hidden on desktop by default */
+  font-size: 22px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* MOBILE MENU */
+.mobile-menu {
+  display: none;
+}
+
+.mobile-menu.open {
+  display: block;
+  position: absolute;
+  top: 56px;
+  left: 0;
+  width: 100%;
+  background: #111;
+  padding: 20px 0;
+}
+
+.mobile-menu .menu-item {
+  padding: 10px 20px;
+}
+
+.mobile-dropdown {
+  list-style: none;
+  padding-left: 20px;
+  background: #222;
+  margin-top: 10px;
+  border-radius: 4px;
+}
+
+.mobile-dropdown li {
+  padding: 10px 15px;
+}
+
+/* RESPONSIVE BREAKPOINT */
+@media (max-width: 768px) {
+  .desktop-menu {
+    display: none;
+  }
+
+  .hamburger {
+    display: block; /* show only on small screens */
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+}
+
+/* Site title on right */
+.site-title {
+  text-align: right;
+  color: #fff;
+}
+
+.site-title .title-main {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.site-title .title-sub {
+  font-size: 11px;
+  opacity: 0.85;
+}
+
+/* Compact top search: icon only, expands on hover/focus */
+.top-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 12px;
+}
+
+.top-search .search-btn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.top-search .search-input {
+  width: 0px;
+  opacity: 0;
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+  transition: width 180ms ease, opacity 180ms ease, margin 180ms ease;
+  outline: none;
+}
+
+.top-search:hover .search-input,
+.top-search:focus-within .search-input {
+  width: 220px;
+  opacity: 1;
+  margin-left: 6px;
+}
+
+/* hide top search on very small screens (mobile uses the hamburger) */
+@media (max-width: 520px) {
+  .top-search { display: none; }
+}

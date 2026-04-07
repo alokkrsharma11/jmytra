@@ -3,13 +3,30 @@ import CodeBlock from "./CodeBlock";
 import { useState } from 'react';
 import QuizOptions from './QuizOptions';
 import MermaidWrapper from './MermaidWrapper';
-import MarkdownRenderer from './MarkdownRenderer'; 
+import MarkdownRenderer from './MarkdownRenderer';
+import { saveQuizResult } from '../utils/learningPath';
 
-const QuizContent = ({ question }) => {
+const QuizContent = ({ question, language = 'general' }) => {
   const [selected, setSelected] = useState(null);
+  const [resultSaved, setResultSaved] = useState(false);
+
+  const isAnswerCorrect = (option) => {
+    if (Array.isArray(question.answer)) {
+      return question.answer.includes(option);
+    }
+    return option === question.answer;
+  };
 
   const handleSelect = (option) => {
     setSelected(option);
+    if (!resultSaved) {
+      saveQuizResult({
+        language,
+        topic: question.type || question.category || 'General',
+        correct: isAnswerCorrect(option),
+      });
+      setResultSaved(true);
+    }
   };
 
   const isMCQ = question.isObjective || (question.options && question.options.length > 0);

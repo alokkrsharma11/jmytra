@@ -3,11 +3,15 @@ import React, { useState, useEffect } from "react";
 import PageLayout from "./PageLayout";
 import { Tabs, Tab, Box, IconButton } from "@mui/material";
 import { ChevronRight, ChevronLeft } from "@mui/icons-material";
+import { FaJava, FaReact } from 'react-icons/fa';
+import { SiSpring } from 'react-icons/si';
+import { GrDatabase } from 'react-icons/gr';
 import "./../App.css";
 import QuizContent from "./QuizContent";
 import CodeBlock from "./CodeBlock";
 import loadAllQuizzes from "../utils/quizLoader";
 import { updatePageSEO, pageSEOData } from "../utils/seoHelper";
+import { getLearningProgress, summarizeProgress } from "../utils/learningPath";
 
 const ReactTutorial = ({ language = "react" }) => {
   const [questions, setQuestions] = useState([]);
@@ -15,12 +19,23 @@ const ReactTutorial = ({ language = "react" }) => {
   const [tabIndex, setTabIndex] = useState(0);
   const [sidebarOpen, setSidebarOpen] = useState(false); // control sidebar
   const [searchTerm, setSearchTerm] = useState("");
+  const [learningSummary, setLearningSummary] = useState([]);
+  
+  const languageIcons = {
+      java: <FaJava size={28} color="#007396" />,
+      spring: <SiSpring size={28} color="#6DB33F" />,
+      react: <FaReact size={28} color="#61DAFB" />,
+      db: <GrDatabase size={28} color="#336791" />,
+  };
 
   // Load quizzes
   useEffect(() => {
     loadAllQuizzes(language, setLoading, setQuestions);
     // Update page SEO on mount
     updatePageSEO(pageSEOData.react);
+    // Load learning progress
+    const progress = getLearningProgress();
+    setLearningSummary(summarizeProgress(progress));
   }, [language]);
 
   // Listen to global search dispatched from topbar
@@ -124,7 +139,49 @@ const ReactTutorial = ({ language = "react" }) => {
           marginLeft: sidebarOpen ? "0px" : "-220px",
         }}
       >
-        <PageLayout title={`📘 ReactJS: ${activeType || "Topics" } Questions`} sidebarOpen={sidebarOpen} />
+        {/* Title and Progress Summary Side-by-Side */}
+        <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'flex-start' }}>
+        {/* Title on left */}
+        <div style={{ flex: '0 0 60%', width: '60%', paddingLeft: '3%' }}>
+          <PageLayout title={` ReactJS: ${activeType || "Topics" } Questions`} sidebarOpen={sidebarOpen}  icon={languageIcons['react']}/>
+        </div>
+  
+          {/* Progress Summary on right */}
+          <div style={{ flex: '0 0 30%', width: '30%' }}>
+            
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(1, 1fr)', gap: '1rem' }}>
+              {learningSummary.filter(item => item.language === language).map((item) => {
+                const accuracyPercent = item.attempts > 0 ? Math.round(item.accuracy * 100) : 0;
+                const barColor = accuracyPercent >= 80 ? '#10b981' : accuracyPercent >= 60 ? '#f59e0b' : accuracyPercent >= 40 ? '#f97316' : '#ef4444';
+                return (
+                  <div key={item.language} style={{ backgroundColor: '#1a1a1a', padding: '0.75rem', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#ddd' }}>
+                              
+                      <span style={{ fontSize: '1rem', fontWeight: 'bold' }}>Progress:</span>
+                              
+                    
+                    {item.attempts > 0 ? (
+                      <>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.8rem', color: '#999' }}>
+                          <span>({accuracyPercent}%)</span>&nbsp;
+                          <span>{item.correct}/{item.attempts}</span>
+                        </div>
+                        <div style={{ width: '100%', height: '16px', backgroundColor: '#0a0a0a', borderRadius: '4px', overflow: 'hidden' }}>
+                          <div style={{ width: `${accuracyPercent}%`, height: '100%', backgroundColor: barColor, transition: 'width 0.3s ease' }} />
+                        </div>
+                      </>
+                    ) : (
+                      <span style={{ fontSize: '0.8rem', color: '#888' }}>Not started</span>
+                    )}
+                  </div>
+                  </div>
+                );
+              })}
+            </div>
+          
+          </div>
+        </div>
+        
         <div className="container">
           <Box sx={{ mb: 4 }}>
             {(() => {
@@ -136,7 +193,7 @@ const ReactTutorial = ({ language = "react" }) => {
                 <React.Fragment key={topicKey}>
                   {topic.askedBy ? (
                     // QuizContent expects a single topic; use a stable key
-                    <QuizContent key={topicKey} question={topic} />
+                    <QuizContent key={topicKey} question={topic} language={language} />
                   ) : (
                     <div className="mb-6 p-4 border rounded-lg shadow-sm bg-white text-black">
                       <h2 className="text-2xl font-semibold mb-3">

@@ -1,11 +1,15 @@
 import { useEffect, useState } from "react";
 import { Tabs, Tab, Box, IconButton } from "@mui/material";
 import { ChevronRight, ChevronLeft } from "@mui/icons-material";
+import { FaJava, FaReact } from 'react-icons/fa';
+import { SiSpring } from 'react-icons/si';
+import { GrDatabase } from 'react-icons/gr';
 import QuizContent from "./QuizContent";
 import PageLayout from "./PageLayout";
 import './../App.css'
 import loadAllQuizzes from "../utils/quizLoader";
 import { updatePageSEO, pageSEOData } from "../utils/seoHelper";
+import { getLearningProgress, summarizeProgress } from "../utils/learningPath";
 
 const DbTutorial = ({language='db'}) => {
   const [questions, setQuestions] = useState([]);
@@ -13,12 +17,23 @@ const DbTutorial = ({language='db'}) => {
   const [tabIndex, setTabIndex] = useState(0);
   const [sidebarOpen, setSidebarOpen] = useState(false); // control sidebar
   const [searchTerm, setSearchTerm] = useState("");
+  const [learningSummary, setLearningSummary] = useState([]);
+  
+  const languageIcons = {
+      java: <FaJava size={28} color="#007396" />,
+      spring: <SiSpring size={28} color="#6DB33F" />,
+      react: <FaReact size={28} color="#61DAFB" />,
+      db: <GrDatabase size={28} color="#336791" />,
+  };
 
   // Load quizs
   useEffect(() => {
     loadAllQuizzes(language, setLoading, setQuestions);
     // Update page SEO on mount
     updatePageSEO(pageSEOData.database);
+    // Load learning progress
+    const progress = getLearningProgress();
+    setLearningSummary(summarizeProgress(progress));
   }, [language]);
 
   // Listen to global search dispatched from topbar
@@ -82,7 +97,7 @@ const DbTutorial = ({language='db'}) => {
           variant="scrollable"
           value={tabIndex}
           onChange={handleChange}
-          aria-label="Java Tutorial Tabs"
+          aria-label="Database Tabs"
           sx={{
             "& .MuiTab-root": {
               alignItems: "flex-start",
@@ -120,7 +135,48 @@ const DbTutorial = ({language='db'}) => {
           (type, index) =>
             tabIndex === index && (
               <div>
-                <PageLayout key={index} title={`📘 Databases (Sql & NoSql): ${type} Questions`}  sidebarOpen={{sidebarOpen}}/>
+                {/* Title and Progress Summary Side-by-Side */}
+                <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'flex-start' }}>
+                  {/* Title on left */}
+                  <div style={{ flex: '0 0 60%', width: '60%', paddingLeft: '3%' }}>
+                    <PageLayout key={index} title={` Databases (Sql & NoSql): ${type} Questions`} sidebarOpen={{sidebarOpen}} icon={languageIcons['db']}/>
+                  </div>
+                  
+                  {/* Progress Summary on right */}
+                  <div style={{ flex: '0 0 30%', width: '30%' }}>
+                  
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(1, 1fr)', gap: '1rem' }}>
+                      {learningSummary.filter(item => item.language === language).map((item) => {
+                        const accuracyPercent = item.attempts > 0 ? Math.round(item.accuracy * 100) : 0;
+                        const barColor = accuracyPercent >= 80 ? '#10b981' : accuracyPercent >= 60 ? '#f59e0b' : accuracyPercent >= 40 ? '#f97316' : '#ef4444';
+                        return (
+                          <div key={item.language} style={{ backgroundColor: '#1a1a1a', padding: '0.75rem', borderRadius: '6px' }}>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#ddd' }}>
+                              <span style={{ fontSize: '1rem', fontWeight: 'bold' }}>Progress:</span>
+                            
+                            
+                            {item.attempts > 0 ? (
+                              <>
+                                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.8rem', color: '#999' }}>
+                                  <span>{accuracyPercent}%</span>
+                                  <span>{item.correct}/{item.attempts}</span>
+                                </div>
+                                <div style={{ width: '100%', height: '16px', backgroundColor: '#0a0a0a', borderRadius: '4px', overflow: 'hidden' }}>
+                                  <div style={{ width: `${accuracyPercent}%`, height: '100%', backgroundColor: barColor, transition: 'width 0.3s ease' }} />
+                                </div>
+                              </>
+                            ) : (
+                              <span style={{ fontSize: '1rem', color: '#888' }}>Not started</span>
+                            )}
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                    
+                  </div>
+                </div>
+                
                 <div className="container">
                   <Box key={type} sx={{ mb: 4 }}>
                     {(() => {
@@ -129,7 +185,7 @@ const DbTutorial = ({language='db'}) => {
                       const filtered = q ? items.filter(it => JSON.stringify(it).toLowerCase().includes(q)) : items;
                       return filtered.length > 0 ? (
                         filtered.map((question, i) => (
-                          <QuizContent key={i} question={question} />
+                          <QuizContent key={i} question={question} language={language} />
                         ))
                       ) : (
                         <div style={{ padding: 12, color: '#666' }}>No results found for "{searchTerm}"</div>

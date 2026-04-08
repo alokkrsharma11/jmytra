@@ -1,16 +1,16 @@
 import React from 'react'
 
-const PageLayout = ({title, data, sidebarOpen}) => {
+const PageLayout = ({title, data, sidebarOpen, icon}) => {
 
   return (
     <>
       <div>
         {sidebarOpen === undefined ? (
-          <h1 className='h1'>{title}</h1>
+          <h2 className='h3'><span style={{width: 28, height: 28, display: 'inline-flex', alignItems: 'center', marginRight: '0.5rem', paddingTop: '0.5rem', verticalAlign: 'top'}}>{icon}</span><b>{title}</b></h2>
         ): (sidebarOpen ? (
-          <h1 className='h1' style={{ marginLeft: '12%'}}>{title}</h1>  
+          <h2 className='h3' style={{ marginLeft: '12%'}}><span style={{width: 28, height: 28, display: 'inline-flex', alignItems: 'center', marginRight: '0.5rem', paddingTop: '0.5rem', verticalAlign: 'top'}}>{icon}</span><b>{title}</b></h2>  
         ): (
-          <h1 className='h1' style={{ marginLeft: '12%'}}>{title}</h1>
+          <h2 className='h3' style={{ marginLeft: '12%'}}><span style={{width: 28, height: 28, display: 'inline-flex', alignItems: 'center', marginRight: '0.5rem', paddingTop: '0.5rem', verticalAlign: 'top'}}>{icon}</span><b>{title}</b></h2>
         ))} 
         
       </div>
